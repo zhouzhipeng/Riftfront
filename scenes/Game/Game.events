@@ -70,6 +70,7 @@ do TextContainerCapability::TextContainerBehavior::SetValue object="BestText" be
 @event aiGeneratedEventId="select-hero-card"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="HeroCard" accurate_test_yes_by_default=true
 do SetNumberVariable variable="SelectedHero" modification_sign="=" value=expr(HeroCard.Variable(Type))
 do SetX object="Selection" modification_sign="=" value=expr(HeroCard.X())
@@ -95,6 +96,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 @event aiGeneratedEventId="deploy-aegis"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="LaneTarget" accurate_test_yes_by_default=true
 if NumberVariable variable="SelectedHero" comparison_sign="=" value=1
 if NumberVariable variable="H1Deployed" comparison_sign="=" value=0
@@ -117,6 +119,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 @event aiGeneratedEventId="deploy-rifle"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="LaneTarget" accurate_test_yes_by_default=true
 if NumberVariable variable="SelectedHero" comparison_sign="=" value=2
 if NumberVariable variable="H2Deployed" comparison_sign="=" value=0
@@ -139,6 +142,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 @event aiGeneratedEventId="deploy-shotgun"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="LaneTarget" accurate_test_yes_by_default=true
 if NumberVariable variable="SelectedHero" comparison_sign="=" value=3
 if NumberVariable variable="H3Deployed" comparison_sign="=" value=0
@@ -161,6 +165,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 @event aiGeneratedEventId="deploy-rocket"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="LaneTarget" accurate_test_yes_by_default=true
 if NumberVariable variable="SelectedHero" comparison_sign="=" value=4
 if NumberVariable variable="H4Deployed" comparison_sign="=" value=0
@@ -183,6 +188,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 @event aiGeneratedEventId="shift-selected-hero"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="LaneTarget" accurate_test_yes_by_default=true
 if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=expr(Variable(SelectedHero))
 if CompareObjectTimer object="Hero" timer_name="move" comparison_sign=">=" time_in_seconds=3
@@ -486,6 +492,7 @@ do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" 
 @event aiGeneratedEventId="activate-hero-skill"
 if NumberVariable variable="GameState" comparison_sign="=" value=1
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="SkillButton" accurate_test_yes_by_default=true
 if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Variable(Energy)) comparison_sign=">=" second_expression=expr(20 + SkillButton.Variable(Type) * 5)
 if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=expr(SkillButton.Variable(Type))
@@ -522,6 +529,7 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-skill.wav" repeat_th
 @event aiGeneratedEventId="upgrade-deployed-hero"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
 if IsCursorOnObject object="UpgradeButton" accurate_test_yes_by_default=true
 if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Variable(Energy)) comparison_sign=">=" second_expression=expr(10 + UpgradeButton.Variable(Type) * 10)
 if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=expr(UpgradeButton.Variable(Type))
