@@ -1,0 +1,101 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 8
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "Hero"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[[variables]]
+name = "Type"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Lane"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Level"
+type = "number"
+value = 1
+
+[[variables]]
+name = "HP"
+type = "number"
+value = 100
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 100
+
+[[animations]]
+name = "Aegis"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\hero-aegis.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Rifle"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\hero-rifle.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Shotgun"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\hero-shotgun.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Rocket"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\hero-rocket.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

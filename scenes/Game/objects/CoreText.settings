@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 14
+assetStoreId = ""
+bold = true
+italic = false
+name = "CoreText"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "CORE 100"
+font = ""
+textAlignment = "left"
+characterSize = 22
+folder = [ "HUD" ]
+
+[color]
+b = 255
+g = 242
+r = 146
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "3;18;42"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = "CORE 100"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 22
+lineHeight = 0
+color = "146;242;255"
+

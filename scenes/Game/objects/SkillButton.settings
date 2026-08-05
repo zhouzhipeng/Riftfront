@@ -1,0 +1,81 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 5
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "SkillButton"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD" ]
+
+[[variables]]
+name = "Type"
+type = "number"
+value = 1
+
+[[animations]]
+name = "AegisSkill"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\skill-1.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "RifleSkill"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\skill-2.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "ShotgunSkill"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\skill-3.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "RocketSkill"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\skill-4.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

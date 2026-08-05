@@ -1,0 +1,81 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 6
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "UpgradeButton"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD" ]
+
+[[variables]]
+name = "Type"
+type = "number"
+value = 1
+
+[[animations]]
+name = "AegisUpgrade"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\upgrade-1.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "RifleUpgrade"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\upgrade-2.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "ShotgunUpgrade"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\upgrade-3.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "RocketUpgrade"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\upgrade-4.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

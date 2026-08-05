@@ -1,0 +1,96 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 10
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "Projectile"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[[variables]]
+name = "Type"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Lane"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Damage"
+type = "number"
+value = 10
+
+[[variables]]
+name = "Hit"
+type = "number"
+value = 0
+
+[[animations]]
+name = "Aegis"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\projectile-1.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Rifle"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\projectile-2.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Shotgun"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\projectile-3.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Rocket"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\projectile-4.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

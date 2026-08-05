@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 21
+assetStoreId = ""
+bold = true
+italic = false
+name = "EndTitle"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = ""
+font = ""
+textAlignment = "center"
+characterSize = 38
+folder = [ "HUD" ]
+
+[color]
+b = 130
+g = 232
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "3;18;42"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = ""
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 38
+lineHeight = 0
+color = "255;232;130"
+

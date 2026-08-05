@@ -9,6 +9,75 @@ name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
-variables = [ ]
 behaviorsSharedData = [ ]
 objectGroups = { }
+
+[[variables]]
+name = "Wave"
+type = "number"
+value = 0
+
+[[variables]]
+name = "GameState"
+type = "number"
+value = 0
+
+[[variables]]
+name = "ToSpawn"
+type = "number"
+value = 0
+
+[[variables]]
+name = "Spawned"
+type = "number"
+value = 0
+
+[[variables]]
+name = "NextLane"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Energy"
+type = "number"
+value = 180
+
+[[variables]]
+name = "Score"
+type = "number"
+value = 0
+
+[[variables]]
+name = "BestScore"
+type = "number"
+value = 0
+
+[[variables]]
+name = "SelectedHero"
+type = "number"
+value = 1
+
+[[variables]]
+name = "CoreHP"
+type = "number"
+value = 100
+
+[[variables]]
+name = "H1Deployed"
+type = "number"
+value = 0
+
+[[variables]]
+name = "H2Deployed"
+type = "number"
+value = 0
+
+[[variables]]
+name = "H3Deployed"
+type = "number"
+value = 0
+
+[[variables]]
+name = "H4Deployed"
+type = "number"
+value = 0

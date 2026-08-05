@@ -1,0 +1,148 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 9
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "Enemy"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[[variables]]
+name = "Kind"
+type = "number"
+value = 1
+
+[[variables]]
+name = "Lane"
+type = "number"
+value = 1
+
+[[variables]]
+name = "HP"
+type = "number"
+value = 30
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 30
+
+[[variables]]
+name = "Speed"
+type = "number"
+value = 50
+
+[[variables]]
+name = "Damage"
+type = "number"
+value = 8
+
+[[variables]]
+name = "Reward"
+type = "number"
+value = 7
+
+[[variables]]
+name = "Blocked"
+type = "number"
+value = 0
+
+[[animations]]
+name = "Scout"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-scout.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Grunt"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-grunt.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Armored"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-armored.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Flyer"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-flyer.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Elite"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-elite.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations]]
+name = "Boss"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\enemy-boss.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

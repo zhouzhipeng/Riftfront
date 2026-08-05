@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 18
+assetStoreId = ""
+bold = true
+italic = false
+name = "StatusText"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "DEPLOY HEROES - WAVE STARTS IN 3"
+font = ""
+textAlignment = "center"
+characterSize = 18
+folder = [ "HUD" ]
+
+[color]
+b = 255
+g = 250
+r = 235
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "3;18;42"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = "DEPLOY HEROES - WAVE STARTS IN 3"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 18
+lineHeight = 0
+color = "235;250;255"
+

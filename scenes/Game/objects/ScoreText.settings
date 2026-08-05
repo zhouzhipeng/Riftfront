@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 16
+assetStoreId = ""
+bold = true
+italic = false
+name = "ScoreText"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "SCORE 0"
+font = ""
+textAlignment = "left"
+characterSize = 22
+folder = [ "HUD" ]
+
+[color]
+b = 230
+g = 190
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "3;18;42"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = "SCORE 0"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 22
+lineHeight = 0
+color = "255;190;230"
+

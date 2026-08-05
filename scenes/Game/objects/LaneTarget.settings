@@ -1,0 +1,33 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 1
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "LaneTarget"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ "Battlefield" ]
+
+[[variables]]
+name = "Lane"
+type = "number"
+value = 1
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\lane-target.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+

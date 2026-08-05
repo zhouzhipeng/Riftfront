@@ -1,3 +1,359 @@
 kind = "resources"
 settingsFormatVersion = 3
-resources = [ ]
+
+[[resources]]
+file = "assets/background.png"
+kind = "image"
+metadata = ""
+name = "assets\\background.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/lane-target.png"
+kind = "image"
+metadata = ""
+name = "assets\\lane-target.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/core.png"
+kind = "image"
+metadata = ""
+name = "assets\\core.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/portal.png"
+kind = "image"
+metadata = ""
+name = "assets\\portal.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/hero-aegis.png"
+kind = "image"
+metadata = ""
+name = "assets\\hero-aegis.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/hero-rifle.png"
+kind = "image"
+metadata = ""
+name = "assets\\hero-rifle.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/hero-shotgun.png"
+kind = "image"
+metadata = ""
+name = "assets\\hero-shotgun.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/hero-rocket.png"
+kind = "image"
+metadata = ""
+name = "assets\\hero-rocket.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/card-1.png"
+kind = "image"
+metadata = ""
+name = "assets\\card-1.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/card-2.png"
+kind = "image"
+metadata = ""
+name = "assets\\card-2.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/card-3.png"
+kind = "image"
+metadata = ""
+name = "assets\\card-3.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/card-4.png"
+kind = "image"
+metadata = ""
+name = "assets\\card-4.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/skill-1.png"
+kind = "image"
+metadata = ""
+name = "assets\\skill-1.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/skill-2.png"
+kind = "image"
+metadata = ""
+name = "assets\\skill-2.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/skill-3.png"
+kind = "image"
+metadata = ""
+name = "assets\\skill-3.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/skill-4.png"
+kind = "image"
+metadata = ""
+name = "assets\\skill-4.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/upgrade-1.png"
+kind = "image"
+metadata = ""
+name = "assets\\upgrade-1.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/upgrade-2.png"
+kind = "image"
+metadata = ""
+name = "assets\\upgrade-2.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/upgrade-3.png"
+kind = "image"
+metadata = ""
+name = "assets\\upgrade-3.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/upgrade-4.png"
+kind = "image"
+metadata = ""
+name = "assets\\upgrade-4.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/selection.png"
+kind = "image"
+metadata = ""
+name = "assets\\selection.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-scout.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-scout.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-grunt.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-grunt.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-armored.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-armored.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-flyer.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-flyer.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-elite.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-elite.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/enemy-boss.png"
+kind = "image"
+metadata = ""
+name = "assets\\enemy-boss.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/projectile-1.png"
+kind = "image"
+metadata = ""
+name = "assets\\projectile-1.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/projectile-2.png"
+kind = "image"
+metadata = ""
+name = "assets\\projectile-2.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/projectile-3.png"
+kind = "image"
+metadata = ""
+name = "assets\\projectile-3.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/projectile-4.png"
+kind = "image"
+metadata = ""
+name = "assets\\projectile-4.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/impact-1.png"
+kind = "image"
+metadata = ""
+name = "assets\\impact-1.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/impact-2.png"
+kind = "image"
+metadata = ""
+name = "assets\\impact-2.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/impact-3.png"
+kind = "image"
+metadata = ""
+name = "assets\\impact-3.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/impact-4.png"
+kind = "image"
+metadata = ""
+name = "assets\\impact-4.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/end-panel.png"
+kind = "image"
+metadata = ""
+name = "assets\\end-panel.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-deploy.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-deploy.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+[[resources]]
+file = "assets/sfx-shot.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-shot.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-hit.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-hit.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-skill.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-skill.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-core.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-core.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-victory.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-victory.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx-defeat.wav"
+kind = "audio"
+metadata = ""
+name = "assets\\sfx-defeat.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true

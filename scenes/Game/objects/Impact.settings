@@ -1,0 +1,53 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 11
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "Impact"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[[animations]]
+name = "Burst"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.055
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\impact-1.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\impact-2.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\impact-3.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\impact-4.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
