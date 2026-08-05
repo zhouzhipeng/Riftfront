@@ -341,6 +341,7 @@ for each Hero
 > @event aiGeneratedEventId="aegis-auto-attack"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=1
+> if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=0.85
 > do Create object_to_create="Projectile" x_position=expr(Hero.X() + 72) y_position=expr(Hero.Y() + 39) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=1
@@ -354,6 +355,7 @@ for each Hero
 > @event aiGeneratedEventId="rifle-auto-attack"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=2
+> if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=0.6
 > do Create object_to_create="Projectile" x_position=expr(Hero.X() + 74) y_position=expr(Hero.Y() + 38) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=2
@@ -367,6 +369,7 @@ for each Hero
 > @event aiGeneratedEventId="shotgun-auto-attack"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=3
+> if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=1.05
 > do Create object_to_create="Projectile" x_position=expr(Hero.X() + 73) y_position=expr(Hero.Y() + 39) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=3
@@ -380,6 +383,7 @@ for each Hero
 > @event aiGeneratedEventId="rocket-auto-attack"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=4
+> if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=1.65
 > do Create object_to_create="Projectile" x_position=expr(Hero.X() + 70) y_position=expr(Hero.Y() + 38) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=4
