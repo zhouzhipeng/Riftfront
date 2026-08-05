@@ -1,5 +1,6 @@
 $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Drawing
+Get-Random -SetSeed 2026 | Out-Null
 
 $assetRoot = Join-Path $PSScriptRoot "..\assets"
 New-Item -ItemType Directory -Force -Path $assetRoot | Out-Null
@@ -106,7 +107,7 @@ New-CanvasAsset "background.png" 1280 720 {
     $top = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(220, 3, 14, 38))
     $g.FillRectangle($top, 0, 0, 1280, 92); $top.Dispose()
     Draw-CenteredText $g "HERO LINE // CELESTIAL BASTION" 22 ([System.Drawing.Color]::FromArgb(255,224,249,255)) 18 9 430 38
-    Draw-CenteredText $g "DEPLOY • SHIFT LANES • CAST • UPGRADE" 12 ([System.Drawing.Color]::FromArgb(255,121,225,255)) 25 47 430 28 $false
+    Draw-CenteredText $g "DEPLOY / SHIFT LANES / CAST / UPGRADE" 12 ([System.Drawing.Color]::FromArgb(255,121,225,255)) 25 47 430 28 $false
 }
 
 New-CanvasAsset "lane-target.png" 860 82 {
