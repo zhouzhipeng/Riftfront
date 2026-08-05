@@ -1,0 +1,14 @@
+kind = "scene"
+settingsFormatVersion = 3
+order = 0
+layout = "game://scenes/Game/Game.layout"
+events = "game://scenes/Game/Game.events"
+disableInputWhenNotFocused = true
+mangledName = "Game"
+name = "Game"
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = ""
+variables = [ ]
+behaviorsSharedData = [ ]
+objectGroups = { }

@@ -1,0 +1,67 @@
+combinedSettingsFormatVersion = 3
+eventsDslVersion = "3.0"
+kind = "project"
+settingsFormatVersion = 3
+firstLayout = ""
+initialGDVersion = "6.0.0"
+variables = [ ]
+objectGroups = { }
+
+[gdVersion]
+build = 0
+major = 6
+minor = 0
+revision = 0
+
+[properties]
+adaptGameResolutionAtRuntime = true
+antialiasingMode = "MSAA"
+antialisingEnabledOnMobile = false
+folderProject = false
+orientation = "landscape"
+packageName = "com.example.gamename"
+pixelsRounding = false
+projectUuid = "d3349135-6a4d-42fc-891e-d526f0cccb6e"
+scaleMode = "linear"
+sizeOnStartupMode = "adaptWidth"
+templateSlug = ""
+version = "1.0.0"
+name = "Wandering Dirt"
+description = ""
+author = ""
+windowWidth = 1_280
+windowHeight = 720
+latestCompilationDirectory = ""
+maxFPS = 60
+minFPS = 20
+verticalSync = false
+platformSpecificAssets = { }
+authorIds = [ ]
+authorUsernames = [ ]
+categories = [ ]
+playableDevices = [ ]
+extensionProperties = [ ]
+currentPlatform = "GDevelop JS platform"
+
+[properties.loadingScreen]
+backgroundColor = 0
+backgroundFadeInDuration = 0.2
+backgroundImageResourceName = ""
+gdevelopLogoStyle = "light"
+logoAndProgressFadeInDuration = 0.2
+logoAndProgressLogoFadeInDelay = 0
+minDuration = 1.5
+progressBarColor = 16_777_215
+progressBarHeight = 20
+progressBarMaxWidth = 200
+progressBarMinWidth = 40
+progressBarWidthPercent = 30
+showGDevelopSplash = true
+showProgressBar = true
+
+[properties.watermark]
+placement = "bottom-left"
+showWatermark = false
+
+[[properties.platforms]]
+name = "GDevelop JS platform"
