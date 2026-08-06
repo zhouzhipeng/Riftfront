@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 3
+assetStoreId = ""
+bold = true
+italic = false
+name = "PlaybackLabel"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "PLAYING"
+font = ""
+textAlignment = "center"
+characterSize = 16
+folder = [ ]
+
+[color]
+b = 200
+g = 255
+r = 166
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = false
+italic = false
+outlineColor = "5;20;15"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = "PLAYING"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 16
+lineHeight = 0
+color = "166;255;200"
+

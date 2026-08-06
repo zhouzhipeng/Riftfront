@@ -1,0 +1,24 @@
+kind = "scene"
+settingsFormatVersion = 3
+order = 1
+layout = "game://scenes/Test/Test.layout"
+events = "game://scenes/Test/Test.events"
+disableInputWhenNotFocused = true
+mangledName = "Test"
+name = "Test"
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = "Twin Kunai Animation Test"
+behaviorsSharedData = [ ]
+objectGroups = { }
+
+[[variables]]
+name = "AnimationIndex"
+type = "number"
+value = 0
+
+[[variables]]
+name = "Paused"
+type = "number"
+value = 0
+

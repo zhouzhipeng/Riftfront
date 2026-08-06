@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 2
+assetStoreId = ""
+bold = true
+italic = false
+name = "AnimationLabel"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "01 / 29  -  TK_Idle"
+font = ""
+textAlignment = "center"
+characterSize = 24
+folder = [ ]
+
+[color]
+b = 167
+g = 195
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "32;7;18"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 160
+smoothed = true
+underlined = false
+text = "01 / 29  -  TK_Idle"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 24
+lineHeight = 0
+color = "255;195;167"
+

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 4
+assetStoreId = ""
+bold = true
+italic = false
+name = "ControlsLabel"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "[LEFT / RIGHT] PREVIOUS / NEXT   |   [ENTER] REPLAY   |   [P] PAUSE / RESUME   |   [HOME] IDLE"
+font = ""
+textAlignment = "center"
+characterSize = 15
+folder = [ ]
+
+[color]
+b = 237
+g = 220
+r = 174
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "4;8;18"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 150
+smoothed = true
+underlined = false
+text = "[LEFT / RIGHT] PREVIOUS / NEXT   |   [ENTER] REPLAY   |   [P] PAUSE / RESUME   |   [HOME] IDLE"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 15
+lineHeight = 0
+color = "174;220;237"
+

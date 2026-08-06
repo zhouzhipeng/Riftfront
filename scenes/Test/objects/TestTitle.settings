@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 1
+assetStoreId = ""
+bold = true
+italic = false
+name = "TestTitle"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "TWIN KUNAI - ANIMATION LAB"
+font = ""
+textAlignment = "center"
+characterSize = 30
+folder = [ ]
+
+[color]
+b = 255
+g = 239
+r = 223
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "5;9;22"
+outlineThickness = 4
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 170
+smoothed = true
+underlined = false
+text = "TWIN KUNAI - ANIMATION LAB"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 30
+lineHeight = 0
+color = "223;239;255"
+

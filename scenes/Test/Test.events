@@ -1,0 +1,224 @@
+@group "Animation controls" source="" creationTime=0 color=[255,132,120] parameters=[]
+
+@event aiGeneratedEventId="test-initialize"
+if SceneJustBegins
+do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=0
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-next-index"
+if KeyFromTextReleased key_to_check="Right"
+do SetNumberVariable variable="AnimationIndex" modification_sign="+" value=1
+
+@event aiGeneratedEventId="test-next-wrap"
+if NumberVariable variable="AnimationIndex" comparison_sign=">" value=28
+do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
+
+@event aiGeneratedEventId="test-next-apply"
+if KeyFromTextReleased key_to_check="Right"
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=expr(Variable(AnimationIndex))
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-previous-index"
+if KeyFromTextReleased key_to_check="Left"
+do SetNumberVariable variable="AnimationIndex" modification_sign="-" value=1
+
+@event aiGeneratedEventId="test-previous-wrap"
+if NumberVariable variable="AnimationIndex" comparison_sign="<" value=0
+do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=28
+
+@event aiGeneratedEventId="test-previous-apply"
+if KeyFromTextReleased key_to_check="Left"
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=expr(Variable(AnimationIndex))
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-home-idle"
+if KeyFromTextReleased key_to_check="Home"
+do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=0
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-replay"
+if KeyFromTextReleased key_to_check="Return"
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-toggle-pause"
+if KeyFromTextReleased key_to_check="p"
+do SetNumberVariable variable="Paused" modification_sign="=" value=expr(1 - Variable(Paused))
+
+> @event aiGeneratedEventId="test-pause"
+> if NumberVariable variable="Paused" comparison_sign="=" value=1
+> do AnimatableCapability::AnimatableBehavior::PauseAnimation object="TwinKunai3D" behavior="Animation"
+> do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PAUSED"
+
+> @event aiGeneratedEventId="test-resume"
+> if NumberVariable variable="Paused" comparison_sign="=" value=0
+> do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+> do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@end group
+
+@group "Animation labels" source="" creationTime=0 color=[91,203,255] parameters=[]
+
+@event aiGeneratedEventId="test-label-00"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=0
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="01 / 29  -  TK_Idle"
+
+@event aiGeneratedEventId="test-label-01"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=1
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="02 / 29  -  TK_Attack1"
+
+@event aiGeneratedEventId="test-label-02"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=2
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="03 / 29  -  TK_Attack2"
+
+@event aiGeneratedEventId="test-label-03"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=3
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="04 / 29  -  TK_Attack3"
+
+@event aiGeneratedEventId="test-label-04"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=4
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="05 / 29  -  TK_CrouchIdle"
+
+@event aiGeneratedEventId="test-label-05"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=5
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="06 / 29  -  TK_CrouchJog"
+
+@event aiGeneratedEventId="test-label-06"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=6
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="07 / 29  -  TK_CrouchWalk"
+
+@event aiGeneratedEventId="test-label-07"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=7
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="08 / 29  -  TK_Die"
+
+@event aiGeneratedEventId="test-label-08"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=8
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="09 / 29  -  TK_Evade"
+
+@event aiGeneratedEventId="test-label-09"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=9
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="10 / 29  -  TK_Hit1"
+
+@event aiGeneratedEventId="test-label-10"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=10
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="11 / 29  -  TK_Hit2"
+
+@event aiGeneratedEventId="test-label-11"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=11
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="12 / 29  -  TK_Put"
+
+@event aiGeneratedEventId="test-label-12"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=12
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="13 / 29  -  TK_Run"
+
+@event aiGeneratedEventId="test-label-13"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=13
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="14 / 29  -  TK_Sprint"
+
+@event aiGeneratedEventId="test-label-14"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=14
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="15 / 29  -  TK_Stun"
+
+@event aiGeneratedEventId="test-label-15"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=15
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="16 / 29  -  TK_Take"
+
+@event aiGeneratedEventId="test-label-16"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=16
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="17 / 29  -  TK_Walk"
+
+@event aiGeneratedEventId="test-label-17"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=17
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="18 / 29  -  TK_Quickshift_B"
+
+@event aiGeneratedEventId="test-label-18"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=18
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="19 / 29  -  TK_Quickshift_F"
+
+@event aiGeneratedEventId="test-label-19"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=19
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="20 / 29  -  TK_Quickshift_L"
+
+@event aiGeneratedEventId="test-label-20"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=20
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="21 / 29  -  TK_Quickshift_R"
+
+@event aiGeneratedEventId="test-label-21"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=21
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="22 / 29  -  TK_SP_Idle"
+
+@event aiGeneratedEventId="test-label-22"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=22
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="23 / 29  -  TK_SP_Run"
+
+@event aiGeneratedEventId="test-label-23"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=23
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="24 / 29  -  TK_Sp_Skill1"
+
+@event aiGeneratedEventId="test-label-24"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=24
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="25 / 29  -  TK_Sp_Skill2"
+
+@event aiGeneratedEventId="test-label-25"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=25
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="26 / 29  -  TK_Sp_Skill3"
+
+@event aiGeneratedEventId="test-label-26"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=26
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="27 / 29  -  TK_Sp_TurnL"
+
+@event aiGeneratedEventId="test-label-27"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=27
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="28 / 29  -  TK_Sp_TurnR"
+
+@event aiGeneratedEventId="test-label-28"
+if NumberVariable variable="AnimationIndex" comparison_sign="=" value=28
+if BuiltinCommonInstructions::Once
+do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="29 / 29  -  TK_SP_Walk"
+
+@end group
+

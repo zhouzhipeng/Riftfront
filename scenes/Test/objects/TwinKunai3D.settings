@@ -1,0 +1,202 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 0
+assetStoreId = ""
+name = "TwinKunai3D"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.08
+depth = 240
+height = 440
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/twin_kunai_gdevelop.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 290
+sharedAnimationModelResources = [ "assets/models/twin_kunai_animations/Normal/TK_Idle.glb", "assets/models/twin_kunai_animations/Normal/TK_Attack1.glb", "assets/models/twin_kunai_animations/Normal/TK_Attack2.glb", "assets/models/twin_kunai_animations/Normal/TK_Attack3.glb", "assets/models/twin_kunai_animations/Normal/TK_CrouchIdle.glb", "assets/models/twin_kunai_animations/Normal/TK_CrouchJog.glb", "assets/models/twin_kunai_animations/Normal/TK_CrouchWalk.glb", "assets/models/twin_kunai_animations/Normal/TK_Die.glb", "assets/models/twin_kunai_animations/Normal/TK_Evade.glb", "assets/models/twin_kunai_animations/Normal/TK_Hit1.glb", "assets/models/twin_kunai_animations/Normal/TK_Hit2.glb", "assets/models/twin_kunai_animations/Normal/TK_Put.glb", "assets/models/twin_kunai_animations/Normal/TK_Run.glb", "assets/models/twin_kunai_animations/Normal/TK_Sprint.glb", "assets/models/twin_kunai_animations/Normal/TK_Stun.glb", "assets/models/twin_kunai_animations/Normal/TK_Take.glb", "assets/models/twin_kunai_animations/Normal/TK_Walk.glb", "assets/models/twin_kunai_animations/Special/TK_Quickshift_B.glb", "assets/models/twin_kunai_animations/Special/TK_Quickshift_F.glb", "assets/models/twin_kunai_animations/Special/TK_Quickshift_L.glb", "assets/models/twin_kunai_animations/Special/TK_Quickshift_R.glb", "assets/models/twin_kunai_animations/Special/TK_SP_Idle.glb", "assets/models/twin_kunai_animations/Special/TK_SP_Run.glb", "assets/models/twin_kunai_animations/Special/TK_Sp_Skill1.glb", "assets/models/twin_kunai_animations/Special/TK_Sp_Skill2.glb", "assets/models/twin_kunai_animations/Special/TK_Sp_Skill3.glb", "assets/models/twin_kunai_animations/Special/TK_Sp_TurnL.glb", "assets/models/twin_kunai_animations/Special/TK_Sp_TurnR.glb", "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb" ]
+
+[[content.animations]]
+loop = true
+name = "TK_Idle"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Idle.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Attack1"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack1.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Attack2"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack2.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Attack3"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack3.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_CrouchIdle"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchIdle.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_CrouchJog"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchJog.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_CrouchWalk"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchWalk.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Die"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Die.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Evade"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Evade.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Hit1"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Hit1.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Hit2"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Hit2.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Put"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Put.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_Run"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Run.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_Sprint"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Sprint.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Stun"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Stun.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Take"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Take.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_Walk"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Walk.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Quickshift_B"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_B.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Quickshift_F"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_F.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Quickshift_L"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_L.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Quickshift_R"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_R.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_SP_Idle"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Idle.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_SP_Run"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Run.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Sp_Skill1"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill1.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Sp_Skill2"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill2.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Sp_Skill3"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill3.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Sp_TurnL"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnL.glb"
+
+[[content.animations]]
+loop = false
+name = "TK_Sp_TurnR"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnR.glb"
+
+[[content.animations]]
+loop = true
+name = "TK_SP_Walk"
+source = "Animation"
+sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
+

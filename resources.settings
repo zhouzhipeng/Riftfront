@@ -421,3 +421,206 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/twin_kunai_gdevelop.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Idle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Idle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Attack1.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Attack1.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Attack2.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Attack2.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Attack3.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Attack3.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_CrouchIdle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_CrouchIdle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_CrouchJog.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_CrouchJog.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_CrouchWalk.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_CrouchWalk.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Die.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Die.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Evade.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Evade.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Hit1.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Hit1.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Hit2.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Hit2.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Put.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Put.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Run.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Run.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Sprint.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Sprint.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Stun.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Stun.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Take.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Take.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Normal/TK_Walk.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Normal/TK_Walk.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Quickshift_B.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Quickshift_B.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Quickshift_F.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Quickshift_F.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Quickshift_L.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Quickshift_L.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Quickshift_R.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Quickshift_R.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_SP_Idle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_SP_Idle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_SP_Run.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_SP_Run.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill1.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill1.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill2.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill2.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill3.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill3.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnL.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnL.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnR.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnR.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
+userAdded = true
