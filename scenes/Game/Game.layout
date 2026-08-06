@@ -87,6 +87,13 @@ layer = "base"
 at = [640, 286, -70]
 
 [[instances]]
+id = "d438cdb1-7959-4fb7-8ba1-03242c99ec34"
+object = "TwinKunai3D"
+layer = "base"
+at = [680, 338, 32]
+z_order = 6
+
+[[instances]]
 id = "00000000-0000-4000-8000-000000000002"
 object = "LaneTarget"
 layer = "base"

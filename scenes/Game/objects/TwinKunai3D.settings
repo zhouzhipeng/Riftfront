@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 24
+assetStoreId = ""
+name = "TwinKunai3D"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.1
+depth = 68
+height = 124
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/twin_kunai.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 82
+sharedAnimationModelResources = [ ]
+animations = [ ]

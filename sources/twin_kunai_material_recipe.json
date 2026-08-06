@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "name": "TwinKunai Body",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Body/Body.png",
+        "output": "twin_kunai_textures/body_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Body",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": false
+      }
+    },
+    {
+      "name": "TwinKunai Face",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Body/Face.png",
+        "output": "twin_kunai_textures/face_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Face",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": false
+      }
+    },
+    {
+      "name": "TwinKunai Eyes",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Body/Eye.png",
+        "output": "twin_kunai_textures/eyes_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "eye",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": false
+      }
+    },
+    {
+      "name": "TwinKunai Cloth Teal",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Cloth/TwinKunai_Girl_Cloth_01.png",
+        "output": "twin_kunai_textures/cloth_teal_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Cloth",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": true
+      }
+    },
+    {
+      "name": "TwinKunai Accessories",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Cloth/TwinKunai_Girl_Acc.png",
+        "output": "twin_kunai_textures/accessories_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Cloth0",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": true
+      }
+    },
+    {
+      "name": "TwinKunai Hair Red",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Hair/TwinKunai_Girl_Hair_01.png",
+        "output": "twin_kunai_textures/hair_red_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Hair1",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": false
+      }
+    },
+    {
+      "name": "TwinKunai Weapons",
+      "base_color": {
+        "source": "D:/download/all_files (1)/Assets/CombatGirlsCharacterPack/CombatGirls_TwinKunai/Texture/Weapon/TwinKunai_Girl_Weapon_01.png",
+        "output": "twin_kunai_textures/weapons_base.png",
+        "rgb_scale": [1.0, 1.0, 1.0],
+        "alpha": "opaque"
+      },
+      "material": {
+        "name": "Weapon_Kunai",
+        "create_if_missing": false,
+        "replace_surface": true,
+        "metallic": 0.0,
+        "roughness": 0.5,
+        "use_alpha": false,
+        "double_sided": false
+      }
+    }
+  ]
+}
