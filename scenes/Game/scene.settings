@@ -12,6 +12,16 @@ title = ""
 behaviorsSharedData = [ ]
 objectGroups = { }
 
+[[externalEventFiles]]
+name = "HUD"
+order = 0
+events = "game://scenes/Game/externals/HUD.events"
+
+[[externalLayoutFiles]]
+name = "HUD"
+order = 0
+layout = "game://scenes/Game/externals/HUD.layout"
+
 [[variables]]
 name = "Wave"
 type = "number"

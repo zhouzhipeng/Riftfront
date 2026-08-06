@@ -1,0 +1,76 @@
+@group "HUD initialization and interaction" source="" creationTime=0 color=[69,197,255] parameters=[]
+
+@event aiGeneratedEventId="initialize-hud"
+if SceneJustBegins
+do OpacityCapability::OpacityBehavior::SetValue object="EndPanel" behavior="Opacity" modification_sign="=" opacity_0_255=0
+do OpacityCapability::OpacityBehavior::SetValue object="EndTitle" behavior="Opacity" modification_sign="=" opacity_0_255=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text="DEPLOY HEROES - WAVE 1 STARTS IN 3"
+do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: AEGIS"
+
+> @event aiGeneratedEventId="initialize-type-one-art"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=1
+> if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=1
+> if NumberObjectVariable object="UpgradeButton" variable="Type" comparison_sign="=" value=1
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="HeroCard" behavior="Animation" modification_sign="=" animation_index=0
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="SkillButton" behavior="Animation" modification_sign="=" animation_index=0
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="UpgradeButton" behavior="Animation" modification_sign="=" animation_index=0
+
+> @event aiGeneratedEventId="initialize-type-two-art"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=2
+> if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=2
+> if NumberObjectVariable object="UpgradeButton" variable="Type" comparison_sign="=" value=2
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="HeroCard" behavior="Animation" modification_sign="=" animation_index=1
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="SkillButton" behavior="Animation" modification_sign="=" animation_index=1
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="UpgradeButton" behavior="Animation" modification_sign="=" animation_index=1
+
+> @event aiGeneratedEventId="initialize-type-three-art"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=3
+> if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=3
+> if NumberObjectVariable object="UpgradeButton" variable="Type" comparison_sign="=" value=3
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="HeroCard" behavior="Animation" modification_sign="=" animation_index=2
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="SkillButton" behavior="Animation" modification_sign="=" animation_index=2
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="UpgradeButton" behavior="Animation" modification_sign="=" animation_index=2
+
+> @event aiGeneratedEventId="initialize-type-four-art"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=4
+> if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=4
+> if NumberObjectVariable object="UpgradeButton" variable="Type" comparison_sign="=" value=4
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="HeroCard" behavior="Animation" modification_sign="=" animation_index=3
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="SkillButton" behavior="Animation" modification_sign="=" animation_index=3
+> do AnimatableCapability::AnimatableBehavior::SetIndex object="UpgradeButton" behavior="Animation" modification_sign="=" animation_index=3
+
+@event aiGeneratedEventId="refresh-hud"
+if NumberVariable variable="GameState" comparison_sign=">=" value=0
+do TextContainerCapability::TextContainerBehavior::SetValue object="WaveText" behavior="Text" modification_sign="=" text=expr("WAVE " + ToString(Variable(Wave)) + " / 10")
+do TextContainerCapability::TextContainerBehavior::SetValue object="CoreText" behavior="Text" modification_sign="=" text=expr("CORE " + ToString(Variable(CoreHP)))
+do TextContainerCapability::TextContainerBehavior::SetValue object="EnergyText" behavior="Text" modification_sign="=" text=expr("ENERGY " + ToString(Variable(Energy)))
+do TextContainerCapability::TextContainerBehavior::SetValue object="ScoreText" behavior="Text" modification_sign="=" text=expr("SCORE " + ToString(Variable(Score)))
+do TextContainerCapability::TextContainerBehavior::SetValue object="BestText" behavior="Text" modification_sign="=" text=expr("BEST " + ToString(Variable(BestScore)))
+
+@event aiGeneratedEventId="select-hero-card"
+if NumberVariable variable="GameState" comparison_sign="<" value=2
+if HasAnyTouchOrMouseStarted
+if BuiltinCommonInstructions::Once
+if IsCursorOnObject object="HeroCard" accurate_test_yes_by_default=true
+do SetNumberVariable variable="SelectedHero" modification_sign="=" value=expr(HeroCard.Variable(Type))
+do SetX object="Selection" modification_sign="=" value=expr(HeroCard.X())
+do SetY object="Selection" modification_sign="=" value=expr(HeroCard.Y())
+do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_the_sound=false volume=24 pitch_speed=1.15
+
+> @event aiGeneratedEventId="selected-aegis-label"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=1
+> do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: AEGIS / SHIELD"
+
+> @event aiGeneratedEventId="selected-rifle-label"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=2
+> do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: RIFLE / FOCUS"
+
+> @event aiGeneratedEventId="selected-shotgun-label"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=3
+> do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: SHOTGUN / PUSH"
+
+> @event aiGeneratedEventId="selected-rocket-label"
+> if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=4
+> do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: ROCKET / BLAST"
+
+@end group
