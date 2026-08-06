@@ -4,6 +4,7 @@ order = 11
 adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "Impact"
+persistentUuid = "b761f8ee-71c3-4cd9-aba2-96bf0e31fb4a"
 type = "Sprite"
 updateIfNotVisible = false
 variables = [ ]

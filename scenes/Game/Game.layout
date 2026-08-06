@@ -10,7 +10,7 @@ grid_offset = [0, 0, 0]
 grid_color = "#72DDF7"
 grid_alpha = 0.35
 snap = false
-zoom = 0.7299422258219767
+zoom = 0.5068212947889823
 window_mask = true
 selected_layer = "HUD"
 mode = "instances-editor"
@@ -85,13 +85,6 @@ id = "72d8dcf0-3f8a-4f16-92bf-6df0d2c3a4e1"
 object = "Environment3D"
 layer = "base"
 at = [640, 286, -70]
-
-[[instances]]
-id = "d438cdb1-7959-4fb7-8ba1-03242c99ec34"
-object = "TwinKunai3D"
-layer = "base"
-at = [680, 338, 32]
-z_order = 6
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000002"

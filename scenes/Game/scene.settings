@@ -14,71 +14,85 @@ objectGroups = { }
 
 [[variables]]
 name = "Wave"
+persistentUuid = "f854ff25-dba2-443b-8c5c-a5f501892714"
 type = "number"
 value = 0
 
 [[variables]]
 name = "GameState"
+persistentUuid = "88f2165e-6033-4254-b114-90f2a1f966c3"
 type = "number"
 value = 0
 
 [[variables]]
 name = "ToSpawn"
+persistentUuid = "80a1dd26-9419-46f3-b5f4-05c0ebcbe015"
 type = "number"
 value = 0
 
 [[variables]]
 name = "Spawned"
+persistentUuid = "17395075-abd4-45c4-9015-01d4dbc7a598"
 type = "number"
 value = 0
 
 [[variables]]
 name = "NextLane"
+persistentUuid = "76af451b-0220-475b-b879-0d48aa567ac7"
 type = "number"
 value = 1
 
 [[variables]]
 name = "Energy"
+persistentUuid = "aba88f3b-6ef2-460e-a6fe-7dc75cdbe86c"
 type = "number"
 value = 180
 
 [[variables]]
 name = "Score"
+persistentUuid = "167e4368-ca7e-414f-9d50-668cc683e35f"
 type = "number"
 value = 0
 
 [[variables]]
 name = "BestScore"
+persistentUuid = "7dfc4375-01e3-4708-a76a-febb3060c602"
 type = "number"
 value = 0
 
 [[variables]]
 name = "SelectedHero"
+persistentUuid = "2fa25207-0a1e-44fd-9d18-802e9064edad"
 type = "number"
 value = 1
 
 [[variables]]
 name = "CoreHP"
+persistentUuid = "a421fa06-27cc-438f-8508-b9bb0f76ad41"
 type = "number"
 value = 100
 
 [[variables]]
 name = "H1Deployed"
+persistentUuid = "e63a6a1a-87e3-455f-9e57-3005979386ee"
 type = "number"
 value = 0
 
 [[variables]]
 name = "H2Deployed"
+persistentUuid = "c5900829-5488-494e-b05b-3c0504cb4411"
 type = "number"
 value = 0
 
 [[variables]]
 name = "H3Deployed"
+persistentUuid = "1af0fa5f-33c5-4467-a4de-62e445dcfab6"
 type = "number"
 value = 0
 
 [[variables]]
 name = "H4Deployed"
+persistentUuid = "9cc7f4c7-765d-4fd4-8546-6e14bed34b34"
 type = "number"
 value = 0
 
