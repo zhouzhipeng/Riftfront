@@ -416,8 +416,8 @@ name = "assets/models/celestial_impact.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/twin_kunai.glb"
+file = "assets/models/twin_kunai_gdevelop.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/twin_kunai.glb"
+name = "assets/models/twin_kunai_gdevelop.glb"
 userAdded = true
