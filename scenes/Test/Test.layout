@@ -13,7 +13,7 @@ snap = false
 zoom = 0.8
 window_mask = true
 selected_layer = "HUD"
-mode = "instances-editor"
+mode = "embedded-game"
 
 [[layers]]
 id = "base"
@@ -21,11 +21,7 @@ name = ""
 rendering = "2d+3d"
 camera_type = "perspective"
 camera_behavior = "do-nothing"
-visible = true
-locked = false
-lighting = false
 ambient = "#B9C9E8"
-near = 3
 far = 5000
 fov = 38
 max_2d_distance = 2500
@@ -35,9 +31,6 @@ cameras = [{ size = "default", viewport = "default" }]
 id = "hud"
 name = "HUD"
 rendering = "2d"
-visible = true
-locked = false
-lighting = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[effects]]
@@ -112,4 +105,3 @@ layer = "hud"
 at = [140, 670]
 z_order = 20
 size = [1000, 28]
-

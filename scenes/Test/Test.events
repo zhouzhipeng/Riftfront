@@ -1,5 +1,4 @@
 @group "Animation controls" source="" creationTime=0 color=[255,132,120] parameters=[]
-
 @event aiGeneratedEventId="test-initialize"
 if SceneJustBegins
 do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
@@ -64,7 +63,6 @@ do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabe
 @event aiGeneratedEventId="test-toggle-pause"
 if KeyFromTextReleased key_to_check="p"
 do SetNumberVariable variable="Paused" modification_sign="=" value=expr(1 - Variable(Paused))
-
 > @event aiGeneratedEventId="test-pause"
 > if NumberVariable variable="Paused" comparison_sign="=" value=1
 > do AnimatableCapability::AnimatableBehavior::PauseAnimation object="TwinKunai3D" behavior="Animation"
@@ -74,11 +72,9 @@ do SetNumberVariable variable="Paused" modification_sign="=" value=expr(1 - Vari
 > if NumberVariable variable="Paused" comparison_sign="=" value=0
 > do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
 > do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
-
 @end group
 
 @group "Animation labels" source="" creationTime=0 color=[91,203,255] parameters=[]
-
 @event aiGeneratedEventId="test-label-00"
 if NumberVariable variable="AnimationIndex" comparison_sign="=" value=0
 if BuiltinCommonInstructions::Once
@@ -223,6 +219,4 @@ do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLab
 if NumberVariable variable="AnimationIndex" comparison_sign="=" value=28
 if BuiltinCommonInstructions::Once
 do TextContainerCapability::TextContainerBehavior::SetValue object="AnimationLabel" behavior="Text" modification_sign="=" text="29 / 29  -  TK_SP_Walk"
-
 @end group
-
