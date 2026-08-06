@@ -357,3 +357,59 @@ preloadAsMusic = false
 preloadAsSound = true
 preloadInCache = false
 userAdded = true
+
+[[resources]]
+file = "assets/models/sky_bastion_environment.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/sky_bastion_environment.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/celestial_lane_pad.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/celestial_lane_pad.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/celestial_core.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/celestial_core.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/void_portal.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/void_portal.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/celestial_guardian.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/celestial_guardian.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/void_hound.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/void_hound.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/celestial_bolt.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/celestial_bolt.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/celestial_impact.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/celestial_impact.glb"
+userAdded = true

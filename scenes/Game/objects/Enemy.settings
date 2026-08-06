@@ -1,11 +1,9 @@
 kind = "object"
 settingsFormatVersion = 3
 order = 9
-adaptCollisionMaskAutomatically = true
 assetStoreId = ""
 name = "Enemy"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
 folder = [ "Combat" ]
@@ -50,99 +48,55 @@ name = "Blocked"
 type = "number"
 value = 0
 
-[[animations]]
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.1
+depth = 62
+height = 58
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/void_hound.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 76
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
 name = "Scout"
-useMultipleDirections = false
+source = "VoidIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-scout.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Grunt"
-useMultipleDirections = false
+source = "VoidIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-grunt.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Armored"
-useMultipleDirections = false
+source = "VoidIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-armored.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Flyer"
-useMultipleDirections = false
+source = "VoidIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-flyer.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Elite"
-useMultipleDirections = false
+source = "VoidIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-elite.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Boss"
-useMultipleDirections = false
-
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\enemy-boss.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
+source = "VoidIdle"
+sourceModelResourceName = ""

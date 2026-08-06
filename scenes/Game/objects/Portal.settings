@@ -1,29 +1,33 @@
 kind = "object"
 settingsFormatVersion = 3
 order = 3
-adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "Portal"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Battlefield" ]
 
-[[animations]]
-name = ""
-useMultipleDirections = false
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.12
+depth = 96
+height = 96
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/void_portal.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 104
+sharedAnimationModelResources = [ ]
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\portal.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
+[[content.animations]]
+loop = true
+name = "Idle"
+source = "PortalIdle"
+sourceModelResourceName = ""

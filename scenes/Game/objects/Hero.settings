@@ -1,11 +1,9 @@
 kind = "object"
 settingsFormatVersion = 3
 order = 8
-adaptCollisionMaskAutomatically = true
 assetStoreId = ""
 name = "Hero"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
 folder = [ "Combat" ]
@@ -35,67 +33,43 @@ name = "MaxHP"
 type = "number"
 value = 100
 
-[[animations]]
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.12
+depth = 78
+height = 88
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/celestial_guardian.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 82
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
 name = "Aegis"
-useMultipleDirections = false
+source = "GuardianIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\hero-aegis.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Rifle"
-useMultipleDirections = false
+source = "GuardianIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\hero-rifle.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Shotgun"
-useMultipleDirections = false
+source = "GuardianIdle"
+sourceModelResourceName = ""
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\hero-shotgun.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
-[[animations]]
+[[content.animations]]
+loop = true
 name = "Rocket"
-useMultipleDirections = false
-
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\hero-rocket.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
+source = "GuardianIdle"
+sourceModelResourceName = ""

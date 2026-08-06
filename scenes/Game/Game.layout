@@ -16,12 +16,29 @@ selected_layer = "HUD"
 mode = "instances-editor"
 
 [[layers]]
+id = "backdrop"
+name = "Backdrop"
+rendering = "2d"
+visible = true
+locked = true
+lighting = false
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layers]]
 id = "base"
 name = ""
-rendering = "2d"
+rendering = "2d+3d"
+camera_type = "perspective"
+camera_behavior = "top-left-anchored-if-never-moved"
 visible = true
 locked = false
 lighting = false
+follow_base_camera = false
+ambient = "#A8C4DF"
+near = 3
+far = 5_000
+fov = 42
+max_2d_distance = 2_000
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layers]]
@@ -34,74 +51,117 @@ lighting = false
 follow_base_camera = false
 cameras = [{ size = "default", viewport = "default" }]
 
+[[effects]]
+layer = "base"
+name = "CelestialHemisphere"
+type = "Scene3D::HemisphereLight"
+enabled = true
+elevation = 90
+groundColor = "34;52;92"
+intensity = 0.92
+rotation = 0
+skyColor = "196;232;255"
+top = "Z+"
+
+[[effects]]
+layer = "base"
+name = "CelestialSun"
+type = "Scene3D::DirectionalLight"
+enabled = true
+color = "255;242;214"
+distanceFromCamera = 1_100
+elevation = 62
+frustumSize = 1_600
+intensity = 0.72
+isCastingShadow = true
+minimumShadowBias = 0.001
+rotation = -35
+shadowQuality = "high"
+top = "Z+"
+
+[[effects]]
+layer = "base"
+name = "AetherBloom"
+type = "Scene3D::Bloom"
+enabled = true
+radius = 0.3
+strength = 0.65
+threshold = 0.55
+
 [[instances]]
 id = "00000000-0000-4000-8000-000000000001"
 object = "Background"
-layer = "base"
+layer = "backdrop"
 at = [0, 0]
 z_order = 0
+
+[[instances]]
+id = "72d8dcf0-3f8a-4f16-92bf-6df0d2c3a4e1"
+object = "Environment3D"
+layer = "base"
+at = [640, 286, -70]
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000002"
 object = "LaneTarget"
 layer = "base"
-at = [246, 130]
+at = [676, 130, 18]
 z_order = 1
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000003"
 object = "LaneTarget"
 layer = "base"
-at = [246, 234]
+at = [676, 234, 18]
 z_order = 1
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000004"
 object = "LaneTarget"
 layer = "base"
-at = [246, 338]
+at = [676, 338, 18]
 z_order = 1
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000005"
 object = "LaneTarget"
 layer = "base"
-at = [246, 442]
+at = [676, 442, 18]
 z_order = 1
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000006"
 object = "Core"
 layer = "base"
-at = [0, 280]
+at = [82, 280, 22]
 z_order = 5
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000007"
 object = "Portal"
 layer = "base"
-at = [1165, 115]
+at = [1_205, 134, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000008"
 object = "Portal"
 layer = "base"
-at = [1165, 219]
+at = [1_205, 238, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000009"
 object = "Portal"
 layer = "base"
-at = [1165, 323]
+at = [1_205, 342, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-00000000000a"
 object = "Portal"
 layer = "base"
-at = [1165, 427]
+at = [1_205, 446, 24]
 z_order = 4
 
 [[instances]]

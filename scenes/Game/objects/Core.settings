@@ -1,29 +1,33 @@
 kind = "object"
 settingsFormatVersion = 3
 order = 2
-adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "Core"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Battlefield" ]
 
-[[animations]]
-name = ""
-useMultipleDirections = false
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.15
+depth = 180
+height = 238
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/celestial_core.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 190
+sharedAnimationModelResources = [ ]
 
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "assets\\core.png"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]
-
+[[content.animations]]
+loop = true
+name = "Idle"
+source = "CoreIdle"
+sourceModelResourceName = ""
