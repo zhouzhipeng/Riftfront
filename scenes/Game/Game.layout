@@ -91,6 +91,7 @@ id = "d438cdb1-7959-4fb7-8ba1-03242c99ec34"
 object = "TwinKunai3D"
 layer = "base"
 at = [680, 338, 32]
+rotation = 180
 z_order = 6
 
 [[instances]]
