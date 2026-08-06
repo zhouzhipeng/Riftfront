@@ -1,9 +1,11 @@
 kind = "object"
 settingsFormatVersion = 3
 order = 1
+adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "LaneTarget"
-type = "Scene3D::Model3DObject"
+type = "Sprite"
+updateIfNotVisible = false
 effects = [ ]
 behaviors = [ ]
 folder = [ "Battlefield" ]
@@ -13,20 +15,18 @@ name = "Lane"
 type = "number"
 value = 1
 
-[content]
-centerLocation = "ModelOrigin"
-crossfadeDuration = 0.1
-depth = 32
-height = 78
-isCastingShadow = true
-isReceivingShadow = true
-keepAspectRatio = true
-materialType = "KeepOriginal"
-modelResourceName = "assets/models/celestial_lane_pad.glb"
-originLocation = "ModelOrigin"
-rotationX = 90
-rotationY = 0
-rotationZ = 0
-width = 860
-sharedAnimationModelResources = [ ]
-animations = [ ]
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\lane-target.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

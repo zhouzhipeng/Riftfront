@@ -105,26 +105,58 @@ at = [640, 286, -70]
 id = "00000000-0000-4000-8000-000000000002"
 object = "LaneTarget"
 layer = "base"
-at = [676, 130, 18]
+at = [246, 130]
 z_order = 1
+opacity = 0
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000003"
 object = "LaneTarget"
 layer = "base"
-at = [676, 234, 18]
+at = [246, 234]
 z_order = 1
+opacity = 0
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000004"
 object = "LaneTarget"
 layer = "base"
-at = [676, 338, 18]
+at = [246, 338]
 z_order = 1
+opacity = 0
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000005"
 object = "LaneTarget"
+layer = "base"
+at = [246, 442]
+z_order = 1
+opacity = 0
+
+[[instances]]
+id = "7a3e6f4d-60b4-4f78-86a1-c0c40a909101"
+object = "LanePad3D"
+layer = "base"
+at = [676, 130, 18]
+z_order = 1
+
+[[instances]]
+id = "7a3e6f4d-60b4-4f78-86a1-c0c40a909102"
+object = "LanePad3D"
+layer = "base"
+at = [676, 234, 18]
+z_order = 1
+
+[[instances]]
+id = "7a3e6f4d-60b4-4f78-86a1-c0c40a909103"
+object = "LanePad3D"
+layer = "base"
+at = [676, 338, 18]
+z_order = 1
+
+[[instances]]
+id = "7a3e6f4d-60b4-4f78-86a1-c0c40a909104"
+object = "LanePad3D"
 layer = "base"
 at = [676, 442, 18]
 z_order = 1

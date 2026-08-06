@@ -1,0 +1,27 @@
+kind = "object"
+settingsFormatVersion = 3
+order = 23
+assetStoreId = ""
+name = "LanePad3D"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ "Battlefield" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 32
+height = 78
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/celestial_lane_pad.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 860
+sharedAnimationModelResources = [ ]
+animations = [ ]
