@@ -271,7 +271,7 @@ for each "Hero"
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=1
 > if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=0.85
-> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 72) y_position=expr(Hero.Y() + 39) layer=""
+> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 72) y_position=expr(Hero.Y() + 27) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=1
 > do SetNumberObjectVariable object="Projectile" variable="Lane" modification_sign="=" value=expr(Hero.Variable(Lane))
 > do SetNumberObjectVariable object="Projectile" variable="Damage" modification_sign="=" value=expr(14 + Hero.Variable(Level) * 5)
@@ -285,7 +285,7 @@ for each "Hero"
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=2
 > if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=0.6
-> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 74) y_position=expr(Hero.Y() + 38) layer=""
+> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 74) y_position=expr(Hero.Y() + 26) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=2
 > do SetNumberObjectVariable object="Projectile" variable="Lane" modification_sign="=" value=expr(Hero.Variable(Lane))
 > do SetNumberObjectVariable object="Projectile" variable="Damage" modification_sign="=" value=expr(24 + Hero.Variable(Level) * 7)
@@ -299,7 +299,7 @@ for each "Hero"
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=3
 > if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=1.05
-> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 73) y_position=expr(Hero.Y() + 39) layer=""
+> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 73) y_position=expr(Hero.Y() + 27) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=3
 > do SetNumberObjectVariable object="Projectile" variable="Lane" modification_sign="=" value=expr(Hero.Variable(Lane))
 > do SetNumberObjectVariable object="Projectile" variable="Damage" modification_sign="=" value=expr(34 + Hero.Variable(Level) * 8)
@@ -313,7 +313,7 @@ for each "Hero"
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=4
 > if NumberObjectVariable object="Enemy" variable="Lane" comparison_sign="=" value=expr(Hero.Variable(Lane))
 > if CompareObjectTimer object="Hero" timer_name="attack" comparison_sign=">=" time_in_seconds=1.65
-> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 70) y_position=expr(Hero.Y() + 38) layer=""
+> do Create object_to_create="Projectile" x_position=expr(Hero.X() + 70) y_position=expr(Hero.Y() + 26) layer=""
 > do SetNumberObjectVariable object="Projectile" variable="Type" modification_sign="=" value=4
 > do SetNumberObjectVariable object="Projectile" variable="Lane" modification_sign="=" value=expr(Hero.Variable(Lane))
 > do SetNumberObjectVariable object="Projectile" variable="Damage" modification_sign="=" value=expr(52 + Hero.Variable(Level) * 12)
