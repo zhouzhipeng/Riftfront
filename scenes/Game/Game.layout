@@ -10,7 +10,7 @@ grid_offset = [0, 0, 0]
 grid_color = "#72DDF7"
 grid_alpha = 0.35
 snap = false
-zoom = 0.78
+zoom = 0.7299422258219767
 window_mask = true
 selected_layer = "HUD"
 mode = "instances-editor"
@@ -19,9 +19,7 @@ mode = "instances-editor"
 id = "backdrop"
 name = "Backdrop"
 rendering = "2d"
-visible = true
 locked = true
-lighting = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layers]]
@@ -30,32 +28,22 @@ name = ""
 rendering = "2d+3d"
 camera_type = "perspective"
 camera_behavior = "do-nothing"
-visible = true
-locked = false
-lighting = false
-follow_base_camera = false
 ambient = "#A8C4DF"
-near = 3
-far = 5_000
+far = 5000
 fov = 35
-max_2d_distance = 2_000
+max_2d_distance = 2000
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layers]]
 id = "hud"
 name = "HUD"
 rendering = "2d"
-visible = true
-locked = false
-lighting = false
-follow_base_camera = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[effects]]
 layer = "base"
 name = "CelestialHemisphere"
 type = "Scene3D::HemisphereLight"
-enabled = true
 elevation = 90
 groundColor = "34;52;92"
 intensity = 0.58
@@ -67,11 +55,10 @@ top = "Z+"
 layer = "base"
 name = "CelestialSun"
 type = "Scene3D::DirectionalLight"
-enabled = true
 color = "255;242;214"
-distanceFromCamera = 1_100
+distanceFromCamera = 1100
 elevation = 62
-frustumSize = 1_600
+frustumSize = 1600
 intensity = 0.34
 isCastingShadow = true
 minimumShadowBias = 0.001
@@ -83,7 +70,6 @@ top = "Z+"
 layer = "base"
 name = "AetherBloom"
 type = "Scene3D::Bloom"
-enabled = true
 radius = 0.16
 strength = 0.18
 threshold = 0.9
@@ -93,7 +79,6 @@ id = "00000000-0000-4000-8000-000000000001"
 object = "Background"
 layer = "backdrop"
 at = [0, 0]
-z_order = 0
 
 [[instances]]
 id = "72d8dcf0-3f8a-4f16-92bf-6df0d2c3a4e1"
@@ -144,28 +129,28 @@ z_order = 5
 id = "00000000-0000-4000-8000-000000000007"
 object = "Portal"
 layer = "base"
-at = [1_205, 134, 24]
+at = [1205, 134, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000008"
 object = "Portal"
 layer = "base"
-at = [1_205, 238, 24]
+at = [1205, 238, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-000000000009"
 object = "Portal"
 layer = "base"
-at = [1_205, 342, 24]
+at = [1205, 342, 24]
 z_order = 4
 
 [[instances]]
 id = "00000000-0000-4000-8000-00000000000a"
 object = "Portal"
 layer = "base"
-at = [1_205, 446, 24]
+at = [1205, 446, 24]
 z_order = 4
 
 [[variables]]

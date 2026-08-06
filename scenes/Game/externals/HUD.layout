@@ -1,6 +1,19 @@
 [layout]
 version = 1
 
+[editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 0.5843784410740926
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
 [[layers]]
 id = "hud"
 name = "HUD"
@@ -184,31 +197,7 @@ type = "number"
 value = 1
 
 [[variables]]
-instance = "00000000-0000-4000-8000-00000000000f"
-name = "Type"
-type = "number"
-value = 1
-
-[[variables]]
-instance = "00000000-0000-4000-8000-000000000013"
-name = "Type"
-type = "number"
-value = 1
-
-[[variables]]
 instance = "00000000-0000-4000-8000-00000000000c"
-name = "Type"
-type = "number"
-value = 2
-
-[[variables]]
-instance = "00000000-0000-4000-8000-000000000010"
-name = "Type"
-type = "number"
-value = 2
-
-[[variables]]
-instance = "00000000-0000-4000-8000-000000000014"
 name = "Type"
 type = "number"
 value = 2
@@ -220,28 +209,52 @@ type = "number"
 value = 3
 
 [[variables]]
-instance = "00000000-0000-4000-8000-000000000011"
-name = "Type"
-type = "number"
-value = 3
-
-[[variables]]
-instance = "00000000-0000-4000-8000-000000000015"
-name = "Type"
-type = "number"
-value = 3
-
-[[variables]]
 instance = "00000000-0000-4000-8000-00000000000e"
 name = "Type"
 type = "number"
 value = 4
 
 [[variables]]
+instance = "00000000-0000-4000-8000-00000000000f"
+name = "Type"
+type = "number"
+value = 1
+
+[[variables]]
+instance = "00000000-0000-4000-8000-000000000010"
+name = "Type"
+type = "number"
+value = 2
+
+[[variables]]
+instance = "00000000-0000-4000-8000-000000000011"
+name = "Type"
+type = "number"
+value = 3
+
+[[variables]]
 instance = "00000000-0000-4000-8000-000000000012"
 name = "Type"
 type = "number"
 value = 4
+
+[[variables]]
+instance = "00000000-0000-4000-8000-000000000013"
+name = "Type"
+type = "number"
+value = 1
+
+[[variables]]
+instance = "00000000-0000-4000-8000-000000000014"
+name = "Type"
+type = "number"
+value = 2
+
+[[variables]]
+instance = "00000000-0000-4000-8000-000000000015"
+name = "Type"
+type = "number"
+value = 3
 
 [[variables]]
 instance = "00000000-0000-4000-8000-000000000016"

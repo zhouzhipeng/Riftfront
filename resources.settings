@@ -298,6 +298,7 @@ preloadAsMusic = false
 preloadAsSound = true
 preloadInCache = false
 userAdded = true
+
 [[resources]]
 file = "assets/sfx-shot.wav"
 kind = "audio"

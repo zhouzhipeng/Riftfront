@@ -4,6 +4,7 @@ order = 23
 assetStoreId = ""
 name = "LanePad3D"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Battlefield" ]

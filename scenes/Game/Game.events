@@ -1,5 +1,4 @@
 @group "Game initialization" source="" creationTime=0 color=[69,197,255] parameters=[]
-
 @event aiGeneratedEventId="initialize-defense"
 if SceneJustBegins
 do SetNumberVariable variable="Wave" modification_sign="=" value=0
@@ -23,13 +22,12 @@ do ReadNumberFromStorage storage_name="HeroLineDefense" group="BestScore" variab
 do ResetTimer timer_name="WaveDelay"
 do ResetTimer timer_name="Spawn"
 do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="HUD" x_position_of_the_origin=0 y_position_of_the_origin=0 z_position_of_the_origin=0
-
 @end group
 
-link external "HUD"
+@event
+link "HUD"
 
 @group "Selection deployment and lane shifts" source="" creationTime=0 color=[255,196,82] parameters=[]
-
 @event aiGeneratedEventId="deploy-aegis"
 if NumberVariable variable="GameState" comparison_sign="<" value=2
 if HasAnyTouchOrMouseStarted
@@ -134,11 +132,9 @@ do SetNumberObjectVariable object="Hero" variable="Lane" modification_sign="=" v
 do ResetObjectTimer object="Hero" timer_name="move"
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text=expr("HERO SHIFTED TO L" + ToString(LaneTarget.Variable(Lane)) + " - MOVE CD 3S")
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_the_sound=false volume=34 pitch_speed=1.25
-
 @end group
 
 @group "Ten wave director" source="" creationTime=0 color=[179,104,255] parameters=[]
-
 @event aiGeneratedEventId="start-next-wave"
 if NumberVariable variable="GameState" comparison_sign="=" value=0
 if NumberVariable variable="Wave" comparison_sign="<" value=10
@@ -149,7 +145,6 @@ do SetNumberVariable variable="Spawned" modification_sign="=" value=0
 do SetNumberVariable variable="ToSpawn" modification_sign="=" value=expr(3 + Variable(Wave))
 do ResetTimer timer_name="Spawn"
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text=expr("WAVE " + ToString(Variable(Wave)) + " INCOMING")
-
 > @event aiGeneratedEventId="boss-wave-count"
 > if NumberVariable variable="Wave" comparison_sign="=" value=10
 > do SetNumberVariable variable="ToSpawn" modification_sign="=" value=1
@@ -172,7 +167,6 @@ do ResetObjectTimer object="Enemy" timer_name="bite"
 do SetNumberVariable variable="Spawned" modification_sign="+" value=1
 do SetNumberVariable variable="NextLane" modification_sign="+" value=1
 do ResetTimer timer_name="Spawn"
-
 > @event aiGeneratedEventId="scout-waves"
 > if NumberVariable variable="Wave" comparison_sign="=" value=1
 > or NumberVariable variable="Wave" comparison_sign="=" value=6
@@ -263,18 +257,15 @@ do OpacityCapability::OpacityBehavior::SetValue object="EndTitle" behavior="Opac
 do TextContainerCapability::TextContainerBehavior::SetValue object="EndTitle" behavior="Text" modification_sign="=" text="BASTION SECURED"
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text="ALL TEN WAVES CLEARED"
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-victory.wav" repeat_the_sound=false volume=76 pitch_speed=1
-
 > @event aiGeneratedEventId="save-victory-best"
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Variable(Score)) comparison_sign=">" second_expression=expr(Variable(BestScore))
 > do SetNumberVariable variable="BestScore" modification_sign="=" value=expr(Variable(Score))
 > do EcrireFichierExp storage_name="HeroLineDefense" group="BestScore" expression=expr(Variable(BestScore))
-
 @end group
 
 @group "Automatic combat" source="" creationTime=0 color=[255,98,151] parameters=[]
-
 @event aiGeneratedEventId="each-hero-auto-attack"
-for each Hero
+for each "Hero"
 > @event aiGeneratedEventId="aegis-auto-attack"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Hero" variable="Type" comparison_sign="=" value=1
@@ -332,7 +323,7 @@ for each Hero
 > do PlaySound audio_file_or_audio_resource_name="assets\\sfx-shot.wav" repeat_the_sound=false volume=16 pitch_speed=0.52
 
 @event aiGeneratedEventId="each-enemy-movement-and-block"
-for each Enemy
+for each "Enemy"
 > @event aiGeneratedEventId="reset-enemy-block-state"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > do SetNumberObjectVariable object="Enemy" variable="Blocked" modification_sign="=" value=0
@@ -343,7 +334,6 @@ for each Enemy
 > if CollisionNP first_object="Enemy" second_object="Hero" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > do SetNumberObjectVariable object="Enemy" variable="Blocked" modification_sign="=" value=1
 > do SeparateFromObjects object="Enemy" objects_won_t_move="Hero" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
-
 >> @event aiGeneratedEventId="enemy-bites-hero"
 >> if CompareObjectTimer object="Enemy" timer_name="bite" comparison_sign=">=" time_in_seconds=1
 >> do SetNumberObjectVariable object="Hero" variable="HP" modification_sign="-" value=expr(Enemy.Variable(Damage))
@@ -356,7 +346,7 @@ for each Enemy
 > do SetX object="Enemy" modification_sign="=" value=expr(Enemy.X() - Enemy.Variable(Speed) * TimeDelta())
 
 @event aiGeneratedEventId="each-projectile-hit"
-for each Projectile
+for each "Projectile"
 > @event aiGeneratedEventId="projectile-hits-enemy"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if CollisionNP first_object="Projectile" second_object="Enemy" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
@@ -374,7 +364,7 @@ if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Impact" b
 do Delete object="Impact"
 
 @event aiGeneratedEventId="each-defeated-enemy"
-for each Enemy
+for each "Enemy"
 > @event aiGeneratedEventId="resolve-enemy-defeat"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if NumberObjectVariable object="Enemy" variable="HP" comparison_sign="<=" value=0
@@ -385,7 +375,7 @@ for each Enemy
 > do PlaySound audio_file_or_audio_resource_name="assets\\sfx-hit.wav" repeat_the_sound=false volume=42 pitch_speed=0.55
 
 @event aiGeneratedEventId="each-core-breach"
-for each Enemy
+for each "Enemy"
 > @event aiGeneratedEventId="enemy-damages-core"
 > if NumberVariable variable="GameState" comparison_sign="=" value=1
 > if PosX object="Enemy" comparison_sign="<" value=110
@@ -425,11 +415,9 @@ do SetNumberVariable variable="H4Deployed" modification_sign="=" value=0
 do Create object_to_create="Impact" x_position=expr(Hero.CenterX() - 36) y_position=expr(Hero.CenterY() - 36) layer=""
 do Delete object="Hero"
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text="ROCKET DOWN - REDEPLOY AVAILABLE"
-
 @end group
 
 @group "Skills upgrades and game end" source="" creationTime=0 color=[111,231,179] parameters=[]
-
 @event aiGeneratedEventId="activate-hero-skill"
 if NumberVariable variable="GameState" comparison_sign="=" value=1
 if HasAnyTouchOrMouseStarted
@@ -441,12 +429,10 @@ if CompareObjectTimer object="Hero" timer_name="skill" comparison_sign=">=" time
 do SetNumberVariable variable="Energy" modification_sign="-" value=expr(20 + SkillButton.Variable(Type) * 5)
 do ResetObjectTimer object="Hero" timer_name="skill"
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-skill.wav" repeat_the_sound=false volume=62 pitch_speed=1
-
 > @event aiGeneratedEventId="aegis-core-restoration"
 > if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=1
 > do SetNumberVariable variable="CoreHP" modification_sign="+" value=20
 > do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text="AEGIS SKILL - CORE RESTORED"
-
 >> @event aiGeneratedEventId="cap-core-health"
 >> if NumberVariable variable="CoreHP" comparison_sign=">" value=100
 >> do SetNumberVariable variable="CoreHP" modification_sign="=" value=100
@@ -490,7 +476,6 @@ do OpacityCapability::OpacityBehavior::SetValue object="EndTitle" behavior="Opac
 do TextContainerCapability::TextContainerBehavior::SetValue object="EndTitle" behavior="Text" modification_sign="=" text="CORE LOST"
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text=expr("DEFENSE FAILED ON WAVE " + ToString(Variable(Wave)))
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-defeat.wav" repeat_the_sound=false volume=76 pitch_speed=1
-
 > @event aiGeneratedEventId="save-defeat-best"
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Variable(Score)) comparison_sign=">" second_expression=expr(Variable(BestScore))
 > do SetNumberVariable variable="BestScore" modification_sign="=" value=expr(Variable(Score))
@@ -506,5 +491,4 @@ do Scene name_of_the_new_scene="Game" stop_any_other_paused_scenes=true
 if NumberVariable variable="GameState" comparison_sign=">=" value=2
 if HasAnyTouchOrMouseStarted
 do Scene name_of_the_new_scene="Game" stop_any_other_paused_scenes=true
-
 @end group

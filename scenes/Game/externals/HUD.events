@@ -1,12 +1,10 @@
 @group "HUD initialization and interaction" source="" creationTime=0 color=[69,197,255] parameters=[]
-
 @event aiGeneratedEventId="initialize-hud"
 if SceneJustBegins
 do OpacityCapability::OpacityBehavior::SetValue object="EndPanel" behavior="Opacity" modification_sign="=" opacity_0_255=0
 do OpacityCapability::OpacityBehavior::SetValue object="EndTitle" behavior="Opacity" modification_sign="=" opacity_0_255=0
 do TextContainerCapability::TextContainerBehavior::SetValue object="StatusText" behavior="Text" modification_sign="=" text="DEPLOY HEROES - WAVE 1 STARTS IN 3"
 do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: AEGIS"
-
 > @event aiGeneratedEventId="initialize-type-one-art"
 > if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=1
 > if NumberObjectVariable object="SkillButton" variable="Type" comparison_sign="=" value=1
@@ -56,7 +54,6 @@ do SetNumberVariable variable="SelectedHero" modification_sign="=" value=expr(He
 do SetX object="Selection" modification_sign="=" value=expr(HeroCard.X())
 do SetY object="Selection" modification_sign="=" value=expr(HeroCard.Y())
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_the_sound=false volume=24 pitch_speed=1.15
-
 > @event aiGeneratedEventId="selected-aegis-label"
 > if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=1
 > do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: AEGIS / SHIELD"
@@ -72,5 +69,4 @@ do PlaySound audio_file_or_audio_resource_name="assets\\sfx-deploy.wav" repeat_t
 > @event aiGeneratedEventId="selected-rocket-label"
 > if NumberObjectVariable object="HeroCard" variable="Type" comparison_sign="=" value=4
 > do TextContainerCapability::TextContainerBehavior::SetValue object="SelectedText" behavior="Text" modification_sign="=" text="SELECTED: ROCKET / BLAST"
-
 @end group

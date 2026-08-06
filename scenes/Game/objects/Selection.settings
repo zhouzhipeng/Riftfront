@@ -26,4 +26,3 @@ points = [ ]
 originPoint = { name = "origine", x = 0, y = 0 }
 centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
 customCollisionMask = [ ]
-
