@@ -29,7 +29,7 @@ id = "base"
 name = ""
 rendering = "2d+3d"
 camera_type = "perspective"
-camera_behavior = "top-left-anchored-if-never-moved"
+camera_behavior = "do-nothing"
 visible = true
 locked = false
 lighting = false
@@ -37,7 +37,7 @@ follow_base_camera = false
 ambient = "#A8C4DF"
 near = 3
 far = 5_000
-fov = 42
+fov = 35
 max_2d_distance = 2_000
 cameras = [{ size = "default", viewport = "default" }]
 

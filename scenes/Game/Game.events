@@ -15,6 +15,10 @@ do SetNumberVariable variable="H1Deployed" modification_sign="=" value=0
 do SetNumberVariable variable="H2Deployed" modification_sign="=" value=0
 do SetNumberVariable variable="H3Deployed" modification_sign="=" value=0
 do SetNumberVariable variable="H4Deployed" modification_sign="=" value=0
+do SetCameraCenterX modification_sign="=" value=640 layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=760 layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=1050 layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=640 y_position=295 z_position=12 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
 do ReadNumberFromStorage storage_name="HeroLineDefense" group="BestScore" variable="BestScore"
 do ResetTimer timer_name="WaveDelay"
 do ResetTimer timer_name="Spawn"
