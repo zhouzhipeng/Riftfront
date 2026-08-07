@@ -3,6 +3,9 @@
 if SceneJustBegins
 do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
 do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-90
+do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=-90
 do SetCameraCenterX modification_sign="=" value=640 layer="" camera_number_default_0=0
 do SetCameraCenterY modification_sign="=" value=-165 layer="" camera_number_default_0=0
 do Scene3D::SetCameraZ modification_sign="=" value=252 layer="" camera_number_default_0=0
@@ -72,6 +75,22 @@ do SetNumberVariable variable="Paused" modification_sign="=" value=expr(1 - Vari
 > if NumberVariable variable="Paused" comparison_sign="=" value=0
 > do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
 > do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+@end group
+
+@group "Camera orbit controls" source="" creationTime=0 color=[143,108,255] parameters=[]
+@event aiGeneratedEventId="test-camera-drag-start"
+if MouseButtonFromTextPressed button_to_check="Left"
+if BuiltinCommonInstructions::Once
+do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
+
+@event aiGeneratedEventId="test-camera-drag-orbit"
+if MouseButtonFromTextPressed button_to_check="Left"
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=expr(Variable(CameraDragStartAngle) + (CursorX("HUD", 0) - Variable(CameraDragStartX)) * 0.35)
+do SetCameraCenterX modification_sign="=" value=expr(640 + cos(ToRad(Variable(CameraOrbitAngle))) * 700) layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=expr(535 + sin(ToRad(Variable(CameraOrbitAngle))) * 700) layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=252 layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=640 y_position=535 z_position=252 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
 @end group
 
 @group "Animation labels" source="" creationTime=0 color=[91,203,255] parameters=[]

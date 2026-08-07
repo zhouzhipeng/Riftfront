@@ -21,3 +21,21 @@ value = 0
 name = "Paused"
 type = "number"
 value = 0
+
+[[variables]]
+name = "CameraOrbitAngle"
+persistentUuid = "55eaeedc-9305-459d-94df-4dd2ba265d08"
+type = "number"
+value = -90
+
+[[variables]]
+name = "CameraDragStartX"
+persistentUuid = "bbc75c14-2229-419c-94bd-7b84de9c267c"
+type = "number"
+value = 0
+
+[[variables]]
+name = "CameraDragStartAngle"
+persistentUuid = "d338aeea-7c3d-4bfc-8cc1-225a1cf8547e"
+type = "number"
+value = -90
