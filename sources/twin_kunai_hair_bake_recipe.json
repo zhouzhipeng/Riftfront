@@ -3,6 +3,7 @@
   "armature": "TwinKunai_AnimationRig",
   "rootBone": "root",
   "rootReferenceAction": "TK_Idle",
+  "exportAnimationName": "Animation",
   "solver": {
     "fps": 30,
     "substeps": 2,

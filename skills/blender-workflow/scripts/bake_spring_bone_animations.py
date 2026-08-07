@@ -1428,7 +1428,12 @@ def _temporary_output(path: Path) -> Path:
     return path.with_name(f".{path.stem}.{uuid.uuid4().hex}.tmp.glb")
 
 
-def _export_action_glb(armature: Any, action: Any, output: Path) -> dict[str, Any]:
+def _export_action_glb(
+    armature: Any,
+    action: Any,
+    output: Path,
+    export_animation_name: str,
+) -> dict[str, Any]:
     output.parent.mkdir(parents=True, exist_ok=True)
     _assign_action(armature, action)
     _make_armature_exportable(armature)
@@ -1447,7 +1452,7 @@ def _export_action_glb(armature: Any, action: Any, output: Path) -> dict[str, An
         "export_materials": "NONE",
         "export_animations": True,
         "export_animation_mode": "ACTIVE_ACTIONS",
-        "export_nla_strips_merged_animation_name": action.name,
+        "export_nla_strips_merged_animation_name": export_animation_name,
         "export_force_sampling": True,
         "export_frame_step": 1,
         "export_anim_slide_to_zero": True,
@@ -1473,9 +1478,10 @@ def _export_action_glb(armature: Any, action: Any, output: Path) -> dict[str, An
         data = _load_glb_json(temporary)
         animations = data.get("animations", [])
         names = [entry.get("name", "") for entry in animations if isinstance(entry, dict)]
-        if names != [action.name]:
+        if names != [export_animation_name]:
             raise SpringBakeError(
-                f"Animation name changed for {action.name!r}: exported {names}"
+                f"Animation name changed for {action.name!r}: exported {names}, "
+                f"expected {[export_animation_name]}"
             )
         if not data.get("nodes"):
             raise SpringBakeError(f"Export lost the skeleton nodes for {action.name!r}")
@@ -1544,6 +1550,9 @@ def run_with_arguments(arguments: Sequence[str]) -> dict[str, Any]:
     _make_armature_exportable(armature)
 
     actions = _action_records(recipe)
+    export_animation_name = str(recipe.get("exportAnimationName", "Animation"))
+    if not export_animation_name:
+        raise SpringBakeError("Recipe exportAnimationName cannot be empty")
     selected = set(args.actions or [])
     if selected:
         known = {record["name"] for record in actions}
@@ -1612,7 +1621,14 @@ def run_with_arguments(arguments: Sequence[str]) -> dict[str, Any]:
                     f"Action output escapes output directory: {record['output']}"
                 ) from error
             _validate_output_target(output_path, args.overwrite)
-            exported.append(_export_action_glb(armature, action, output_path))
+            exported.append(
+                _export_action_glb(
+                    armature,
+                    action,
+                    output_path,
+                    export_animation_name,
+                )
+            )
 
     _assign_action(armature, bpy.data.actions[actions[0]["name"]])
     bpy.context.scene.frame_set(int(baked[0]["frameStart"]))
