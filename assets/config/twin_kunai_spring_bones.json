@@ -103,11 +103,11 @@
       "radius": 0.085
     },
     {
-      "name": "LeftShoulder",
+      "name": "RightShoulder",
       "type": "sphere",
-      "bone": "upperarm_l",
+      "bone": "upperarm_r",
       "chains": ["Hair_Tail"],
-      "center": [-0.123721, -0.023708, 1.361648],
+      "center": [0.124274, -0.023707, 1.361648],
       "radius": 0.075
     }
   ]
