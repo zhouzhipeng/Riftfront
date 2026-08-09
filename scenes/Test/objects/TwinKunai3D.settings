@@ -7,8 +7,25 @@ persistentUuid = "695551f0-5ed2-4c6a-9c13-871746e9c8ac"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "HairSpringBones"
+type = "SpringBoneDynamics::SpringBone3DBehavior"
+backendPreference = "WebGPUPreferred"
+blendWeight = 1
+configurationResource = "TwinKunaiSpringBones"
+enabled = true
+gravityScale = 1
+maxSubsteps = 6
+movementInertia = 1
+rotationInertia = 1
+simulationFrequency = 120
+teleportAngle = 90
+teleportDistance = 250
+windX = 15
+windY = 0
+windZ = 0
 
 [content]
 centerLocation = "CenteredOnZ"

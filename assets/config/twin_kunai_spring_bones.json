@@ -1,0 +1,230 @@
+{
+  "formatVersion": 1,
+  "chains": [
+    {
+      "name": "Hair_R2",
+      "bones": ["Hair_R2_001", "Hair_R2_002", "Hair_R2_003", "Hair_R2_End"],
+      "damping": 0.88,
+      "stiffness": 0.25,
+      "gravity": [0, 0, -96],
+      "maxAngleDegrees": 24,
+      "collisionMargin": 0.75,
+      "collisionPointCount": 3
+    },
+    {
+      "name": "Hair_R1",
+      "bones": ["Hair_R1_001", "Hair_R1_End"],
+      "damping": 0.84,
+      "stiffness": 0.36,
+      "gravity": [0, 0, -72],
+      "maxAngleDegrees": 18,
+      "collisionMargin": 0.75,
+      "collisionPointCount": 1
+    },
+    {
+      "name": "Hair_F",
+      "bones": ["Hair_F_001", "Hair_F_End"],
+      "damping": 0.82,
+      "stiffness": 0.45,
+      "gravity": [0, 0, -58],
+      "maxAngleDegrees": 15,
+      "collisionMargin": 0.5,
+      "collisionPointCount": 1
+    },
+    {
+      "name": "Hair_L1",
+      "bones": ["Hair_L1_001", "Hair_L1_End"],
+      "damping": 0.84,
+      "stiffness": 0.36,
+      "gravity": [0, 0, -72],
+      "maxAngleDegrees": 18,
+      "collisionMargin": 0.75,
+      "collisionPointCount": 1
+    },
+    {
+      "name": "Hair_L2",
+      "bones": ["Hair_L2_001", "Hair_L2_002", "Hair_L2_003", "Hair_L2_End"],
+      "damping": 0.88,
+      "stiffness": 0.25,
+      "gravity": [0, 0, -96],
+      "maxAngleDegrees": 24,
+      "collisionMargin": 0.75,
+      "collisionPointCount": 3
+    },
+    {
+      "name": "Hair_Tail",
+      "bones": [
+        "Hair_Tail_001",
+        "Hair_Tail_002",
+        "Hair_Tail_003",
+        "Hair_Tail_004",
+        "Hair_Tail_005",
+        "Hair_Tail_006",
+        "Hair_Tail_007",
+        "Hair_Tail_008",
+        "Hair_Tail_009",
+        "Hair_Tail_End"
+      ],
+      "damping": 0.9,
+      "stiffness": 0.1,
+      "gravity": [0, 0, -240],
+      "maxAngleDegrees": 125,
+      "collisionMargin": 4,
+      "collisionStartPoint": 3,
+      "collisionPointCount": 7
+    }
+  ],
+  "colliders": [
+    {
+      "name": "Head",
+      "type": "capsule",
+      "bone": "head",
+      "chains": ["Hair_R2", "Hair_R1", "Hair_F", "Hair_L1", "Hair_L2", "Hair_Tail"],
+      "center": [0.000277, -0.0322575, 1.5857335],
+      "axis": [0.0000004, 0.6770861, 0.7359038],
+      "length": 0.27,
+      "radiusA": 0.097,
+      "radiusB": 0.076
+    },
+    {
+      "name": "UpperTorso",
+      "type": "capsule",
+      "bone": "spine_03",
+      "chains": ["Hair_Tail"],
+      "center": [0.000277, -0.012636, 1.296967],
+      "axis": [0.000001, -0.194691, -0.980865],
+      "length": 0.39,
+      "radiusA": 0.11,
+      "radiusB": 0.001
+    },
+    {
+      "name": "UpperBack",
+      "type": "sphere",
+      "bone": "spine_03",
+      "chains": ["Hair_Tail"],
+      "center": [0.000277, -0.123231, 1.418427],
+      "radius": 0.152
+    },
+    {
+      "name": "MidTorso",
+      "type": "capsule",
+      "bone": "spine_02",
+      "chains": ["Hair_Tail"],
+      "center": [0.000277, -0.019021, 1.089457],
+      "axis": [0, 0.003094, -0.999995],
+      "length": 0.35,
+      "radiusA": 0.125,
+      "radiusB": 0.001
+    },
+    {
+      "name": "Pelvis",
+      "type": "capsule",
+      "bone": "pelvis",
+      "chains": ["Hair_Tail"],
+      "center": [0, 0, 0.986621],
+      "axis": [-0.000002, 0, -1],
+      "length": 0.36,
+      "radiusA": 0.124,
+      "radiusB": 0.001
+    },
+    {
+      "name": "SkirtSafety",
+      "type": "capsule",
+      "bone": "pelvis",
+      "chains": ["Hair_Tail"],
+      "center": [0, 0, 0.95],
+      "axis": [0, 0, 1],
+      "length": 0.4,
+      "radius": 0.13
+    },
+    {
+      "name": "LeftThigh",
+      "type": "capsule",
+      "bone": "thigh_l",
+      "chains": ["Hair_Tail"],
+      "center": [-0.071961, 0.000446, 0.814728],
+      "axis": [-0.025522, -0.002608, 0.999671],
+      "length": 0.5,
+      "radius": 0.09
+    },
+    {
+      "name": "RightThigh",
+      "type": "capsule",
+      "bone": "thigh_r",
+      "chains": ["Hair_Tail"],
+      "center": [0.077869, 0.000323, 0.81461],
+      "axis": [0.014421, -0.001868, 0.999894],
+      "length": 0.5,
+      "radius": 0.09
+    },
+    {
+      "name": "LeftCalf",
+      "type": "capsule",
+      "bone": "calf_l",
+      "chains": ["Hair_Tail"],
+      "a": [-0.0668759, -0.0011724, 0.5490143],
+      "b": [-0.0558289, -0.0448076, 0.118621],
+      "radius": 0.06
+    },
+    {
+      "name": "RightCalf",
+      "type": "capsule",
+      "bone": "calf_r",
+      "chains": ["Hair_Tail"],
+      "a": [0.0718667, -0.0008394, 0.5489135],
+      "b": [0.0656273, -0.0478805, 0.1187829],
+      "radius": 0.06
+    },
+    {
+      "name": "LeftUpperArm",
+      "type": "capsule",
+      "bone": "upperarm_l",
+      "chains": ["Hair_Tail"],
+      "center": [-0.20475, 0.02709, 1.277004],
+      "axis": [0.743389, -0.03103, 0.668139],
+      "length": 0.446,
+      "radiusA": 0.1,
+      "radiusB": 0.08
+    },
+    {
+      "name": "RightUpperArm",
+      "type": "capsule",
+      "bone": "upperarm_r",
+      "chains": ["Hair_Tail"],
+      "center": [0.205304, 0.02709, 1.277004],
+      "axis": [-0.743389, -0.031029, 0.668139],
+      "length": 0.446,
+      "radiusA": 0.1,
+      "radiusB": 0.08
+    },
+    {
+      "name": "LeftForearm",
+      "type": "capsule",
+      "bone": "lowerarm_l",
+      "chains": ["Hair_Tail"],
+      "a": [-0.2908003, -0.0306817, 1.2114812],
+      "b": [-0.4696991, -0.026067, 1.0533577],
+      "radius": 0.055
+    },
+    {
+      "name": "RightForearm",
+      "type": "capsule",
+      "bone": "lowerarm_r",
+      "chains": ["Hair_Tail"],
+      "a": [0.2913531, -0.0306807, 1.2114812],
+      "b": [0.4702513, -0.0260654, 1.053358],
+      "radius": 0.055
+    },
+    {
+      "name": "Neck",
+      "type": "capsule",
+      "bone": "neck_01",
+      "chains": ["Hair_Tail"],
+      "center": [0.000277, -0.012371, 1.466509],
+      "axis": [0, 0.236963, -0.971519],
+      "length": 0.19,
+      "radiusA": 0.062,
+      "radiusB": 0.001
+    }
+  ]
+}

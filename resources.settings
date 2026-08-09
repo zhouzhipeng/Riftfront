@@ -632,3 +632,11 @@ metadata = '{"extension":".png"}'
 name = "NewSprite"
 smoothed = true
 userAdded = false
+
+[[resources]]
+disablePreload = false
+file = "assets/config/twin_kunai_spring_bones.json"
+kind = "json"
+metadata = ""
+name = "TwinKunaiSpringBones"
+userAdded = true
