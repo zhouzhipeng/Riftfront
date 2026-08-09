@@ -3,6 +3,7 @@ settingsFormatVersion = 4
 order = 0
 assetStoreId = ""
 name = "TwinKunai3D"
+persistentUuid = "695551f0-5ed2-4c6a-9c13-871746e9c8ac"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

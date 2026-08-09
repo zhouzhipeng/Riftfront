@@ -10,7 +10,7 @@ grid_offset = [0, 0, 0]
 grid_color = "#53D4FF"
 grid_alpha = 0.25
 snap = false
-zoom = 0.8269762640641912
+zoom = 0.6342618411450328
 window_mask = true
 selected_layer = "HUD"
 mode = "instances-editor"
@@ -105,3 +105,17 @@ layer = "hud"
 at = [140, 670]
 z_order = 20
 size = [1000, 28]
+
+[[instances]]
+id = "35883fbb-4de3-443d-a800-4e33118a6977"
+object = "New3DModel"
+layer = "hud"
+at = [818, 535]
+z_order = 21
+
+[[instances]]
+id = "92463067-bfa0-4867-a260-dec3259ee602"
+object = "NewObject"
+layer = "hud"
+at = [659, 535]
+z_order = 22
