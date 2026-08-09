@@ -1,2 +1,0 @@
-@event
-do DebuggerTools::ConsoleLog message_to_log=expr("ssss"+SignalName)
