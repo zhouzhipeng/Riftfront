@@ -31,3 +31,4 @@ loop = true
 name = "Idle"
 source = "CoreIdle"
 sourceModelResourceName = ""
+useRootMotion = true

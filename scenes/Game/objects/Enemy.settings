@@ -70,33 +70,39 @@ loop = true
 name = "Scout"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Grunt"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Armored"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Flyer"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Elite"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Boss"
 source = "VoidIdle"
 sourceModelResourceName = ""
+useRootMotion = true

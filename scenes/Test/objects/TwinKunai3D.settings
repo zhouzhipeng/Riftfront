@@ -135,171 +135,200 @@ loop = true
 name = "TK_Idle"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Idle.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Attack1"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack1.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Attack2"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack2.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Attack3"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Attack3.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_CrouchIdle"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchIdle.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_CrouchJog"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchJog.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_CrouchWalk"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_CrouchWalk.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Die"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Die.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Evade"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Evade.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Hit1"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Hit1.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Hit2"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Hit2.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Put"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Put.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_Run"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Run.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_Sprint"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Sprint.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Stun"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Stun.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Take"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Take.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_Walk"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Normal/TK_Walk.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Quickshift_B"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_B.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Quickshift_F"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_F.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Quickshift_L"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_L.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Quickshift_R"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Quickshift_R.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_SP_Idle"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Idle.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_SP_Run"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Run.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Sp_Skill1"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill1.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Sp_Skill2"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill2.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Sp_Skill3"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_Skill3.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Sp_TurnL"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnL.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = false
 name = "TK_Sp_TurnR"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_Sp_TurnR.glb"
+useRootMotion = false
 
 [[content.animations]]
 loop = true
 name = "TK_SP_Walk"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
+useRootMotion = false

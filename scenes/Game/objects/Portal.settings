@@ -31,3 +31,4 @@ loop = true
 name = "Idle"
 source = "PortalIdle"
 sourceModelResourceName = ""
+useRootMotion = true

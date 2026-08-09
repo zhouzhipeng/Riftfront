@@ -1,4 +1,5 @@
 kind = "externalEvents"
 settingsFormatVersion = 5
 order = 0
+sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
 name = "HUD"

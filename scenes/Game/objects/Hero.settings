@@ -55,21 +55,25 @@ loop = true
 name = "Aegis"
 source = "GuardianIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Rifle"
 source = "GuardianIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Shotgun"
 source = "GuardianIdle"
 sourceModelResourceName = ""
+useRootMotion = true
 
 [[content.animations]]
 loop = true
 name = "Rocket"
 source = "GuardianIdle"
 sourceModelResourceName = ""
+useRootMotion = true
