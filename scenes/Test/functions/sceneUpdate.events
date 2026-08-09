@@ -14,9 +14,13 @@ do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behav
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
 do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
 do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" target_3d_model="TwinKunai3D" bone_name="head"
-do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_offset=-25 y_offset=21 z_offset=35
+do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_offset=-25 y_offset=14 z_offset=35
 do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_rotation_offset=0 y_rotation_offset=0 z_rotation_offset=-90
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
+
+@event aiGeneratedEventId="test-hair-cloth-wind"
+if Scene3D::Base3DBehavior::IsBoneAttachmentResolved parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D"
+do ClothSimulation::Cloth3DObject::SetWind parameter_3d_cloth="TwinKunaiHairCloth" x=expr(22 + sin(TimeFromStart() * 2.7) * 18) y=expr(cos(TimeFromStart() * 2.1) * 8) z=0
 
 @event aiGeneratedEventId="test-next-index"
 if KeyFromTextReleased key_to_check="Right"
