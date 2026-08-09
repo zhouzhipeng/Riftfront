@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 4
+order = 5
+assetStoreId = ""
+name = "New3DModel"
+persistentUuid = "d582dbb4-fc90-4916-8ccf-a52bd86e399e"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.10000000149011612
+depth = 100
+height = 100
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "StandardWithoutMetalness"
+modelResourceName = ""
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+width = 100
+sharedAnimationModelResources = [ ]
+animations = [ ]
