@@ -23,8 +23,8 @@ rotationInertia = 1
 simulationFrequency = 120
 teleportAngle = 90
 teleportDistance = 250
-windX = 90
-windY = 20
+windX = 0
+windY = 0
 windZ = 0
 
 [content]
