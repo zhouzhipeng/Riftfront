@@ -14,8 +14,8 @@ do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behav
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
 do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
 do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" target_3d_model="TwinKunai3D" bone_name="head"
-do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_offset=-45 y_offset=-85 z_offset=75
-do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_rotation_offset=0 y_rotation_offset=0 z_rotation_offset=0
+do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_offset=-3 y_offset=21 z_offset=35
+do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="TwinKunaiHairCloth" behavior="Object3D" x_rotation_offset=0 y_rotation_offset=0 z_rotation_offset=-90
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 
 @event aiGeneratedEventId="test-next-index"
