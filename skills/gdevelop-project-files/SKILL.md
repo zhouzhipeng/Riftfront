@@ -20,15 +20,13 @@ Read, in order:
 2. `resources.settings` for the complete project resource registry.
 3. `constants.toml` for the complete editor-only Constants object.
 4. `.gdevelop/settings-catalog.json`, then relevant child `.settings` files
-   for semantic configuration and object definitions, including each object's
-   variables, effects, and behaviors.
-5. `.gdevelop/layout-catalog.json`, then the relevant owner `.settings`
-   `[layout]` subtree for instances, layers, spatial bounds, background, and
-   editor-canvas layout.
-6. Relevant `.events` files for IfDo event logic.
-7. `.gdevelop/instructions-catalog.json` before adding or changing
+   for semantic configuration, object definitions, and embedded `[layout]`
+   subtrees, including instances, layers, spatial bounds, background, and
+   editor-canvas state.
+5. Relevant `.events` files for IfDo event logic.
+6. `.gdevelop/instructions-catalog.json` before adding or changing
    instructions.
-8. `.gdevelop/runtime-api.d.ts` and `.gdevelop/project-api.d.ts` before adding
+7. `.gdevelop/runtime-api.d.ts` and `.gdevelop/project-api.d.ts` before adding
    or changing any JavaScript event.
 
 The three catalogs and two JavaScript declarations are regenerated from the
@@ -68,11 +66,11 @@ Use the catalogs as authoring contracts:
   serializer properties are deliberately absent from the authoring surface;
   never invent them, but preserve every unlisted field already present in an
   object settings file or legacy JSON source.
-- In `layout-catalog.json`, read `tables` for exact context-specific headers,
-  fields, value types, defaults, and constraints. Select the one
-  `contexts` entry whose `owner` matches the scene, prefab, variant, or external
-  layout, then use only its listed layers, objects, and attached behaviors.
-  Search `effectTypes` for exact effect parameters and types.
+- In `settings-catalog.json`, read `layoutTables` for exact context-specific
+  headers, fields, value types, defaults, and constraints. Select the one
+  `layoutContexts` entry whose `owner` matches the scene, prefab, variant, or
+  external layout, then use only its listed layers, objects, and attached
+  behaviors. Search `effectTypes` for exact effect parameters and types.
 - If the relevant registered type, file kind, layout table, or effect is absent,
   stop instead of guessing. If a direct edit introduces a new object or
   attached behavior name, validate its registered type in the settings catalog,
@@ -103,8 +101,8 @@ Search narrowly, for example:
 ```sh
 rg '"type":"Sprite"' .gdevelop/settings-catalog.json
 rg '"type":"Tween::TweenBehavior"' .gdevelop/settings-catalog.json
-rg '"table":"instance"' .gdevelop/layout-catalog.json
-rg '"owner":{"scene":"Main"}' .gdevelop/layout-catalog.json
+rg '"table":"instances"' .gdevelop/settings-catalog.json
+rg '"owner":{"scene":"Main"}' .gdevelop/settings-catalog.json
 ```
 
 Do not edit legacy project JSON, including `.gdevelop/game.json`. It is
@@ -149,8 +147,8 @@ generated compatibility/runtime output, not multi-file source.
   `[[layout.behaviors]]` records. Never put object definitions or attached
   behavior definitions in the embedded layout subtree. Instance
   behavior overrides are allowed only for behaviors already attached by the
-  owning `.settings` object definition. Follow the matching layout-catalog
-  `contexts` entry and `tables` definitions.
+  owning `.settings` object definition. Follow the matching settings-catalog
+  `layoutContexts` entry and `layoutTables` definitions.
 - `.events`: IfDo DSL only. Do not embed TOML or raw event JSON.
 - References: use canonical `game://...` URIs rooted at `project.gdevelop`.
 - `.gdevelop/`: generated/editor state. Read catalogs; do not author sources
@@ -244,7 +242,6 @@ extensions/<Extension>/behaviors/<Behavior>/functions/<Function>.events
 .gdevelop/instructions-catalog.json
 .gdevelop/deprecated-instructions-catalog.json # legacy read/edit only; never for new events
 .gdevelop/settings-catalog.json
-.gdevelop/layout-catalog.json
 .gdevelop/runtime-api.d.ts
 .gdevelop/project-api.d.ts
 ```
@@ -408,9 +405,9 @@ loop, comment, and JavaScript metadata when editing existing sources.
 
 1. Inspect manifests and only the owned files relevant to the request. Search
    `.gdevelop/settings-catalog.json` before adding or changing settings-owned
-   object, behavior, effect, or component definitions. Search
-   `.gdevelop/layout-catalog.json` for the exact layout schema and matching
-   project context before adding or changing layout content.
+   object, behavior, effect, component, or embedded layout definitions. Search
+   its `layoutTables` and `layoutContexts` for the exact layout schema and
+   matching project context before adding or changing layout content.
 2. Search `.gdevelop/instructions-catalog.json` for required instructions and
    expressions. The generated catalog excludes editor-hidden and deprecated
    APIs; never invent or reuse an instruction identifier that is absent from it
@@ -545,16 +542,17 @@ sync, or save tools for authoring.
 
 `generate-catalogs` is a mandatory mid-task refresh after every large
 structural source change. Require `catalogsRegenerated: true`, then read the
-latest relevant `.gdevelop/settings-catalog.json`,
-`.gdevelop/layout-catalog.json`, and `.gdevelop/instructions-catalog.json` and,
+latest relevant `.gdevelop/settings-catalog.json` and
+`.gdevelop/instructions-catalog.json` and,
 for JavaScript work, both generated `.d.ts` files before making dependent edits.
 The tool writes and verifies those five generated authoring files and does not
 validate sources or reload editor memory.
 
 `validate_project_files` is a mandatory reload gate. In every direct-edit task,
 call it successfully with no inputs at least once after the most recent
-source-file edit and before `reload_project`. It regenerates the instruction,
-settings, and layout catalogs and both JavaScript declarations first, then
+source-file edit and before `reload_project`. It regenerates the instruction
+catalogs, the settings catalog (including embedded layout authoring data), and
+both JavaScript declarations first, then
 reconstructs the generated `game.json` representation from the multi-file
 settings, layouts, and events and type-checks JavaScript blocks against the
 fresh public API without replacing editor memory. A later source edit
@@ -611,7 +609,8 @@ Before finishing:
 - Confirm settings file kinds and every object/behavior/effect type against
   `settings-catalog.json`.
 - Confirm layout tables, fields, layers, objects, attached behaviors,
-  and effect parameters against the matching `layout-catalog.json` context.
+  and effect parameters against the matching `layoutContexts` entry and
+  `layoutTables` definitions in `settings-catalog.json`.
 - Confirm no `3d` or `2d+3d` layer is marked `lighting = true`; inspect
   renderer diagnostics for a Three scene/group/camera, visible meshes, zero
   rejected objects, and zero failed textures when 3D rendering changed.

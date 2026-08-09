@@ -1,10 +1,10 @@
 # Author layout TOML
 
-Read `.gdevelop/layout-catalog.json` and the owning `.settings` file before
-editing its `[layout]` subtree. Select the catalog `contexts` entry whose owner identifies
-the scene, prefab, variant, or external layout. It is the generated authority
-for resolvable objects, attached behaviors, layers, effects, and writable
-properties.
+Read `.gdevelop/settings-catalog.json` and the owning `.settings` file before
+editing its `[layout]` subtree. Select the catalog `layoutContexts` entry whose
+owner identifies the scene, prefab, variant, or external layout. It is the
+generated authority for resolvable objects, attached behaviors, layers,
+effects, and writable properties; `layoutTables` is the structural schema.
 
 Version 5 has no managed `.layout` files. Layout-bearing owner settings embed
 placement and editor-layout data below `[layout]`; object definitions and
@@ -186,8 +186,8 @@ fast = true
 ```
 
 Effect names are unique per layer. Effect parameters are direct fields on the
-`[[effects]]` record. Use only effect types and parameter names listed in the
-layout catalog, and match their TOML value types. `params` is not a valid
+`[[layout.effects]]` record. Use only effect types and parameter names listed in the
+settings catalog, and match their TOML value types. `params` is not a valid
 field. Optional `folded` defaults to false and `enabled` defaults to true.
 
 ## Instances
@@ -285,9 +285,10 @@ record may exist for each attached behavior on one instance.
 ## Checklist
 
 - Parse as standard TOML and keep one final newline.
-- Use only tables and fields listed in the generated layout catalog.
-- Preserve `[[layers]]`, `[[effects]]`, `[[instances]]`, `[[variables]]`, and
-  `[[behaviors]]` array order.
+- Use only tables and fields listed in the generated settings catalog's
+  `layoutTables`.
+- Preserve `[[layout.layers]]`, `[[layout.effects]]`, `[[layout.instances]]`,
+  `[[layout.variables]]`, and `[[layout.behaviors]]` array order.
 - Preserve every existing instance UUID.
 - Resolve every layer ID, instance UUID, object, behavior, effect, and property
   against the matching catalog context.
