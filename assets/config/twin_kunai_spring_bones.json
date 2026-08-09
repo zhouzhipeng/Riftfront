@@ -94,8 +94,8 @@
       "center": [0.000277, -0.012636, 1.296967],
       "axis": [0.000001, -0.194691, -0.980865],
       "length": 0.39,
-      "radiusA": 0.17,
-      "radiusB": 0.15
+      "radiusA": 0.1,
+      "radiusB": 0.085
     },
     {
       "name": "UpperBack",
@@ -103,7 +103,7 @@
       "bone": "spine_03",
       "chains": ["Hair_Tail"],
       "center": [0.000277, -0.123231, 1.418427],
-      "radius": 0.115
+      "radius": 0.085
     },
     {
       "name": "LeftShoulder",
@@ -111,7 +111,7 @@
       "bone": "upperarm_l",
       "chains": ["Hair_Tail"],
       "center": [-0.123721, -0.023708, 1.361648],
-      "radius": 0.125
+      "radius": 0.075
     },
     {
       "name": "RightShoulder",
@@ -119,7 +119,7 @@
       "bone": "upperarm_r",
       "chains": ["Hair_Tail"],
       "center": [0.124274, -0.023707, 1.361648],
-      "radius": 0.125
+      "radius": 0.075
     }
   ]
 }
