@@ -1,0 +1,3 @@
+@event
+@instruction disabled=true
+do Rotate object="Background" angular_speed_in_degrees_per_second=1
