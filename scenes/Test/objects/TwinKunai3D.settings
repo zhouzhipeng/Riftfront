@@ -16,15 +16,15 @@ backendPreference = "WebGPUPreferred"
 blendWeight = 1
 configurationResource = "TwinKunaiSpringBones"
 enabled = true
-gravityScale = 1
+gravityScale = 1.25
 maxSubsteps = 6
 movementInertia = 1
 rotationInertia = 1
 simulationFrequency = 120
 teleportAngle = 90
 teleportDistance = 250
-windX = 15
-windY = 0
+windX = 90
+windY = 20
 windZ = 0
 
 [content]
