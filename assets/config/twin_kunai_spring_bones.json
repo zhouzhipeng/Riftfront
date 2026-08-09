@@ -65,7 +65,7 @@
         "Hair_Tail_009",
         "Hair_Tail_End"
       ],
-      "damping": 0.94,
+      "damping": 0.80,
       "stiffness": 0.001,
       "gravity": [0, 0, -3600],
       "maxAngleDegrees": 170,
