@@ -77,14 +77,11 @@
   "colliders": [
     {
       "name": "Head",
-      "type": "capsule",
+      "type": "sphere",
       "bone": "head",
       "chains": ["Hair_R2", "Hair_R1", "Hair_F", "Hair_L1", "Hair_L2", "Hair_Tail"],
       "center": [0.000277, -0.0322575, 1.5857335],
-      "axis": [0.0000004, 0.6770861, 0.7359038],
-      "length": 0.27,
-      "radiusA": 0.097,
-      "radiusB": 0.076
+      "radius": 0.095
     },
     {
       "name": "UpperTorso",
