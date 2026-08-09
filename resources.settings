@@ -640,3 +640,11 @@ kind = "json"
 metadata = ""
 name = "TwinKunaiSpringBones"
 userAdded = true
+
+[[resources]]
+disablePreload = false
+file = "assets/config/twin_kunai_chest_spring_bones.json"
+kind = "json"
+metadata = ""
+name = "TwinKunaiChestSpringBones"
+userAdded = true
