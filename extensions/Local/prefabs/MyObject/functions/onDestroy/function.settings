@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 4
+order = 3
+fullName = "onDestroy"
+functionType = "Action"
+name = "onDestroy"
+sentence = ""
+folder = [ ]
+events = "game://extensions/Local/prefabs/MyObject/functions/onDestroy/onDestroy.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::MyObject"
+type = "object"

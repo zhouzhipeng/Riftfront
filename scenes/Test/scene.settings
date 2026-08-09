@@ -1,8 +1,7 @@
 kind = "scene"
-settingsFormatVersion = 3
+settingsFormatVersion = 4
 order = 1
 layout = "game://scenes/Test/Test.layout"
-events = "game://scenes/Test/Test.events"
 disableInputWhenNotFocused = true
 mangledName = "Test"
 name = "Test"
@@ -14,11 +13,13 @@ objectGroups = { }
 
 [[variables]]
 name = "AnimationIndex"
+persistentUuid = "7d13f2fc-2364-4787-94cb-a5f5cc779a3f"
 type = "number"
 value = 0
 
 [[variables]]
 name = "Paused"
+persistentUuid = "0695167e-a18d-48e4-9695-2268a62359ee"
 type = "number"
 value = 0
 

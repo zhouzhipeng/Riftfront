@@ -1,0 +1,28 @@
+[layout]
+version = 1
+bounds = { max = [64, 64, 64], min = [0, 0, 0] }
+
+[editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 8.115037811887646
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layers]]
+id = "base"
+name = ""
+cameras = [{ size = "default", viewport = "default" }]
+
+[[instances]]
+id = "b7b41794-a92e-443a-b79e-d29fa1e4f159"
+object = "NewSprite"
+layer = "base"
+at = [8, 12]
+z_order = 1

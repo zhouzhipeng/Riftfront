@@ -1,8 +1,7 @@
 kind = "scene"
-settingsFormatVersion = 3
+settingsFormatVersion = 4
 order = 0
 layout = "game://scenes/Game/Game.layout"
-events = "game://scenes/Game/Game.events"
 disableInputWhenNotFocused = true
 mangledName = "Game"
 name = "Game"
@@ -95,11 +94,6 @@ name = "H4Deployed"
 persistentUuid = "9cc7f4c7-765d-4fd4-8546-6e14bed34b34"
 type = "number"
 value = 0
-
-[[externalEventFiles]]
-name = "HUD"
-order = 0
-events = "game://scenes/Game/externals/HUD.events"
 
 [[externalLayoutFiles]]
 name = "HUD"

@@ -1,0 +1,30 @@
+kind = "object"
+settingsFormatVersion = 4
+order = 0
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "NewSprite"
+persistentUuid = "636083c8-c1b5-47db-94bc-176b767e5a17"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "NewSprite"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+metadata = '{"pskl":{}}'
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "NewSprite"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 11, y = 13 }, { x = 55, y = 13 }, { x = 55, y = 42 }, { x = 11, y = 42 } ] ]

@@ -1,0 +1,21 @@
+kind = "prefab"
+settingsFormatVersion = 4
+order = 0
+defaultName = ""
+description = ""
+fullName = "MyObject"
+helpPath = ""
+iconUrl = ""
+isUsingLegacyInstancesRenderer = false
+name = "MyObject"
+previewIconUrl = ""
+behaviors = [ ]
+variables = [ ]
+propertyDescriptors = [ ]
+layout = "game://extensions/Local/prefabs/MyObject/MyObject.layout"
+objectGroups = { }
+
+[[variants]]
+name = "New variant"
+layout = "game://extensions/Local/prefabs/MyObject/variants/New%20variant.layout"
+objectGroups = { }

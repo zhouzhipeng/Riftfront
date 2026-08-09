@@ -1,5 +1,5 @@
 kind = "resources"
-settingsFormatVersion = 3
+settingsFormatVersion = 4
 
 [[resources]]
 file = "assets/background.png"
@@ -624,3 +624,11 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/NewSprite.png"
+kind = "image"
+metadata = '{"extension":".png"}'
+name = "NewSprite"
+smoothed = true
+userAdded = false
