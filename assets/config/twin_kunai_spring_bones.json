@@ -76,20 +76,20 @@
     {
       "name": "Chest_L",
       "bones": ["add_chest_l01", "bone28"],
-      "damping": 0.96,
-      "stiffness": 0.01,
-      "gravity": [0, 0, -1800],
-      "maxAngleDegrees": 32,
+      "damping": 0.985,
+      "stiffness": 0.006,
+      "gravity": [0, 0, -260],
+      "maxAngleDegrees": 35,
       "collisionMargin": 0,
       "collisionPointCount": 0
     },
     {
       "name": "Chest_R",
       "bones": ["add_chest_r01", "bone29"],
-      "damping": 0.96,
-      "stiffness": 0.01,
-      "gravity": [0, 0, -1800],
-      "maxAngleDegrees": 32,
+      "damping": 0.985,
+      "stiffness": 0.006,
+      "gravity": [0, 0, -260],
+      "maxAngleDegrees": 35,
       "collisionMargin": 0,
       "collisionPointCount": 0
     }
