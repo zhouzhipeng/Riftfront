@@ -1,0 +1,14 @@
+@event aiGeneratedEventId="test-initialize"
+do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=16
+do SetNumberVariable variable="Paused" modification_sign="=" value=0
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-90
+do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=-90
+do SetCameraCenterX modification_sign="=" value=640 layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=-165 layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=252 layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=640 y_position=535 z_position=252 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=16
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
