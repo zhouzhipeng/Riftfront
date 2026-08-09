@@ -65,13 +65,13 @@
         "Hair_Tail_009",
         "Hair_Tail_End"
       ],
-      "damping": 0.80,
+      "damping": 0.65,
       "stiffness": 0.001,
       "gravity": [0, 0, -3600],
-      "maxAngleDegrees": 170,
-      "collisionMargin": 2,
-      "collisionStartPoint": 3,
-      "collisionPointCount": 7
+      "maxAngleDegrees": 65,
+      "collisionMargin": 4,
+      "collisionStartPoint": 1,
+      "collisionPointCount": 9
     }
   ],
   "colliders": [
@@ -94,8 +94,8 @@
       "center": [0.000277, -0.012636, 1.296967],
       "axis": [0.000001, -0.194691, -0.980865],
       "length": 0.39,
-      "radiusA": 0.11,
-      "radiusB": 0.001
+      "radiusA": 0.16,
+      "radiusB": 0.14
     },
     {
       "name": "UpperBack",
@@ -103,7 +103,7 @@
       "bone": "spine_03",
       "chains": ["Hair_Tail"],
       "center": [0.000277, -0.123231, 1.418427],
-      "radius": 0.152
+      "radius": 0.18
     },
     {
       "name": "MidTorso",
@@ -113,8 +113,8 @@
       "center": [0.000277, -0.019021, 1.089457],
       "axis": [0, 0.003094, -0.999995],
       "length": 0.35,
-      "radiusA": 0.125,
-      "radiusB": 0.001
+      "radiusA": 0.16,
+      "radiusB": 0.14
     },
     {
       "name": "Pelvis",
@@ -124,18 +124,18 @@
       "center": [0, 0, 0.986621],
       "axis": [-0.000002, 0, -1],
       "length": 0.36,
-      "radiusA": 0.124,
-      "radiusB": 0.001
+      "radiusA": 0.16,
+      "radiusB": 0.14
     },
     {
       "name": "SkirtSafety",
       "type": "capsule",
       "bone": "pelvis",
       "chains": ["Hair_Tail"],
-      "center": [0, 0, 0.95],
+      "center": [0, -0.055, 0.95],
       "axis": [0, 0, 1],
       "length": 0.4,
-      "radius": 0.13
+      "radius": 0.17
     },
     {
       "name": "LeftThigh",
