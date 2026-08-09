@@ -1,0 +1,12 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "MyObject"
+type = "Local::MyObject"
+variant = ""
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+content = { }
+folder = [ ]

@@ -28,11 +28,16 @@ and event scope:
   `scenes/<Scene>/functions/`: `sceneLoad`, `sceneSignal`, `sceneUpdate`, and
   `sceneUnload`. Each has a flat same-stem `.settings` and `.events` pair.
 - `external-events.settings` owns an External Events resource below
-  `scenes/<Scene>/externals/<External>/`; it has the same four flat lifecycle
-  function pairs, and the physical owner path supplies its scene context.
+  `scenes/<Scene>/external-events/<External>/`; it has the same four flat
+  lifecycle function pairs, and the physical owner path supplies its scene
+  context.
 - A dedicated `<Function>.settings` owns every extension, prefab, or behavior
   function body. Its sibling `<Function>.events` uses the same stem; editor
   grouping is the `folder` array in the settings file.
+
+Every managed `.events` file is a function body and must have a same-stem
+`.settings` file in the same `functions/` directory. An orphan `.events` file
+is invalid and is never treated as an implicit function.
 
 Read `.gdevelop/instructions-catalog.json` before writing instructions. It is
 regenerated on project save and is read-only. Search it narrowly instead of
@@ -306,9 +311,9 @@ explicitly permitted.
   delivered scene notification handling in `sceneSignal`, continuous gameplay
   in `sceneUpdate`, and synchronous final cleanup in `sceneUnload`.
 - `sceneSignal` is invoked once per delivered scene signal. Compare
-  `SignalName()` and read `SignalPayload()` directly; never add the
-  `SignalReceived` iterator there. `SignalReceived` is valid only in
-  `sceneUpdate`.
+  its fixed `SignalName` parameter and read `Payload` directly. Never author
+  the legacy `SignalReceived` iterator; only parse and preserve existing uses
+  in `sceneUpdate`.
 - `sceneUnload` is terminal and synchronous. Never author awaited/future-frame
   actions, deferred signal emission, or scene-stack transitions there.
 - A `link scene` or `link external` resolves the target's same lifecycle

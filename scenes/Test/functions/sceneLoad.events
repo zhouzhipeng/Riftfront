@@ -1,0 +1,2 @@
+@event
+do DebuggerTools::ConsoleLog message_to_log="ssss"

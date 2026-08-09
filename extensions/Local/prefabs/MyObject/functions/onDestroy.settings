@@ -1,6 +1,6 @@
 kind = "function"
 settingsFormatVersion = 5
-order = 3
+order = 2
 fullName = "onDestroy"
 functionType = "Action"
 name = "onDestroy"

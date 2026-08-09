@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+folder = [ "Lifecycle" ]
+name = "sceneUnload"
+functionType = "Action"
+lifecycleRole = "sceneUnload"
+fullName = "On scene unload"
+description = "Events run once before this scene and its objects are unloaded."
+sentence = ""
+private = true
+async = false
+parameters = [ ]
+objectGroups = { }

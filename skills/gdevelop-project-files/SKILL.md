@@ -221,12 +221,12 @@ scenes/<Scene>/functions/sceneUpdate.settings
 scenes/<Scene>/functions/sceneUpdate.events
 scenes/<Scene>/functions/<OptionalLifecycle>.settings # only when non-empty
 scenes/<Scene>/functions/<OptionalLifecycle>.events
-scenes/<Scene>/externals/<External>/external-events.settings
-scenes/<Scene>/externals/<External>/external-layout.settings
-scenes/<Scene>/externals/<External>/functions/sceneUpdate.settings
-scenes/<Scene>/externals/<External>/functions/sceneUpdate.events
-scenes/<Scene>/externals/<External>/functions/<OptionalLifecycle>.settings
-scenes/<Scene>/externals/<External>/functions/<OptionalLifecycle>.events
+scenes/<Scene>/external-events/<External>/external-events.settings
+scenes/<Scene>/external-events/<External>/functions/sceneUpdate.settings
+scenes/<Scene>/external-events/<External>/functions/sceneUpdate.events
+scenes/<Scene>/external-events/<External>/functions/<OptionalLifecycle>.settings
+scenes/<Scene>/external-events/<External>/functions/<OptionalLifecycle>.events
+scenes/<Scene>/external-layout/<External>.settings
 extensions/<Extension>/extension.settings
 extensions/<Extension>/functions/<Function>.settings
 extensions/<Extension>/functions/<Function>.events
@@ -251,11 +251,12 @@ fixed; object/function grouping belongs in each settings file's `folder`
 array. Settings files never reference other settings files.
 
 In format version 5, declare each External Events resource with
-`scenes/<Scene>/externals/<External>/external-events.settings`; its physical
-scene owner supplies `associatedLayout`, and its lifecycle logic lives in that
-owner's flat `functions/` pairs. Declare an external layout independently with
-`scenes/<Scene>/externals/<External>/external-layout.settings`; it owns its
-identity, project-wide contiguous `order`, and embedded `[layout]` subtree.
+`scenes/<Scene>/external-events/<External>/external-events.settings`; its
+physical scene owner supplies `associatedLayout`, and its lifecycle logic lives
+in that owner's flat same-stem `functions/` pairs. Every managed `.events`
+body has a matching function `.settings` file. Declare an external layout
+independently with `scenes/<Scene>/external-layout/<External>.settings`; it owns
+its identity, project-wide contiguous `order`, and embedded `[layout]` subtree.
 Do not write `externalEventFiles`, `externalLayoutFiles`, layout URIs,
 `associatedLayout`, `linkedScene`, or `unresolvedScene`, and never create a
 root `externals/external.settings`.
