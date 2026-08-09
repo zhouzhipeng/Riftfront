@@ -1,5 +1,5 @@
 kind = "function"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 0
 fullName = "Function"
 functionType = "Action"
@@ -7,5 +7,4 @@ name = "Function"
 sentence = ""
 parameters = [ ]
 extension = "Local"
-events = "game://extensions/Local/functions/Function/Function.events"
 objectGroups = { }

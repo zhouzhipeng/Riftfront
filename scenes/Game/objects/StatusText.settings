@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 18
 assetStoreId = ""
 bold = true
@@ -15,7 +15,7 @@ string = "DEPLOY HEROES - WAVE STARTS IN 3"
 font = ""
 textAlignment = "center"
 characterSize = 18
-folder = [ "HUD" ]
+folder = [ ]
 
 [color]
 b = 255

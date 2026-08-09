@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 10
 adaptCollisionMaskAutomatically = true
 assetStoreId = ""
@@ -8,7 +8,7 @@ type = "Sprite"
 updateIfNotVisible = false
 effects = [ ]
 behaviors = [ ]
-folder = [ "Combat" ]
+folder = [ ]
 
 [[variables]]
 name = "Type"

@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 0
 adaptCollisionMaskAutomatically = false
 assetStoreId = ""
@@ -9,7 +9,7 @@ updateIfNotVisible = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-folder = [ "Environment" ]
+folder = [ ]
 
 [[animations]]
 name = ""

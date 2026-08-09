@@ -1,12 +1,11 @@
 kind = "function"
-settingsFormatVersion = 4
-order = 2
-fullName = "doStepPostEvents"
+settingsFormatVersion = 5
+order = 3
+fullName = "onDestroy"
 functionType = "Action"
-name = "doStepPostEvents"
+name = "onDestroy"
 sentence = ""
 folder = [ ]
-events = "game://extensions/Local/prefabs/MyObject/functions/doStepPostEvents/doStepPostEvents.events"
 objectGroups = { }
 
 [[parameters]]

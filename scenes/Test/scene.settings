@@ -1,7 +1,6 @@
 kind = "scene"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 1
-layout = "game://scenes/Test/Test.layout"
 disableInputWhenNotFocused = true
 mangledName = "Test"
 name = "Test"
@@ -40,3 +39,125 @@ name = "CameraDragStartAngle"
 persistentUuid = "d338aeea-7c3d-4bfc-8cc1-225a1cf8547e"
 type = "number"
 value = -90
+
+[layout]
+version = 1
+background = "#0B1020"
+
+[layout.editor]
+grid = true
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#53D4FF"
+grid_alpha = 0.25
+snap = false
+zoom = 0.6342618411450328
+window_mask = true
+selected_layer = "HUD"
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "2d+3d"
+camera_type = "perspective"
+camera_behavior = "do-nothing"
+ambient = "#B9C9E8"
+far = 5000
+fov = 38
+max_2d_distance = 2500
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.layers]]
+id = "hud"
+name = "HUD"
+rendering = "2d"
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.effects]]
+layer = "base"
+name = "TestHemisphere"
+type = "Scene3D::HemisphereLight"
+elevation = 90
+groundColor = "25;31;52"
+intensity = 0.72
+rotation = 0
+skyColor = "210;232;255"
+top = "Z+"
+
+[[layout.effects]]
+layer = "base"
+name = "TestKeyLight"
+type = "Scene3D::DirectionalLight"
+color = "255;230;220"
+distanceFromCamera = 1000
+elevation = 58
+frustumSize = 1400
+intensity = 0.55
+isCastingShadow = false
+minimumShadowBias = 0.001
+rotation = -32
+shadowQuality = "high"
+top = "Z+"
+
+[[layout.effects]]
+layer = "base"
+name = "TestBloom"
+type = "Scene3D::Bloom"
+radius = 0.12
+strength = 0.12
+threshold = 0.92
+
+[[layout.instances]]
+id = "a1b2c3d4-1000-4000-8000-000000000001"
+object = "TwinKunai3D"
+layer = "base"
+at = [640, 535, 32]
+z_order = 5
+
+[[layout.instances]]
+id = "a1b2c3d4-1000-4000-8000-000000000002"
+object = "TestTitle"
+layer = "hud"
+at = [240, 24]
+z_order = 20
+size = [800, 48]
+
+[[layout.instances]]
+id = "a1b2c3d4-1000-4000-8000-000000000003"
+object = "AnimationLabel"
+layer = "hud"
+at = [340, 80]
+z_order = 20
+size = [600, 42]
+
+[[layout.instances]]
+id = "a1b2c3d4-1000-4000-8000-000000000004"
+object = "PlaybackLabel"
+layer = "hud"
+at = [490, 125]
+z_order = 20
+size = [300, 30]
+
+[[layout.instances]]
+id = "a1b2c3d4-1000-4000-8000-000000000005"
+object = "ControlsLabel"
+layer = "hud"
+at = [140, 670]
+z_order = 20
+size = [1000, 28]
+
+[[layout.instances]]
+id = "35883fbb-4de3-443d-a800-4e33118a6977"
+object = "New3DModel"
+layer = "hud"
+at = [818, 535]
+z_order = 21
+
+[[layout.instances]]
+id = "92463067-bfa0-4867-a260-dec3259ee602"
+object = "NewObject"
+layer = "hud"
+at = [659, 535]
+z_order = 22

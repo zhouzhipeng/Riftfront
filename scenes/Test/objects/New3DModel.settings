@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 5
 assetStoreId = ""
 name = "New3DModel"

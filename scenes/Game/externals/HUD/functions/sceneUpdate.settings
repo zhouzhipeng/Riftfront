@@ -1,9 +1,8 @@
 kind = "function"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 2
 folder = [ "Lifecycle" ]
 name = "sceneUpdate"
-events = "game://scenes/Game/functions/sceneUpdate/sceneUpdate.events"
 functionType = "Action"
 lifecycleRole = "sceneUpdate"
 fullName = "Scene update"

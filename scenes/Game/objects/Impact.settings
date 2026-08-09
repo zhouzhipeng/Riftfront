@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 11
 adaptCollisionMaskAutomatically = false
 assetStoreId = ""
@@ -10,7 +10,7 @@ updateIfNotVisible = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-folder = [ "Combat" ]
+folder = [ ]
 
 [[animations]]
 name = "Burst"

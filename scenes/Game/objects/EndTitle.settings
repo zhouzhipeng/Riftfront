@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 21
 assetStoreId = ""
 bold = true
@@ -15,7 +15,7 @@ string = ""
 font = ""
 textAlignment = "center"
 characterSize = 38
-folder = [ "HUD" ]
+folder = [ ]
 
 [color]
 b = 130

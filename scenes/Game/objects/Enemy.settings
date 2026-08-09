@@ -1,12 +1,12 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 9
 assetStoreId = ""
 name = "Enemy"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = [ "Combat" ]
+folder = [ ]
 
 [[variables]]
 name = "Kind"

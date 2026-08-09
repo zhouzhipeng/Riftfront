@@ -1,12 +1,11 @@
 kind = "function"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 1
 fullName = "onSignal"
 functionType = "Action"
 name = "onSignal"
 sentence = ""
 folder = [ ]
-events = "game://extensions/Local/prefabs/MyObject/functions/onSignal/onSignal.events"
 objectGroups = { }
 
 [[parameters]]

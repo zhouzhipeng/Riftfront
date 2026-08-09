@@ -1,12 +1,11 @@
 kind = "function"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 0
 fullName = "onCreated"
 functionType = "Action"
 name = "onCreated"
 sentence = ""
 folder = [ ]
-events = "game://extensions/Local/prefabs/MyObject/functions/onCreated/onCreated.events"
 objectGroups = { }
 
 [[parameters]]

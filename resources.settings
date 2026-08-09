@@ -1,5 +1,5 @@
 kind = "resources"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 
 [[resources]]
 file = "assets/background.png"

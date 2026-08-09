@@ -1,7 +1,6 @@
 kind = "scene"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 0
-layout = "game://scenes/Game/Game.layout"
 disableInputWhenNotFocused = true
 mangledName = "Game"
 name = "Game"
@@ -95,7 +94,181 @@ persistentUuid = "9cc7f4c7-765d-4fd4-8546-6e14bed34b34"
 type = "number"
 value = 0
 
-[[externalLayoutFiles]]
+[layout]
+version = 1
+background = "#071833"
+
+[layout.editor]
+grid = true
+grid_type = "rectangular"
+grid_size = [16, 16, 16]
+grid_offset = [0, 0, 0]
+grid_color = "#72DDF7"
+grid_alpha = 0.35
+snap = false
+zoom = 0.45882352941176524
+window_mask = true
+selected_layer = "HUD"
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "backdrop"
+name = "Backdrop"
+rendering = "2d"
+locked = true
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "2d+3d"
+camera_type = "perspective"
+camera_behavior = "do-nothing"
+ambient = "#A8C4DF"
+far = 5000
+fov = 35
+max_2d_distance = 2000
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.layers]]
+id = "hud"
 name = "HUD"
-order = 0
-layout = "game://scenes/Game/externals/HUD.layout"
+rendering = "2d"
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.effects]]
+layer = "base"
+name = "CelestialHemisphere"
+type = "Scene3D::HemisphereLight"
+elevation = 90
+groundColor = "34;52;92"
+intensity = 0.58
+rotation = 0
+skyColor = "196;232;255"
+top = "Z+"
+
+[[layout.effects]]
+layer = "base"
+name = "CelestialSun"
+type = "Scene3D::DirectionalLight"
+color = "255;242;214"
+distanceFromCamera = 1100
+elevation = 62
+frustumSize = 1600
+intensity = 0.34
+isCastingShadow = true
+minimumShadowBias = 0.001
+rotation = -35
+shadowQuality = "high"
+top = "Z+"
+
+[[layout.effects]]
+layer = "base"
+name = "AetherBloom"
+type = "Scene3D::Bloom"
+radius = 0.16
+strength = 0.18
+threshold = 0.9
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000001"
+object = "Background"
+layer = "backdrop"
+at = [0, 0]
+
+[[layout.instances]]
+id = "72d8dcf0-3f8a-4f16-92bf-6df0d2c3a4e1"
+object = "Environment3D"
+layer = "base"
+at = [640, 286, -70]
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000002"
+object = "LaneTarget"
+layer = "base"
+at = [246, 130]
+z_order = 1
+opacity = 0
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000003"
+object = "LaneTarget"
+layer = "base"
+at = [246, 234]
+z_order = 1
+opacity = 0
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000004"
+object = "LaneTarget"
+layer = "base"
+at = [246, 338]
+z_order = 1
+opacity = 0
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000005"
+object = "LaneTarget"
+layer = "base"
+at = [246, 442]
+z_order = 1
+opacity = 0
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000006"
+object = "Core"
+layer = "base"
+at = [82, 280, 22]
+z_order = 5
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000007"
+object = "Portal"
+layer = "base"
+at = [1205, 134, 24]
+z_order = 4
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000008"
+object = "Portal"
+layer = "base"
+at = [1205, 238, 24]
+z_order = 4
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-000000000009"
+object = "Portal"
+layer = "base"
+at = [1205, 342, 24]
+z_order = 4
+
+[[layout.instances]]
+id = "00000000-0000-4000-8000-00000000000a"
+object = "Portal"
+layer = "base"
+at = [1205, 446, 24]
+z_order = 4
+
+[[layout.variables]]
+instance = "00000000-0000-4000-8000-000000000002"
+name = "Lane"
+type = "number"
+value = 1
+
+[[layout.variables]]
+instance = "00000000-0000-4000-8000-000000000003"
+name = "Lane"
+type = "number"
+value = 2
+
+[[layout.variables]]
+instance = "00000000-0000-4000-8000-000000000004"
+name = "Lane"
+type = "number"
+value = 3
+
+[[layout.variables]]
+instance = "00000000-0000-4000-8000-000000000005"
+name = "Lane"
+type = "number"
+value = 4

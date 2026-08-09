@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 22
 assetStoreId = ""
 name = "Environment3D"
@@ -7,7 +7,7 @@ type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-folder = [ "Environment" ]
+folder = [ ]
 
 [content]
 centerLocation = "ModelOrigin"

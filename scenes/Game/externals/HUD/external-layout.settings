@@ -1,7 +1,12 @@
+kind = "externalLayout"
+settingsFormatVersion = 5
+order = 0
+name = "HUD"
+
 [layout]
 version = 1
 
-[editor]
+[layout.editor]
 grid = false
 grid_type = "rectangular"
 grid_size = [32, 32, 32]
@@ -14,102 +19,102 @@ window_mask = false
 selected_layer = ""
 mode = "instances-editor"
 
-[[layers]]
+[[layout.layers]]
 id = "hud"
 name = "HUD"
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000000b"
 object = "HeroCard"
 layer = "hud"
 at = [16, 582]
 z_order = 10
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000000c"
 object = "HeroCard"
 layer = "hud"
 at = [188, 582]
 z_order = 10
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000000d"
 object = "HeroCard"
 layer = "hud"
 at = [360, 582]
 z_order = 10
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000000e"
 object = "HeroCard"
 layer = "hud"
 at = [532, 582]
 z_order = 10
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000000f"
 object = "SkillButton"
 layer = "hud"
 at = [714, 598]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000010"
 object = "SkillButton"
 layer = "hud"
 at = [810, 598]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000011"
 object = "SkillButton"
 layer = "hud"
 at = [906, 598]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000012"
 object = "SkillButton"
 layer = "hud"
 at = [1002, 598]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000013"
 object = "UpgradeButton"
 layer = "hud"
 at = [714, 644]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000014"
 object = "UpgradeButton"
 layer = "hud"
 at = [810, 644]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000015"
 object = "UpgradeButton"
 layer = "hud"
 at = [906, 644]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000016"
 object = "UpgradeButton"
 layer = "hud"
 at = [1002, 644]
 z_order = 11
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000017"
 object = "Selection"
 layer = "hud"
 at = [16, 582]
 z_order = 12
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000018"
 object = "WaveText"
 layer = "hud"
@@ -117,7 +122,7 @@ at = [465, 16]
 z_order = 20
 size = [150, 32]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000019"
 object = "CoreText"
 layer = "hud"
@@ -125,7 +130,7 @@ at = [625, 16]
 z_order = 20
 size = [150, 32]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001a"
 object = "EnergyText"
 layer = "hud"
@@ -133,7 +138,7 @@ at = [785, 16]
 z_order = 20
 size = [175, 32]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001b"
 object = "ScoreText"
 layer = "hud"
@@ -141,7 +146,7 @@ at = [970, 16]
 z_order = 20
 size = [145, 32]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001c"
 object = "BestText"
 layer = "hud"
@@ -149,7 +154,7 @@ at = [1120, 21]
 z_order = 20
 size = [145, 28]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001d"
 object = "StatusText"
 layer = "hud"
@@ -157,7 +162,7 @@ at = [455, 56]
 z_order = 20
 size = [650, 28]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001e"
 object = "SelectedText"
 layer = "hud"
@@ -165,7 +170,7 @@ at = [692, 565]
 z_order = 20
 size = [440, 24]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-00000000001f"
 object = "HelpText"
 layer = "hud"
@@ -173,7 +178,7 @@ at = [690, 684]
 z_order = 20
 size = [560, 24]
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000020"
 object = "EndPanel"
 layer = "hud"
@@ -181,7 +186,7 @@ at = [290, 225]
 z_order = 100
 opacity = 0
 
-[[instances]]
+[[layout.instances]]
 id = "00000000-0000-4000-8000-000000000021"
 object = "EndTitle"
 layer = "hud"
@@ -190,73 +195,73 @@ z_order = 101
 size = [640, 70]
 opacity = 0
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-00000000000b"
 name = "Type"
 type = "number"
 value = 1
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-00000000000c"
 name = "Type"
 type = "number"
 value = 2
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-00000000000d"
 name = "Type"
 type = "number"
 value = 3
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-00000000000e"
 name = "Type"
 type = "number"
 value = 4
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-00000000000f"
 name = "Type"
 type = "number"
 value = 1
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000010"
 name = "Type"
 type = "number"
 value = 2
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000011"
 name = "Type"
 type = "number"
 value = 3
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000012"
 name = "Type"
 type = "number"
 value = 4
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000013"
 name = "Type"
 type = "number"
 value = 1
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000014"
 name = "Type"
 type = "number"
 value = 2
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000015"
 name = "Type"
 type = "number"
 value = 3
 
-[[variables]]
+[[layout.variables]]
 instance = "00000000-0000-4000-8000-000000000016"
 name = "Type"
 type = "number"

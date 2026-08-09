@@ -26,15 +26,13 @@ and event scope:
 
 - `scene.settings` owns four fixed lifecycle functions below
   `scenes/<Scene>/functions/`: `sceneLoad`, `sceneSignal`, `sceneUpdate`, and
-  `sceneUnload`. Each has `function.settings` and a sibling `.events` body.
-- A scene's `[[externalEventFiles]]` entry owns an External Events resource
-  below `scenes/<Scene>/externals/<External>/`; it has the same four fixed
-  lifecycle function directories, and the declaring scene supplies its event
-  context.
-- A dedicated `function.settings` owns every extension, prefab, or behavior
-  function body. Prefab/behavior methods live under
-  `functions/<Function>/` with their sibling `.events`; editor grouping is the
-  `folder` array in `function.settings`.
+  `sceneUnload`. Each has a flat same-stem `.settings` and `.events` pair.
+- `external-events.settings` owns an External Events resource below
+  `scenes/<Scene>/externals/<External>/`; it has the same four flat lifecycle
+  function pairs, and the physical owner path supplies its scene context.
+- A dedicated `<Function>.settings` owns every extension, prefab, or behavior
+  function body. Its sibling `<Function>.events` uses the same stem; editor
+  grouping is the `folder` array in the settings file.
 
 Read `.gdevelop/instructions-catalog.json` before writing instructions. It is
 regenerated on project save and is read-only. Search it narrowly instead of

@@ -1,5 +1,5 @@
 kind = "object"
-settingsFormatVersion = 4
+settingsFormatVersion = 5
 order = 0
 adaptCollisionMaskAutomatically = true
 assetStoreId = ""
