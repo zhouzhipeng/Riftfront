@@ -72,6 +72,26 @@
       "collisionMargin": 12,
       "collisionStartPoint": 1,
       "collisionPointCount": 9
+    },
+    {
+      "name": "Chest_L",
+      "bones": ["add_chest_l01", "bone28"],
+      "damping": 0.997,
+      "stiffness": 0.002,
+      "gravity": [0, 0, -80],
+      "maxAngleDegrees": 45,
+      "collisionMargin": 0,
+      "collisionPointCount": 0
+    },
+    {
+      "name": "Chest_R",
+      "bones": ["add_chest_r01", "bone29"],
+      "damping": 0.997,
+      "stiffness": 0.002,
+      "gravity": [0, 0, -80],
+      "maxAngleDegrees": 45,
+      "collisionMargin": 0,
+      "collisionPointCount": 0
     }
   ],
   "colliders": [
