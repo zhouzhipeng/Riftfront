@@ -67,7 +67,7 @@
       ],
       "damping": 0.75,
       "stiffness": 0.12,
-      "gravity": [0, 0, -30000],
+      "gravity": [0, 0, -100000],
       "maxAngleDegrees": 170,
       "collisionMargin": 2,
       "collisionStartPoint": 3,
