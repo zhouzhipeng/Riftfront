@@ -103,7 +103,7 @@
       "bone": "spine_03",
       "chains": ["Hair_Tail"],
       "center": [0.000277, -0.123231, 1.418427],
-      "radius": 0.19
+      "radius": 0.115
     },
     {
       "name": "LeftShoulder",
