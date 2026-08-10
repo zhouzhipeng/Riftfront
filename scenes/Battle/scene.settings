@@ -12,7 +12,6 @@ objectGroups = { }
 
 [[variables]]
 name = "CameraOrbitAngle"
-persistentUuid = "8208999b-5126-4d95-8a90-cc946ee1b311"
 type = "number"
 value = 180
 
@@ -47,8 +46,15 @@ name = ""
 rendering = "2d+3d"
 camera_type = "perspective"
 camera_behavior = "do-nothing"
+visible = true
+locked = false
+lighting = false
+follow_base_camera = false
 ambient = "#C7D2E8"
+near = 3
 far = 6000
+fov = 45
+max_2d_distance = 5000
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layout.effects]]
@@ -88,5 +94,5 @@ id = "9e51f1af-589e-4eb8-89fb-79343566d5e2"
 object = "TwinKunai"
 layer = "base"
 at = [0, 0, 20]
-rotation = 90
+rotation = [0, 0, 90]
 z_order = 5
