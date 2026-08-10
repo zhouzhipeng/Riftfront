@@ -2,12 +2,16 @@
 @event aiGeneratedEventId="battle-move-forward"
 if KeyFromTextPressed key_to_check="w"
 or KeyFromTextPressed key_to_check="Up"
+do Physics3D::PhysicsCharacter3D::SetForwardAngle object="TwinKunai" behavior="PhysicsCharacter3D" modification_sign="=" angle_in_degrees=expr(Variable(CameraOrbitAngle) - 180)
+do SetAngle object="TwinKunai" modification_sign="=" angle_in_degrees=expr(Variable(CameraOrbitAngle) - 90)
 do Physics3D::PhysicsCharacter3D::SimulateForwardKey object="TwinKunai" behavior="PhysicsCharacter3D"
 
 @event aiGeneratedEventId="battle-move-backward"
 if KeyFromTextPressed key_to_check="s"
 or KeyFromTextPressed key_to_check="Down"
-do Physics3D::PhysicsCharacter3D::SimulateBackwardKey object="TwinKunai" behavior="PhysicsCharacter3D"
+do Physics3D::PhysicsCharacter3D::SetForwardAngle object="TwinKunai" behavior="PhysicsCharacter3D" modification_sign="=" angle_in_degrees=expr(Variable(CameraOrbitAngle))
+do SetAngle object="TwinKunai" modification_sign="=" angle_in_degrees=expr(Variable(CameraOrbitAngle) + 90)
+do Physics3D::PhysicsCharacter3D::SimulateForwardKey object="TwinKunai" behavior="PhysicsCharacter3D"
 
 @event aiGeneratedEventId="battle-move-left"
 if KeyFromTextPressed key_to_check="a"
@@ -38,14 +42,42 @@ do SetNumberVariable variable="CameraOrbitAngle" modification_sign="-" value=exp
 @end group
 
 @group "Character animation" source="" creationTime=0 color=[126,211,126] parameters=[]
+@event aiGeneratedEventId="battle-turn-left-animation"
+if KeyFromTextPressed key_to_check="a"
+or KeyFromTextPressed key_to_check="Left"
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=26
+
+@event aiGeneratedEventId="battle-turn-right-animation"
+if KeyFromTextPressed key_to_check="d"
+or KeyFromTextPressed key_to_check="Right"
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=27
+
 @event aiGeneratedEventId="battle-walk-animation"
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="TwinKunai" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="a"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="Left"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="d"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="Right"
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=16
 
 @event aiGeneratedEventId="battle-idle-animation"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="TwinKunai" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="a"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="Left"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="d"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="Right"
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=0
 @end group
