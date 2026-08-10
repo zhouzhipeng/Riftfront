@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 10
+description = "the movement of the pointer on the Y axis."
+fullName = "Pointer Y movement"
+functionType = "ExpressionAndCondition"
+name = "MovementY"
+sentence = "the movement of the pointer on the Y axis"
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

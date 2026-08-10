@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+description = "Unlocks the mouse pointer and show it."
+fullName = "Exit pointer lock"
+functionType = "Action"
+name = "ExitPointerLock"
+sentence = "Exit pointer lock"
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }

@@ -1,0 +1,6 @@
+@event
+do CenterCameraOnObject object="Object" layer=expr(Object.Layer())
+do Scene3D::SetCameraZ modification_sign="=" value=expr(Object.Object3D::Z() + Object.Object3D::Depth() + OffsetZ)
+do Scene3D::SetCameraRotationX modification_sign="=" angle_in_degrees=expr(- Object.Object3D::RotationY() + 90) layer=expr(GetArgumentAsString("Layer"))
+do Scene3D::SetCameraRotationY modification_sign="=" angle_in_degrees=expr(Object.Object3D::RotationX()) layer=expr(GetArgumentAsString("Layer"))
+do SetCameraAngle modification_sign="=" value=expr(Object.Angle() + 90) layer=expr(Object.Layer())

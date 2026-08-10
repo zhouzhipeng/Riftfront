@@ -1,0 +1,10 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+fullName = ""
+functionType = "Action"
+name = "onScenePostEvents"
+sentence = ""
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }

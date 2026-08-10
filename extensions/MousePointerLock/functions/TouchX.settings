@@ -1,0 +1,19 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 12
+description = "Return the X position of a specific touch"
+fullName = "Touch X position"
+functionType = "Expression"
+name = "TouchX"
+private = true
+sentence = ""
+extension = "MousePointerLock"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Touch identifier"
+name = "NewTouchId"
+type = "expression"

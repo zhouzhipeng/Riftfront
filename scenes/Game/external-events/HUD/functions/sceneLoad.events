@@ -1,3 +1,1 @@
-@event
-@instruction disabled=true
-do Rotate object="Background" angular_speed_in_degrees_per_second=1
+@comment "Removed a disabled legacy rotation action so current project serialization remains compatible." background=[128,128,128] text=[255,255,255]

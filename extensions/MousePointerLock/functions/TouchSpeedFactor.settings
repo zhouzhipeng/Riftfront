@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 14
+description = "the speed factor for touch movement."
+fullName = "Speed factor for touch movement"
+functionType = "ExpressionAndCondition"
+name = "TouchSpeedFactor"
+sentence = "the speed factor for touch movement"
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

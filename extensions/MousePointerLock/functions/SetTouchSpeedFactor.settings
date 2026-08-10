@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 15
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "TouchSpeedFactor"
+name = "SetTouchSpeedFactor"
+sentence = ""
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }

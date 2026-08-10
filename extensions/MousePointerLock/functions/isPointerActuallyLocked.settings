@@ -1,0 +1,12 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 5
+description = "Check if the mouse pointer is actually locked."
+fullName = "Pointer is actually locked"
+functionType = "Condition"
+name = "isPointerActuallyLocked"
+private = true
+sentence = "The mouse pointer actually is locked"
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }

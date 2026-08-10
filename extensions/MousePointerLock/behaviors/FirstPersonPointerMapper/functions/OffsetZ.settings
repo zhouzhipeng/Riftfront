@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 10
+description = "the z position offset of the object."
+fullName = "Z position offset"
+functionType = "ExpressionAndCondition"
+group = "First person camera mouse mapper configuration"
+name = "OffsetZ"
+sentence = "the z position offset"
+folder = [ "First person camera mouse mapper configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "MousePointerLock::FirstPersonPointerMapper"
+type = "behavior"

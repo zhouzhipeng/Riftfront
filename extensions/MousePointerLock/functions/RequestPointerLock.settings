@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Lock the mouse pointer to hide it."
+fullName = "Request Pointer Lock"
+functionType = "Action"
+name = "RequestPointerLock"
+sentence = "Request Pointer Lock"
+parameters = [ ]
+extension = "MousePointerLock"
+objectGroups = { }
