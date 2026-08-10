@@ -332,5 +332,3 @@ name = "TK_SP_Walk"
 source = "Animation"
 sourceModelResourceName = "assets/models/twin_kunai_animations/Special/TK_SP_Walk.glb"
 useRootMotion = false
-
-
