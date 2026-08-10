@@ -8,8 +8,12 @@ standardSortMethod = true
 stopSoundsOnStartup = true
 title = "Battle"
 sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
-variables = [ ]
 objectGroups = { }
+
+[[variables]]
+name = "CameraOrbitAngle"
+type = "number"
+value = 180
 
 [[behaviorsSharedData]]
 name = "Physics3D"
