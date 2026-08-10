@@ -9,9 +9,7 @@ do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
 
 @event aiGeneratedEventId="test-next-apply"
 if KeyFromTextReleased key_to_check="Right"
-do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=expr(Variable(AnimationIndex))
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai3D" animation_index_from_0_to_28=expr(Variable(AnimationIndex))
 do SetNumberVariable variable="Paused" modification_sign="=" value=0
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 
@@ -25,39 +23,33 @@ do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=28
 
 @event aiGeneratedEventId="test-previous-apply"
 if KeyFromTextReleased key_to_check="Left"
-do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=expr(Variable(AnimationIndex))
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai3D" animation_index_from_0_to_28=expr(Variable(AnimationIndex))
 do SetNumberVariable variable="Paused" modification_sign="=" value=0
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 
 @event aiGeneratedEventId="test-home-idle"
 if KeyFromTextReleased key_to_check="Home"
 do SetNumberVariable variable="AnimationIndex" modification_sign="=" value=0
-do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunai3D" behavior="Animation" modification_sign="=" animation_index=0
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai3D" animation_index_from_0_to_28=0
 do SetNumberVariable variable="Paused" modification_sign="=" value=0
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 
 @event aiGeneratedEventId="test-replay"
 if KeyFromTextReleased key_to_check="Return"
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunai3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai3D" animation_index_from_0_to_28=expr(Variable(AnimationIndex))
 do SetNumberVariable variable="Paused" modification_sign="=" value=0
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 
 @event aiGeneratedEventId="test-toggle-pause"
 if KeyFromTextReleased key_to_check="p"
 do SetNumberVariable variable="Paused" modification_sign="=" value=expr(1 - Variable(Paused))
+do Local::TwinKunai3D::SetAnimationPaused twin_kunai_prefab="TwinKunai3D" parameter_1_to_pause_0_to_resume=expr(Variable(Paused))
 > @event aiGeneratedEventId="test-pause"
 > if NumberVariable variable="Paused" comparison_sign="=" value=1
-> do AnimatableCapability::AnimatableBehavior::PauseAnimation object="TwinKunai3D" behavior="Animation"
 > do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PAUSED"
 
 > @event aiGeneratedEventId="test-resume"
 > if NumberVariable variable="Paused" comparison_sign="=" value=0
-> do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunai3D" behavior="Animation"
 > do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"
 @end group
 
