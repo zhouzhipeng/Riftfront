@@ -38,7 +38,7 @@ do MousePointerLock::RequestPointerLock
 @event aiGeneratedEventId="battle-orbit-camera-with-mouse"
 if MousePointerLock::isPointerLocked
 if MousePointerLock::MovementX comparison_sign="!=" value=0
-do SetNumberVariable variable="CameraOrbitAngle" modification_sign="-" value=expr(MousePointerLock::MovementX() * 0.18)
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="+" value=expr(MousePointerLock::MovementX() * 0.18)
 @end group
 
 @group "Mouse combo attack" source="" creationTime=0 color=[255,92,92] parameters=[]
