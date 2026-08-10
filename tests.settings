@@ -1,0 +1,3 @@
+kind = "tests"
+settingsFormatVersion = 5
+tests = [ ]
