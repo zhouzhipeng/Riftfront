@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+folder = [ ]
+name = "PlayAnimation"
+functionType = "Action"
+fullName = "Play animation"
+description = "Select, restart, and play one Twin Kunai model animation."
+sentence = "Play animation _PARAM1_ on _PARAM0_"
+private = false
+async = false
+objectGroups = { }
+
+[[parameters]]
+name = "Object"
+type = "object"
+supplementaryInformation = "Local::TwinKunai3D"
+description = "Twin Kunai prefab"
+
+[[parameters]]
+name = "AnimationIndex"
+type = "expression"
+description = "Animation index from 0 to 28"

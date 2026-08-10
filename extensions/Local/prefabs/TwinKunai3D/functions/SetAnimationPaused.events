@@ -1,0 +1,7 @@
+@event aiGeneratedEventId="twin-kunai-pause-animation"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Paused) comparison_sign="=" second_expression=1
+do AnimatableCapability::AnimatableBehavior::PauseAnimation object="TwinKunaiModel" behavior="Animation"
+
+@event aiGeneratedEventId="twin-kunai-resume-animation"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Paused) comparison_sign="=" second_expression=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunaiModel" behavior="Animation"

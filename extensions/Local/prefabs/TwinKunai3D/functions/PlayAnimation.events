@@ -1,0 +1,6 @@
+@event aiGeneratedEventId="twin-kunai-play-animation"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(AnimationIndex) comparison_sign=">=" second_expression=0
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(AnimationIndex) comparison_sign="<=" second_expression=28
+do AnimatableCapability::AnimatableBehavior::SetIndex object="TwinKunaiModel" behavior="Animation" modification_sign="=" animation_index=expr(AnimationIndex)
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="TwinKunaiModel" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
+do AnimatableCapability::AnimatableBehavior::PlayAnimation object="TwinKunaiModel" behavior="Animation"

@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+folder = [ ]
+name = "SetAnimationPaused"
+functionType = "Action"
+fullName = "Set animation paused"
+description = "Pause or resume the Twin Kunai model animation."
+sentence = "Set the paused state of _PARAM0_ to _PARAM1_"
+private = false
+async = false
+objectGroups = { }
+
+[[parameters]]
+name = "Object"
+type = "object"
+supplementaryInformation = "Local::TwinKunai3D"
+description = "Twin Kunai prefab"
+
+[[parameters]]
+name = "Paused"
+type = "expression"
+description = "1 to pause, 0 to resume"
