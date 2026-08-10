@@ -1,3 +1,10 @@
 kind = "tests"
 settingsFormatVersion = 5
-tests = [ ]
+
+[[tests]]
+scope = "project"
+order = 0
+name = "Untitled test"
+type = "gameplay"
+description = "sdsf "
+file = "tests/Untitled%20test.js"
