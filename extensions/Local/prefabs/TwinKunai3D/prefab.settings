@@ -1,0 +1,51 @@
+kind = "prefab"
+settingsFormatVersion = 5
+order = 1
+name = "TwinKunai3D"
+defaultName = "TwinKunai3D"
+description = "Reusable animated Twin Kunai 3D character with spring-bone dynamics."
+fullName = "Twin Kunai 3D"
+helpPath = ""
+iconUrl = ""
+previewIconUrl = ""
+private = false
+is3D = true
+isAnimatable = true
+isTextContainer = false
+isInnerAreaFollowingParentSize = false
+isUsingLegacyInstancesRenderer = false
+behaviors = [ ]
+variables = [ ]
+propertyDescriptors = [ ]
+objectGroups = { }
+
+[layout]
+version = 1
+bounds = { min = [0, 0, 0], max = [290, 440, 240] }
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "3d"
+lighting = false
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "9f3917a8-d7a4-49d0-a2ce-3b7d51a44824"
+object = "TwinKunaiModel"
+layer = "base"
+at = [0, 0, 0]
+
