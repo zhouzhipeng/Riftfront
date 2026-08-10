@@ -1,0 +1,94 @@
+kind = "scene"
+settingsFormatVersion = 5
+order = 2
+disableInputWhenNotFocused = true
+mangledName = "Battle"
+name = "Battle"
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = "Battle"
+sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
+variables = [ ]
+objectGroups = { }
+
+[[behaviorsSharedData]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+gravityX = 0
+gravityY = 0
+gravityZ = -9.8
+worldScale = 100
+
+[layout]
+version = 1
+background = "#111827"
+
+[layout.editor]
+grid = true
+grid_type = "rectangular"
+grid_size = [100, 100, 100]
+grid_offset = [0, 0, 0]
+grid_color = "#5EA6FF"
+grid_alpha = 0.22
+snap = false
+zoom = 1
+window_mask = true
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "2d+3d"
+camera_type = "perspective"
+camera_behavior = "do-nothing"
+visible = true
+locked = false
+lighting = false
+follow_base_camera = false
+ambient = "#C7D2E8"
+near = 3
+far = 6000
+fov = 45
+max_2d_distance = 5000
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.effects]]
+layer = "base"
+name = "BattleHemisphere"
+type = "Scene3D::HemisphereLight"
+elevation = 90
+groundColor = "35;42;62"
+intensity = 0.78
+rotation = 0
+skyColor = "214;230;255"
+top = "Z+"
+
+[[layout.effects]]
+layer = "base"
+name = "BattleKeyLight"
+type = "Scene3D::DirectionalLight"
+color = "255;236;220"
+distanceFromCamera = 1000
+elevation = 55
+frustumSize = 1800
+intensity = 0.65
+isCastingShadow = true
+minimumShadowBias = 0.001
+rotation = -35
+shadowQuality = "high"
+top = "Z+"
+
+[[layout.instances]]
+id = "f0d2d64a-67a4-47c4-b0bb-f904c75bcfa1"
+object = "Ground3D"
+layer = "base"
+at = [-1200, -1200, -40]
+
+[[layout.instances]]
+id = "9e51f1af-589e-4eb8-89fb-79343566d5e2"
+object = "TwinKunai"
+layer = "base"
+at = [0, 0, 20]
+rotation = [0, 0, 90]
+z_order = 5

@@ -1,0 +1,47 @@
+@group "Keyboard movement" source="" creationTime=0 color=[255,183,77] parameters=[]
+@event aiGeneratedEventId="battle-move-forward"
+if KeyFromTextPressed key_to_check="w"
+or KeyFromTextPressed key_to_check="Up"
+do Physics3D::PhysicsCharacter3D::SimulateForwardKey object="TwinKunai" behavior="PhysicsCharacter3D"
+
+@event aiGeneratedEventId="battle-move-backward"
+if KeyFromTextPressed key_to_check="s"
+or KeyFromTextPressed key_to_check="Down"
+do Physics3D::PhysicsCharacter3D::SimulateBackwardKey object="TwinKunai" behavior="PhysicsCharacter3D"
+
+@event aiGeneratedEventId="battle-move-left"
+if KeyFromTextPressed key_to_check="a"
+or KeyFromTextPressed key_to_check="Left"
+do Physics3D::PhysicsCharacter3D::SimulateLeftKey object="TwinKunai" behavior="PhysicsCharacter3D"
+
+@event aiGeneratedEventId="battle-move-right"
+if KeyFromTextPressed key_to_check="d"
+or KeyFromTextPressed key_to_check="Right"
+do Physics3D::PhysicsCharacter3D::SimulateRightKey object="TwinKunai" behavior="PhysicsCharacter3D"
+
+@event aiGeneratedEventId="battle-jump"
+if KeyFromTextPressed key_to_check="Space"
+do Physics3D::PhysicsCharacter3D::SimulateJumpKey object="TwinKunai" behavior="PhysicsCharacter3D"
+@end group
+
+@group "Character animation" source="" creationTime=0 color=[126,211,126] parameters=[]
+@event aiGeneratedEventId="battle-walk-animation"
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="TwinKunai" behavior="PhysicsCharacter3D"
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=16
+
+@event aiGeneratedEventId="battle-idle-animation"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="TwinKunai" behavior="PhysicsCharacter3D"
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=0
+@end group
+
+@group "Third-person camera follow" source="" creationTime=0 color=[143,108,255] parameters=[]
+@event aiGeneratedEventId="battle-camera-follow"
+if PickedInstancesCount object="TwinKunai" comparison_sign=">" value=0
+do SetCameraCenterX modification_sign="=" value=expr(TwinKunai.X()) layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=expr(TwinKunai.Y() - 650) layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=expr(TwinKunai.Base3D::Z() + 280) layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=expr(TwinKunai.X()) y_position=expr(TwinKunai.Y()) z_position=expr(TwinKunai.Base3D::Z() + 115) layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
+@end group

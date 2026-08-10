@@ -1,0 +1,52 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "TwinKunai"
+persistentUuid = "c7fb3ef9-6cbd-49bc-8b24-781505f10340"
+type = "Local::TwinKunai3D"
+variant = ""
+variables = [ ]
+effects = [ ]
+content = { }
+folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0.1
+bodyType = "Kinematic"
+bullet = false
+density = 123
+fixedRotation = true
+friction = 0.3
+gravityScale = 0
+linearDamping = 0.1
+massOverride = 0
+object3D = "Base3D"
+restitution = 0.1
+shape = "Capsule"
+shapeOrientation = "Z"
+
+[[behaviors]]
+name = "PhysicsCharacter3D"
+type = "Physics3D::PhysicsCharacter3D"
+canBePushed = true
+fallingSpeedMax = 900
+forwardAcceleration = 1400
+forwardDeceleration = 1800
+forwardSpeedMax = 360
+gravity = 1000
+jumpHeight = 180
+jumpSustainTime = 0.18
+physics3D = "Physics3D"
+shouldBindObjectAndForwardAngle = true
+sidewaysAcceleration = 1400
+sidewaysDeceleration = 1800
+sidewaysSpeedMax = 360
+slopeMaxAngle = 50
+stairHeightMax = 24

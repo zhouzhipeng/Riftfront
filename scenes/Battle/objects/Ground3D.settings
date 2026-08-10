@@ -1,0 +1,62 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+assetStoreId = ""
+name = "Ground3D"
+persistentUuid = "6e6acaff-5b34-4b44-bb6a-81c29602aa7f"
+type = "Scene3D::Cube3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0.1
+bodyType = "Static"
+bullet = false
+density = 123
+fixedRotation = false
+friction = 0.65
+gravityScale = 0
+linearDamping = 0.1
+massOverride = 0
+object3D = "Base3D"
+restitution = 0.05
+shape = "Box"
+shapeOrientation = "Z"
+
+[content]
+backFaceResourceName = ""
+backFaceResourceRepeat = false
+backFaceUpThroughWhichAxisRotation = "X"
+backFaceVisible = true
+bottomFaceResourceName = ""
+bottomFaceResourceRepeat = false
+bottomFaceVisible = true
+depth = 40
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = ""
+frontFaceResourceRepeat = false
+frontFaceVisible = true
+height = 2400
+isCastingShadow = false
+isReceivingShadow = true
+leftFaceResourceName = ""
+leftFaceResourceRepeat = false
+leftFaceVisible = true
+materialType = "StandardWithoutMetalness"
+rightFaceResourceName = ""
+rightFaceResourceRepeat = false
+rightFaceVisible = true
+tileScale = 1
+tint = "55;65;88"
+topFaceResourceName = ""
+topFaceResourceRepeat = false
+topFaceVisible = true
+width = 2400
