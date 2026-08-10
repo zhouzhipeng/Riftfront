@@ -44,6 +44,8 @@ do SetNumberVariable variable="CameraOrbitAngle" modification_sign="+" value=exp
 @group "Mouse combo attack" source="" creationTime=0 color=[255,92,92] parameters=[]
 @event aiGeneratedEventId="battle-combo-left-click"
 if MouseButtonFromTextPressed button_to_check="Left"
+@instruction inverted=true
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=1
 do ResetTimer timer_name="TwinKunaiComboTimer"
