@@ -13,12 +13,14 @@ do Physics3D::PhysicsCharacter3D::SimulateBackwardKey object="TwinKunai" behavio
 if KeyFromTextPressed key_to_check="a"
 or KeyFromTextPressed key_to_check="Left"
 do Physics3D::PhysicsCharacter3D::SetForwardAngle object="TwinKunai" behavior="PhysicsCharacter3D" modification_sign="+" angle_in_degrees=expr(90 * TimeDelta())
+do SetAngle object="TwinKunai" modification_sign="+" angle_in_degrees=expr(90 * TimeDelta())
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="+" value=expr(90 * TimeDelta())
 
 @event aiGeneratedEventId="battle-move-right"
 if KeyFromTextPressed key_to_check="d"
 or KeyFromTextPressed key_to_check="Right"
 do Physics3D::PhysicsCharacter3D::SetForwardAngle object="TwinKunai" behavior="PhysicsCharacter3D" modification_sign="-" angle_in_degrees=expr(90 * TimeDelta())
+do SetAngle object="TwinKunai" modification_sign="-" angle_in_degrees=expr(90 * TimeDelta())
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="-" value=expr(90 * TimeDelta())
 
 @event aiGeneratedEventId="battle-jump"
@@ -39,11 +41,11 @@ if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=0
 @end group
 
-@group "Third-person camera follow" source="" creationTime=0 color=[143,108,255] parameters=[]
+@group "Constrained spring-arm camera" source="" creationTime=0 color=[143,108,255] parameters=[]
 @event aiGeneratedEventId="battle-camera-follow"
 if Physics3D::PhysicsCharacter3D::ForwardSpeedMax object="TwinKunai" behavior="PhysicsCharacter3D" comparison_sign=">" speed_in_pixels_per_second=0
-do SetCameraCenterX modification_sign="=" value=expr(TwinKunai.X() + cos(ToRad(Variable(CameraOrbitAngle))) * 650) layer="" camera_number_default_0=0
-do SetCameraCenterY modification_sign="=" value=expr(TwinKunai.Y() + sin(ToRad(Variable(CameraOrbitAngle))) * 650) layer="" camera_number_default_0=0
-do Scene3D::SetCameraZ modification_sign="=" value=expr(TwinKunai.Base3D::Z() + 280) layer="" camera_number_default_0=0
-do Scene3D::TurnCameraTowardPosition x_position=expr(TwinKunai.X()) y_position=expr(TwinKunai.Y()) z_position=expr(TwinKunai.Base3D::Z() + 115) layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
+do SetCameraCenterX modification_sign="=" value=expr(lerp(CameraCenterX("", 0), TwinKunai.X() + cos(ToRad(Variable(CameraOrbitAngle))) * 650, min(1, 10 * TimeDelta()))) layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=expr(lerp(CameraCenterY("", 0), TwinKunai.Y() + sin(ToRad(Variable(CameraOrbitAngle))) * 650, min(1, 10 * TimeDelta()))) layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=expr(lerp(Scene3D::CameraZ("", 0), TwinKunai.Base3D::Z() + 280, min(1, 10 * TimeDelta()))) layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=expr(TwinKunai.X() - cos(ToRad(Variable(CameraOrbitAngle))) * 160) y_position=expr(TwinKunai.Y() - sin(ToRad(Variable(CameraOrbitAngle))) * 160) z_position=expr(TwinKunai.Base3D::Z() + 115) layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
 @end group
