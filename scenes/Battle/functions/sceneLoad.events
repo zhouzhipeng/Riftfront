@@ -2,8 +2,8 @@
 @event aiGeneratedEventId="battle-initialize-character-camera"
 do Physics3D::PhysicsCharacter3D::SetForwardAngle object="TwinKunai" behavior="PhysicsCharacter3D" modification_sign="=" angle_in_degrees=90
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=0
-do SetCameraCenterX modification_sign="=" value=expr(TwinKunai.X()) layer="" camera_number_default_0=0
-do SetCameraCenterY modification_sign="=" value=expr(TwinKunai.Y() - 650) layer="" camera_number_default_0=0
+do SetCameraCenterX modification_sign="=" value=expr(TwinKunai.X() + 650) layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=expr(TwinKunai.Y()) layer="" camera_number_default_0=0
 do Scene3D::SetCameraZ modification_sign="=" value=expr(TwinKunai.Base3D::Z() + 280) layer="" camera_number_default_0=0
 do Scene3D::TurnCameraTowardPosition x_position=expr(TwinKunai.X()) y_position=expr(TwinKunai.Y()) z_position=expr(TwinKunai.Base3D::Z() + 115) layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
 @end group
