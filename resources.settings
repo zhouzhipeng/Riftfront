@@ -640,3 +640,167 @@ kind = "json"
 metadata = ""
 name = "TwinKunaiSpringBones"
 userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/SkeletonMonster.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/SkeletonMonster.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/IdleNormal.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/IdleNormal.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/IdleBattle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/IdleBattle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Run.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Run.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/WalkFront.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/WalkFront.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/WalkBack.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/WalkBack.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/WalkLeft.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/WalkLeft.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/WalkRight.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/WalkRight.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/SentryWalkFront.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/SentryWalkFront.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Attack01.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Attack01.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Attack02.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Attack02.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Defense.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Defense.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/DefenseGetHit.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/DefenseGetHit.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/GetHit.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/GetHit.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Dizzy.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Dizzy.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Die.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Die.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/SenseSomethingRT.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/SenseSomethingRT.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/SenseSomethingST.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/SenseSomethingST.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Taunting.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Taunting.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/animations/Victory.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/skeleton_monster/animations/Victory.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/textures/DefaultPBR/Albedo.png"
+kind = "image"
+metadata = ""
+name = "assets/models/skeleton_monster/textures/DefaultPBR/Albedo.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/textures/DefaultPBR/Emission.png"
+kind = "image"
+metadata = ""
+name = "assets/models/skeleton_monster/textures/DefaultPBR/Emission.png"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/models/skeleton_monster/textures/DefaultPBR/Metallic-Smoothness.png"
+kind = "image"
+metadata = ""
+name = "assets/models/skeleton_monster/textures/DefaultPBR/Metallic-Smoothness.png"
+smoothed = true
+userAdded = true

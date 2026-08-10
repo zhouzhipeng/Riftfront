@@ -1,0 +1,217 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "SkeletonModel"
+persistentUuid = "13aed025-11d8-45ad-9b92-bc74441cfa30"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.1
+depth = 75
+height = 174
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/skeleton_monster/SkeletonMonster.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 253
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/IdleNormal.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/IdleBattle.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Run.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/WalkFront.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/WalkBack.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/WalkLeft.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/WalkRight.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/SentryWalkFront.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Attack01.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Attack02.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Defense.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/DefenseGetHit.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/GetHit.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Dizzy.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Die.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/SenseSomethingRT.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/SenseSomethingST.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Taunting.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/models/skeleton_monster/animations/Victory.glb"
+
+[[content.animations]]
+loop = true
+name = "IdleNormal"
+source = "IdleNormal_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/IdleNormal.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "IdleBattle"
+source = "IdleBattle_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/IdleBattle.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "Run"
+source = "Run_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Run.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "WalkFront"
+source = "WalkFront_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/WalkFront.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "WalkBack"
+source = "WalkBack_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/WalkBack.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "WalkLeft"
+source = "WalkLeft_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/WalkLeft.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "WalkRight"
+source = "WalkRight_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/WalkRight.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "SentryWalkFront"
+source = "SentryWalkFront_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/SentryWalkFront.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "Attack01"
+source = "Attack01_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Attack01.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "Attack02"
+source = "Attack02_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Attack02.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "Defense"
+source = "Defense_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Defense.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "DefenseGetHit"
+source = "DefenseGetHit_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/DefenseGetHit.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "GetHit"
+source = "GetHit_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/GetHit.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = true
+name = "Dizzy"
+source = "Dizzy_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Dizzy.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "Die"
+source = "Die_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Die.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "SenseSomethingRT"
+source = "SenseSomethingRT_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/SenseSomethingRT.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "SenseSomethingST"
+source = "SenseSomethingST_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/SenseSomethingST.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "Taunting"
+source = "Taunting_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Taunting.glb"
+useRootMotion = false
+
+[[content.animations]]
+loop = false
+name = "Victory"
+source = "Victory_Skeleton_Anim"
+sourceModelResourceName = "assets/models/skeleton_monster/animations/Victory.glb"
+useRootMotion = false
