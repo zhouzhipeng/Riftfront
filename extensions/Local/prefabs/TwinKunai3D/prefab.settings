@@ -21,7 +21,7 @@ objectGroups = { }
 
 [layout]
 version = 1
-bounds = { min = [-145, -220, 0], max = [145, 220, 240] }
+bounds = { min = [-65, -65, 0], max = [65, 65, 300] }
 
 [layout.editor]
 grid = false
