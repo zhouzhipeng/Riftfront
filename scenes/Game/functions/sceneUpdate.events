@@ -1,6 +1,6 @@
 @group "Game initialization" source="" creationTime=0 color=[69,197,255] parameters=[]
 @event aiGeneratedEventId="initialize-defense"
-if SceneJustBegins
+if BuiltinCommonInstructions::Once
 do SetNumberVariable variable="Wave" modification_sign="=" value=0
 do SetNumberVariable variable="GameState" modification_sign="=" value=0
 do SetNumberVariable variable="ToSpawn" modification_sign="=" value=0
