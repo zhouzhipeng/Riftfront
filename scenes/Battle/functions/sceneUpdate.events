@@ -39,7 +39,7 @@ do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_ind
 
 @group "Third-person camera follow" source="" creationTime=0 color=[143,108,255] parameters=[]
 @event aiGeneratedEventId="battle-camera-follow"
-if PickedInstancesCount object="TwinKunai" comparison_sign=">" value=0
+if Physics3D::PhysicsCharacter3D::ForwardSpeedMax object="TwinKunai" behavior="PhysicsCharacter3D" comparison_sign=">" speed_in_pixels_per_second=0
 do SetCameraCenterX modification_sign="=" value=expr(TwinKunai.X()) layer="" camera_number_default_0=0
 do SetCameraCenterY modification_sign="=" value=expr(TwinKunai.Y() - 650) layer="" camera_number_default_0=0
 do Scene3D::SetCameraZ modification_sign="=" value=expr(TwinKunai.Base3D::Z() + 280) layer="" camera_number_default_0=0
