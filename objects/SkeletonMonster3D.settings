@@ -1,0 +1,13 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+assetStoreId = ""
+name = "SkeletonMonster3D"
+persistentUuid = "ca5a6b4c-8de9-45a4-9f68-56a1553b7d9f"
+type = "Local::SkeletonMonster3D"
+variant = ""
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+content = { }
+folder = [ ]

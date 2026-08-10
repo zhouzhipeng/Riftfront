@@ -1,19 +1,15 @@
 kind = "prefab"
 settingsFormatVersion = 5
 order = 2
-name = "SkeletonMonster3D"
 defaultName = "SkeletonMonster3D"
 description = "Reusable animated PBR skeleton monster with 19 embedded animation mappings."
 fullName = "Skeleton Monster 3D"
 helpPath = ""
 iconUrl = ""
-previewIconUrl = ""
-private = false
 is3D = true
-isAnimatable = false
-isTextContainer = false
-isInnerAreaFollowingParentSize = false
 isUsingLegacyInstancesRenderer = false
+name = "SkeletonMonster3D"
+previewIconUrl = ""
 behaviors = [ ]
 variables = [ ]
 propertyDescriptors = [ ]
@@ -21,7 +17,7 @@ objectGroups = { }
 
 [layout]
 version = 1
-bounds = { min = [-127, -38, 0], max = [127, 38, 174] }
+bounds = { max = [127, 38, 174], min = [-127, -38, 0] }
 
 [layout.editor]
 grid = false
@@ -40,11 +36,10 @@ mode = "instances-editor"
 id = "base"
 name = ""
 rendering = "3d"
-lighting = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layout.instances]]
 id = "7b13fdae-3553-4221-9d03-babb6e93b439"
 object = "SkeletonModel"
 layer = "base"
-at = [0, 0, 0]
+at = [0, 0]
