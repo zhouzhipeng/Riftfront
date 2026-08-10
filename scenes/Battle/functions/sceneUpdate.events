@@ -41,16 +41,44 @@ if MousePointerLock::MovementX comparison_sign="!=" value=0
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="-" value=expr(MousePointerLock::MovementX() * 0.18)
 @end group
 
+@group "Mouse combo attack" source="" creationTime=0 color=[255,92,92] parameters=[]
+@event aiGeneratedEventId="battle-combo-left-click"
+if MouseButtonFromTextPressed button_to_check="Left"
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=1
+do ResetTimer timer_name="TwinKunaiComboTimer"
+
+@event aiGeneratedEventId="battle-combo-second-hit"
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign=">=" time_in_seconds=0.4
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=0.8
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=2
+
+@event aiGeneratedEventId="battle-combo-third-hit"
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign=">=" time_in_seconds=0.8
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
+if BuiltinCommonInstructions::Once
+do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=3
+
+@event aiGeneratedEventId="battle-combo-finish"
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign=">=" time_in_seconds=1.35
+do RemoveTimer timer_name="TwinKunaiComboTimer"
+@end group
+
 @group "Character animation" source="" creationTime=0 color=[126,211,126] parameters=[]
 @event aiGeneratedEventId="battle-turn-left-animation"
 if KeyFromTextPressed key_to_check="a"
 or KeyFromTextPressed key_to_check="Left"
+@instruction inverted=true
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=26
 
 @event aiGeneratedEventId="battle-turn-right-animation"
 if KeyFromTextPressed key_to_check="d"
 or KeyFromTextPressed key_to_check="Right"
+@instruction inverted=true
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=27
 
@@ -64,6 +92,8 @@ if KeyFromTextPressed key_to_check="Left"
 if KeyFromTextPressed key_to_check="d"
 @instruction inverted=true
 if KeyFromTextPressed key_to_check="Right"
+@instruction inverted=true
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=16
 
@@ -78,6 +108,8 @@ if KeyFromTextPressed key_to_check="Left"
 if KeyFromTextPressed key_to_check="d"
 @instruction inverted=true
 if KeyFromTextPressed key_to_check="Right"
+@instruction inverted=true
+if CompareTimer timer_name="TwinKunaiComboTimer" comparison_sign="<" time_in_seconds=1.35
 if BuiltinCommonInstructions::Once
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai" animation_index_from_0_to_28=0
 @end group
