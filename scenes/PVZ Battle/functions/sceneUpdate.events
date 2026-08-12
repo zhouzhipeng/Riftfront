@@ -84,6 +84,7 @@ if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_val
 do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
 do Create object_to_create="SunflowerPlant" x_position=expr(LawnTiles.X() + 50) y_position=expr(LawnTiles.Y() + 50) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SunflowerPlant" behavior="Base3D" modification_sign="=" value=5
+do PlaySound audio_file_or_audio_resource_name="PVZ_PlacePlant" repeat_the_sound=false volume=65 pitch_speed=1
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
@@ -103,6 +104,7 @@ if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_val
 do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
 do Create object_to_create="PeashooterPlant" x_position=expr(LawnTiles.X() + 50) y_position=expr(LawnTiles.Y() + 50) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeashooterPlant" behavior="Base3D" modification_sign="=" value=5
+do PlaySound audio_file_or_audio_resource_name="PVZ_PlacePlant" repeat_the_sound=false volume=65 pitch_speed=1
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
@@ -133,6 +135,7 @@ if MouseButtonFromTextReleased button_to_check="Left"
 do SetBooleanVariable variable="PlantingMode" modification_sign="True"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Sunflower"
+do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_sound=false volume=55 pitch_speed=1
 do Show object="SelectedSunflower"
 do Hide object="SelectedPeashooter"
 do Show object="PlantingHint"
@@ -143,6 +146,7 @@ if MouseButtonFromTextReleased button_to_check="Left"
 do SetBooleanVariable variable="PlantingMode" modification_sign="True"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Peashooter"
+do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_sound=false volume=55 pitch_speed=1
 do Hide object="SelectedSunflower"
 do Show object="SelectedPeashooter"
 do Show object="PlantingHint"
@@ -154,6 +158,7 @@ if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=5
 if PickRandomInstance object="ZombieSpawnPoint"
 do Create object_to_create="Zombie" x_position=expr(ZombieSpawnPoint.X()) y_position=expr(ZombieSpawnPoint.Y()) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="Zombie" behavior="Base3D" modification_sign="=" value=5
+do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieVoice" repeat_the_sound=false volume=45 pitch_speed=1
 do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 do ResetTimer timer_name="ZombieSpawn"
 
@@ -189,6 +194,7 @@ for each "Zombie"
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign="<=" second_expression=6400
 > if CompareObjectTimer object="Zombie" timer_name="AttackCooldown" comparison_sign=">=" time_in_seconds=1
 > do EmitSignalToObjectInstance instance_id=expr(Plants.InstanceId()) signal_name="Unit.Damage" payload="1"
+> do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieEat" repeat_the_sound=false volume=45 pitch_speed=1
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 
 @event aiGeneratedEventId="pvz-remove-zombie-at-house"
@@ -202,6 +208,7 @@ for each "PeashooterPlant"
 > @event aiGeneratedEventId="pvz-peashooter-fire-ready"
 > if CompareTimer timer_name="PeashooterFire" comparison_sign=">=" time_in_seconds=1.1
 > do EmitSignalToObjectInstance instance_id=expr(PeashooterPlant.InstanceId()) signal_name="Peashooter.Shoot" payload=""
+> do PlaySound audio_file_or_audio_resource_name="PVZ_PlantAttack" repeat_the_sound=false volume=42 pitch_speed=1
 > do Create object_to_create="PeaProjectile" x_position=expr(PeashooterPlant.X() + 45) y_position=expr(PeashooterPlant.Y()) layer=""
 > do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=52
 
@@ -219,6 +226,7 @@ for each "PeaProjectile"
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((PeaProjectile.X() - Zombie.X()) * (PeaProjectile.X() - Zombie.X()) + (PeaProjectile.Y() - Zombie.Y()) * (PeaProjectile.Y() - Zombie.Y())) comparison_sign="<=" second_expression=3600
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="1"
+> do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
 > do Delete object="PeaProjectile"
 
 @event aiGeneratedEventId="pvz-remove-offscreen-pea"

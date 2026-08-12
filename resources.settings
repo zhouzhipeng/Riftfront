@@ -968,3 +968,63 @@ metadata = ""
 name = "HealthBarWhite"
 smoothed = false
 userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/SelectPlantCardSound.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_SelectPlantCard"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/PlacePlantSound.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_PlacePlant"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/PlantAttack00.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_PlantAttack"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/ZombieDamageNormal.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_ZombieDamage"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/ZombieVoice.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_ZombieVoice"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/audio/pvz/ZombieEatSound.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_ZombieEat"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
