@@ -45,6 +45,7 @@ do SetBooleanVariable variable="SunCollectedThisFrame" modification_sign="False"
 
 @event aiGeneratedEventId="pvz-spawn-sun-collectible"
 if CompareTimer timer_name="SunSpawn" comparison_sign=">=" time_in_seconds=5
+if SceneInstancesCount object="SunflowerPlant" comparison_sign=">" value=0
 do Create object_to_create="SunCollect" x_position=expr(350 + RandomInRange(0, 8) * 100) y_position=expr(150 + RandomInRange(0, 4) * 100) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SunCollect" behavior="Base3D" modification_sign="=" value=20
 do SetAngle object="SunCollect" modification_sign="=" angle_in_degrees=expr(RandomInRange(0, 359))
@@ -248,7 +249,7 @@ for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((PeaProjectile.X() - Zombie.X()) * (PeaProjectile.X() - Zombie.X()) + (PeaProjectile.Y() - Zombie.Y()) * (PeaProjectile.Y() - Zombie.Y())) comparison_sign="<=" second_expression=3600
-> do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="1"
+> do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="20"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
 > do Delete object="PeaProjectile"
 

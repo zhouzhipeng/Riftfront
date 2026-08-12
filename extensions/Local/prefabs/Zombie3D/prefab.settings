@@ -15,12 +15,12 @@ behaviors = [ ]
 [[variables]]
 name = "HP"
 type = "number"
-value = 3
+value = 100
 
 [[variables]]
 name = "MaxHP"
 type = "number"
-value = 3
+value = 100
 
 propertyDescriptors = [ ]
 objectGroups = { }
