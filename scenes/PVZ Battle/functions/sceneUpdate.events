@@ -257,26 +257,3 @@ for each "PeaProjectile"
 if PosX object="PeaProjectile" comparison_sign=">" value=1400
 do Delete object="PeaProjectile"
 @end group
-
-@group "Camera-facing health bars" source="" creationTime=0 color=[86,213,74] parameters=[]
-@event aiGeneratedEventId="sync-sunflower-health-bars-to-camera"
-if SceneInstancesCount object="SunflowerPlant" comparison_sign=">" value=0
-> for each SunflowerPlant
->> do EmitSignalToObjectInstance instance_id=expr(SunflowerPlant.InstanceId()) signal_name="HealthBar.FaceCameraX" payload=expr(ToString(-Scene3D::CameraRotationX("")))
->> do EmitSignalToObjectInstance instance_id=expr(SunflowerPlant.InstanceId()) signal_name="HealthBar.FaceCameraY" payload=expr(ToString(Scene3D::CameraRotationY("")))
->> do EmitSignalToObjectInstance instance_id=expr(SunflowerPlant.InstanceId()) signal_name="HealthBar.FaceCameraZ" payload=expr(ToString(CameraAngle("")))
-
-@event aiGeneratedEventId="sync-peashooter-health-bars-to-camera"
-if SceneInstancesCount object="PeashooterPlant" comparison_sign=">" value=0
-> for each PeashooterPlant
->> do EmitSignalToObjectInstance instance_id=expr(PeashooterPlant.InstanceId()) signal_name="HealthBar.FaceCameraX" payload=expr(ToString(-Scene3D::CameraRotationX("")))
->> do EmitSignalToObjectInstance instance_id=expr(PeashooterPlant.InstanceId()) signal_name="HealthBar.FaceCameraY" payload=expr(ToString(Scene3D::CameraRotationY("")))
->> do EmitSignalToObjectInstance instance_id=expr(PeashooterPlant.InstanceId()) signal_name="HealthBar.FaceCameraZ" payload=expr(ToString(CameraAngle("")))
-
-@event aiGeneratedEventId="sync-zombie-health-bars-to-camera"
-if SceneInstancesCount object="Zombie" comparison_sign=">" value=0
-> for each Zombie
->> do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="HealthBar.FaceCameraX" payload=expr(ToString(-Scene3D::CameraRotationX("")))
->> do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="HealthBar.FaceCameraY" payload=expr(ToString(Scene3D::CameraRotationY("")))
->> do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="HealthBar.FaceCameraZ" payload=expr(ToString(CameraAngle("")))
-@end group

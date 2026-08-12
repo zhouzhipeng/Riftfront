@@ -10,7 +10,15 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "HealthBar3D"
 previewIconUrl = ""
-behaviors = [ ]
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "Billboard"
+type = "Billboard::Billboard"
+Object3D = "Base3D"
+OffsetPositionMode = "No change"
 
 [[variables]]
 name = "Ratio"
