@@ -14,7 +14,7 @@ objectGroups = { }
 
 [layout]
 version = 1
-background = "#78A7D1"
+background = "#21472B"
 
 [layout.editor]
 grid = true
@@ -63,7 +63,7 @@ name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
 elevation = 55
 groundColor = "76;101;53"
-intensity = 0.55
+intensity = 0.45
 rotation = 320
 skyColor = "255;246;220"
 top = "Z+"
@@ -76,7 +76,7 @@ color = "255;255;255"
 distanceFromCamera = 1500
 elevation = 52
 frustumSize = 2200
-intensity = 1.1
+intensity = 0.9
 isCastingShadow = true
 minimumShadowBias = 0.001
 rotation = 325
@@ -87,7 +87,7 @@ top = "Z+"
 layer = "base"
 name = "Sunny Exposure"
 type = "Scene3D::Exposure"
-exposure = 1.08
+exposure = 0.88
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000001"
