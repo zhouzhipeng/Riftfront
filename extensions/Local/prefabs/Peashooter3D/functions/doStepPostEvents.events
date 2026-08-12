@@ -1,9 +1,3 @@
-@event aiGeneratedEventId="peashooter-health-bar-face-camera"
-if NumberVariable variable="HP" comparison_sign=">" value=0
-do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(-Scene3D::CameraRotationX(HealthBar.Layer()))
-do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(Scene3D::CameraRotationY(HealthBar.Layer()))
-do SetAngle object="HealthBar" modification_sign="=" angle_in_degrees=expr(CameraAngle(HealthBar.Layer()))
-
 @event aiGeneratedEventId="peashooter-return-to-idle"
 if AnimatableCapability::AnimatableBehavior::Index object="PeashooterModel" behavior="Animation" comparison_sign="=" animation_index=1
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="PeashooterModel" behavior="Animation"

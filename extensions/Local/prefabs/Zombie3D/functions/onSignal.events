@@ -21,3 +21,15 @@ do ModVarObjet object="Object" variable="HP" modification_sign="=" value=expr(ma
 if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Unit.Damage"
 if VarObjet object="Object" variable="HP" comparison_sign=">" value=0
 do EmitSignalToObjectInstance instance_id=expr(HealthBar.InstanceId()) signal_name="HealthBar.SetRatio" payload=expr(ToString(Object.Variable(HP) / Object.Variable(MaxHP)))
+
+@event aiGeneratedEventId="zombie-health-bar-camera-x"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.FaceCameraX"
+do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(ToNumber(Payload))
+
+@event aiGeneratedEventId="zombie-health-bar-camera-y"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.FaceCameraY"
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(ToNumber(Payload))
+
+@event aiGeneratedEventId="zombie-health-bar-camera-z"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.FaceCameraZ"
+do SetAngle object="HealthBar" modification_sign="=" angle_in_degrees=expr(ToNumber(Payload))
