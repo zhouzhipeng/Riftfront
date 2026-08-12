@@ -1,0 +1,45 @@
+kind = "prefab"
+settingsFormatVersion = 5
+order = 4
+defaultName = "Sunflower3D"
+description = "Reusable animated 3D sunflower plant that idles by default."
+fullName = "Sunflower 3D"
+helpPath = ""
+iconUrl = ""
+is3D = true
+isUsingLegacyInstancesRenderer = false
+name = "Sunflower3D"
+previewIconUrl = ""
+behaviors = [ ]
+variables = [ ]
+propertyDescriptors = [ ]
+objectGroups = { }
+
+[layout]
+version = 1
+bounds = { max = [48, 48, 100], min = [-48, -48, 0] }
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "3d"
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "86a75979-d54b-4767-9d19-dd4f9ceabec0"
+object = "SunflowerModel"
+layer = "base"
+at = [0, 0]

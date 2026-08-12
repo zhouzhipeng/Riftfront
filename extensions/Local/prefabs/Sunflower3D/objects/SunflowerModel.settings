@@ -1,0 +1,70 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "SunflowerModel"
+persistentUuid = "3c9cebad-7728-428f-b252-013a92f03280"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 96
+height = 86
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SK_SunFlower.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+width = 86
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
+name = "Plant__SK_SunFlower_Idle"
+source = "Plant__SK_SunFlower_Idle"
+sourceModelResourceName = ""
+useRootMotion = true
+
+[[content.animations]]
+loop = false
+name = "Plant__SK_SunFlower_Attack"
+source = "Plant__SK_SunFlower_Attack"
+sourceModelResourceName = ""
+useRootMotion = true
+
+[[content.animations]]
+loop = false
+name = "Plant__SK_SunFlower_Attack_Montage"
+source = "Plant__SK_SunFlower_Attack_Montage"
+sourceModelResourceName = ""
+useRootMotion = true
+
+[[content.animations]]
+loop = false
+name = "Plant__SK_SunFlower_JumpStart"
+source = "Plant__SK_SunFlower_JumpStart"
+sourceModelResourceName = ""
+useRootMotion = true
+
+[[content.animations]]
+loop = false
+name = "Plant__SK_SunFlower_LightState"
+source = "Plant__SK_SunFlower_LightState"
+sourceModelResourceName = ""
+useRootMotion = true
+
+[[content.animations]]
+loop = false
+name = "Plant__SK_SunFlower_Walk"
+source = "Plant__SK_SunFlower_Walk"
+sourceModelResourceName = ""
+useRootMotion = true

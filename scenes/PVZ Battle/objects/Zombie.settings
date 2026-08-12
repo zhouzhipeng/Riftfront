@@ -4,8 +4,10 @@ order = 25
 assetStoreId = ""
 name = "Zombie"
 persistentUuid = "c3c6ee72-e91a-4990-85a9-4221a617d4ec"
-type = "Scene3D::Model3DObject"
+type = "Local::Zombie3D"
+variant = ""
 effects = [ ]
+content = { }
 folder = [ "Combat" ]
 
 [[variables]]
@@ -17,27 +19,3 @@ value = 3
 [[behaviors]]
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
-
-[content]
-centerLocation = "BottomCenterZ"
-crossfadeDuration = 0.1
-depth = 100
-height = 100
-isCastingShadow = true
-isReceivingShadow = true
-keepAspectRatio = true
-materialType = "KeepOriginal"
-modelResourceName = "SK_Zombie.glb"
-originLocation = "BottomCenterZ"
-rotationX = 90
-rotationY = 0
-rotationZ = 270
-width = 100
-sharedAnimationModelResources = [ ]
-
-[[content.animations]]
-loop = true
-name = "Walk"
-source = "Zombie__SK_Zombie_Walk"
-sourceModelResourceName = ""
-useRootMotion = false
