@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 6
+assetStoreId = ""
+name = "FenceShort"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Architecture" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 140
+height = 28
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_Fence.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 96
+sharedAnimationModelResources = [ ]
+animations = [ ]

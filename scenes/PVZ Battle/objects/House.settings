@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 3
+assetStoreId = ""
+name = "House"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Architecture" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 390
+height = 550
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_House.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 550
+sharedAnimationModelResources = [ ]
+animations = [ ]

@@ -1,0 +1,45 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 13
+assetStoreId = ""
+bold = true
+italic = false
+name = "SeedRack"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "  SUNFLOWER  50     PEASHOOTER  100     WALL-NUT  75          SHOVEL   GLOVE  "
+font = ""
+textAlignment = "center"
+characterSize = 21
+folder = [ "HUD" ]
+
+[color]
+b = 232
+g = 245
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "74;34;12"
+outlineThickness = 5
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "  SUNFLOWER  50     PEASHOOTER  100     WALL-NUT  75          SHOVEL   GLOVE  "
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 21
+lineHeight = 0
+color = "255;245;232"

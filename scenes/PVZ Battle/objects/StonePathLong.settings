@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+assetStoreId = ""
+name = "StonePathLong"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Yard" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 5
+height = 150
+isCastingShadow = false
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_lobbyStoneFloorfbx.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 500
+sharedAnimationModelResources = [ ]
+animations = [ ]

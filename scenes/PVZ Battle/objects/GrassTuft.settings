@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 10
+assetStoreId = ""
+name = "GrassTuft"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Yard" ]
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 34
+height = 34
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "freshGreen.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 34
+sharedAnimationModelResources = [ ]
+animations = [ ]

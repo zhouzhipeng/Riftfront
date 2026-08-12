@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 5
+assetStoreId = ""
+name = "FenceLong"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Architecture" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 156
+height = 36
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_Fence01.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 220
+sharedAnimationModelResources = [ ]
+animations = [ ]

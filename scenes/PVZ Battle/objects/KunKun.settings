@@ -1,0 +1,34 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 11
+assetStoreId = ""
+name = "KunKun"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Characters" ]
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.15
+depth = 148
+height = 72
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SK_KunKun.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 180
+width = 72
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
+name = "Idle"
+source = "KunKun__Idle"
+sourceModelResourceName = ""
+useRootMotion = false

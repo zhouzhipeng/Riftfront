@@ -1,0 +1,45 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 14
+assetStoreId = ""
+bold = true
+italic = false
+name = "LevelLabel"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "ADVENTURE  •  FRONT YARD"
+font = ""
+textAlignment = "center"
+characterSize = 24
+folder = [ "HUD" ]
+
+[color]
+b = 255
+g = 255
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "15;45;12"
+outlineThickness = 4
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 190
+smoothed = true
+underlined = false
+text = "ADVENTURE  •  FRONT YARD"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 24
+lineHeight = 0
+color = "255;255;255"

@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 9
+assetStoreId = ""
+name = "WindowSmall"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Architecture" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 70
+height = 18
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_Window01.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 48
+sharedAnimationModelResources = [ ]
+animations = [ ]

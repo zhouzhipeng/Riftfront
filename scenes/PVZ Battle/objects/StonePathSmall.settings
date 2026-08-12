@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 2
+assetStoreId = ""
+name = "StonePathSmall"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Yard" ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 7
+height = 120
+isCastingShadow = false
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_MainStoneFloor.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 160
+sharedAnimationModelResources = [ ]
+animations = [ ]

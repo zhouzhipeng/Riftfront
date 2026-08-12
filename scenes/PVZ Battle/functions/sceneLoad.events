@@ -1,0 +1,5 @@
+@event aiGeneratedEventId="pvz-yard-camera"
+do SetCameraCenterX modification_sign="=" value=650 layer="" camera_number_default_0=0
+do SetCameraCenterY modification_sign="=" value=980 layer="" camera_number_default_0=0
+do Scene3D::SetCameraZ modification_sign="=" value=820 layer="" camera_number_default_0=0
+do Scene3D::TurnCameraTowardPosition x_position=650 y_position=345 z_position=25 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false

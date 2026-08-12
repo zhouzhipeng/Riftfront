@@ -804,3 +804,94 @@ metadata = ""
 name = "assets/models/skeleton_monster/textures/DefaultPBR/Metallic-Smoothness.png"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/SK_KunKun.glb"
+kind = "model3D"
+metadata = ""
+name = "SK_KunKun.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Floor_Hiden.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Floor_Hiden.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Floor.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Floor.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_lobbyStoneFloorfbx.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_lobbyStoneFloorfbx.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_MainStoneFloor.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_MainStoneFloor.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_House.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_House.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Door00.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Door00.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/freshGreen.glb"
+kind = "model3D"
+metadata = ""
+name = "freshGreen.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Fence.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Fence.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Fence01.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Fence01.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Fence02.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Fence02.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Window00.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Window00.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_Window01.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_Window01.glb"
+userAdded = false
