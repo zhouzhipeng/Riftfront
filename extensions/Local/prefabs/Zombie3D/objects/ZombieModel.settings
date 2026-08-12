@@ -13,8 +13,8 @@ folder = [ ]
 [content]
 centerLocation = "BottomCenterZ"
 crossfadeDuration = 0.1
-depth = 120
-height = 120
+depth = 135
+height = 135
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
@@ -24,7 +24,7 @@ originLocation = "BottomCenterZ"
 rotationX = 90
 rotationY = 0
 rotationZ = 270
-width = 120
+width = 135
 sharedAnimationModelResources = [ ]
 
 [[content.animations]]
