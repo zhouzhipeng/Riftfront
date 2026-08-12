@@ -1,54 +1,49 @@
-@group "Third-person camera orbit" source="" creationTime=0 color=[143,108,255] parameters=[]
+@group "Free orbit camera" source="" creationTime=0 color=[143,108,255] parameters=[]
 @event aiGeneratedEventId="pvz-camera-drag-start"
 if MouseButtonFromTextPressed button_to_check="Right"
 if BuiltinCommonInstructions::Once
 do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraDragStartY" modification_sign="=" value=expr(CursorY("HUD", 0))
 do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
+do SetNumberVariable variable="CameraDragStartElevation" modification_sign="=" value=expr(Variable(CameraElevationAngle))
 
 @event aiGeneratedEventId="pvz-camera-drag-orbit"
 if MouseButtonFromTextPressed button_to_check="Right"
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=expr(Variable(CameraDragStartAngle) + (CursorX("HUD", 0) - Variable(CameraDragStartX)) * 0.35)
-do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="KunKun" behavior="ThirdPersonCamera" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
-@end group
+do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=expr(clamp(Variable(CameraDragStartElevation) - (CursorY("HUD", 0) - Variable(CameraDragStartY)) * 0.25, 20, 78))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 
-@group "KunKun WASD movement" source="" creationTime=0 color=[255,183,77] parameters=[]
-@event aiGeneratedEventId="pvz-kunkun-move-up"
-if KeyFromTextPressed key_to_check="w"
-do SetY object="KunKun" modification_sign="-" value=expr(220 * TimeDelta())
+@event aiGeneratedEventId="pvz-camera-pan-start"
+if MouseButtonFromTextPressed button_to_check="Middle"
+if BuiltinCommonInstructions::Once
+do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=expr(CursorY("HUD", 0))
 
-@event aiGeneratedEventId="pvz-kunkun-move-down"
-if KeyFromTextPressed key_to_check="s"
-do SetY object="KunKun" modification_sign="+" value=expr(220 * TimeDelta())
+@event aiGeneratedEventId="pvz-camera-pan"
+if MouseButtonFromTextPressed button_to_check="Middle"
+do SetNumberVariable variable="CameraTargetX" modification_sign="-" value=expr((cos(ToRad(Variable(CameraOrbitAngle))) * (CursorX("HUD", 0) - Variable(CameraPanLastX)) + cos(ToRad(Variable(CameraOrbitAngle) + 90)) * (CursorY("HUD", 0) - Variable(CameraPanLastY))) * Variable(CameraDistance) / 700)
+do SetNumberVariable variable="CameraTargetY" modification_sign="-" value=expr((sin(ToRad(Variable(CameraOrbitAngle))) * (CursorX("HUD", 0) - Variable(CameraPanLastX)) + sin(ToRad(Variable(CameraOrbitAngle) + 90)) * (CursorY("HUD", 0) - Variable(CameraPanLastY))) * Variable(CameraDistance) / 700)
+do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=expr(CursorY("HUD", 0))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 
-@event aiGeneratedEventId="pvz-kunkun-move-left"
-if KeyFromTextPressed key_to_check="a"
-do SetX object="KunKun" modification_sign="-" value=expr(220 * TimeDelta())
+@event aiGeneratedEventId="pvz-camera-zoom-in"
+if IsMouseWheelScrollingUp
+do SetNumberVariable variable="CameraDistance" modification_sign="=" value=expr(max(300, Variable(CameraDistance) * 0.88))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 
-@event aiGeneratedEventId="pvz-kunkun-move-right"
-if KeyFromTextPressed key_to_check="d"
-do SetX object="KunKun" modification_sign="+" value=expr(220 * TimeDelta())
+@event aiGeneratedEventId="pvz-camera-zoom-out"
+if IsMouseWheelScrollingDown
+do SetNumberVariable variable="CameraDistance" modification_sign="=" value=expr(min(1800, Variable(CameraDistance) / 0.88))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 @end group
 
 @group "Plant placement preview" source="" creationTime=0 color=[103,208,93] parameters=[]
-@event aiGeneratedEventId="pvz-carry-selected-plant"
-if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
-if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
-do Show object="SelectedSunflower"
-do SetX object="SelectedSunflower" modification_sign="=" value=expr(KunKun.CenterX())
-do SetY object="SelectedSunflower" modification_sign="=" value=expr(KunKun.CenterY())
-do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(KunKun.Base3D::Z() + KunKun.Base3D::Depth() + 26)
-
-@event aiGeneratedEventId="pvz-carry-selected-peashooter"
-if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
-if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
-do Show object="SelectedPeashooter"
-do SetX object="SelectedPeashooter" modification_sign="=" value=expr(KunKun.CenterX())
-do SetY object="SelectedPeashooter" modification_sign="=" value=expr(KunKun.CenterY())
-do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(KunKun.Base3D::Z() + KunKun.Base3D::Depth() + 26)
-
 @event aiGeneratedEventId="pvz-reset-hover-target"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
 do Hide object="PlacementHover"
+do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 
 @event aiGeneratedEventId="pvz-hover-open-lawn-tile"
@@ -60,6 +55,20 @@ do SetX object="PlacementHover" modification_sign="=" value=expr(LawnTiles.X() +
 do SetY object="PlacementHover" modification_sign="=" value=expr(LawnTiles.Y() + 6)
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PlacementHover" behavior="Base3D" modification_sign="=" value=5
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="True"
+
+> @event aiGeneratedEventId="pvz-cursor-preview-sunflower"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
+> do Show object="SelectedSunflower"
+> do SetX object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
+
+> @event aiGeneratedEventId="pvz-cursor-preview-peashooter"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
+> do Show object="SelectedPeashooter"
+> do SetX object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
 @end group
 
 @group "Plant sunflower" source="" creationTime=0 color=[255,197,72] parameters=[]

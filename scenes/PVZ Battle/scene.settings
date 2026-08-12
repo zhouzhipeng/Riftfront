@@ -29,6 +29,60 @@ type = "number"
 value = -90
 
 [[variables]]
+name = "CameraTargetX"
+persistentUuid = "38597aed-c576-4664-98eb-69e6e45dc677"
+type = "number"
+value = 750
+
+[[variables]]
+name = "CameraTargetY"
+persistentUuid = "5156e594-9f1c-46d1-bc9b-4cece4c4b0ff"
+type = "number"
+value = 450
+
+[[variables]]
+name = "CameraTargetZ"
+persistentUuid = "56e9aaf3-0b64-4706-9f24-c4219ee5c227"
+type = "number"
+value = 0
+
+[[variables]]
+name = "CameraDistance"
+persistentUuid = "b99ad4ad-39b1-430f-8bc0-e2475333c73a"
+type = "number"
+value = 900
+
+[[variables]]
+name = "CameraElevationAngle"
+persistentUuid = "4ec2501f-8122-4c84-9ba2-7a0624eb5037"
+type = "number"
+value = 48
+
+[[variables]]
+name = "CameraDragStartY"
+persistentUuid = "e7506c95-9394-496c-85db-844da3ff5766"
+type = "number"
+value = 0
+
+[[variables]]
+name = "CameraDragStartElevation"
+persistentUuid = "f260f71b-47fb-486f-9b3a-5d9d427113a2"
+type = "number"
+value = 48
+
+[[variables]]
+name = "CameraPanLastX"
+persistentUuid = "d4cd2ffe-c8ab-4b03-a7be-cb3b24ac37e9"
+type = "number"
+value = 0
+
+[[variables]]
+name = "CameraPanLastY"
+persistentUuid = "e08c9e77-7cda-4006-82d3-a0123347b0b7"
+type = "number"
+value = 0
+
+[[variables]]
 name = "PlantingMode"
 persistentUuid = "42a376d5-bfb4-471f-ad9f-34ac1cdf398c"
 type = "boolean"
@@ -617,12 +671,6 @@ object = "GrassTuft"
 layer = "base"
 at = [1150, 560, 3]
 rotation = 92
-
-[[layout.instances]]
-id = "60000000-0000-4000-8000-000000000001"
-object = "KunKun"
-layer = "base"
-at = [430, 500, 4]
 
 [[layout.instances]]
 id = "70000000-0000-4000-8000-000000000001"
