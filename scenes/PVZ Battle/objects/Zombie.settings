@@ -17,6 +17,16 @@ type = "number"
 value = 0
 
 [[variables]]
+name = "HP"
+type = "number"
+value = 100
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 100
+
+[[variables]]
 name = "TargetX"
 type = "number"
 value = -100000
