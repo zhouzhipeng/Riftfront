@@ -13,12 +13,6 @@ folder = [ ]
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
 
-[[behaviors]]
-name = "Billboard"
-type = "Billboard::Billboard"
-Object3D = "Base3D"
-OffsetPositionMode = "No change"
-
 [content]
 backFaceResourceName = "HealthBarWhite"
 backFaceResourceRepeat = false
