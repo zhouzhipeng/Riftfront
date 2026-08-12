@@ -46,6 +46,12 @@ persistentUuid = "62648a59-5736-4fab-80aa-69909c673ed6"
 type = "number"
 value = 0
 
+[[variables]]
+name = "SelectedPlantType"
+persistentUuid = "05096034-ac25-4666-b15a-e0d25a8c79f5"
+type = "string"
+value = ""
+
 [objectGroups]
 LawnTiles = [ "LawnTile", "LawnTileDark" ]
 
@@ -629,7 +635,7 @@ z_order = 10
 id = "70000000-0000-4000-8000-000000000002"
 object = "SeedRack"
 layer = "hud"
-at = [420, 22]
+at = [645, 22]
 z_order = 10
 
 [[layout.instances]]
@@ -707,3 +713,26 @@ object = "SM_lobbyRoad"
 layer = "base"
 at = [1200, 153]
 z_order = 11
+
+[[layout.instances]]
+id = "65d65862-13e1-4ece-819a-683e1aaec02a"
+object = "PeashooterCard"
+layer = "hud"
+at = [420, 32]
+z_order = 20
+size = [220, 62]
+
+[[layout.instances]]
+id = "435300c3-b240-485a-89a4-47092c1f27cc"
+object = "SelectedPeashooter"
+layer = "base"
+at = [430, 500, 190]
+z_order = 30
+hidden = true
+
+[[layout.instances]]
+id = "864052fb-41fe-4ca9-ad93-4a05fe76a78c"
+object = "Zombie"
+layer = "base"
+at = [1270, 350, 5]
+z_order = 30

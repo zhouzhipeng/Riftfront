@@ -5,7 +5,10 @@ do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetNumberVariable variable="PlacedPlants" modification_sign="=" value=0
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
 do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="KunKun" behavior="ThirdPersonCamera" modification_sign="=" value=-90
+do ResetTimer timer_name="PeashooterFire"
 do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
 do Hide object="PlacementHover"
 do Hide object="PlantingHint"

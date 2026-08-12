@@ -946,3 +946,17 @@ metadata = ""
 name = "assets/textures/pvz_placement_hover.svg"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/SK_Zombie.glb"
+kind = "model3D"
+metadata = ""
+name = "SK_Zombie.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/SM_PeaSphere.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_PeaSphere.glb"
+userAdded = false

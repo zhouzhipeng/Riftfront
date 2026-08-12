@@ -1,0 +1,32 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 24
+assetStoreId = ""
+name = "PeaProjectile"
+persistentUuid = "0150fa7b-8c38-48e3-9d2a-49fc8fd14cb7"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ "Combat" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[content]
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
+depth = 24
+height = 24
+isCastingShadow = false
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SM_PeaSphere.glb"
+originLocation = "ObjectCenter"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 24
+sharedAnimationModelResources = [ ]
+animations = [ ]

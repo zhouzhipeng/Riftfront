@@ -1,0 +1,43 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 25
+assetStoreId = ""
+name = "Zombie"
+persistentUuid = "c3c6ee72-e91a-4990-85a9-4221a617d4ec"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+folder = [ "Combat" ]
+
+[[variables]]
+name = "HP"
+persistentUuid = "b98d02a0-fb49-4e43-8769-1f2c357616e3"
+type = "number"
+value = 3
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 70
+height = 155
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SK_Zombie.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 270
+width = 105
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
+name = "Walk"
+source = "Zombie__SK_Zombie_Walk"
+sourceModelResourceName = ""
+useRootMotion = false

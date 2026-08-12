@@ -14,10 +14,19 @@ do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="KunKun
 @group "Plant placement preview" source="" creationTime=0 color=[103,208,93] parameters=[]
 @event aiGeneratedEventId="pvz-carry-selected-plant"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
+if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
 do Show object="SelectedSunflower"
 do SetX object="SelectedSunflower" modification_sign="=" value=expr(KunKun.CenterX())
 do SetY object="SelectedSunflower" modification_sign="=" value=expr(KunKun.CenterY())
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(KunKun.Base3D::Z() + KunKun.Base3D::Depth() + 26)
+
+@event aiGeneratedEventId="pvz-carry-selected-peashooter"
+if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
+if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
+do Show object="SelectedPeashooter"
+do SetX object="SelectedPeashooter" modification_sign="=" value=expr(KunKun.CenterX())
+do SetY object="SelectedPeashooter" modification_sign="=" value=expr(KunKun.CenterY())
+do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(KunKun.Base3D::Z() + KunKun.Base3D::Depth() + 26)
 
 @event aiGeneratedEventId="pvz-reset-hover-target"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
@@ -41,6 +50,7 @@ do SetBooleanVariable variable="HasPlacementTarget" modification_sign="True"
 @event aiGeneratedEventId="pvz-place-sunflower"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
 if BooleanVariable variable="HasPlacementTarget" check_if_the_value_is=true
+if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
 if MouseButtonFromTextReleased button_to_check="Left"
 if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
 if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
@@ -50,7 +60,28 @@ do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SunflowerPlant" behavior="
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
 do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
+do Hide object="PlacementHover"
+do Hide object="PlantingHint"
+
+@event aiGeneratedEventId="pvz-place-peashooter"
+if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
+if BooleanVariable variable="HasPlacementTarget" check_if_the_value_is=true
+if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
+if MouseButtonFromTextReleased button_to_check="Left"
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
+if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
+do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
+do Create object_to_create="PeashooterPlant" x_position=expr(LawnTiles.X() + 50) y_position=expr(LawnTiles.Y() + 50) layer=""
+do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeashooterPlant" behavior="Base3D" modification_sign="=" value=5
+do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
+do SetBooleanVariable variable="PlantingMode" modification_sign="False"
+do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
+do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
 do Hide object="PlacementHover"
 do Hide object="PlantingHint"
 
@@ -59,12 +90,14 @@ if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
 if KeyFromTextReleased key_to_check="Escape"
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
 do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
 do Hide object="PlacementHover"
 do Hide object="PlantingHint"
 @end group
 
-@group "Choose sunflower" source="" creationTime=0 color=[247,217,83] parameters=[]
+@group "Choose plant" source="" creationTime=0 color=[247,217,83] parameters=[]
 @comment "Selection is intentionally after placement so the card click cannot also plant on the same frame." background=[255,230,109] text=[0,0,0]
 
 @event aiGeneratedEventId="pvz-select-sunflower"
@@ -72,6 +105,60 @@ if IsCursorOnObject object="SunflowerCard" accurate_test_yes_by_default=true
 if MouseButtonFromTextReleased button_to_check="Left"
 do SetBooleanVariable variable="PlantingMode" modification_sign="True"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Sunflower"
 do Show object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
 do Show object="PlantingHint"
+
+@event aiGeneratedEventId="pvz-select-peashooter"
+if IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
+if MouseButtonFromTextReleased button_to_check="Left"
+do SetBooleanVariable variable="PlantingMode" modification_sign="True"
+do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Peashooter"
+do Hide object="SelectedSunflower"
+do Show object="SelectedPeashooter"
+do Show object="PlantingHint"
+@end group
+
+@group "Zombie lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
+@event aiGeneratedEventId="pvz-zombie-walk-left"
+if SceneInstancesCount object="Zombie" comparison_sign=">" value=0
+do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - 22 * TimeDelta())
+
+@event aiGeneratedEventId="pvz-remove-zombie-at-house"
+if PosX object="Zombie" comparison_sign="<" value=180
+do Delete object="Zombie"
+@end group
+
+@group "Peashooter combat" source="" creationTime=0 color=[84,190,102] parameters=[]
+@event aiGeneratedEventId="pvz-each-peashooter-fire"
+for each "PeashooterPlant"
+> @event aiGeneratedEventId="pvz-peashooter-fire-ready"
+> if CompareTimer timer_name="PeashooterFire" comparison_sign=">=" time_in_seconds=1.1
+> do Create object_to_create="PeaProjectile" x_position=expr(PeashooterPlant.X() + 45) y_position=expr(PeashooterPlant.Y()) layer=""
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=52
+
+@event aiGeneratedEventId="pvz-reset-peashooter-fire-timer"
+if CompareTimer timer_name="PeashooterFire" comparison_sign=">=" time_in_seconds=1.1
+do ResetTimer timer_name="PeashooterFire"
+
+@event aiGeneratedEventId="pvz-move-peas-right"
+if SceneInstancesCount object="PeaProjectile" comparison_sign=">" value=0
+do SetX object="PeaProjectile" modification_sign="=" value=expr(PeaProjectile.X() + 300 * TimeDelta())
+
+@event aiGeneratedEventId="pvz-each-pea-hit"
+for each "PeaProjectile"
+> @event aiGeneratedEventId="pvz-pea-hits-zombie"
+> if CollisionNP first_object="PeaProjectile" second_object="Zombie" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> do SetNumberObjectVariable object="Zombie" variable="HP" modification_sign="-" value=1
+> do Delete object="PeaProjectile"
+
+@event aiGeneratedEventId="pvz-remove-defeated-zombie"
+if NumberObjectVariable object="Zombie" variable="HP" comparison_sign="<=" value=0
+do Delete object="Zombie"
+
+@event aiGeneratedEventId="pvz-remove-offscreen-pea"
+if PosX object="PeaProjectile" comparison_sign=">" value=1400
+do Delete object="PeaProjectile"
 @end group

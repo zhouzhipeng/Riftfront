@@ -1,0 +1,38 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 23
+assetStoreId = ""
+name = "SelectedPeashooter"
+persistentUuid = "ae509857-8019-483a-bb7a-c5541f426c9f"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ "Planting" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 76
+height = 76
+isCastingShadow = false
+isReceivingShadow = false
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SK_PeaShooter.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+width = 76
+sharedAnimationModelResources = [ ]
+
+[[content.animations]]
+loop = true
+name = "Idle"
+source = "Plant__SK_PeaShooter_Idle"
+sourceModelResourceName = ""
+useRootMotion = false
