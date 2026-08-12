@@ -13,8 +13,8 @@ folder = [ "Combat" ]
 [[variables]]
 name = "Attacking"
 persistentUuid = "b98d02a0-fb49-4e43-8769-1f2c357616e3"
-type = "boolean"
-value = false
+type = "number"
+value = 0
 
 [[variables]]
 name = "TargetX"

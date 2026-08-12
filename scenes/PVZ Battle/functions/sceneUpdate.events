@@ -173,14 +173,14 @@ for each "Zombie"
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign=">" second_expression=5625
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=1
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Walk" payload=""
-> do SetBooleanObjectVariable object="Zombie" variable="Attacking" modification_sign="False"
+> do SetNumberObjectVariable object="Zombie" variable="Attacking" modification_sign="=" value=0
 
 @event aiGeneratedEventId="pvz-each-zombie-enter-attack"
 for each "Zombie"
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign="<=" second_expression=5625
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=0
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Attack" payload=""
-> do SetBooleanObjectVariable object="Zombie" variable="Attacking" modification_sign="True"
+> do SetNumberObjectVariable object="Zombie" variable="Attacking" modification_sign="=" value=1
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 
 @event aiGeneratedEventId="pvz-each-zombie-deal-signal-damage"
