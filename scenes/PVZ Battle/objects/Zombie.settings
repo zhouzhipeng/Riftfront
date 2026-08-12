@@ -16,6 +16,16 @@ persistentUuid = "b98d02a0-fb49-4e43-8769-1f2c357616e3"
 type = "boolean"
 value = false
 
+[[variables]]
+name = "TargetX"
+type = "number"
+value = -100000
+
+[[variables]]
+name = "TargetY"
+type = "number"
+value = -100000
+
 [[behaviors]]
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
