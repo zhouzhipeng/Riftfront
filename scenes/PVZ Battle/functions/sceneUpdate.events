@@ -11,6 +11,24 @@ do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=exp
 do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="KunKun" behavior="ThirdPersonCamera" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
 @end group
 
+@group "KunKun WASD movement" source="" creationTime=0 color=[255,183,77] parameters=[]
+@event aiGeneratedEventId="pvz-kunkun-move-up"
+if KeyFromTextPressed key_to_check="w"
+do SetY object="KunKun" modification_sign="-" value=expr(220 * TimeDelta())
+
+@event aiGeneratedEventId="pvz-kunkun-move-down"
+if KeyFromTextPressed key_to_check="s"
+do SetY object="KunKun" modification_sign="+" value=expr(220 * TimeDelta())
+
+@event aiGeneratedEventId="pvz-kunkun-move-left"
+if KeyFromTextPressed key_to_check="a"
+do SetX object="KunKun" modification_sign="-" value=expr(220 * TimeDelta())
+
+@event aiGeneratedEventId="pvz-kunkun-move-right"
+if KeyFromTextPressed key_to_check="d"
+do SetX object="KunKun" modification_sign="+" value=expr(220 * TimeDelta())
+@end group
+
 @group "Plant placement preview" source="" creationTime=0 color=[103,208,93] parameters=[]
 @event aiGeneratedEventId="pvz-carry-selected-plant"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
