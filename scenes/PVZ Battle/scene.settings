@@ -408,6 +408,65 @@ layer = "base"
 at = [1100, 600]
 
 [[layout.instances]]
+id = "10000000-0000-4000-8000-000000000046"
+object = "LawnTile"
+layer = "base"
+at = [300, 100]
+opacity = 225
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000047"
+object = "LawnTile"
+layer = "base"
+at = [400, 100]
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000048"
+object = "LawnTile"
+layer = "base"
+at = [500, 100]
+opacity = 225
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000049"
+object = "LawnTile"
+layer = "base"
+at = [600, 100]
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000050"
+object = "LawnTile"
+layer = "base"
+at = [700, 100]
+opacity = 225
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000051"
+object = "LawnTile"
+layer = "base"
+at = [800, 100]
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000052"
+object = "LawnTile"
+layer = "base"
+at = [900, 100]
+opacity = 225
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000053"
+object = "LawnTile"
+layer = "base"
+at = [1000, 100]
+
+[[layout.instances]]
+id = "10000000-0000-4000-8000-000000000054"
+object = "LawnTile"
+layer = "base"
+at = [1100, 100]
+opacity = 225
+
+[[layout.instances]]
 id = "20000000-0000-4000-8000-000000000001"
 object = "StonePathLong"
 layer = "base"
