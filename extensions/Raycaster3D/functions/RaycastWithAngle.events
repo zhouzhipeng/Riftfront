@@ -1,0 +1,14 @@
+@js objects="Object" strict=true expanded=true
+eventsFunctionContext.returnValue =
+    gdjs.__raycaster3DExtension.raycaster.recastWithAngle(
+        eventsFunctionContext.getObjectsLists("Object"),
+        objects,
+        eventsFunctionContext.getArgument("OriginX"),
+        eventsFunctionContext.getArgument("OriginY"),
+        eventsFunctionContext.getArgument("OriginZ"),
+        eventsFunctionContext.getArgument("RotationAngle"),
+        eventsFunctionContext.getArgument("ElevationAngle"),
+        eventsFunctionContext.getArgument("DistanceMax")
+    );
+
+@end js

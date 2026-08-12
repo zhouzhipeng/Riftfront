@@ -1,0 +1,25 @@
+@js objects="Object" strict=true expanded=true
+const { camera, input } = gdjs.evtTools;
+
+/** @type {string} */
+//@ts-ignore
+const layer2D = eventsFunctionContext.getArgument("Layer2D");
+
+const cameraMinX = camera.getCameraBorderLeft(runtimeScene, layer2D, 0);
+const cameraMaxX = camera.getCameraBorderRight(runtimeScene, layer2D, 0);
+const cameraMinY = camera.getCameraBorderTop(runtimeScene, layer2D, 0);
+const cameraMaxY = camera.getCameraBorderBottom(runtimeScene, layer2D, 0);
+
+const cursorX = input.getCursorX(runtimeScene, layer2D, 0);
+const cursorY = input.getCursorY(runtimeScene, layer2D, 0);
+
+eventsFunctionContext.returnValue =
+    gdjs.__raycaster3DExtension.raycaster.recastFromCamera(
+        eventsFunctionContext.getObjectsLists("Object"),
+        objects,
+        (cursorX - cameraMinX) / (cameraMaxX - cameraMinX),
+        (cursorY - cameraMinY) / (cameraMaxY - cameraMinY),
+        eventsFunctionContext.getArgument("DistanceMax")
+    );
+
+@end js

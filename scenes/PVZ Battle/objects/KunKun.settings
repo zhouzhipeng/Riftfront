@@ -3,11 +3,33 @@ settingsFormatVersion = 5
 order = 11
 assetStoreId = ""
 name = "KunKun"
+persistentUuid = "f6f09f01-e476-4a17-b118-debf519eb486"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ "Characters" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "ThirdPersonCamera"
+type = "ThirdPersonCamera::ThirdPersonCamera"
+Object3D = "Base3D"
+RotationHalfwayDuration = 0.08
+ElevationHalfwayDuration = 0
+TranslationZHalfwayDuration = 0.08
+Distance = 720
+OffsetX = 0
+OffsetY = 0
+OffsetZ = 60
+RotationAngleOffset = 0
+ElevationAngleOffset = 42
+FollowFreeAreaZMax = 0
+FollowFreeAreaZMin = 0
+IsRotatingWithObject = false
+RotationMode = "Z"
 
 [content]
 centerLocation = "BottomCenterZ"

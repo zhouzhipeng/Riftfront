@@ -1,0 +1,2 @@
+@event
+do Raycaster3D::DefineHelperClasses

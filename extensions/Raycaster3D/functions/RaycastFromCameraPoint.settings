@@ -1,0 +1,31 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 5
+description = "Sends a ray from the given source point on the camera screen, intersecting the closest object. The intersected object will become the only one taken into account."
+fullName = "Raycast from a camera point"
+functionType = "Condition"
+group = "Collision"
+name = "RaycastFromCameraPoint"
+sentence = "Cast a ray from the camera point _PARAM2_; _PARAM3_ to a maximum distance of _PARAM4_ against _PARAM1_"
+extension = "Raycaster3D"
+objectGroups = { }
+
+[[parameters]]
+description = "Objects to test against the ray"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "X position on the screen (from 0 to 1)"
+name = "PointerX"
+type = "expression"
+
+[[parameters]]
+description = "Y position on the screen (from 0 to 1)"
+name = "PointerY"
+type = "expression"
+
+[[parameters]]
+description = "Ray maximum distance (in pixels)"
+name = "DistanceMax"
+type = "expression"

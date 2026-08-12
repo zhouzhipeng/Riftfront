@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 11
+description = "Return the last recast intersection normal on X axis."
+fullName = "Last recast X normal"
+functionType = "Expression"
+name = "NormalX"
+sentence = ""
+parameters = [ ]
+extension = "Raycaster3D"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

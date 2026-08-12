@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 34
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "TargetedRotationAngle"
+group = "Third person camera configuration"
+name = "SetTargetedRotationAngle"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

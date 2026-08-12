@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 15
+description = "Return follow free area bottom border Z."
+fullName = "Free area Z min"
+functionType = "Expression"
+group = "Private"
+name = "FreeAreaZMin"
+private = true
+sentence = ""
+folder = [ "Private" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

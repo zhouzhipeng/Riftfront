@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 16
+assetStoreId = ""
+bold = true
+italic = false
+name = "SunflowerCard"
+persistentUuid = "034e0863-b558-4bf1-9c81-d8e301aa12cb"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "[ SUNFLOWER ]\n50 SUN  •  CLICK"
+font = ""
+textAlignment = "center"
+characterSize = 19
+folder = [ "HUD" ]
+
+[color]
+b = 88
+g = 245
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "60;98;25"
+outlineThickness = 4
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "[ SUNFLOWER ]\n50 SUN  •  CLICK"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 19
+lineHeight = 0
+color = "255;245;88"

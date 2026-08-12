@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+description = "the halfway time for rotation of the object."
+fullName = "Halfway time for rotation"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "RotationHalfwayDuration"
+sentence = "the halfway time for rotation"
+folder = [ "Third person camera configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

@@ -8,6 +8,27 @@ type = "Local::TwinKunai3D"
 variant = ""
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 content = { }
 folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "ThirdPersonCamera"
+type = "ThirdPersonCamera::ThirdPersonCamera"
+Object3D = "Base3D"
+RotationHalfwayDuration = 0.08
+ElevationHalfwayDuration = 0
+TranslationZHalfwayDuration = 0.08
+Distance = 700
+OffsetX = 0
+OffsetY = 0
+OffsetZ = 70
+RotationAngleOffset = 0
+ElevationAngleOffset = 0
+FollowFreeAreaZMax = 0
+FollowFreeAreaZMin = 0
+IsRotatingWithObject = false
+RotationMode = "Z"

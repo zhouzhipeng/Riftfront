@@ -4,9 +4,6 @@ do SetNumberVariable variable="Paused" modification_sign="=" value=0
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-90
 do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
 do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=-90
-do SetCameraCenterX modification_sign="=" value=640 layer="" camera_number_default_0=0
-do SetCameraCenterY modification_sign="=" value=-165 layer="" camera_number_default_0=0
-do Scene3D::SetCameraZ modification_sign="=" value=252 layer="" camera_number_default_0=0
-do Scene3D::TurnCameraTowardPosition x_position=640 y_position=535 z_position=252 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
+do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="TwinKunai3D" behavior="ThirdPersonCamera" modification_sign="=" value=-90
 do Local::TwinKunai3D::PlayAnimation twin_kunai_prefab="TwinKunai3D" animation_index_from_0_to_28=16
 do TextContainerCapability::TextContainerBehavior::SetValue object="PlaybackLabel" behavior="Text" modification_sign="=" text="PLAYING"

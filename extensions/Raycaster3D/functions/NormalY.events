@@ -1,0 +1,3 @@
+@js strict=true expanded=false
+eventsFunctionContext.returnValue = gdjs.__raycaster3DExtension.raycaster.lastNormal.y;
+@end js

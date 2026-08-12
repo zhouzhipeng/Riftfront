@@ -1,0 +1,32 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 17
+assetStoreId = ""
+name = "SelectedSunflower"
+persistentUuid = "9b524526-61e7-4d7f-a9f1-f982d9e42a03"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ "Planting" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 86
+height = 76
+isCastingShadow = false
+isReceivingShadow = false
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SK_SunFlower.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 76
+sharedAnimationModelResources = [ ]
+animations = [ ]

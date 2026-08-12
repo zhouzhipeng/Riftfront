@@ -1,0 +1,10 @@
+@js objects="Object" strict=true expanded=true
+/** @type {gdjs.RuntimeObject3D} */
+const object = objects[0];
+const ratio = eventsFunctionContext.getArgument("Ratio");
+const rotationAngleOffset = eventsFunctionContext.getArgument("NewRotationAngleOffset");
+const elevationAngleOffset = eventsFunctionContext.getArgument("NewElevationAngleOffset");
+
+gdjs.__thirdPersonCameraExtension.slerpCamera(object, ratio, rotationAngleOffset, elevationAngleOffset);
+
+@end js

@@ -1,0 +1,10 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+fullName = ""
+functionType = "Action"
+name = "onFirstSceneLoaded"
+sentence = ""
+parameters = [ ]
+extension = "Raycaster3D"
+objectGroups = { }

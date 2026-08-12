@@ -1,0 +1,46 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Sends a ray from the given source position and angle, intersecting the closest object. The intersected object will become the only one taken into account."
+fullName = "Raycast"
+functionType = "Condition"
+group = "Collision"
+name = "RaycastWithAngle"
+sentence = "Cast a ray from _PARAM2_; _PARAM3_; _PARAM4_ toward a rotation of _PARAM5_°, an elevation of _PARAM6_° and max distance of _PARAM7_ against _PARAM1_"
+extension = "Raycaster3D"
+objectGroups = { }
+
+[[parameters]]
+description = "Objects to test against the ray"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "Ray source X position"
+name = "OriginX"
+type = "expression"
+
+[[parameters]]
+description = "Ray source Y position"
+name = "OriginY"
+type = "expression"
+
+[[parameters]]
+description = "Ray source Z position"
+name = "OriginZ"
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle (in degrees)"
+name = "RotationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Elevation angle (in degrees)"
+name = "ElevationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Ray maximum distance (in pixels)"
+name = "DistanceMax"
+type = "expression"

@@ -1,0 +1,29 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 6
+fullName = ""
+functionType = "Expression"
+name = "RotatedY"
+private = true
+sentence = ""
+extension = "ThirdPersonCamera"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle"
+name = "RotationAngle"
+supplementaryInformation = "Tank::Tank"
+type = "expression"
+
+[[parameters]]
+description = ""
+name = "X"
+type = "expression"
+
+[[parameters]]
+description = ""
+name = "Y"
+type = "expression"

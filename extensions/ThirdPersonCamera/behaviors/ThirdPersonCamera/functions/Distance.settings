@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 21
+description = "the camera distance of the object."
+fullName = "Camera distance"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "Distance"
+sentence = "the camera distance"
+folder = [ "Third person camera configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

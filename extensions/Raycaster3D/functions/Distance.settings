@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 7
+description = "the last recast intersection distance."
+fullName = "Last recast distance"
+functionType = "ExpressionAndCondition"
+name = "Distance"
+sentence = "the last recast intersection distance"
+parameters = [ ]
+extension = "Raycaster3D"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "Return the last recast intersection position on X axis."
+fullName = "Last recast X intersection"
+functionType = "Expression"
+name = "IntersectionX"
+sentence = ""
+parameters = [ ]
+extension = "Raycaster3D"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

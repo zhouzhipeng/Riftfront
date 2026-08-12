@@ -3,11 +3,17 @@ settingsFormatVersion = 5
 order = 0
 assetStoreId = ""
 name = "LawnTile"
+persistentUuid = "09f8228f-ac51-4826-b29f-8053a4aaae6e"
 type = "Scene3D::Model3DObject"
-variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Yard" ]
+
+[[variables]]
+name = "Occupied"
+persistentUuid = "5d5406d9-c534-4dd0-b232-23c263922e43"
+type = "boolean"
+value = false
 
 [content]
 centerLocation = "ModelOrigin"
@@ -18,7 +24,7 @@ isCastingShadow = false
 isReceivingShadow = true
 keepAspectRatio = false
 materialType = "KeepOriginal"
-modelResourceName = "SM_Floor.glb"
+modelResourceName = "SM_LawnTile.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0

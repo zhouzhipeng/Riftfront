@@ -1,0 +1,45 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 18
+assetStoreId = ""
+name = "PlacementHover"
+persistentUuid = "2c2e29d8-94ac-4e51-94ea-c3a9979c5df2"
+type = "Scene3D::Cube3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ "Planting" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[content]
+backFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+backFaceResourceRepeat = false
+backFaceUpThroughWhichAxisRotation = "X"
+backFaceVisible = true
+bottomFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+bottomFaceResourceRepeat = false
+bottomFaceVisible = true
+depth = 6
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+frontFaceResourceRepeat = false
+frontFaceVisible = true
+height = 88
+isCastingShadow = false
+isReceivingShadow = false
+leftFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+leftFaceResourceRepeat = false
+leftFaceVisible = true
+materialType = "Basic"
+rightFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+rightFaceResourceRepeat = false
+rightFaceVisible = true
+tileScale = 1
+tint = "146;255;88"
+topFaceResourceName = "assets/textures/pvz_placement_hover.svg"
+topFaceResourceRepeat = false
+topFaceVisible = true
+width = 88

@@ -1,0 +1,11 @@
+@js objects="Object" strict=true expanded=true
+eventsFunctionContext.returnValue =
+    gdjs.__raycaster3DExtension.raycaster.recastFromCamera(
+        eventsFunctionContext.getObjectsLists("Object"),
+        objects,
+        0.5,
+        0.5,
+        eventsFunctionContext.getArgument("DistanceMax")
+    );
+
+@end js

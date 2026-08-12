@@ -1,5 +1,11 @@
-@event aiGeneratedEventId="pvz-yard-camera"
-do SetCameraCenterX modification_sign="=" value=650 layer="" camera_number_default_0=0
-do SetCameraCenterY modification_sign="=" value=980 layer="" camera_number_default_0=0
-do Scene3D::SetCameraZ modification_sign="=" value=820 layer="" camera_number_default_0=0
-do Scene3D::TurnCameraTowardPosition x_position=650 y_position=345 z_position=25 layer="" camera_number_default_0=0 stand_on_y_instead_of_z=false
+@event aiGeneratedEventId="pvz-initialize-planting-camera"
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-90
+do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=-90
+do SetBooleanVariable variable="PlantingMode" modification_sign="False"
+do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetNumberVariable variable="PlacedPlants" modification_sign="=" value=0
+do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="KunKun" behavior="ThirdPersonCamera" modification_sign="=" value=-90
+do Hide object="SelectedSunflower"
+do Hide object="PlacementHover"
+do Hide object="PlantingHint"

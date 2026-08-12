@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 18
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "FollowFreeAreaZMax"
+group = "Third person camera configuration"
+name = "SetFollowFreeAreaZMax"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"
