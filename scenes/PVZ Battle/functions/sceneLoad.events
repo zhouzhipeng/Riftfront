@@ -1,14 +1,14 @@
 @event aiGeneratedEventId="pvz-initialize-planting-camera"
-do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-90
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=6.332409972299168
 do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
-do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=-90
-do SetNumberVariable variable="CameraTargetX" modification_sign="=" value=750
-do SetNumberVariable variable="CameraTargetY" modification_sign="=" value=450
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=6.332409972299168
+do SetNumberVariable variable="CameraTargetX" modification_sign="=" value=675.8398688375491
+do SetNumberVariable variable="CameraTargetY" modification_sign="=" value=432.3036508539436
 do SetNumberVariable variable="CameraTargetZ" modification_sign="=" value=0
-do SetNumberVariable variable="CameraDistance" modification_sign="=" value=900
-do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=48
+do SetNumberVariable variable="CameraDistance" modification_sign="=" value=696.96
+do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=38.027700831024944
 do SetNumberVariable variable="CameraDragStartY" modification_sign="=" value=0
-do SetNumberVariable variable="CameraDragStartElevation" modification_sign="=" value=48
+do SetNumberVariable variable="CameraDragStartElevation" modification_sign="=" value=38.027700831024944
 do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=0
 do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=0
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"

@@ -14,7 +14,7 @@ behaviorsSharedData = [ ]
 name = "CameraOrbitAngle"
 persistentUuid = "3d4da1e3-7a44-4a2b-9eed-b3df5741b337"
 type = "number"
-value = -90
+value = 6.332409972299168
 
 [[variables]]
 name = "CameraDragStartX"
@@ -26,19 +26,19 @@ value = 0
 name = "CameraDragStartAngle"
 persistentUuid = "011e126e-9d14-401e-8f72-aaeaa03e47dc"
 type = "number"
-value = -90
+value = 6.332409972299168
 
 [[variables]]
 name = "CameraTargetX"
 persistentUuid = "38597aed-c576-4664-98eb-69e6e45dc677"
 type = "number"
-value = 750
+value = 675.8398688375491
 
 [[variables]]
 name = "CameraTargetY"
 persistentUuid = "5156e594-9f1c-46d1-bc9b-4cece4c4b0ff"
 type = "number"
-value = 450
+value = 432.3036508539436
 
 [[variables]]
 name = "CameraTargetZ"
@@ -50,13 +50,13 @@ value = 0
 name = "CameraDistance"
 persistentUuid = "b99ad4ad-39b1-430f-8bc0-e2475333c73a"
 type = "number"
-value = 900
+value = 696.96
 
 [[variables]]
 name = "CameraElevationAngle"
 persistentUuid = "4ec2501f-8122-4c84-9ba2-7a0624eb5037"
 type = "number"
-value = 48
+value = 38.027700831024944
 
 [[variables]]
 name = "CameraDragStartY"
@@ -68,7 +68,7 @@ value = 0
 name = "CameraDragStartElevation"
 persistentUuid = "f260f71b-47fb-486f-9b3a-5d9d427113a2"
 type = "number"
-value = 48
+value = 38.027700831024944
 
 [[variables]]
 name = "CameraPanLastX"
