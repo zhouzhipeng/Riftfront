@@ -940,10 +940,10 @@ smoothed = true
 userAdded = true
 
 [[resources]]
-file = "assets/textures/pvz_placement_hover.svg"
+file = "assets/textures/pvz_placement_hover.png"
 kind = "image"
 metadata = ""
-name = "assets/textures/pvz_placement_hover.svg"
+name = "assets/textures/pvz_placement_hover.png"
 smoothed = true
 userAdded = true
 
