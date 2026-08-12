@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Handle direct health signals sent to this sunflower instance."
+fullName = "On signal"
+functionType = "Action"
+name = "onSignal"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Sunflower3D"
+type = "object"
+
+[[parameters]]
+description = "Signal name"
+name = "SignalName"
+type = "string"
+
+[[parameters]]
+description = "Payload"
+name = "Payload"
+type = "string"

@@ -11,13 +11,23 @@ isUsingLegacyInstancesRenderer = false
 name = "Zombie3D"
 previewIconUrl = ""
 behaviors = [ ]
-variables = [ ]
+
+[[variables]]
+name = "HP"
+type = "number"
+value = 3
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 3
+
 propertyDescriptors = [ ]
 objectGroups = { }
 
 [layout]
 version = 1
-bounds = { max = [50, 50, 100], min = [-50, -50, 0] }
+bounds = { max = [60, 60, 150], min = [-60, -60, 0] }
 
 [layout.editor]
 grid = false
@@ -43,3 +53,9 @@ id = "2f280cb2-54d0-47c8-9327-6930fa3d444a"
 object = "ZombieModel"
 layer = "base"
 at = [0, 0]
+
+[[layout.instances]]
+id = "36bf0efb-8650-4b9d-b2c6-413187089cd6"
+object = "HealthBar"
+layer = "base"
+at = [0, 0, 134]

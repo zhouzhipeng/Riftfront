@@ -1,0 +1,13 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+assetStoreId = ""
+name = "HealthBar"
+persistentUuid = "c6d91e46-044d-4265-8702-e17efb638791"
+type = "Local::HealthBar3D"
+variant = ""
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+content = { }
+folder = [ ]

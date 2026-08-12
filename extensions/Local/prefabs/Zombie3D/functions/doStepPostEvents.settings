@@ -1,0 +1,15 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+fullName = "doStepPostEvents"
+functionType = "Action"
+name = "doStepPostEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Zombie3D"
+type = "object"

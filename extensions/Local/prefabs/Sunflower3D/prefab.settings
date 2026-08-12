@@ -11,13 +11,23 @@ isUsingLegacyInstancesRenderer = false
 name = "Sunflower3D"
 previewIconUrl = ""
 behaviors = [ ]
-variables = [ ]
+
+[[variables]]
+name = "HP"
+type = "number"
+value = 3
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 3
+
 propertyDescriptors = [ ]
 objectGroups = { }
 
 [layout]
 version = 1
-bounds = { max = [48, 48, 100], min = [-48, -48, 0] }
+bounds = { max = [48, 48, 124], min = [-48, -48, 0] }
 
 [layout.editor]
 grid = false
@@ -43,3 +53,9 @@ id = "86a75979-d54b-4767-9d19-dd4f9ceabec0"
 object = "SunflowerModel"
 layer = "base"
 at = [0, 0]
+
+[[layout.instances]]
+id = "5ad5d74e-4510-4274-9f5c-13ab670c39f5"
+object = "HealthBar"
+layer = "base"
+at = [0, 0, 108]

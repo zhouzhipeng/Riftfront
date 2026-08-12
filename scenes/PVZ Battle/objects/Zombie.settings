@@ -11,10 +11,10 @@ content = { }
 folder = [ "Combat" ]
 
 [[variables]]
-name = "HP"
+name = "Attacking"
 persistentUuid = "b98d02a0-fb49-4e43-8769-1f2c357616e3"
-type = "number"
-value = 3
+type = "boolean"
+value = false
 
 [[behaviors]]
 name = "Base3D"

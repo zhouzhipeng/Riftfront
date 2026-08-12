@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Update this health bar from direct health signals."
+fullName = "On signal"
+functionType = "Action"
+name = "onSignal"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::HealthBar3D"
+type = "object"
+
+[[parameters]]
+description = "Signal name"
+name = "SignalName"
+type = "string"
+
+[[parameters]]
+description = "Payload"
+name = "Payload"
+type = "string"

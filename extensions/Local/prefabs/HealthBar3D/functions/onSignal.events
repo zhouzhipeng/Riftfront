@@ -1,0 +1,14 @@
+@event aiGeneratedEventId="health-bar-clamp-ratio-signal"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.SetRatio"
+do SetNumberVariable variable="Ratio" modification_sign="=" value=expr(clamp(ToNumber(Payload), 0, 1))
+
+@event aiGeneratedEventId="health-bar-resize-positive-fill"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.SetRatio"
+if NumberVariable variable="Ratio" comparison_sign=">" value=0
+do Show object="HealthFill"
+do ResizableCapability::ResizableBehavior::SetWidth object="HealthFill" behavior="Resizable" modification_sign="=" width=expr(60 * Variable(Ratio))
+
+@event aiGeneratedEventId="health-bar-hide-empty-fill"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="HealthBar.SetRatio"
+if NumberVariable variable="Ratio" comparison_sign="<=" value=0
+do Hide object="HealthFill"

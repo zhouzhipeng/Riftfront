@@ -1,0 +1,9 @@
+@event aiGeneratedEventId="sunflower-handle-damage-signal"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Unit.Damage"
+if NumberVariable variable="HP" comparison_sign=">" value=0
+do SetNumberVariable variable="HP" modification_sign="=" value=expr(max(0, Variable(HP) - max(0, ToNumber(Payload))))
+
+@event aiGeneratedEventId="sunflower-update-health-bar-after-damage"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Unit.Damage"
+if NumberVariable variable="HP" comparison_sign=">" value=0
+do EmitSignalToObjectInstance instance_id=expr(HealthBar.InstanceId()) signal_name="HealthBar.SetRatio" payload=expr(ToString(Variable(HP) / Variable(MaxHP)))

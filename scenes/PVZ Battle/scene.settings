@@ -108,6 +108,7 @@ value = ""
 
 [objectGroups]
 LawnTiles = [ "LawnTile", "LawnTileDark" ]
+Plants = [ "SunflowerPlant", "PeashooterPlant" ]
 
 [layout]
 version = 1

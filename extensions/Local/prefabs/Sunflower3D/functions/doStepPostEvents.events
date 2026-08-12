@@ -1,0 +1,3 @@
+@event aiGeneratedEventId="sunflower-delete-at-zero-health"
+if NumberVariable variable="HP" comparison_sign="<=" value=0
+do Delete object="Object"

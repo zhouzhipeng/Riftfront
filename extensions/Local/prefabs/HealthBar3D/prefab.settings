@@ -1,38 +1,33 @@
 kind = "prefab"
 settingsFormatVersion = 5
-order = 3
-defaultName = "Peashooter3D"
-description = "Reusable animated 3D peashooter plant for lane-defense scenes."
-fullName = "Peashooter 3D"
+order = 6
+defaultName = "HealthBar3D"
+description = "Reusable 3D health bar updated through direct instance signals."
+fullName = "Health bar 3D"
 helpPath = ""
 iconUrl = ""
 is3D = true
 isUsingLegacyInstancesRenderer = false
-name = "Peashooter3D"
+name = "HealthBar3D"
 previewIconUrl = ""
 behaviors = [ ]
 
 [[variables]]
-name = "HP"
+name = "Ratio"
 type = "number"
-value = 3
-
-[[variables]]
-name = "MaxHP"
-type = "number"
-value = 3
+value = 1
 
 propertyDescriptors = [ ]
 objectGroups = { }
 
 [layout]
 version = 1
-bounds = { max = [48, 48, 120], min = [-48, -48, 0] }
+bounds = { max = [32, 4, 12], min = [-32, -4, 0] }
 
 [layout.editor]
 grid = false
 grid_type = "rectangular"
-grid_size = [32, 32, 32]
+grid_size = [16, 16, 8]
 grid_offset = [0, 0, 0]
 grid_color = "#9EB4FF"
 grid_alpha = 0.8
@@ -49,13 +44,13 @@ rendering = "3d"
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layout.instances]]
-id = "cb5fd78f-b805-423f-b1f9-d6d935ba234b"
-object = "PeashooterModel"
+id = "aa3cffb1-88d0-4a92-82ab-d89029e16de1"
+object = "HealthTrack"
 layer = "base"
-at = [0, 0]
+at = [0, 0, 0]
 
 [[layout.instances]]
-id = "802d5ac3-44f4-4d61-81c7-a8581192f0a5"
-object = "HealthBar"
+id = "4afb79bd-6929-4d3b-a617-46316205ea08"
+object = "HealthFill"
 layer = "base"
-at = [0, 0, 104]
+at = [0, -1, 2]
