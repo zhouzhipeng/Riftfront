@@ -1,3 +1,3 @@
 @event aiGeneratedEventId="sun-collectible-spin"
 if SceneInstancesCount object="SunModel" comparison_sign=">" value=0
-do Rotate object="SunModel" angular_speed_in_degrees_per_second=90
+do Rotate object="Object" angular_speed_in_degrees_per_second=90
