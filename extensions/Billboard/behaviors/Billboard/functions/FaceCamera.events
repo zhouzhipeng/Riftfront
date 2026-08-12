@@ -1,0 +1,11 @@
+@event
+if BooleanVariable variable="ShouldRotateX" check_if_the_value_is=true
+do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees=expr(-Scene3D::CameraRotationX(Object.Layer()))
+
+@event
+if BooleanVariable variable="ShouldRotateY" check_if_the_value_is=true
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees=expr(Scene3D::CameraRotationY(Object.Layer()))
+
+@event
+if BooleanVariable variable="ShouldRotateZ" check_if_the_value_is=true
+do SetAngle object="Object" modification_sign="=" angle_in_degrees=expr(CameraAngle(Object.Layer()))

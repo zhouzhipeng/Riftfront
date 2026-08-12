@@ -1,0 +1,9 @@
+@event
+if BuiltinCommonInstructions::Once
+do Billboard::Billboard::EnableTransparency object="Object" behavior="Behavior"
+> @comment "Make the instance bottom center seen in the scene editor at the same position in the game after the instance is rotated." background=[255,230,109] text=[0,0,0]
+
+> @event
+> if StringVariable variable="OffsetPositionMode" comparison_sign="=" value="Standing on Z axis"
+> do SetY object="Object" modification_sign="+" value=expr(Object.Height() / 2)
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="Object" behavior="Object3D" modification_sign="+" value=expr(Object.Height() / 2)

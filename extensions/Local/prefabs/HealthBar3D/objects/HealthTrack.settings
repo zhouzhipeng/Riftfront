@@ -7,18 +7,27 @@ persistentUuid = "ac5c7f3a-a0b7-4aa1-9b9f-3eb89af1b92e"
 type = "Scene3D::Cube3DObject"
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+name = "Billboard"
+type = "Billboard::Billboard"
+Object3D = "Base3D"
+OffsetPositionMode = "No change"
 
 [content]
 backFaceResourceName = "HealthBarWhite"
 backFaceResourceRepeat = false
 backFaceUpThroughWhichAxisRotation = "X"
-backFaceVisible = true
+backFaceVisible = false
 bottomFaceResourceName = "HealthBarWhite"
 bottomFaceResourceRepeat = false
-bottomFaceVisible = true
-depth = 10
+bottomFaceVisible = false
+depth = 1
 enableTextureTransparency = false
 facesOrientation = "Y"
 frontFaceResourceName = "HealthBarWhite"
@@ -29,14 +38,14 @@ isCastingShadow = false
 isReceivingShadow = false
 leftFaceResourceName = "HealthBarWhite"
 leftFaceResourceRepeat = false
-leftFaceVisible = true
+leftFaceVisible = false
 materialType = "Basic"
 rightFaceResourceName = "HealthBarWhite"
 rightFaceResourceRepeat = false
-rightFaceVisible = true
+rightFaceVisible = false
 tileScale = 1
 tint = "48;35;35"
 topFaceResourceName = "HealthBarWhite"
 topFaceResourceRepeat = false
-topFaceVisible = true
+topFaceVisible = false
 width = 64

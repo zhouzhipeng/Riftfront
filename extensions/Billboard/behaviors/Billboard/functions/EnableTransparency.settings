@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+description = "Enable texture transparency of the front face."
+fullName = "Enable texture transparency"
+functionType = "Action"
+name = "EnableTransparency"
+private = true
+sentence = "Enable texture transparency of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "Billboard::Billboard"
+type = "behavior"

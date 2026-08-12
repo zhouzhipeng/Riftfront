@@ -1,0 +1,29 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "Change if the object should rotate on Z axis."
+fullName = "Should rotate on Z axis"
+functionType = "Action"
+group = "Billboard configuration"
+name = "SetShouldRotateZ"
+sentence = "_PARAM0_ should rotate on Z axis: _PARAM2_"
+folder = [ "Billboard configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "Billboard::Billboard"
+type = "behavior"
+
+[[parameters]]
+defaultValue = "no"
+description = "ShouldRotateZ"
+name = "Value"
+optional = true
+type = "yesorno"

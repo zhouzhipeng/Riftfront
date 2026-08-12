@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+description = "Check if the object should rotate on X axis."
+fullName = "Should rotate on X axis"
+functionType = "Condition"
+group = "Billboard configuration"
+name = "ShouldRotateX"
+sentence = "_PARAM0_ should rotate on X axis"
+folder = [ "Billboard configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "Billboard::Billboard"
+type = "behavior"

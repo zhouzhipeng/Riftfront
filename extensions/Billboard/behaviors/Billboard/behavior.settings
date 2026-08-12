@@ -1,0 +1,53 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 0
+description = "Rotate to always face the camera (only the front face of the cube should be enabled)."
+fullName = "Billboard"
+helpPath = ""
+iconUrl = ""
+name = "Billboard"
+objectType = ""
+previewIconUrl = ""
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D capability"
+extraInformation = [ "Scene3D::Base3DBehavior" ]
+choices = [ ]
+name = "Object3D"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = "Should rotate on X axis"
+hidden = true
+name = "ShouldRotateX"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = "Should rotate on Y axis"
+hidden = true
+name = "ShouldRotateY"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = "Should rotate on Z axis"
+hidden = true
+name = "ShouldRotateZ"
+
+[[propertyDescriptors]]
+value = "No change"
+type = "Choice"
+label = "Offset position"
+name = "OffsetPositionMode"
+
+[[propertyDescriptors.choices]]
+label = "No change"
+value = "No change"
+
+[[propertyDescriptors.choices]]
+label = "Standing on Z axis"
+value = "Standing on Z axis"

@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+fullName = ""
+functionType = "Action"
+name = "doStepPostEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "Billboard::Billboard"
+type = "behavior"

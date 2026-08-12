@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Rotate the object to the camera. This is also done automatically at the end of the scene events."
+fullName = "Rotate to face the camera"
+functionType = "Action"
+name = "FaceCamera"
+sentence = "Rotate _PARAM0_ to the camera"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "Billboard::Billboard"
+type = "behavior"
