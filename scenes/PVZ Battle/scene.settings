@@ -779,8 +779,36 @@ z_order = 30
 hidden = true
 
 [[layout.instances]]
-id = "864052fb-41fe-4ca9-ad93-4a05fe76a78c"
-object = "Zombie"
+id = "1d0f8266-4ed6-4c8e-9770-3288f96108f6"
+object = "ZombieSpawnPoint"
+layer = "base"
+at = [1270, 153, 5]
+hidden = true
+
+[[layout.instances]]
+id = "32863559-6f94-4a57-86f9-57dc74513de2"
+object = "ZombieSpawnPoint"
+layer = "base"
+at = [1270, 251, 5]
+hidden = true
+
+[[layout.instances]]
+id = "8fb6e3fa-688a-4091-85de-9bc12978e1dd"
+object = "ZombieSpawnPoint"
 layer = "base"
 at = [1270, 350, 5]
-z_order = 30
+hidden = true
+
+[[layout.instances]]
+id = "4562a897-6747-42aa-8d9d-96341744642a"
+object = "ZombieSpawnPoint"
+layer = "base"
+at = [1270, 450, 5]
+hidden = true
+
+[[layout.instances]]
+id = "4c07a0c3-e49e-41e1-a05f-344f37852a0e"
+object = "ZombieSpawnPoint"
+layer = "base"
+at = [1270, 550, 5]
+hidden = true

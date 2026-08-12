@@ -148,7 +148,14 @@ do Show object="SelectedPeashooter"
 do Show object="PlantingHint"
 @end group
 
-@group "Zombie lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
+@group "Zombie spawning and lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
+@event aiGeneratedEventId="pvz-spawn-random-zombie"
+if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=5
+if PickRandomInstance object="ZombieSpawnPoint"
+do Create object_to_create="Zombie" x_position=expr(ZombieSpawnPoint.X()) y_position=expr(ZombieSpawnPoint.Y()) layer=""
+do Scene3D::Base3DBehavior::SetZ parameter_3d_object="Zombie" behavior="Base3D" modification_sign="=" value=5
+do ResetTimer timer_name="ZombieSpawn"
+
 @event aiGeneratedEventId="pvz-zombie-walk-left"
 if SceneInstancesCount object="Zombie" comparison_sign=">" value=0
 do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - 22 * TimeDelta())
