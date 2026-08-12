@@ -1,0 +1,16 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 28
+assetStoreId = ""
+name = "SunCollect"
+persistentUuid = "4eb24c35-d5c2-41ed-8d02-a3adb19d9427"
+type = "Local::SunCollect3D"
+variant = ""
+variables = [ ]
+effects = [ ]
+content = { }
+folder = [ "Collectibles" ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"

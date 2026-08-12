@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "SunModel"
+persistentUuid = "7e97047c-976b-49ad-a785-cf875fd0e3f4"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "BottomCenterZ"
+crossfadeDuration = 0.1
+depth = 72
+height = 16
+isCastingShadow = false
+isReceivingShadow = false
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "SM_SunCollect.glb"
+originLocation = "BottomCenterZ"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 64
+sharedAnimationModelResources = [ ]
+animations = [ ]

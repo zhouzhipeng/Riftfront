@@ -101,6 +101,18 @@ type = "number"
 value = 0
 
 [[variables]]
+name = "SunAmount"
+persistentUuid = "99405c41-5dc7-4297-a6aa-d20505eb07d4"
+type = "number"
+value = 500
+
+[[variables]]
+name = "SunCollectedThisFrame"
+persistentUuid = "d973ab47-2ab0-484d-a7e3-65706a045490"
+type = "boolean"
+value = false
+
+[[variables]]
 name = "SelectedPlantType"
 persistentUuid = "05096034-ac25-4666-b15a-e0d25a8c79f5"
 type = "string"

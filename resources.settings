@@ -1028,3 +1028,10 @@ preloadAsMusic = false
 preloadAsSound = true
 preloadInCache = false
 userAdded = true
+
+[[resources]]
+file = "assets/SM_SunCollect.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_SunCollect.glb"
+userAdded = false
