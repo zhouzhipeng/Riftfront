@@ -21,7 +21,7 @@ type = "Scene3D::Base3DBehavior"
 [content]
 centerLocation = "BottomCenterZ"
 crossfadeDuration = 0.1
-depth = 70
+depth = 150
 height = 155
 isCastingShadow = true
 isReceivingShadow = true
