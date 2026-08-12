@@ -1,8 +1,0 @@
-@event aiGeneratedEventId="health-bar-face-active-camera"
-if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Variable(Ratio)) comparison_sign=">=" second_expression=0
-do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="HealthTrack" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(-Scene3D::CameraRotationX(HealthTrack.Layer()))
-do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealthTrack" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(Scene3D::CameraRotationY(HealthTrack.Layer()))
-do SetAngle object="HealthTrack" modification_sign="=" angle_in_degrees=expr(CameraAngle(HealthTrack.Layer()))
-do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="HealthFill" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(-Scene3D::CameraRotationX(HealthFill.Layer()))
-do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealthFill" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(Scene3D::CameraRotationY(HealthFill.Layer()))
-do SetAngle object="HealthFill" modification_sign="=" angle_in_degrees=expr(CameraAngle(HealthFill.Layer()))

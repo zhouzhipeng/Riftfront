@@ -8,6 +8,9 @@ type = "Local::HealthBar3D"
 variant = ""
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 content = { }
 folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"

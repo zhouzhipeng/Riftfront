@@ -1,3 +1,9 @@
+@event aiGeneratedEventId="zombie-health-bar-face-camera"
+if VarObjet object="Object" variable="HP" comparison_sign=">" value=0
+do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(-Scene3D::CameraRotationX(HealthBar.Layer()))
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealthBar" behavior="Base3D" modification_sign="=" angle_in_degrees=expr(Scene3D::CameraRotationY(HealthBar.Layer()))
+do SetAngle object="HealthBar" modification_sign="=" angle_in_degrees=expr(CameraAngle(HealthBar.Layer()))
+
 @event aiGeneratedEventId="zombie-delete-at-zero-health"
 if VarObjet object="Object" variable="HP" comparison_sign="<=" value=0
 do Delete object="Object"
