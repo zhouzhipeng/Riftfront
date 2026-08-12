@@ -513,18 +513,21 @@ id = "30000000-0000-4000-8000-000000000002"
 object = "FrontDoor"
 layer = "base"
 at = [453, 474, 4]
+rotation = 90
 
 [[layout.instances]]
 id = "30000000-0000-4000-8000-000000000003"
 object = "WindowWide"
 layer = "base"
 at = [453, 324, 92]
+rotation = 90
 
 [[layout.instances]]
 id = "30000000-0000-4000-8000-000000000004"
 object = "WindowSmall"
 layer = "base"
 at = [453, 539, 86]
+rotation = 90
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000001"
