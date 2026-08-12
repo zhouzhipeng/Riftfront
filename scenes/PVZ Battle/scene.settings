@@ -9,7 +9,9 @@ stopSoundsOnStartup = true
 title = ""
 sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
 behaviorsSharedData = [ ]
-objectGroups = { }
+
+[objectGroups]
+LawnTiles = ["LawnTile", "LawnTileDark"]
 
 [[variables]]
 name = "CameraOrbitAngle"
@@ -123,10 +125,9 @@ at = [300, 200]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000002"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [400, 200]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000003"
@@ -136,10 +137,9 @@ at = [500, 200]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000004"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [600, 200]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000005"
@@ -149,10 +149,9 @@ at = [700, 200]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000006"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [800, 200]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000007"
@@ -162,10 +161,9 @@ at = [900, 200]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000008"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1000, 200]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000009"
@@ -175,10 +173,9 @@ at = [1100, 200]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000010"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [300, 300]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000011"
@@ -188,10 +185,9 @@ at = [400, 300]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000012"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [500, 300]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000013"
@@ -201,10 +197,9 @@ at = [600, 300]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000014"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [700, 300]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000015"
@@ -214,10 +209,9 @@ at = [800, 300]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000016"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [900, 300]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000017"
@@ -227,10 +221,9 @@ at = [1000, 300]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000018"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1100, 300]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000019"
@@ -240,10 +233,9 @@ at = [300, 400]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000020"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [400, 400]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000021"
@@ -253,10 +245,9 @@ at = [500, 400]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000022"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [600, 400]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000023"
@@ -266,10 +257,9 @@ at = [700, 400]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000024"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [800, 400]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000025"
@@ -279,10 +269,9 @@ at = [900, 400]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000026"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1000, 400]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000027"
@@ -292,10 +281,9 @@ at = [1100, 400]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000028"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [300, 500]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000029"
@@ -305,10 +293,9 @@ at = [400, 500]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000030"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [500, 500]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000031"
@@ -318,10 +305,9 @@ at = [600, 500]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000032"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [700, 500]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000033"
@@ -331,10 +317,9 @@ at = [800, 500]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000034"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [900, 500]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000035"
@@ -344,10 +329,9 @@ at = [1000, 500]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000036"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1100, 500]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000037"
@@ -357,10 +341,9 @@ at = [300, 600]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000038"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [400, 600]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000039"
@@ -370,10 +353,9 @@ at = [500, 600]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000040"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [600, 600]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000041"
@@ -383,10 +365,9 @@ at = [700, 600]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000042"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [800, 600]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000043"
@@ -396,10 +377,9 @@ at = [900, 600]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000044"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1000, 600]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000045"
@@ -409,10 +389,9 @@ at = [1100, 600]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000046"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [300, 100]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000047"
@@ -422,10 +401,9 @@ at = [400, 100]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000048"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [500, 100]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000049"
@@ -435,10 +413,9 @@ at = [600, 100]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000050"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [700, 100]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000051"
@@ -448,10 +425,9 @@ at = [800, 100]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000052"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [900, 100]
-opacity = 185
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000053"
@@ -461,10 +437,9 @@ at = [1000, 100]
 
 [[layout.instances]]
 id = "10000000-0000-4000-8000-000000000054"
-object = "LawnTile"
+object = "LawnTileDark"
 layer = "base"
 at = [1100, 100]
-opacity = 185
 
 [[layout.instances]]
 id = "20000000-0000-4000-8000-000000000001"

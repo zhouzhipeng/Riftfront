@@ -925,6 +925,13 @@ name = "SM_LawnTile.glb"
 userAdded = true
 
 [[resources]]
+file = "assets/SM_LawnTile_Dark.glb"
+kind = "model3D"
+metadata = ""
+name = "SM_LawnTile_Dark.glb"
+userAdded = true
+
+[[resources]]
 file = "assets/textures/pvz_lawn_grass.png"
 kind = "image"
 metadata = ""

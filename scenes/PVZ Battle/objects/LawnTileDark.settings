@@ -1,0 +1,34 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 21
+assetStoreId = ""
+name = "LawnTileDark"
+persistentUuid = "7b236f04-937b-42e0-83f8-5dc5db1f95d2"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ "Yard" ]
+
+[[variables]]
+name = "Occupied"
+persistentUuid = "1a7408a0-b7a0-4cf4-9e27-07d44a5cb057"
+type = "boolean"
+value = false
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 4
+height = 97
+isCastingShadow = false
+isReceivingShadow = true
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_LawnTile_Dark.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 97
+sharedAnimationModelResources = [ ]
+animations = [ ]

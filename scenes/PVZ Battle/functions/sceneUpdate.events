@@ -26,25 +26,25 @@ do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 
 @event aiGeneratedEventId="pvz-hover-open-lawn-tile"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
-if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTile" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
-if BooleanObjectVariable object="LawnTile" variable="Occupied" check_if_the_value_is=false
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
+if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
 do Show object="PlacementHover"
-do SetX object="PlacementHover" modification_sign="=" value=expr(LawnTile.X() + 6)
-do SetY object="PlacementHover" modification_sign="=" value=expr(LawnTile.Y() + 6)
+do SetX object="PlacementHover" modification_sign="=" value=expr(LawnTiles.X() + 6)
+do SetY object="PlacementHover" modification_sign="=" value=expr(LawnTiles.Y() + 6)
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PlacementHover" behavior="Base3D" modification_sign="=" value=5
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="True"
 @end group
 
 @group "Plant sunflower" source="" creationTime=0 color=[255,197,72] parameters=[]
-@comment "Resolve the clicked tile again so the raycast-picked LawnTile remains scoped to this placement event."
+@comment "Resolve the clicked tile again so the raycast-picked LawnTiles group remains scoped to this placement event."
 @event aiGeneratedEventId="pvz-place-sunflower"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
 if BooleanVariable variable="HasPlacementTarget" check_if_the_value_is=true
 if MouseButtonFromTextReleased button_to_check="Left"
-if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTile" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
-if BooleanObjectVariable object="LawnTile" variable="Occupied" check_if_the_value_is=false
-do SetBooleanObjectVariable object="LawnTile" variable="Occupied" modification_sign="True"
-do Create object_to_create="SunflowerPlant" x_position=expr(LawnTile.X() + 50) y_position=expr(LawnTile.Y() + 50) layer=""
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
+if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
+do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
+do Create object_to_create="SunflowerPlant" x_position=expr(LawnTiles.X() + 50) y_position=expr(LawnTiles.Y() + 50) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SunflowerPlant" behavior="Base3D" modification_sign="=" value=5
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
