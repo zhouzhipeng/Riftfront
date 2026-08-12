@@ -12,7 +12,9 @@ underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "[ SUNFLOWER ]\n50 SUN  •  CLICK"
+string = """
+[ SUNFLOWER ]
+50 SUN  •  CLICK"""
 font = ""
 textAlignment = "center"
 characterSize = 19
@@ -37,7 +39,9 @@ shadowDistance = 3
 shadowOpacity = 180
 smoothed = true
 underlined = false
-text = "[ SUNFLOWER ]\n50 SUN  •  CLICK"
+text = """
+[ SUNFLOWER ]
+50 SUN  •  CLICK"""
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "center"

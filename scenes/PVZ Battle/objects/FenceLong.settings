@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 5
 assetStoreId = ""
 name = "FenceLong"
+persistentUuid = "a96cb23e-8bd9-4283-b4a2-4336f119fe83"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

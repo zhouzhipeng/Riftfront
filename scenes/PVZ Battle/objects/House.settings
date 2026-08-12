@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 3
 assetStoreId = ""
 name = "House"
+persistentUuid = "4d3c2cd9-d7a3-4d03-9f67-fd24b82f80f5"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

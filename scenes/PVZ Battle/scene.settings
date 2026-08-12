@@ -10,9 +10,6 @@ title = ""
 sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
 behaviorsSharedData = [ ]
 
-[objectGroups]
-LawnTiles = ["LawnTile", "LawnTileDark"]
-
 [[variables]]
 name = "CameraOrbitAngle"
 persistentUuid = "3d4da1e3-7a44-4a2b-9eed-b3df5741b337"
@@ -49,22 +46,25 @@ persistentUuid = "62648a59-5736-4fab-80aa-69909c673ed6"
 type = "number"
 value = 0
 
+[objectGroups]
+LawnTiles = [ "LawnTile", "LawnTileDark" ]
+
 [layout]
 version = 1
 background = "#21472B"
 
 [layout.editor]
-grid = true
+grid = false
 grid_type = "rectangular"
 grid_size = [100, 100, 25]
 grid_offset = [0, 0, 0]
 grid_color = "#9EB4FF"
 grid_alpha = 0.8
-snap = true
-zoom = 0.36942475881734455
+snap = false
+zoom = 0.3947590667919588
 window_mask = false
 selected_layer = ""
-mode = "instances-editor"
+mode = "embedded-game"
 
 [[layout.layers]]
 id = "base"
@@ -481,52 +481,53 @@ at = [140, 570, 1]
 id = "30000000-0000-4000-8000-000000000001"
 object = "House"
 layer = "base"
-at = [-7, 719]
+at = [200, 500]
+rotation = 270
 
 [[layout.instances]]
 id = "30000000-0000-4000-8000-000000000002"
 object = "FrontDoor"
 layer = "base"
-at = [385, 474, 4]
+at = [200, 432, -4]
 rotation = 90
 
 [[layout.instances]]
 id = "30000000-0000-4000-8000-000000000003"
 object = "WindowWide"
 layer = "base"
-at = [335, 324, 92]
+at = [304, 212, 6]
 rotation = 90
 
 [[layout.instances]]
 id = "30000000-0000-4000-8000-000000000004"
 object = "WindowSmall"
 layer = "base"
-at = [375, 600, 86]
+at = [300, 582, 9]
 rotation = 90
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000001"
 object = "FenceLong"
 layer = "base"
-at = [520, 104, 3]
+at = [520, 92, -5]
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000002"
 object = "FenceLong"
 layer = "base"
-at = [740, 104, 3]
+at = [740, 92, -5]
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000003"
 object = "FenceLong"
 layer = "base"
-at = [960, 104, 3]
+at = [960, 92, -5]
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000004"
 object = "FenceLong"
 layer = "base"
-at = [1180, 104, 3]
+at = [1180, 92, -5]
 
 [[layout.instances]]
 id = "40000000-0000-4000-8000-000000000007"
@@ -642,7 +643,7 @@ z_order = 10
 id = "6d97739d-3e59-4b73-8e9c-a5f7dd234292"
 object = "SM_lobbyRoad"
 layer = "base"
-at = [1200, 250]
+at = [1200, 251]
 z_order = 11
 
 [[layout.instances]]
@@ -699,3 +700,10 @@ at = [300, 625]
 z_order = 30
 size = [720, 40]
 hidden = true
+
+[[layout.instances]]
+id = "3346f459-486f-4a37-a3f1-32eabe3cbca1"
+object = "SM_lobbyRoad"
+layer = "base"
+at = [1200, 153]
+z_order = 11

@@ -5,6 +5,7 @@ assetStoreId = ""
 bold = true
 italic = false
 name = "SunCounter"
+persistentUuid = "13bdf8bf-cf57-47cd-ad30-e8ca560efb5f"
 smoothed = true
 type = "TextObject::Text"
 underlined = false

@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 4
 assetStoreId = ""
 name = "FrontDoor"
+persistentUuid = "6a6877f0-5b3a-41a9-bdc7-d5fdaa63def6"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

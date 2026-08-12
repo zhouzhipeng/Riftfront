@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 9
 assetStoreId = ""
 name = "WindowSmall"
+persistentUuid = "c113d435-8144-47f4-8302-a1bed30fc7a5"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

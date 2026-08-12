@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 10
 assetStoreId = ""
 name = "GrassTuft"
+persistentUuid = "51bdbd79-c6fd-407d-a9ed-c6c2585c21f7"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]

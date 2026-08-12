@@ -3,6 +3,7 @@ settingsFormatVersion = 5
 order = 8
 assetStoreId = ""
 name = "WindowWide"
+persistentUuid = "8fead6ce-7f18-4931-933b-a5e4c8bbfe4f"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
