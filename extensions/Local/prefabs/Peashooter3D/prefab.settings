@@ -27,7 +27,7 @@ objectGroups = { }
 
 [layout]
 version = 1
-bounds = { max = [48, 48, 120], min = [-48, -48, 0] }
+bounds = { max = [48, 48, 132], min = [-48, -48, 0] }
 
 [layout.editor]
 grid = false
@@ -58,4 +58,4 @@ at = [0, 0]
 id = "802d5ac3-44f4-4d61-81c7-a8581192f0a5"
 object = "HealthBar"
 layer = "base"
-at = [0, 0, 104]
+at = [0, 0, 116]

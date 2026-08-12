@@ -960,3 +960,11 @@ kind = "model3D"
 metadata = ""
 name = "SM_PeaSphere.glb"
 userAdded = false
+
+[[resources]]
+file = "assets/textures/health-bar-white.png"
+kind = "image"
+metadata = ""
+name = "HealthBarWhite"
+smoothed = false
+userAdded = true

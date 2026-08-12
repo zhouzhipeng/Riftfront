@@ -160,20 +160,20 @@ do ResetTimer timer_name="ZombieSpawn"
 @event aiGeneratedEventId="pvz-each-zombie-walk-when-clear"
 for each "Zombie"
 > @instruction inverted=true
-> if CollisionNP first_object="Zombie" second_object="Plants" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if Distance object="Zombie" object_2="Plants" distance=75
 > do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - 22 * TimeDelta())
 
 @event aiGeneratedEventId="pvz-each-zombie-return-to-walk"
 for each "Zombie"
 > @instruction inverted=true
-> if CollisionNP first_object="Zombie" second_object="Plants" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if Distance object="Zombie" object_2="Plants" distance=75
 > if BooleanObjectVariable object="Zombie" variable="Attacking" check_if_the_value_is=true
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Walk" payload=""
 > do SetBooleanObjectVariable object="Zombie" variable="Attacking" modification_sign="False"
 
 @event aiGeneratedEventId="pvz-each-zombie-enter-attack"
 for each "Zombie"
-> if CollisionNP first_object="Zombie" second_object="Plants" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if Distance object="Zombie" object_2="Plants" distance=75
 > if BooleanObjectVariable object="Zombie" variable="Attacking" check_if_the_value_is=false
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Attack" payload=""
 > do SetBooleanObjectVariable object="Zombie" variable="Attacking" modification_sign="True"
@@ -181,8 +181,8 @@ for each "Zombie"
 
 @event aiGeneratedEventId="pvz-each-zombie-deal-signal-damage"
 for each "Zombie"
-> if CollisionNP first_object="Zombie" second_object="Plants" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Plants" x_position=expr(Zombie.X()) y_position=expr(Zombie.Y())
+> if Distance object="Zombie" object_2="Plants" distance=75
 > if CompareObjectTimer object="Zombie" timer_name="AttackCooldown" comparison_sign=">=" time_in_seconds=1
 > do EmitSignalToObjectInstance instance_id=expr(Plants.InstanceId()) signal_name="Unit.Damage" payload="1"
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
@@ -212,8 +212,8 @@ do SetX object="PeaProjectile" modification_sign="=" value=expr(PeaProjectile.X(
 @event aiGeneratedEventId="pvz-each-pea-hit"
 for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
-> if CollisionNP first_object="PeaProjectile" second_object="Zombie" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
+> if Distance object="PeaProjectile" object_2="Zombie" distance=55
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="1"
 > do Delete object="PeaProjectile"
 

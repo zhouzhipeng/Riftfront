@@ -47,10 +47,10 @@ cameras = [{ size = "default", viewport = "default" }]
 id = "aa3cffb1-88d0-4a92-82ab-d89029e16de1"
 object = "HealthTrack"
 layer = "base"
-at = [0, 0, 0]
+at = [-32, 0, 0]
 
 [[layout.instances]]
 id = "4afb79bd-6929-4d3b-a617-46316205ea08"
 object = "HealthFill"
 layer = "base"
-at = [0, -1, 2]
+at = [-30, -1, 2]
