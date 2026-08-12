@@ -526,7 +526,7 @@ rotation = 90
 id = "30000000-0000-4000-8000-000000000004"
 object = "WindowSmall"
 layer = "base"
-at = [390, 600, 86]
+at = [375, 600, 86]
 rotation = 90
 
 [[layout.instances]]
