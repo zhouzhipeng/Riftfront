@@ -57,4 +57,4 @@ at = [0, 0]
 id = "5ad5d74e-4510-4274-9f5c-13ab670c39f5"
 object = "HealthBar"
 layer = "base"
-at = [4, 0, 120]
+at = [6, 0, 120]
