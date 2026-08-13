@@ -13,17 +13,17 @@ async = false
 objectGroups = { }
 
 [[parameters]]
-description = "Delivered scene signal name"
 name = "SignalName"
 type = "string"
+description = "Delivered scene signal name"
 optional = false
 defaultValue = ""
 codeOnly = false
 
 [[parameters]]
-description = "Delivered immutable string payload"
 name = "Payload"
 type = "string"
+description = "Delivered immutable string payload"
 optional = false
 defaultValue = ""
 codeOnly = false

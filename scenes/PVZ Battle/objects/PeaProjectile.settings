@@ -8,10 +8,9 @@ type = "Local::PeaBullet3D"
 variant = ""
 variables = [ ]
 effects = [ ]
+content = [ ]
 folder = [ "Combat" ]
 
 [[behaviors]]
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
-
-content = { }

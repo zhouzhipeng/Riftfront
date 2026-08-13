@@ -11,6 +11,8 @@ isUsingLegacyInstancesRenderer = false
 name = "Peashooter3D"
 previewIconUrl = ""
 behaviors = [ ]
+propertyDescriptors = [ ]
+objectGroups = { }
 
 [[variables]]
 name = "HP"
@@ -21,9 +23,6 @@ value = 3
 name = "MaxHP"
 type = "number"
 value = 3
-
-propertyDescriptors = [ ]
-objectGroups = { }
 
 [layout]
 version = 1

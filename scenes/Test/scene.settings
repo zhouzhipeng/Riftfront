@@ -4,6 +4,7 @@ order = 1
 disableInputWhenNotFocused = true
 mangledName = "Test"
 name = "Test"
+renderer3DWorldScale = 100
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = "Twin Kunai Animation Test"
@@ -113,7 +114,7 @@ threshold = 0.92
 id = "a1b2c3d4-1000-4000-8000-000000000001"
 object = "TwinKunai3D"
 layer = "base"
-at = [640, 535, 32]
+at = [640, 535, 129]
 z_order = 5
 
 [[layout.instances]]

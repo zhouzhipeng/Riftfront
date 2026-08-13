@@ -4,6 +4,7 @@ order = 0
 disableInputWhenNotFocused = true
 mangledName = "Game"
 name = "Game"
+renderer3DWorldScale = 100
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""

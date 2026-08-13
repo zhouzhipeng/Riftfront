@@ -2,23 +2,8 @@ combinedSettingsFormatVersion = 5
 eventsDslVersion = "3.0"
 kind = "project"
 settingsFormatVersion = 5
-firstLayout = "Test"
+firstLayout = "PVZ Battle"
 initialGDVersion = "6.0.0"
-[[variables]]
-name = "BillboardCameraRotationX"
-type = "number"
-value = -48.46202093
-
-[[variables]]
-name = "BillboardCameraRotationY"
-type = "number"
-value = 0
-
-[[variables]]
-name = "BillboardCameraRotationZ"
-type = "number"
-value = -1.31140401
-
 objectGroups = { }
 
 [gdVersion]
@@ -79,3 +64,18 @@ showWatermark = false
 
 [[properties.platforms]]
 name = "GDevelop JS platform"
+
+[[variables]]
+name = "BillboardCameraRotationX"
+type = "number"
+value = -48.46202093
+
+[[variables]]
+name = "BillboardCameraRotationY"
+type = "number"
+value = 0
+
+[[variables]]
+name = "BillboardCameraRotationZ"
+type = "number"
+value = -1.31140401

@@ -11,9 +11,9 @@ isUsingLegacyInstancesRenderer = false
 name = "PeaBullet3D"
 previewIconUrl = ""
 behaviors = [ ]
+variables = [ ]
 propertyDescriptors = [ ]
 objectGroups = { }
-variables = [ ]
 
 [layout]
 version = 1
@@ -42,4 +42,4 @@ cameras = [{ size = "default", viewport = "default" }]
 id = "3510a649-84ce-4300-98a0-ca79bcba99e7"
 object = "PeaModel"
 layer = "base"
-at = [0, 0, 0]
+at = [0, 0]

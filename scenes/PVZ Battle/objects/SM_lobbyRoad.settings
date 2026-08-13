@@ -8,7 +8,7 @@ type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-folder = [ ]
+folder = [ "Yard" ]
 
 [content]
 centerLocation = "CenteredOnZ"

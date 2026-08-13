@@ -4,6 +4,7 @@ order = 3
 disableInputWhenNotFocused = true
 mangledName = "PVZ_32Battle"
 name = "PVZ Battle"
+renderer3DWorldScale = 100
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
@@ -133,10 +134,10 @@ grid_offset = [0, 0, 0]
 grid_color = "#9EB4FF"
 grid_alpha = 0.8
 snap = false
-zoom = 0.3947590667919588
+zoom = 0.5500000000000006
 window_mask = false
 selected_layer = ""
-mode = "embedded-game"
+mode = "instances-editor"
 
 [[layout.layers]]
 id = "base"

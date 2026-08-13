@@ -12,5 +12,12 @@ content = { }
 folder = [ ]
 
 [[behaviors]]
+isInheritedFromObjectType = true
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
+
+[[behaviors]]
+isInheritedFromObjectType = true
+name = "SceneCameraBillboard"
+type = "Local::SceneCameraBillboard"
+Object3D = "Base3D"

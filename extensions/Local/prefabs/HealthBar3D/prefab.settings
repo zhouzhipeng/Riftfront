@@ -10,6 +10,9 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "HealthBar3D"
 previewIconUrl = ""
+propertyDescriptors = [ ]
+objectGroups = { }
+
 [[behaviors]]
 name = "Base3D"
 type = "Scene3D::Base3DBehavior"
@@ -23,9 +26,6 @@ Object3D = "Base3D"
 name = "Ratio"
 type = "number"
 value = 1
-
-propertyDescriptors = [ ]
-objectGroups = { }
 
 [layout]
 version = 1
@@ -54,7 +54,7 @@ cameras = [{ size = "default", viewport = "default" }]
 id = "aa3cffb1-88d0-4a92-82ab-d89029e16de1"
 object = "HealthTrack"
 layer = "base"
-at = [-32, 0, 0]
+at = [-32, 0]
 
 [[layout.instances]]
 id = "4afb79bd-6929-4d3b-a617-46316205ea08"

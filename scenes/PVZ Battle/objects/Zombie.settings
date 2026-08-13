@@ -29,12 +29,12 @@ value = 100
 [[variables]]
 name = "TargetX"
 type = "number"
-value = -100000
+value = -100_000
 
 [[variables]]
 name = "TargetY"
 type = "number"
-value = -100000
+value = -100_000
 
 [[behaviors]]
 name = "Base3D"
