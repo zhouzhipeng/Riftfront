@@ -1,0 +1,33 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 0
+description = "Rotates a nested 3D object to the scene camera only when the camera rotation changes."
+fullName = "Scene camera billboard"
+helpPath = ""
+iconUrl = ""
+name = "SceneCameraBillboard"
+objectType = ""
+previewIconUrl = ""
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D capability"
+extraInformation = [ "Scene3D::Base3DBehavior" ]
+choices = [ ]
+name = "Object3D"
+
+[[variables]]
+name = "LastRotationX"
+type = "number"
+value = 100_000
+
+[[variables]]
+name = "LastRotationY"
+type = "number"
+value = 100_000
+
+[[variables]]
+name = "LastRotationZ"
+type = "number"
+value = 100_000

@@ -15,10 +15,9 @@ name = "Base3D"
 type = "Scene3D::Base3DBehavior"
 
 [[behaviors]]
-name = "Billboard"
-type = "Billboard::Billboard"
+name = "SceneCameraBillboard"
+type = "Local::SceneCameraBillboard"
 Object3D = "Base3D"
-OffsetPositionMode = "No change"
 
 [[variables]]
 name = "Ratio"

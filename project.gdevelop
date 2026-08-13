@@ -4,7 +4,21 @@ kind = "project"
 settingsFormatVersion = 5
 firstLayout = "Test"
 initialGDVersion = "6.0.0"
-variables = [ ]
+[[variables]]
+name = "BillboardCameraRotationX"
+type = "number"
+value = -48.46202093
+
+[[variables]]
+name = "BillboardCameraRotationY"
+type = "number"
+value = 0
+
+[[variables]]
+name = "BillboardCameraRotationZ"
+type = "number"
+value = -1.31140401
+
 objectGroups = { }
 
 [gdVersion]

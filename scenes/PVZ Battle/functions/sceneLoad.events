@@ -11,6 +11,9 @@ do SetNumberVariable variable="CameraDragStartY" modification_sign="=" value=0
 do SetNumberVariable variable="CameraDragStartElevation" modification_sign="=" value=41.53797907
 do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=0
 do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=0
+do SetNumberVariable variable="BillboardCameraRotationX" modification_sign="=" value=expr(Variable(CameraElevationAngle) - 90)
+do SetNumberVariable variable="BillboardCameraRotationY" modification_sign="=" value=0
+do SetNumberVariable variable="BillboardCameraRotationZ" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetNumberVariable variable="PlacedPlants" modification_sign="=" value=0

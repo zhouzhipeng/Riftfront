@@ -1,0 +1,10 @@
+@event aiGeneratedEventId="scene-camera-billboard-update-when-camera-rotates"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(GlobalVariable(BillboardCameraRotationX)) comparison_sign="!=" second_expression=expr(Variable(LastRotationX))
+or BuiltinCommonInstructions::CompareNumbers first_expression=expr(GlobalVariable(BillboardCameraRotationY)) comparison_sign="!=" second_expression=expr(Variable(LastRotationY))
+or BuiltinCommonInstructions::CompareNumbers first_expression=expr(GlobalVariable(BillboardCameraRotationZ)) comparison_sign="!=" second_expression=expr(Variable(LastRotationZ))
+do Scene3D::Base3DBehavior::SetRotationX parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees=expr(GlobalVariable(BillboardCameraRotationX))
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees=expr(GlobalVariable(BillboardCameraRotationY))
+do SetAngle object="Object" modification_sign="=" angle_in_degrees=expr(GlobalVariable(BillboardCameraRotationZ))
+do SetNumberVariable variable="LastRotationX" modification_sign="=" value=expr(GlobalVariable(BillboardCameraRotationX))
+do SetNumberVariable variable="LastRotationY" modification_sign="=" value=expr(GlobalVariable(BillboardCameraRotationY))
+do SetNumberVariable variable="LastRotationZ" modification_sign="=" value=expr(GlobalVariable(BillboardCameraRotationZ))
