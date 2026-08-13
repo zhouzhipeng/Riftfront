@@ -217,7 +217,7 @@ for each "Zombie"
 
 @event aiGeneratedEventId="pvz-each-zombie-deal-signal-damage"
 for each "Zombie"
-> if CollisionNP first_object="Zombie" second_object="Plants"
+> if Collision3D::AreInCollision object="Zombie" first_parameter_3d_capability="Base3D" other_object="Plants" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Plants" x_position=expr(Zombie.X()) y_position=expr(Zombie.Y())
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=1
 > if CompareObjectTimer object="Zombie" timer_name="AttackCooldown" comparison_sign=">=" time_in_seconds=1
@@ -234,7 +234,7 @@ do Delete object="Zombie"
 @event aiGeneratedEventId="pvz-each-pea-hit"
 for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
-> if CollisionNP first_object="PeaProjectile" second_object="Zombie"
+> if Collision3D::AreInCollision object="PeaProjectile" first_parameter_3d_capability="Base3D" other_object="Zombie" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="20"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
