@@ -152,21 +152,6 @@ max_2d_distance = 2000
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layout.layers]]
-id = "plant-preview"
-name = "Plant Preview"
-rendering = "3d"
-camera_type = "perspective"
-camera_behavior = "do-nothing"
-locked = true
-lighting = false
-follow_base_camera = true
-ambient = "#D6E8C4"
-far = 5000
-fov = 40
-max_2d_distance = 2000
-cameras = [{ size = "default", viewport = "default" }]
-
-[[layout.layers]]
 id = "hud"
 name = "HUD"
 rendering = "2d"
@@ -202,38 +187,6 @@ top = "Z+"
 [[layout.effects]]
 layer = "base"
 name = "Sunny Exposure"
-type = "Scene3D::Exposure"
-exposure = 0.88
-
-[[layout.effects]]
-layer = "plant-preview"
-name = "Preview Hemisphere Light"
-type = "Scene3D::HemisphereLight"
-elevation = 55
-groundColor = "76;101;53"
-intensity = 0.45
-rotation = 320
-skyColor = "255;246;220"
-top = "Z+"
-
-[[layout.effects]]
-layer = "plant-preview"
-name = "Preview Directional Light"
-type = "Scene3D::DirectionalLight"
-color = "255;255;255"
-distanceFromCamera = 1500
-elevation = 52
-frustumSize = 2200
-intensity = 0.9
-isCastingShadow = false
-minimumShadowBias = 0.001
-rotation = 325
-shadowQuality = "medium"
-top = "Z+"
-
-[[layout.effects]]
-layer = "plant-preview"
-name = "Preview Exposure"
 type = "Scene3D::Exposure"
 exposure = 0.88
 
@@ -792,7 +745,7 @@ size = [210, 62]
 [[layout.instances]]
 id = "f84c0afb-c7bf-42a5-b93c-38f2996ad56e"
 object = "SelectedSunflower"
-layer = "plant-preview"
+layer = "base"
 at = [430, 500, 190]
 z_order = 30
 hidden = true
@@ -833,7 +786,7 @@ size = [220, 62]
 [[layout.instances]]
 id = "435300c3-b240-485a-89a4-47092c1f27cc"
 object = "SelectedPeashooter"
-layer = "plant-preview"
+layer = "base"
 at = [430, 500, 190]
 z_order = 30
 hidden = true
