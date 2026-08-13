@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+description = "the joystick force (from 0 to 1)."
+fullName = "Joystick force (deprecated)"
+functionType = "ExpressionAndCondition"
+name = "JoystickForce"
+private = true
+sentence = "the joystick force"
+folder = [ ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

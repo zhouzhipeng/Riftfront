@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 12
+description = "Reset the joystick values (except for angle, which stays the same)"
+fullName = "Reset"
+functionType = "Action"
+name = "Reset"
+private = true
+sentence = "Reset the joystick of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"

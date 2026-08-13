@@ -1,0 +1,15 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+fullName = ""
+functionType = "Action"
+name = "doStepPostEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

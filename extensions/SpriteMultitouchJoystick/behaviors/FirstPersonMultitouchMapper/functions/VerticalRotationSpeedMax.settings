@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "the maximum vertical rotation speed of the object."
+fullName = "Maximum vertical rotation speed"
+functionType = "ExpressionAndCondition"
+group = "First person camera multitouch controller mapper vertical rotation configuration"
+name = "VerticalRotationSpeedMax"
+sentence = "the maximum vertical rotation speed"
+folder = [
+"First person camera multitouch controller mapper vertical rotation configuration"
+]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

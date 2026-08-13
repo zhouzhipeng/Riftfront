@@ -1,0 +1,4 @@
+@event
+do SpriteMultitouchJoystick::MultitouchJoystick::SetControllerIdentifier object="Border" behavior="MultitouchJoystick" modification_sign="=" value=expr(ControllerIdentifier)
+do SpriteMultitouchJoystick::MultitouchJoystick::SetJoystickIdentifier object="Border" behavior="MultitouchJoystick" modification_sign="=" value=expr(JoystickIdentifier)
+do SpriteMultitouchJoystick::MultitouchJoystick::SetDeadZoneRadius object="Border" behavior="MultitouchJoystick" modification_sign="=" value=expr(DeadZoneRadius)

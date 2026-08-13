@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 21
+description = "Return the multitouch contoller stick force on Y axis (from -1 at the top to 1 at the bottom)."
+fullName = "Stick Y force"
+functionType = "Expression"
+name = "StickForceY"
+sentence = ""
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Joystick name"
+name = "JoystickIdentifier"
+supplementaryInformation = '["Primary","Secondary"]'
+type = "stringWithSelector"

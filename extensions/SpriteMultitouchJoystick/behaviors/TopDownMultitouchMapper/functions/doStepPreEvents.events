@@ -1,0 +1,66 @@
+@event
+if StringVariable variable="StickMode" comparison_sign="=" value="Analog"
+do TopDownMovementBehavior::SimulateStick object="Object" behavior="TopDownMovement" stick_angle_in_degrees=expr(SpriteMultitouchJoystick::StickAngle(ControllerIdentifier, JoystickIdentifier)) stick_force_between_0_and_1=expr(SpriteMultitouchJoystick::StickForce(ControllerIdentifier, JoystickIdentifier))
+
+@event
+if StringVariable variable="StickMode" comparison_sign="=" value="360°"
+do TopDownMovementBehavior::SimulateStick object="Object" behavior="TopDownMovement" stick_angle_in_degrees=expr(SpriteMultitouchJoystick::StickAngle(ControllerIdentifier, JoystickIdentifier)) stick_force_between_0_and_1=expr(sign(SpriteMultitouchJoystick::StickForce(ControllerIdentifier, JoystickIdentifier)))
+
+@event
+if StringVariable variable="StickMode" comparison_sign="=" value="8 Directions"
+> @event
+> @instruction inverted=true
+> if TopDownMovementBehavior::DiagonalsAllowed object="Object" behavior="TopDownMovement"
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Left"
+>> do TopDownMovementBehavior::SimulateLeftKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Right"
+>> do TopDownMovementBehavior::SimulateRightKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Up"
+>> do TopDownMovementBehavior::SimulateUpKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Down"
+>> do TopDownMovementBehavior::SimulateDownKey object="Object" behavior="TopDownMovement"
+
+> @event
+> if TopDownMovementBehavior::DiagonalsAllowed object="Object" behavior="TopDownMovement"
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Left"
+>> do TopDownMovementBehavior::SimulateLeftKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Right"
+>> do TopDownMovementBehavior::SimulateRightKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Up"
+>> do TopDownMovementBehavior::SimulateUpKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Down"
+>> do TopDownMovementBehavior::SimulateDownKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="UpLeft"
+>> do TopDownMovementBehavior::SimulateUpKey object="Object" behavior="TopDownMovement"
+>> do TopDownMovementBehavior::SimulateLeftKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="UpRight"
+>> do TopDownMovementBehavior::SimulateUpKey object="Object" behavior="TopDownMovement"
+>> do TopDownMovementBehavior::SimulateRightKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="DownLeft"
+>> do TopDownMovementBehavior::SimulateDownKey object="Object" behavior="TopDownMovement"
+>> do TopDownMovementBehavior::SimulateLeftKey object="Object" behavior="TopDownMovement"
+
+>> @event
+>> if SpriteMultitouchJoystick::IsDirectionPushed8Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="DownRight"
+>> do TopDownMovementBehavior::SimulateDownKey object="Object" behavior="TopDownMovement"
+>> do TopDownMovementBehavior::SimulateRightKey object="Object" behavior="TopDownMovement"

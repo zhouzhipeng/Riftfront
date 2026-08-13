@@ -1,0 +1,9 @@
+@event
+do Create object_to_create="Border" x_position=0 y_position=0
+do Create object_to_create="Thumb" x_position=0 y_position=0
+do SetZOrder object="Border" modification_sign="=" value=1
+do SetZOrder object="Thumb" modification_sign="=" value=2
+do SetCenter object="Border" first_modification_sign="=" x_position=0 second_modification_sign="=" y_position=0
+do SetCenter object="Thumb" first_modification_sign="=" x_position=0 second_modification_sign="=" y_position=0
+do SpriteMultitouchJoystick::SpriteMultitouchJoystick::UpdateConfiguration object="Object"
+do SetIncludedInParentCollisionMask object="Thumb"

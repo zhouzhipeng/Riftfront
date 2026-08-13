@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "Check if a stick is pressed."
+fullName = "Stick pressed"
+functionType = "Condition"
+name = "IsPressed"
+sentence = "Stick _PARAM0_ is pressed"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

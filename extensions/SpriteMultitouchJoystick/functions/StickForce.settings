@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 15
+description = "the force of multitouch contoller stick (from 0 to 1)."
+fullName = "Stick force"
+functionType = "ExpressionAndCondition"
+name = "StickForce"
+sentence = "multitouch controller _PARAM1_ _PARAM2_ stick force"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Stick name"
+name = "JoystickIdentifier"
+supplementaryInformation = '["Primary","Secondary"]'
+type = "stringWithSelector"

@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 20
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "JoystickIdentifier"
+group = "Multitouch Joystick configuration"
+name = "SetJoystickIdentifier"
+sentence = ""
+folder = [ "Multitouch Joystick configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

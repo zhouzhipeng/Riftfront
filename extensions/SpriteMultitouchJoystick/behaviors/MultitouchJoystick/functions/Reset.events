@@ -1,0 +1,3 @@
+@event
+do SpriteMultitouchJoystick::MultitouchJoystick::SetJoystickForce object="Object" behavior="Behavior" modification_sign="=" value=0
+do SetNumberVariable variable="TouchId" modification_sign="=" value=0

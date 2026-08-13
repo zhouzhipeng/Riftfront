@@ -1035,3 +1035,19 @@ kind = "model3D"
 metadata = ""
 name = "SM_SunCollect.glb"
 userAdded = false
+
+[[resources]]
+file = "assets/ui/mobile-camera-joystick-border.svg"
+kind = "image"
+metadata = ""
+name = "PVZCameraJoystickBorder"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/mobile-camera-joystick-thumb.svg"
+kind = "image"
+metadata = ""
+name = "PVZCameraJoystickThumb"
+smoothed = true
+userAdded = true

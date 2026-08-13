@@ -1,0 +1,62 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 6
+description = "Control a 3D physics car with a multitouch controller."
+fullName = "3D car multitouch controller mapper"
+helpPath = ""
+iconUrl = ""
+name = "PhysicsCar3DMultitouchMapper"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D physics car"
+extraInformation = [ "Physics3D::PhysicsCar3D" ]
+choices = [ ]
+name = "PhysicsCar3D"
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Primary"
+type = "Choice"
+label = "Steer joystick"
+group = "Controls"
+name = "SteerJoystickIdentifier"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "Secondary"
+type = "Choice"
+label = "Speed joystick"
+group = "Controls"
+name = "SpeedJoystickIdentifier"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "B"
+type = "String"
+label = "Hand brake button name"
+group = "Controls"
+name = "HandBrakeButton"

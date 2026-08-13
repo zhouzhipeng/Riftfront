@@ -1,0 +1,38 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+fullName = "Accelerated speed"
+functionType = "Expression"
+name = "AcceleratedSpeed"
+private = true
+sentence = ""
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Current speed"
+name = "CurrentSpeed"
+type = "expression"
+
+[[parameters]]
+description = "Targeted speed"
+name = "TargetedSpeed"
+type = "expression"
+
+[[parameters]]
+description = "Max speed"
+name = "SpeedMax"
+type = "expression"
+
+[[parameters]]
+description = "Acceleration"
+name = "Acceleration"
+type = "expression"
+
+[[parameters]]
+description = "Deceleration"
+name = "Deceleration"
+type = "expression"

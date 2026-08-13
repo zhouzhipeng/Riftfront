@@ -1,0 +1,39 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "Border"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+folder = [ ]
+
+[[behaviors]]
+name = "MultitouchJoystick"
+type = "SpriteMultitouchJoystick::MultitouchJoystick"
+ControllerIdentifier = 1
+JoystickIdentifier = "Primary"
+FloatingEnabled = false
+DeadZoneRadius = 0.4
+JoystickAngle = 0
+JoystickForce = 0
+TouchId = 0
+TouchIndex = 0
+
+[[animations]]
+name = "Idle"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZCameraJoystickBorder"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

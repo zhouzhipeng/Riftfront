@@ -1,0 +1,19 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+description = "the direction index (left = 1, bottom-left = 1... top-left = 7) for an angle (in degrees)."
+fullName = "Angle to 8-way index"
+functionType = "ExpressionAndCondition"
+name = "AngleTo8Way"
+private = true
+sentence = "The angle _PARAM1_ 8-way index"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Angle"
+name = "Angle"
+type = "expression"

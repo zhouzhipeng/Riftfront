@@ -1,0 +1,7 @@
+@event
+if SpriteMultitouchJoystick::StickForce comparison_sign=">" value=0 multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) stick_name=expr(JoystickIdentifier)
+do Physics3D::PhysicsCharacter3D::SimulateStick object="Object" behavior="PhysicsCharacter3D" stick_angle_in_degrees=expr(SpriteMultitouchJoystick::StickAngle(ControllerIdentifier, JoystickIdentifier)) stick_force_between_0_and_1=expr(SpriteMultitouchJoystick::StickForce(ControllerIdentifier, JoystickIdentifier))
+
+@event
+if SpriteMultitouchJoystick::IsButtonPressed multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) button_name=expr(JumpButton)
+do Physics3D::PhysicsCharacter3D::SimulateJumpKey object="Object" behavior="PhysicsCharacter3D"

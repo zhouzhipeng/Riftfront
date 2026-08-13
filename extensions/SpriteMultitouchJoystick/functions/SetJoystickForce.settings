@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 16
+description = "Change the percentage the thumb has been pulled away from the joystick center (Range: 0 to 1)."
+fullName = "Joystick force"
+functionType = "Action"
+name = "SetJoystickForce"
+private = true
+sentence = "Change the force of the joystick _PARAM2_ of multitouch controller _PARAM1_ to _PARAM3_"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Joystick name"
+name = "JoystickIdentifier"
+type = "string"
+
+[[parameters]]
+description = "Value"
+name = "Value"
+type = "expression"

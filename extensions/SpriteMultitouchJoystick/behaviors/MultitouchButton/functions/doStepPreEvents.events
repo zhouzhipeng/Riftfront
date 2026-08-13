@@ -1,0 +1,34 @@
+@event
+if BooleanVariable variable="IsReleased" check_if_the_value_is=true
+do SetBooleanVariable variable="IsReleased" modification_sign="False"
+do SpriteMultitouchJoystick::MultitouchButton::SetButtonState object="Object" behavior="Behavior" button_state="Idle"
+
+@event
+if BooleanVariable variable="IsJustPressed" check_if_the_value_is=true
+do SetBooleanVariable variable="IsJustPressed" modification_sign="False"
+do SpriteMultitouchJoystick::MultitouchButton::SetButtonState object="Object" behavior="Behavior" button_state="Pressed"
+
+@event
+@instruction inverted=true
+if SpriteMultitouchJoystick::MultitouchButton::IsPressed object="Object" behavior="Behavior"
+if HasAnyTouchOrMouseStarted
+do SetNumberVariable variable="TouchIndex" modification_sign="=" value=0
+> @event
+> repeat "StartedTouchOrMouseCount()"
+>> @event
+>> if CollisionPoint object="Object" x_position_of_the_point=expr(TouchX(StartedTouchOrMouseId(TouchIndex), Object.Layer())) y_position_of_the_point=expr(TouchY(StartedTouchOrMouseId(TouchIndex), Object.Layer()))
+>> or NumberVariable variable="Radius" comparison_sign=">" value=expr(DistanceBetweenPositions(Object.CenterX(), Object.CenterY(), TouchX(StartedTouchOrMouseId(TouchIndex), Object.Layer()), TouchY(StartedTouchOrMouseId(TouchIndex), Object.Layer())))
+>> do SetNumberVariable variable="TouchId" modification_sign="=" value=expr(StartedTouchOrMouseId(TouchIndex))
+>> do SpriteMultitouchJoystick::MultitouchButton::SetButtonState object="Object" behavior="Behavior" button_state="JustPressed"
+>> do SetBooleanVariable variable="IsJustPressed" modification_sign="True"
+
+>> @event
+>> do SetNumberVariable variable="TouchIndex" modification_sign="+" value=1
+
+@event
+if SpriteMultitouchJoystick::MultitouchButton::IsPressed object="Object" behavior="Behavior"
+if HasTouchEnded touch_identifier=expr(TouchId)
+do SpriteMultitouchJoystick::MultitouchButton::SetButtonState object="Object" behavior="Behavior" button_state="Released"
+do SetBooleanVariable variable="IsReleased" modification_sign="True"
+do SetBooleanVariable variable="IsJustPressed" modification_sign="False"
+do SetNumberVariable variable="TouchId" modification_sign="=" value=0

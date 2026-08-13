@@ -1,0 +1,4 @@
+@js strict=true expanded=false
+const game = runtimeScene.getGame();
+eventsFunctionContext.returnValue = game.isInGameEdition && game.isInGameEdition();
+@end js

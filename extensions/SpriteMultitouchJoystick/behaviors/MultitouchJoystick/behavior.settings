@@ -1,0 +1,58 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 0
+description = "Joystick that can be controlled by interacting with a touchscreen."
+fullName = "Multitouch Joystick"
+helpPath = ""
+iconUrl = ""
+name = "MultitouchJoystick"
+objectType = ""
+previewIconUrl = ""
+private = true
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Primary"
+type = "String"
+label = "Joystick name"
+name = "JoystickIdentifier"
+
+[[propertyDescriptors]]
+value = "0.4"
+type = "Number"
+label = "Dead zone radius (range: 0 to 1)"
+description = "The deadzone is an area for which movement on sticks won't be taken into account (instead, the stick will be considered as not moved)"
+name = "DeadZoneRadius"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+label = "Joystick angle (range: -180 to 180)"
+hidden = true
+name = "JoystickAngle"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+label = "Joystick force (range: 0 to 1)"
+hidden = true
+name = "JoystickForce"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+label = ""
+hidden = true
+name = "TouchId"
+
+[[propertyDescriptors]]
+value = ""
+type = "Number"
+label = ""
+hidden = true
+name = "TouchIndex"

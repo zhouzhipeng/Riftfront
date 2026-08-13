@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 19
+description = "Change the angle the joystick is pointing towards (Range: -180 to 180)."
+fullName = "Joystick angle"
+functionType = "Action"
+name = "SetJoystickAngle"
+private = true
+sentence = "Change the angle of the joystick _PARAM2_ of multitouch controller _PARAM1_ to _PARAM3_"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Joystick name"
+name = "JoystickIdentifier"
+type = "string"
+
+[[parameters]]
+description = "Value"
+name = "Value"
+type = "expression"

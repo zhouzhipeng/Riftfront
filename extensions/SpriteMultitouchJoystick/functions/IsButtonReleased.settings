@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+description = "Check if a button is released on a multitouch controller."
+fullName = "Multitouch controller button released"
+functionType = "Condition"
+name = "IsButtonReleased"
+sentence = "Button _PARAM2_ of multitouch controller _PARAM1_ is released"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Button name"
+name = "Button"
+supplementaryInformation = '["A","CROSS","B","CIRCLE","X","SQUARE","Y","TRIANGLE","LB","L1","RB","R1","LT","L2","RT","R2","UP","DOWN","LEFT","RIGHT","BACK","SHARE","START","OPTIONS","CLICK_STICK_LEFT","CLICK_STICK_RIGHT","PS_BUTTON","CLICK_TOUCHPAD"]'
+type = "string"

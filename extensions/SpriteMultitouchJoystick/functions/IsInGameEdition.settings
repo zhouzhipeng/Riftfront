@@ -1,0 +1,12 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Check if the events are running for the editor."
+fullName = "Editor is running"
+functionType = "Condition"
+name = "IsInGameEdition"
+private = true
+sentence = "Events are running for the editor"
+parameters = [ ]
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }

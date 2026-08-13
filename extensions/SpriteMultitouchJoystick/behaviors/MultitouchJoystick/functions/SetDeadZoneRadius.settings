@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 18
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "DeadZoneRadius"
+group = "Multitouch Joystick configuration"
+name = "SetDeadZoneRadius"
+sentence = ""
+folder = [ "Multitouch Joystick configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"

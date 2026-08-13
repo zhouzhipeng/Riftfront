@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 18
+description = "the z position offset of the object."
+fullName = "Z position offset"
+functionType = "ExpressionAndCondition"
+group = "First person camera multitouch controller mapper position configuration"
+name = "OffsetZ"
+sentence = "the z position offset"
+folder = [
+"First person camera multitouch controller mapper position configuration"
+]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

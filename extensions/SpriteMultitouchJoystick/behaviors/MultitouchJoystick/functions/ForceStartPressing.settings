@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 19
+description = "Force the joystick into the pressing state."
+fullName = "Force start pressing"
+functionType = "Action"
+name = "ForceStartPressing"
+sentence = "Force start pressing _PARAM0_ with touch identifier: _PARAM2_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"
+
+[[parameters]]
+description = "Touch identifier"
+name = "Value"
+type = "expression"

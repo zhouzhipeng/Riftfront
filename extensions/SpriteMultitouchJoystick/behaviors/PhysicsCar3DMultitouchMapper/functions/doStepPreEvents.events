@@ -1,0 +1,11 @@
+@event
+if SpriteMultitouchJoystick::StickForce comparison_sign=">" value=0 multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) stick_name=expr(SteerJoystickIdentifier)
+do Physics3D::PhysicsCar3D::SimulateSteeringStick object="Object" behavior="PhysicsCar3D" stick_force_between_1_and_1=expr(SpriteMultitouchJoystick::StickForceX(ControllerIdentifier, SteerJoystickIdentifier))
+
+@event
+if SpriteMultitouchJoystick::StickForce comparison_sign=">" value=0 multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) stick_name=expr(SpeedJoystickIdentifier)
+do Physics3D::PhysicsCar3D::SimulateAcceleratorStick object="Object" behavior="PhysicsCar3D" stick_force_between_1_and_1=expr(-SpriteMultitouchJoystick::StickForceY(ControllerIdentifier, SpeedJoystickIdentifier))
+
+@event
+if SpriteMultitouchJoystick::IsButtonPressed multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) button_name=expr(HandBrakeButton)
+do Physics3D::PhysicsCar3D::SimulateHandBrakeKey object="Object" behavior="PhysicsCar3D"

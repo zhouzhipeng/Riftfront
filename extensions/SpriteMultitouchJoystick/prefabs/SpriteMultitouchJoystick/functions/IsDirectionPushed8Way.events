@@ -1,0 +1,3 @@
+@event
+if SpriteMultitouchJoystick::MultitouchJoystick::IsDirectionPushed8Way object="Border" behavior="MultitouchJoystick" direction=expr(Direction)
+do SetReturnBoolean should_the_condition_be_true_or_false=true

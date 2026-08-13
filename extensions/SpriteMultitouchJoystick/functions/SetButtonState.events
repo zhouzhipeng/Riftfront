@@ -1,0 +1,2 @@
+@event
+do SetStringVariable variable="Controllers[ControllerIdentifier].Buttons[Button].State" modification_sign="=" value=expr(ButtonState)

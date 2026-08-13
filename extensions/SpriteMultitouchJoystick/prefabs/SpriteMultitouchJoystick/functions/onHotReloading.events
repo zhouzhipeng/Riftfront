@@ -1,0 +1,2 @@
+@event
+do SpriteMultitouchJoystick::SpriteMultitouchJoystick::UpdateConfiguration object="Object"

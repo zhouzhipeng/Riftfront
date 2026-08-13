@@ -1,0 +1,13 @@
+@event
+@instruction inverted=true
+if SpriteMultitouchJoystick::IsInGameEdition
+> @event
+> do PutAroundObject object="Thumb" center_object="Border" distance=expr(Border.MultitouchJoystick::JoystickForce() * Border.Width() / 2) angle_in_degrees=expr(Border.MultitouchJoystick::JoystickAngle())
+
+> @event
+> if BooleanVariable variable="ShouldBeHiddenWhenReleased" check_if_the_value_is=true
+> @instruction inverted=true
+> if SpriteMultitouchJoystick::SpriteMultitouchJoystick::IsPressed object="Object"
+> do Hide object="Object"
+> do SpriteMultitouchJoystick::SpriteMultitouchJoystick::ActivateControl object="Object" activate=false
+> do SetBooleanVariable variable="ShouldBeHiddenWhenReleased" modification_sign="False"

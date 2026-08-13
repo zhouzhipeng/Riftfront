@@ -824,3 +824,11 @@ object = "ZombieSpawnPoint"
 layer = "base"
 at = [1270, 550, 5]
 hidden = true
+
+[[layout.instances]]
+id = "4682a5af-9bdb-427f-9513-b48e429a53d7"
+object = "MobileCameraJoystick"
+layer = "hud"
+at = [1120, 560]
+z_order = 80
+size = [140, 140]

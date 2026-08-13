@@ -1,0 +1,8 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="ShouldActivate" check_if_the_value_is=true
+do ActivateBehavior object="Border" behavior="MultitouchJoystick" activate=false
+
+@event
+if BooleanVariable variable="ShouldActivate" check_if_the_value_is=true
+do ActivateBehavior object="Border" behavior="MultitouchJoystick" activate=true

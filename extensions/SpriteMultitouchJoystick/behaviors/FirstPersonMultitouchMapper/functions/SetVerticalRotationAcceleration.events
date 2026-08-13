@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="VerticalRotationAcceleration" modification_sign="=" value=expr(Value)

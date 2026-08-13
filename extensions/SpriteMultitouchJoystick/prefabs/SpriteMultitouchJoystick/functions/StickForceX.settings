@@ -1,0 +1,19 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 11
+description = "the stick force on X axis (from -1 at the left to 1 at the right)."
+fullName = "Stick X force"
+functionType = "ExpressionAndCondition"
+name = "StickForceX"
+sentence = "the stick X force"
+folder = [ ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

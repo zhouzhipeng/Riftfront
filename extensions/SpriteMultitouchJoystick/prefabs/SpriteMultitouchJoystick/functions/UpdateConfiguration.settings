@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+description = "Pass the object property values to the behavior."
+fullName = "Update configuration"
+functionType = "Action"
+name = "UpdateConfiguration"
+private = true
+sentence = "Update the configuration of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

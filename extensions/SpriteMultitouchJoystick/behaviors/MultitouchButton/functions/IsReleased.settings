@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+description = "Check if the button is released."
+fullName = "Button released"
+functionType = "Condition"
+name = "IsReleased"
+sentence = "Button _PARAM0_ is released"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchButton"
+type = "behavior"

@@ -1,0 +1,20 @@
+@event
+if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Left"
+do PlatformBehavior::SimulateLeftKey object="Object" behavior="Property"
+
+@event
+if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Right"
+do PlatformBehavior::SimulateRightKey object="Object" behavior="Property"
+
+@event
+if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Up"
+do PlatformBehavior::SimulateUpKey object="Object" behavior="Property"
+do PlatformBehavior::SimulateLadderKey object="Object" behavior="Property"
+
+@event
+if SpriteMultitouchJoystick::IsDirectionPushed4Way multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) direction="Down"
+do PlatformBehavior::SimulateDownKey object="Object" behavior="Property"
+
+@event
+if SpriteMultitouchJoystick::IsButtonPressed multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) button_name=expr(JumpButton)
+do PlatformBehavior::SimulateJumpKey object="Object" behavior="Property"

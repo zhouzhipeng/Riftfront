@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 5
+description = "Return the X position of a specified touch"
+fullName = "Touch X position (on parent)"
+functionType = "Expression"
+name = "ParentTouchX"
+private = true
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"
+
+[[parameters]]
+description = "Touch identifier"
+name = "TouchId"
+type = "expression"

@@ -1,0 +1,2 @@
+@event
+do SpriteMultitouchJoystick::SetButtonState multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) button_name=expr(ButtonIdentifier) button_state=expr(ButtonState)

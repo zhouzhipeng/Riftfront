@@ -1,0 +1,11 @@
+@event
+if HasAnyTouchOrMouseStarted
+> @event
+> if StringVariable variable="Side" comparison_sign="=" value="Left"
+> if TouchX touch_identifier=expr(StartedTouchOrMouseId(0)) comparison_sign="<" value=expr(CameraCenterX(Object.Layer())) layer=expr(Object.Layer())
+> do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+> @event
+> if StringVariable variable="Side" comparison_sign="=" value="Right"
+> if TouchX touch_identifier=expr(StartedTouchOrMouseId(0)) comparison_sign=">=" value=expr(CameraCenterX(Object.Layer())) layer=expr(Object.Layer())
+> do SetReturnBoolean should_the_condition_be_true_or_false=true

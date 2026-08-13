@@ -1,0 +1,30 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 14
+description = "the percentage the thumb has been pulled away from the joystick center (Range: 0 to 1)."
+fullName = "Joystick force (deprecated)"
+functionType = "ExpressionAndCondition"
+name = "JoystickForce"
+private = true
+sentence = "Joystick _PARAM2_ of multitouch controller _PARAM1_ force"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Joystick name"
+name = "JoystickIdentifier"
+supplementaryInformation = '["Primary","Secondary"]'
+type = "stringWithSelector"
+
+[[parameters]]
+description = ""
+name = "Coucou"
+type = "expression"

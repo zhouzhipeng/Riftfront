@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 10
+description = "Check if angle is in a given direction."
+fullName = "Angle 4-way direction"
+functionType = "Condition"
+name = "IsAngleIn4WayDirection"
+private = true
+sentence = "The angle _PARAM1_ is the 4-way direction _PARAM2_"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Angle"
+name = "Angle"
+type = "expression"
+
+[[parameters]]
+description = "Direction"
+name = "Direction"
+supplementaryInformation = '["Up","Down","Left","Right"]'
+type = "stringWithSelector"

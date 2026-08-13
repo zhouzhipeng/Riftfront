@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 21
+description = "the dead zone radius of the joystick (range: 0 to 1). The deadzone is an area for which movement on sticks won't be taken into account (instead, the stick will be considered as not moved)."
+fullName = "Dead zone radius"
+functionType = "ExpressionAndCondition"
+group = "Multitouch Joystick configuration"
+name = "DeadZoneRadius"
+sentence = "the dead zone radius"
+folder = [ "Multitouch Joystick configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

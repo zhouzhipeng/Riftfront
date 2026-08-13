@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 16
+description = "the maximum vertical camera angle of the object."
+fullName = "Maximum vertical camera angle"
+functionType = "ExpressionAndCondition"
+group = "First person camera multitouch controller mapper vertical rotation configuration"
+name = "VerticalAngleMax"
+sentence = "the maximum vertical camera angle"
+folder = [
+"First person camera multitouch controller mapper vertical rotation configuration"
+]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

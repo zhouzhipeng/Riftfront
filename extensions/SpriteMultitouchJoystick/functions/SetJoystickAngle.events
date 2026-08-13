@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="Controllers[ControllerIdentifier].Joystick[JoystickIdentifier].Angle" modification_sign="=" value=expr(Value)

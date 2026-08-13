@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 13
+description = "Return the angle the joystick is pointing towards (from -180 to 180)."
+fullName = "Joystick angle (deprecated)"
+functionType = "Expression"
+name = "JoystickAngle"
+private = true
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

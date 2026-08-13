@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 11
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "VerticalRotationAcceleration"
+group = "First person camera multitouch controller mapper vertical rotation configuration"
+name = "SetVerticalRotationAcceleration"
+sentence = ""
+folder = [
+"First person camera multitouch controller mapper vertical rotation configuration"
+]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 10
+description = "the vertical rotation acceleration of the object."
+fullName = "Vertical rotation acceleration"
+functionType = "ExpressionAndCondition"
+group = "First person camera multitouch controller mapper vertical rotation configuration"
+name = "VerticalRotationAcceleration"
+sentence = "the vertical rotation acceleration"
+folder = [
+"First person camera multitouch controller mapper vertical rotation configuration"
+]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

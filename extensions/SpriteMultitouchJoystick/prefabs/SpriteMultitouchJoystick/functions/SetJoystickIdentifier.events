@@ -1,0 +1,2 @@
+@event
+do SpriteMultitouchJoystick::MultitouchJoystick::SetJoystickIdentifier object="Border" behavior="MultitouchJoystick" modification_sign="=" value=expr(Value)

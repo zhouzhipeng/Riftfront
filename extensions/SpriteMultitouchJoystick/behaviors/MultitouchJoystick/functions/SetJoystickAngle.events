@@ -1,0 +1,3 @@
+@event
+do SetNumberVariable variable="JoystickAngle" modification_sign="=" value=expr(Value)
+do SpriteMultitouchJoystick::SetJoystickAngle multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier) value=expr(JoystickAngle)

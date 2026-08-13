@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 12
+description = "Check if joystick is pushed in a given direction."
+fullName = "Joystick pushed in a direction (4-way)"
+functionType = "Condition"
+name = "IsDirectionPushed4Way"
+sentence = "Joystick _PARAM2_ of multitouch controller _PARAM1_ is pushed in direction _PARAM3_"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Joystick name"
+name = "JoystickIdentifier"
+supplementaryInformation = '["Primary","Secondary"]'
+type = "stringWithSelector"
+
+[[parameters]]
+description = "Direction"
+name = "Direction"
+supplementaryInformation = '["Up","Down","Left","Right"]'
+type = "stringWithSelector"

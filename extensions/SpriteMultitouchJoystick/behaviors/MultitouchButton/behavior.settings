@@ -1,0 +1,58 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 1
+description = "Detect presses made on a touchscreen on the object so it acts like a button and automatically trigger the button having the same identifier for the mapper behaviors."
+fullName = "Multitouch button"
+helpPath = ""
+iconUrl = ""
+name = "MultitouchButton"
+objectType = ""
+previewIconUrl = ""
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "A"
+type = "String"
+label = "Button identifier"
+name = "ButtonIdentifier"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+label = "TouchID"
+hidden = true
+name = "TouchId"
+
+[[propertyDescriptors]]
+value = ""
+type = "Number"
+label = ""
+hidden = true
+name = "TouchIndex"
+
+[[propertyDescriptors]]
+value = ""
+type = "Boolean"
+label = "Button released"
+hidden = true
+name = "IsReleased"
+
+[[propertyDescriptors]]
+value = ""
+type = "Boolean"
+label = "Button just pressed"
+hidden = true
+name = "IsJustPressed"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Triggering circle radius"
+description = "This circle adds up to the object collision mask."
+name = "Radius"

@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 7
+description = "De/activate control of the joystick."
+fullName = "De/activate control"
+functionType = "Action"
+name = "ActivateControl"
+sentence = "Activate control of _PARAM0_: _PARAM1_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"
+
+[[parameters]]
+description = "Activate"
+name = "ShouldActivate"
+type = "yesorno"

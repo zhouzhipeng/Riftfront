@@ -1,0 +1,58 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 7
+description = "Control a top-down character with a multitouch controller."
+fullName = "Top-down multitouch controller mapper"
+helpPath = ""
+iconUrl = ""
+name = "TopDownMultitouchMapper"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "Top-down movement behavior"
+extraInformation = [ "TopDownMovementBehavior::TopDownMovementBehavior" ]
+choices = [ ]
+name = "TopDownMovement"
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Primary"
+type = "Choice"
+label = "Joystick name"
+name = "JoystickIdentifier"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "Analog"
+type = "Choice"
+label = "Stick mode"
+group = "Controls"
+name = "StickMode"
+
+[[propertyDescriptors.choices]]
+label = "Analog"
+value = "Analog"
+
+[[propertyDescriptors.choices]]
+label = "360°"
+value = "360°"
+
+[[propertyDescriptors.choices]]
+label = "8 Directions"
+value = "8 Directions"

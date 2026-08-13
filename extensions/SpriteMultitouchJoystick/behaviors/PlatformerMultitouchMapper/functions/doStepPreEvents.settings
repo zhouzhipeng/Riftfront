@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+fullName = ""
+functionType = "Action"
+name = "doStepPreEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::PlatformerMultitouchMapper"
+type = "behavior"

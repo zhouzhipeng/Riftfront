@@ -1,0 +1,19 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "the direction index (left = 1, bottom = 1, right = 2, top = 3) for an angle (in degrees)."
+fullName = "Angle to 4-way index"
+functionType = "ExpressionAndCondition"
+name = "AngleTo4Way"
+private = true
+sentence = "The angle _PARAM1_ 4-way index"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Angle"
+name = "Angle"
+type = "expression"

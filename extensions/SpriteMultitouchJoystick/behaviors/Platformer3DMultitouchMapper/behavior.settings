@@ -1,0 +1,47 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 3
+description = "Control a 3D physics character with a multitouch controller."
+fullName = "3D platformer multitouch controller mapper"
+helpPath = ""
+iconUrl = ""
+name = "Platformer3DMultitouchMapper"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D physics character"
+extraInformation = [ "Physics3D::PhysicsCharacter3D" ]
+choices = [ ]
+name = "PhysicsCharacter3D"
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Primary"
+type = "Choice"
+label = "Walk joystick"
+group = "Controls"
+name = "JoystickIdentifier"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "A"
+type = "String"
+label = "Jump button name"
+group = "Controls"
+name = "JumpButton"

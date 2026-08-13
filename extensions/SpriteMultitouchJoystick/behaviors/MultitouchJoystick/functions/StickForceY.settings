@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "Return the stick force on Y axis (from -1 at the top to 1 at the bottom)."
+fullName = "Stick Y force"
+functionType = "Expression"
+name = "StickForceY"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"

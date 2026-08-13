@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 22
+description = "Check if a new touch has started on the right or left side of the screen."
+fullName = "New touch on a screen side"
+functionType = "Condition"
+group = "Multitouch Joystick"
+name = "HasTouchStartedOnScreenSide"
+sentence = "A new touch has started on the _PARAM2_ side of the screen on _PARAM1_'s layer"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch joystick"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "objectList"
+
+[[parameters]]
+description = "Screen side"
+name = "Side"
+supplementaryInformation = '["Left","Right"]'
+type = "stringWithSelector"

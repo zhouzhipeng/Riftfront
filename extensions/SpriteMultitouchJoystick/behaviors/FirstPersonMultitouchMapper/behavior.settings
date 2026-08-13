@@ -1,0 +1,124 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 5
+description = "Control camera rotations with a multitouch controller."
+fullName = "First person camera multitouch controller mapper"
+helpPath = ""
+iconUrl = ""
+name = "FirstPersonMultitouchMapper"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D capability"
+extraInformation = [ "Scene3D::Base3DBehavior" ]
+choices = [ ]
+name = "Object3D"
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Secondary"
+type = "Choice"
+label = "Camera joystick"
+group = "Controls"
+name = "CameraStick"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "180"
+type = "Number"
+unit = "AngularSpeed"
+label = "Maximum rotation speed"
+group = "Horizontal rotation"
+name = "HorizontalRotationSpeedMax"
+
+[[propertyDescriptors]]
+value = "360"
+type = "Number"
+label = "Rotation acceleration"
+group = "Horizontal rotation"
+name = "HorizontalRotationAcceleration"
+
+[[propertyDescriptors]]
+value = "720"
+type = "Number"
+label = "Rotation deceleration"
+group = "Horizontal rotation"
+name = "HorizontalRotationDeceleration"
+
+[[propertyDescriptors]]
+value = "120"
+type = "Number"
+unit = "AngularSpeed"
+label = "Maximum rotation speed"
+group = "Vertical rotation"
+name = "VerticalRotationSpeedMax"
+
+[[propertyDescriptors]]
+value = "240"
+type = "Number"
+label = "Rotation acceleration"
+group = "Vertical rotation"
+name = "VerticalRotationAcceleration"
+
+[[propertyDescriptors]]
+value = "480"
+type = "Number"
+label = "Rotation deceleration"
+group = "Vertical rotation"
+name = "VerticalRotationDeceleration"
+
+[[propertyDescriptors]]
+value = "-90"
+type = "Number"
+unit = "DegreeAngle"
+label = "Minimum angle"
+group = "Vertical rotation"
+name = "VerticalAngleMin"
+
+[[propertyDescriptors]]
+value = "90"
+type = "Number"
+unit = "DegreeAngle"
+label = "Maximum angle"
+group = "Vertical rotation"
+name = "VerticalAngleMax"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Z position offset"
+group = "Position"
+name = "OffsetZ"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "AngularSpeed"
+label = "Current rotation speed Z"
+hidden = true
+name = "CurrentRotationSpeedZ"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "AngularSpeed"
+label = "Current rotation speed Y"
+hidden = true
+name = "CurrentRotationSpeedY"

@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Check if the button is pressed."
+fullName = "Button pressed"
+functionType = "Condition"
+name = "IsPressed"
+sentence = "Button _PARAM0_ is pressed"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchButton"
+type = "behavior"

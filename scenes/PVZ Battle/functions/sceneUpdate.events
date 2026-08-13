@@ -41,6 +41,17 @@ do SetNumberVariable variable="CameraDistance" modification_sign="=" value=expr(
 do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 @end group
 
+@group "Mobile camera joystick" source="" creationTime=0 color=[103,208,93] parameters=[]
+@event aiGeneratedEventId="pvz-mobile-camera-joystick"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Primary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Primary"))) comparison_sign=">" second_expression=0.01
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="+" value=expr(SpriteMultitouchJoystick::StickForceX(1, "Primary") * 85 * TimeDelta())
+do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=expr(clamp(Variable(CameraElevationAngle) + SpriteMultitouchJoystick::StickForceY(1, "Primary") * 55 * TimeDelta(), 20, 78))
+do SetNumberVariable variable="BillboardCameraRotationX" modification_sign="=" value=expr(Variable(CameraElevationAngle) - 90)
+do SetNumberVariable variable="BillboardCameraRotationY" modification_sign="=" value=0
+do SetNumberVariable variable="BillboardCameraRotationZ" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
+@end group
+
 @group "Sun collectibles" source="" creationTime=0 color=[255,197,72] parameters=[]
 @event aiGeneratedEventId="pvz-reset-sun-click-consumption"
 if BooleanVariable variable="SunCollectedThisFrame" check_if_the_value_is=true

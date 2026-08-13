@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 13
+description = "the multitouch controller identifier."
+fullName = "Multitouch controller identifier"
+functionType = "ExpressionAndCondition"
+group = "Multitouch Joystick configuration"
+name = "ControllerIdentifier"
+sentence = "the multitouch controller identifier"
+folder = [ "Multitouch Joystick configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"

@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "VerticalRotationSpeedMax"
+group = "First person camera multitouch controller mapper vertical rotation configuration"
+name = "SetVerticalRotationSpeedMax"
+sentence = ""
+folder = [
+"First person camera multitouch controller mapper vertical rotation configuration"
+]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

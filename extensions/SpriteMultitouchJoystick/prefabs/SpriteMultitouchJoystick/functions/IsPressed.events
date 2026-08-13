@@ -1,0 +1,3 @@
+@event
+if SpriteMultitouchJoystick::MultitouchJoystick::IsPressed object="Border" behavior="MultitouchJoystick"
+do SetReturnBoolean should_the_condition_be_true_or_false=true

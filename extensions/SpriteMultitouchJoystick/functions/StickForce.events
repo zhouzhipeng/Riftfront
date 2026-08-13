@@ -1,0 +1,2 @@
+@event
+do SetReturnNumber the_number_to_be_returned=expr(max(0, Controllers[ControllerIdentifier].Joystick[JoystickIdentifier].Force - SpriteMultitouchJoystick::DeadZone(ControllerIdentifier, JoystickIdentifier)) / (1 - SpriteMultitouchJoystick::DeadZone(ControllerIdentifier, JoystickIdentifier)))

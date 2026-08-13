@@ -1,0 +1,2 @@
+@event
+do SpriteMultitouchJoystick::MultitouchJoystick::Reset object="Object" behavior="Behavior"

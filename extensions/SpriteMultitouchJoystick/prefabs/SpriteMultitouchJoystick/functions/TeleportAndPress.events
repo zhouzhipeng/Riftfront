@@ -1,0 +1,7 @@
+@event
+if HasAnyTouchOrMouseStarted
+do SetXY object="Object" first_modification_sign="=" x_position=expr(Object.ParentTouchX(StartedTouchOrMouseId(0))) second_modification_sign="=" y_position=expr(Object.ParentTouchY(StartedTouchOrMouseId(0)))
+do SpriteMultitouchJoystick::SpriteMultitouchJoystick::ActivateControl object="Object" activate=true
+do Show object="Object"
+do SetBooleanVariable variable="ShouldBeHiddenWhenReleased" modification_sign="True"
+do SpriteMultitouchJoystick::MultitouchJoystick::ForceStartPressing object="Border" behavior="MultitouchJoystick" touch_identifier=expr(StartedTouchOrMouseId(0))

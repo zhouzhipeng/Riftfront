@@ -1,0 +1,8 @@
+@event
+event
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const touchId = eventsFunctionContext.getArgument("TouchId");
+eventsFunctionContext.returnValue = gdjs.evtTools.input.getTouchY(object.getInstanceContainer(), touchId, object.getLayer());
+@end js

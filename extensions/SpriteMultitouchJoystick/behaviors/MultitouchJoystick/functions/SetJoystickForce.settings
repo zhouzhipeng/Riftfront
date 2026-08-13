@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "JoystickForce"
+name = "SetJoystickForce"
+private = true
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"
+
+[[parameters]]
+description = ""
+name = "Parameter"
+type = "objectList"

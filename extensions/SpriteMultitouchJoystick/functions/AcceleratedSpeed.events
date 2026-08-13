@@ -1,0 +1,53 @@
+@event
+local AcceleratedSpeed = var(type="number",value=0,persistentUuid="",folded=false,hasMixedValues=false)
+do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(CurrentSpeed)
+> @event
+> if NumberVariable variable="TargetedSpeed" comparison_sign="<" value=0
+>> @comment "Reduce the speed to match the stick force." background=[255,230,109] text=[0,0,0]
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign="<" value=expr(TargetedSpeed)
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(min(TargetedSpeed, CurrentSpeed + Acceleration * TimeDelta()))
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign=">" value=expr(TargetedSpeed)
+>> if NumberVariable variable="CurrentSpeed" comparison_sign="<" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="-" value=expr(Acceleration * TimeDelta())
+
+>> @comment "Turn back at least as fast as it would stop." background=[255,230,109] text=[0,0,0]
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign=">=" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(max(TargetedSpeed, CurrentSpeed - max(Acceleration , Deceleration) * TimeDelta()))
+
+> @event
+> if NumberVariable variable="TargetedSpeed" comparison_sign=">" value=0
+>> @comment "Reduce the speed to match the stick force." background=[255,230,109] text=[0,0,0]
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign=">" value=expr(TargetedSpeed)
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(max(TargetedSpeed, CurrentSpeed - Acceleration * TimeDelta()))
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign="<" value=expr(TargetedSpeed)
+>> if NumberVariable variable="CurrentSpeed" comparison_sign=">" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="+" value=expr(Acceleration * TimeDelta())
+
+>> @comment "Turn back at least as fast as it would stop." background=[255,230,109] text=[0,0,0]
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign="<=" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(min(TargetedSpeed, CurrentSpeed + max(Acceleration , Deceleration) * TimeDelta()))
+
+> @event
+> if NumberVariable variable="TargetedSpeed" comparison_sign="=" value=0
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign="<" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(min(0, CurrentSpeed + Acceleration * TimeDelta()))
+
+>> @event
+>> if NumberVariable variable="CurrentSpeed" comparison_sign=">" value=0
+>> do SetNumberVariable variable="AcceleratedSpeed" modification_sign="=" value=expr(max(0, CurrentSpeed - Acceleration * TimeDelta()))
+
+> @event
+> do SetReturnNumber the_number_to_be_returned=expr(clamp(AcceleratedSpeed, -SpeedMax, SpeedMax))

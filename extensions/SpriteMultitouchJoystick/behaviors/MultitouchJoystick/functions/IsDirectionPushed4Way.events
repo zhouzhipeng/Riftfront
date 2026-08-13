@@ -1,0 +1,4 @@
+@event
+if SpriteMultitouchJoystick::MultitouchJoystick::JoystickForce object="Object" behavior="Behavior" comparison_sign=">" value=0
+if SpriteMultitouchJoystick::IsAngleIn4WayDirection angle=expr(JoystickAngle) direction=expr(Direction)
+do SetReturnBoolean should_the_condition_be_true_or_false=true

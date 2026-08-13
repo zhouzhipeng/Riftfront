@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+description = "the horizontal rotation acceleration of the object."
+fullName = "Horizontal rotation acceleration"
+functionType = "ExpressionAndCondition"
+group = "First person camera multitouch controller mapper horizontal rotation configuration"
+name = "HorizontalRotationAcceleration"
+sentence = "the horizontal rotation acceleration"
+folder = [
+"First person camera multitouch controller mapper horizontal rotation configuration"
+]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::FirstPersonMultitouchMapper"
+type = "behavior"

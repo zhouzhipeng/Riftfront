@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+description = "Show the joystick until it is released."
+fullName = "Show and start pressing"
+functionType = "Action"
+name = "TeleportAndPress"
+sentence = "Show _PARAM0_ at the cursor position and start pressing"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+type = "object"

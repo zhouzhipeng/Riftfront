@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 11
+description = "Check if a joystick is pressed."
+fullName = "Joystick pressed"
+functionType = "Condition"
+name = "IsPressed"
+sentence = "Joystick _PARAM0_ is pressed"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchJoystick"
+type = "behavior"

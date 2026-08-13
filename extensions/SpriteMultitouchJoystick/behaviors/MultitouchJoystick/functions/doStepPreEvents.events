@@ -1,0 +1,34 @@
+@event
+@instruction inverted=true
+if SpriteMultitouchJoystick::IsInGameEdition
+> @event
+> if HasGameJustResumed
+> do SpriteMultitouchJoystick::MultitouchJoystick::Reset object="Object" behavior="Behavior"
+
+> @group "Manage touches" source="" creationTime=0 color=[74,176,228] parameters=[]
+> @event
+> if HasAnyTouchOrMouseStarted
+> do SetNumberVariable variable="TouchIndex" modification_sign="=" value=0
+>> @event
+>> repeat "StartedTouchOrMouseCount()"
+>>> @event
+>>> if NumberVariable variable="TouchId" comparison_sign="=" value=0
+>>> if CollisionPoint object="Object" x_position_of_the_point=expr(TouchX(StartedTouchOrMouseId(TouchIndex), Object.Layer(), 0)) y_position_of_the_point=expr(TouchY(StartedTouchOrMouseId(TouchIndex), Object.Layer(), 0))
+>>> do SetNumberVariable variable="TouchId" modification_sign="=" value=expr(StartedTouchOrMouseId(TouchIndex))
+
+>>> @event
+>>> do SetNumberVariable variable="TouchIndex" modification_sign="+" value=1
+
+> @comment "Move thumb back to center when not being pressed (acts like a spring on a real controller)" background=[255,230,109] text=[0,0,0]
+
+> @event
+> if HasTouchEnded touch_identifier=expr(TouchId)
+> do SpriteMultitouchJoystick::MultitouchJoystick::Reset object="Object" behavior="Behavior"
+> @end group
+
+> @group "Update joystick position" source="" creationTime=0 color=[74,176,228] parameters=[]
+> @event
+> if NumberVariable variable="TouchId" comparison_sign="!=" value=0
+> do SpriteMultitouchJoystick::MultitouchJoystick::SetJoystickAngle object="Object" behavior="Behavior" angle=expr(AngleBetweenPositions(Object.CenterX(), Object.CenterY(), TouchX(TouchId, Object.Layer(), 0), TouchY(TouchId, Object.Layer(), 0)))
+> do SpriteMultitouchJoystick::MultitouchJoystick::SetJoystickForce object="Object" behavior="Behavior" modification_sign="=" value=expr(clamp(2 * DistanceBetweenPositions(Object.CenterX(), Object.CenterY(), TouchX(TouchId, Object.Layer(), 0), TouchY(TouchId, Object.Layer(), 0)) / Object.Width(), 0, 1))
+> @end group

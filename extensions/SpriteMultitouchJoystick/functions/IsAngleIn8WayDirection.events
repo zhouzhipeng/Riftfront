@@ -1,0 +1,39 @@
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="Right"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=0 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="DownRight"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=1 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="Down"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=2 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="DownLeft"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=3 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="Left"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=4 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="UpLeft"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=5 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="Up"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=6 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Direction) comparison_sign="=" second_string_expression="UpRight"
+if SpriteMultitouchJoystick::AngleTo8Way comparison_sign="=" value=7 angle=expr(Angle)
+do SetReturnBoolean should_the_condition_be_true_or_false=true

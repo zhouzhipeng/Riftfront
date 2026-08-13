@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 5
+description = "Change a button state for a multitouch controller."
+fullName = "Button state"
+functionType = "Action"
+name = "SetButtonState"
+private = true
+sentence = "Mark _PARAM2_ button as _PARAM3_ for multitouch controller _PARAM1_"
+extension = "SpriteMultitouchJoystick"
+objectGroups = { }
+
+[[parameters]]
+description = "Multitouch controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+type = "expression"
+
+[[parameters]]
+description = "Button name"
+name = "Button"
+type = "string"
+
+[[parameters]]
+description = "Button state"
+name = "ButtonState"
+supplementaryInformation = '["Idle","Pressed","JustPressed","Released"]'
+type = "stringWithSelector"

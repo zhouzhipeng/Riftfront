@@ -1,0 +1,47 @@
+kind = "behavior"
+settingsFormatVersion = 5
+order = 2
+description = "Control a platformer character with a multitouch controller."
+fullName = "Platformer multitouch controller mapper"
+helpPath = ""
+iconUrl = ""
+name = "PlatformerMultitouchMapper"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "Platform character behavior"
+extraInformation = [ "PlatformBehavior::PlatformerObjectBehavior" ]
+choices = [ ]
+name = "Property"
+
+[[propertyDescriptors]]
+value = "1"
+type = "Number"
+label = "Controller identifier (1, 2, 3, 4...)"
+name = "ControllerIdentifier"
+
+[[propertyDescriptors]]
+value = "Primary"
+type = "Choice"
+label = "Joystick name"
+group = "Controls"
+name = "JoystickIdentifier"
+
+[[propertyDescriptors.choices]]
+label = "Primary"
+value = "Primary"
+
+[[propertyDescriptors.choices]]
+label = "Secondary"
+value = "Secondary"
+
+[[propertyDescriptors]]
+value = "A"
+type = "String"
+label = "Jump button name"
+group = "Controls"
+name = "JumpButton"

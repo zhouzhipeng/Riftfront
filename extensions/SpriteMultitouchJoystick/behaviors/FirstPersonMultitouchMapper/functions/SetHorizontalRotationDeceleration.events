@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="HorizontalRotationDeceleration" modification_sign="=" value=expr(Value)

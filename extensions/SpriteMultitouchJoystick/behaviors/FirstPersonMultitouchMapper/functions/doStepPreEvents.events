@@ -1,0 +1,9 @@
+@comment "TODO It's probably a bad idea to rotate the object around Y." background=[255,230,109] text=[0,0,0]
+
+@event
+do SetNumberVariable variable="CurrentRotationSpeedZ" modification_sign="=" value=expr(SpriteMultitouchJoystick::AcceleratedSpeed(CurrentRotationSpeedZ, SpriteMultitouchJoystick::StickForceX(ControllerIdentifier, CameraStick) * HorizontalRotationSpeedMax, HorizontalRotationSpeedMax, HorizontalRotationAcceleration, HorizontalRotationDeceleration))
+do SetAngle object="Object" modification_sign="+" angle_in_degrees=expr(CurrentRotationSpeedZ * TimeDelta())
+do SetNumberVariable variable="CurrentRotationSpeedY" modification_sign="=" value=expr(SpriteMultitouchJoystick::AcceleratedSpeed(CurrentRotationSpeedY, SpriteMultitouchJoystick::StickForceY(ControllerIdentifier, CameraStick) * VerticalRotationSpeedMax, VerticalRotationSpeedMax, VerticalRotationAcceleration, VerticalRotationDeceleration))
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="+" angle_in_degrees=expr(CurrentRotationSpeedY * TimeDelta())
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees=expr(clamp(Object.Object3D::RotationY(), VerticalAngleMin, VerticalAngleMax))
+do SpriteMultitouchJoystick::FirstPersonMultitouchMapper::LookFromObjectEyes object="Object" behavior="Behavior"

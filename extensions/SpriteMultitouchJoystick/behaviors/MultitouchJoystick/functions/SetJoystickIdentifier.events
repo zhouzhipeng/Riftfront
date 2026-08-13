@@ -1,0 +1,2 @@
+@event
+do SetStringVariable variable="JoystickIdentifier" modification_sign="=" value=expr(Value)

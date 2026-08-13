@@ -1,0 +1,6 @@
+@comment "Make sure the joystick has moved from center" background=[255,230,109] text=[0,0,0]
+
+@event
+if SpriteMultitouchJoystick::JoystickForce comparison_sign=">" value=0 multitouch_controller_identifier_1_2_3_4=expr(ControllerIdentifier) joystick_name=expr(JoystickIdentifier)
+if SpriteMultitouchJoystick::IsAngleIn8WayDirection angle=expr(SpriteMultitouchJoystick::JoystickAngle(ControllerIdentifier, JoystickIdentifier)) direction=expr(Direction)
+do SetReturnBoolean should_the_condition_be_true_or_false=true

@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+fullName = "Button state"
+functionType = "Action"
+name = "SetButtonState"
+private = true
+sentence = "Mark the button _PARAM0_ as _PARAM2_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "SpriteMultitouchJoystick::MultitouchButton"
+type = "behavior"
+
+[[parameters]]
+description = "Button state"
+name = "ButtonState"
+supplementaryInformation = '["Idle","JustPressed","Pressed","Released"]'
+type = "stringWithSelector"
