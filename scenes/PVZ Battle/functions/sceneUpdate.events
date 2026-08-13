@@ -234,8 +234,8 @@ do Delete object="Zombie"
 @event aiGeneratedEventId="pvz-each-pea-hit"
 for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
+> if CollisionNP first_object="PeaProjectile" second_object="Zombie"
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
-> if BuiltinCommonInstructions::CompareNumbers first_expression=expr((PeaProjectile.X() - Zombie.X()) * (PeaProjectile.X() - Zombie.X()) + (PeaProjectile.Y() - Zombie.Y()) * (PeaProjectile.Y() - Zombie.Y())) comparison_sign="<=" second_expression=3600
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="20"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
 > do Delete object="PeaProjectile"
