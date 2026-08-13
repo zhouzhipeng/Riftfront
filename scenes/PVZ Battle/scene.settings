@@ -841,3 +841,10 @@ layer = "hud"
 at = [150, 560]
 z_order = 80
 size = [140, 140]
+
+[[layout.instances]]
+id = "16fadfcf-706c-4123-a7b9-b531fd0fcf9b"
+object = "PlantCursorSurface"
+layer = "base"
+at = [-5_000, -5_000, -5]
+hidden = true

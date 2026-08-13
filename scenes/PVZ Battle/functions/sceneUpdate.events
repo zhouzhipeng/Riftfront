@@ -90,6 +90,23 @@ do Hide object="SelectedSunflower"
 do Hide object="SelectedPeashooter"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 
+@event aiGeneratedEventId="pvz-follow-cursor-off-lawn"
+if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
+> @event aiGeneratedEventId="pvz-off-lawn-preview-sunflower"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
+> do Show object="SelectedSunflower"
+> do SetX object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
+
+> @event aiGeneratedEventId="pvz-off-lawn-preview-peashooter"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
+> do Show object="SelectedPeashooter"
+> do SetX object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
+
 @event aiGeneratedEventId="pvz-hover-open-lawn-tile"
 if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
 if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
@@ -184,6 +201,11 @@ do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_
 do Show object="SelectedSunflower"
 do Hide object="SelectedPeashooter"
 do Show object="PlantingHint"
+> @event aiGeneratedEventId="pvz-position-sunflower-on-card-click"
+> if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
+> do SetX object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedSunflower" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
 
 @event aiGeneratedEventId="pvz-select-peashooter"
 if IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
@@ -195,6 +217,11 @@ do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_
 do Hide object="SelectedSunflower"
 do Show object="SelectedPeashooter"
 do Show object="PlantingHint"
+> @event aiGeneratedEventId="pvz-position-peashooter-on-card-click"
+> if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
+> do SetX object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionX())
+> do SetY object="SelectedPeashooter" modification_sign="=" value=expr(Raycaster3D::IntersectionY())
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(Raycaster3D::IntersectionZ() + 5)
 @end group
 
 @group "Zombie spawning and lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
