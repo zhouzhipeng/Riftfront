@@ -13,11 +13,7 @@ previewIconUrl = ""
 behaviors = [ ]
 propertyDescriptors = [ ]
 objectGroups = { }
-
-[[variables]]
-name = "Speed"
-type = "number"
-value = 300
+variables = [ ]
 
 [layout]
 version = 1

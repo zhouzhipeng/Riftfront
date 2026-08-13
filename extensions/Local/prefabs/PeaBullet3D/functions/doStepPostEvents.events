@@ -1,6 +1,6 @@
 @event aiGeneratedEventId="pea-bullet-move-forward"
 if PosX object="Object" comparison_sign="<=" value=1400
-do SetX object="Object" modification_sign="+" value=expr(Variable(Speed) * TimeDelta())
+do SetX object="Object" modification_sign="+" value=expr(300 * TimeDelta())
 
 @event aiGeneratedEventId="pea-bullet-delete-offscreen"
 if PosX object="Object" comparison_sign=">" value=1400
