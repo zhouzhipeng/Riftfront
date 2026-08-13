@@ -7,7 +7,6 @@ name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
-sceneLifecycleFunctions = [ "sceneUpdate" ]
 behaviorsSharedData = [ ]
 objectGroups = { }
 
