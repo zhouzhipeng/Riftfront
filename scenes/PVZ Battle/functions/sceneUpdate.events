@@ -55,8 +55,8 @@ do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Varia
 @group "Mobile camera pan joystick" source="" creationTime=0 color=[74,176,228] parameters=[]
 @event aiGeneratedEventId="pvz-mobile-camera-pan-joystick"
 if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Secondary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Secondary"))) comparison_sign=">" second_expression=0.01
-do SetNumberVariable variable="CameraTargetX" modification_sign="-" value=expr((cos(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + cos(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
-do SetNumberVariable variable="CameraTargetY" modification_sign="-" value=expr((sin(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + sin(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
+do SetNumberVariable variable="CameraTargetX" modification_sign="+" value=expr((cos(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + cos(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
+do SetNumberVariable variable="CameraTargetY" modification_sign="+" value=expr((sin(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + sin(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
 do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 @end group
 
