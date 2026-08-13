@@ -1,0 +1,8 @@
+@event aiGeneratedEventId="pvz-handle-peashooter-spawn-bullet"
+if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Peashooter.SpawnBullet"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(ToNumber(Payload)) comparison_sign=">" second_expression=0
+> for each "PeashooterPlant"
+>> @event aiGeneratedEventId="pvz-spawn-bullet-for-emitter"
+>> if BuiltinCommonInstructions::CompareNumbers first_expression=expr(PeashooterPlant.InstanceId()) comparison_sign="=" second_expression=expr(ToNumber(Payload))
+>> do Create object_to_create="PeaProjectile" x_position=expr(PeashooterPlant.X() + 45) y_position=expr(PeashooterPlant.Y()) layer=""
+>> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=52

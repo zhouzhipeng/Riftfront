@@ -7,7 +7,7 @@ name = "PVZ Battle"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
-sceneLifecycleFunctions = [ "sceneLoad", "sceneUpdate" ]
+sceneLifecycleFunctions = [ "sceneLoad", "sceneSignal", "sceneUpdate" ]
 behaviorsSharedData = [ ]
 
 [[variables]]

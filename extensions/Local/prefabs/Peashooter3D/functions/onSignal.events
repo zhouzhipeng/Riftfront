@@ -1,9 +1,3 @@
-@event aiGeneratedEventId="peashooter-handle-shoot-signal"
-if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Peashooter.Shoot"
-do AnimatableCapability::AnimatableBehavior::SetIndex object="PeashooterModel" behavior="Animation" modification_sign="=" animation_index=1
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="PeashooterModel" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="PeashooterModel" behavior="Animation"
-
 @event aiGeneratedEventId="peashooter-handle-damage-signal"
 if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(SignalName) comparison_sign="=" second_string_expression="Unit.Damage"
 if NumberVariable variable="HP" comparison_sign=">" value=0

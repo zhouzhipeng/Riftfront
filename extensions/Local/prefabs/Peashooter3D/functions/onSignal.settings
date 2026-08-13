@@ -1,7 +1,7 @@
 kind = "function"
 settingsFormatVersion = 5
 order = 0
-description = "Handle direct gameplay signals sent to this peashooter instance."
+description = "Handle direct health signals sent to this peashooter instance."
 fullName = "On signal"
 functionType = "Action"
 name = "onSignal"

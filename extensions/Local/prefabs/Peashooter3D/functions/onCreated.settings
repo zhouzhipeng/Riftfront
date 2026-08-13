@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Initialize the per-instance firing cooldown."
+fullName = "On created"
+functionType = "Action"
+name = "onCreated"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Peashooter3D"
+type = "object"

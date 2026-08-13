@@ -1,0 +1,49 @@
+kind = "prefab"
+settingsFormatVersion = 5
+order = 8
+defaultName = "PeaBullet3D"
+description = "Reusable 3D pea bullet with self-owned movement and cleanup."
+fullName = "Pea bullet 3D"
+helpPath = ""
+iconUrl = ""
+is3D = true
+isUsingLegacyInstancesRenderer = false
+name = "PeaBullet3D"
+previewIconUrl = ""
+behaviors = [ ]
+propertyDescriptors = [ ]
+objectGroups = { }
+
+[[variables]]
+name = "Speed"
+type = "number"
+value = 300
+
+[layout]
+version = 1
+bounds = { max = [12, 12, 12], min = [-12, -12, -12] }
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [16, 16, 16]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "3d"
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "3510a649-84ce-4300-98a0-ca79bcba99e7"
+object = "PeaModel"
+layer = "base"
+at = [0, 0, 0]

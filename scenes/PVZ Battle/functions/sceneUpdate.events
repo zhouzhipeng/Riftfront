@@ -230,23 +230,6 @@ do Delete object="Zombie"
 @end group
 
 @group "Peashooter combat" source="" creationTime=0 color=[84,190,102] parameters=[]
-@event aiGeneratedEventId="pvz-each-peashooter-fire"
-for each "PeashooterPlant"
-> @event aiGeneratedEventId="pvz-peashooter-fire-ready"
-> if CompareTimer timer_name="PeashooterFire" comparison_sign=">=" time_in_seconds=1.1
-> do EmitSignalToObjectInstance instance_id=expr(PeashooterPlant.InstanceId()) signal_name="Peashooter.Shoot" payload=""
-> do PlaySound audio_file_or_audio_resource_name="PVZ_PlantAttack" repeat_the_sound=false volume=42 pitch_speed=1
-> do Create object_to_create="PeaProjectile" x_position=expr(PeashooterPlant.X() + 45) y_position=expr(PeashooterPlant.Y()) layer=""
-> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=52
-
-@event aiGeneratedEventId="pvz-reset-peashooter-fire-timer"
-if CompareTimer timer_name="PeashooterFire" comparison_sign=">=" time_in_seconds=1.1
-do ResetTimer timer_name="PeashooterFire"
-
-@event aiGeneratedEventId="pvz-move-peas-right"
-if SceneInstancesCount object="PeaProjectile" comparison_sign=">" value=0
-do SetX object="PeaProjectile" modification_sign="=" value=expr(PeaProjectile.X() + 300 * TimeDelta())
-
 @event aiGeneratedEventId="pvz-each-pea-hit"
 for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
@@ -255,8 +238,4 @@ for each "PeaProjectile"
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="20"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
 > do Delete object="PeaProjectile"
-
-@event aiGeneratedEventId="pvz-remove-offscreen-pea"
-if PosX object="PeaProjectile" comparison_sign=">" value=1400
-do Delete object="PeaProjectile"
 @end group

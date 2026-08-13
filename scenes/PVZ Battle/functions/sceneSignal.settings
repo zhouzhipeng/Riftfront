@@ -1,0 +1,29 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+folder = [ "Lifecycle" ]
+name = "sceneSignal"
+functionType = "Action"
+lifecycleRole = "sceneSignal"
+fullName = "On scene signal"
+description = "Events run once for each scene signal delivered to this scene."
+sentence = ""
+private = true
+async = false
+objectGroups = { }
+
+[[parameters]]
+description = "Delivered scene signal name"
+name = "SignalName"
+type = "string"
+optional = false
+defaultValue = ""
+codeOnly = false
+
+[[parameters]]
+description = "Delivered immutable string payload"
+name = "Payload"
+type = "string"
+optional = false
+defaultValue = ""
+codeOnly = false

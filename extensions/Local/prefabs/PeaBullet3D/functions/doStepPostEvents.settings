@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Move this pea bullet and remove it after leaving the battlefield."
+fullName = "doStepPostEvents"
+functionType = "Action"
+name = "doStepPostEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::PeaBullet3D"
+type = "object"

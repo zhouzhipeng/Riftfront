@@ -1,0 +1,2 @@
+@event aiGeneratedEventId="peashooter-start-fire-cooldown"
+do ResetObjectTimer object="Object" timer_name="FireCooldown"
