@@ -1,0 +1,17 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 30
+assetStoreId = ""
+name = "MobileCameraPanJoystick"
+persistentUuid = "8ffb26e6-ef14-44c1-9c94-0799a91892ec"
+type = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
+variant = ""
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "UI" ]
+
+[content]
+ControllerIdentifier = 1
+DeadZoneRadius = 0.18
+JoystickIdentifier = "Secondary"

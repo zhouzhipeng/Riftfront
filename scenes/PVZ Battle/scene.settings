@@ -832,3 +832,11 @@ layer = "hud"
 at = [1120, 560]
 z_order = 80
 size = [140, 140]
+
+[[layout.instances]]
+id = "255ae3c4-ab35-44dc-8307-3391e4a1a555"
+object = "MobileCameraPanJoystick"
+layer = "hud"
+at = [150, 560]
+z_order = 80
+size = [140, 140]
