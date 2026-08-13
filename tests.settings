@@ -8,3 +8,11 @@ name = "Untitled test"
 type = "gameplay"
 description = "sdsf "
 file = "tests/Untitled%20test.js"
+
+[[tests]]
+scope = "project"
+order = 1
+name = "PVZ projectile uses 3D collision"
+type = "gameplay"
+description = "A pea damages a zombie only when their XYZ volumes overlap."
+file = "tests/PVZ%20projectile%20uses%203D%20collision.js"
