@@ -1051,3 +1051,67 @@ metadata = ""
 name = "PVZCameraJoystickThumb"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/sunflower-card.png"
+kind = "image"
+metadata = ""
+name = "PVZUISunflowerCard"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/peashooter-card.png"
+kind = "image"
+metadata = ""
+name = "PVZUIPeashooterCard"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/sun-counter.png"
+kind = "image"
+metadata = ""
+name = "PVZUISunCounter"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/shovel-slot.png"
+kind = "image"
+metadata = ""
+name = "PVZUIShovelSlot"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/shovel.png"
+kind = "image"
+metadata = ""
+name = "PVZUIShovel"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/wave-meter-empty.png"
+kind = "image"
+metadata = ""
+name = "PVZUIWaveMeterEmpty"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/wave-zombie-marker.png"
+kind = "image"
+metadata = ""
+name = "PVZUIWaveZombieMarker"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/wave-flag-marker.png"
+kind = "image"
+metadata = ""
+name = "PVZUIWaveFlagMarker"
+smoothed = true
+userAdded = true

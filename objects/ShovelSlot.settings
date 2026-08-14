@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 13
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "ShovelSlot"
+persistentUuid = "379ce044-0375-44ba-b6f2-e524fc66e85e"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIShovelSlot"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

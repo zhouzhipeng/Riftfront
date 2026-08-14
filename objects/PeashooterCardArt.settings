@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 12
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "PeashooterCardArt"
+persistentUuid = "3e89cd7d-65db-4c61-b32d-2d17e061e1cc"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIPeashooterCard"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

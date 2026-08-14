@@ -11,10 +11,10 @@ underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "ADVENTURE  •  FRONT YARD"
+string = "FRONT YARD  •  WAVE 1"
 font = ""
 textAlignment = "center"
-characterSize = 24
+characterSize = 20
 folder = [ "HUD" ]
 
 [color]
@@ -36,10 +36,10 @@ shadowDistance = 3
 shadowOpacity = 190
 smoothed = true
 underlined = false
-text = "ADVENTURE  •  FRONT YARD"
+text = "FRONT YARD  •  WAVE 1"
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "top"
-characterSize = 24
+characterSize = 20
 lineHeight = 0
 color = "255;255;255"

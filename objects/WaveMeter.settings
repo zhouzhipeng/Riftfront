@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 15
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "WaveMeter"
+persistentUuid = "e8110ce7-8ce7-4f04-bf53-2dc1538d3743"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIWaveMeterEmpty"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

@@ -11,10 +11,10 @@ underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "WALL-NUT  75          SHOVEL   GLOVE"
+string = "SEED BANK"
 font = ""
 textAlignment = "center"
-characterSize = 21
+characterSize = 18
 folder = [ "HUD" ]
 
 [color]
@@ -36,10 +36,10 @@ shadowDistance = 3
 shadowOpacity = 180
 smoothed = true
 underlined = false
-text = "WALL-NUT  75          SHOVEL   GLOVE"
+text = "SEED BANK"
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "top"
-characterSize = 21
+characterSize = 18
 lineHeight = 0
 color = "255;245;232"

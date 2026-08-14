@@ -12,26 +12,24 @@ underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = """
-[ PEASHOOTER ]
-100 SUN  -  CLICK"""
+string = "100"
 font = ""
-textAlignment = "center"
-characterSize = 19
+textAlignment = "right"
+characterSize = 20
 folder = [ "HUD" ]
 
 [color]
-b = 232
-g = 245
-r = 255
+b = 24
+g = 70
+r = 84
 
 [content]
 bold = true
 isOutlineEnabled = true
 isShadowEnabled = true
 italic = false
-outlineColor = "74;34;12"
-outlineThickness = 4
+outlineColor = "255;244;180"
+outlineThickness = 2
 shadowAngle = 90
 shadowBlurRadius = 2
 shadowColor = "0;0;0"
@@ -39,12 +37,10 @@ shadowDistance = 3
 shadowOpacity = 180
 smoothed = true
 underlined = false
-text = """
-[ PEASHOOTER ]
-100 SUN  -  CLICK"""
+text = "100"
 font = ""
-textAlignment = "center"
-verticalTextAlignment = "center"
-characterSize = 19
+textAlignment = "right"
+verticalTextAlignment = "bottom"
+characterSize = 20
 lineHeight = 0
-color = "255;245;232"
+color = "84;70;24"

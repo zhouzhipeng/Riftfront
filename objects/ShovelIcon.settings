@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 14
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "ShovelIcon"
+persistentUuid = "fe08c45d-9f43-420b-98a4-9c521f6d81bc"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIShovel"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

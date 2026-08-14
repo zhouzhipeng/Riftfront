@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 16
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "WaveZombieMarker"
+persistentUuid = "5a9978a1-6400-46f3-aad5-20b0c6cda558"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIWaveZombieMarker"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 10
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "SunCounterPanel"
+persistentUuid = "afc2d564-d95c-495e-b30a-1daad8a0eeb1"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUISunCounter"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
