@@ -509,8 +509,8 @@ loop, comment, and JavaScript metadata when editing existing sources.
     verification is mandatory for rendering/input changes and extension
     actions that create, delete, pick, or mutate objects.
     Pass `display_collision_shapes: true` when collision geometry must be
-    visually verified. An explicit true or false starts a fresh preview because
-    the collision-shape display cannot be reconfigured on an attached preview.
+    visually verified. Every `launch_preview` call closes the previous game and
+    debugger windows before opening a fresh pair.
     If any project source changes after the reload, call `reload_project` again
     before the next preview, preceded by a new successful
     `validate_project_files` call and Git commit for those edits.
@@ -519,6 +519,8 @@ loop, comment, and JavaScript metadata when editing existing sources.
     with the exact scheme-free `tests.settings` `file`, or omit `file` to run
     all tests. Record the returned `operation_id` and poll
     `get_gameplay_test_results` until `status` is `completed` or `failed`.
+    The floating gameplay-test game window closes automatically when the MCP
+    batch finishes.
     Report the behavior as gameplay-test verified only when the operation is
     `completed` and `summary.all_passed` is `true`. A source edit after reload
     requires validation, a follow-up commit, and another reload before a new

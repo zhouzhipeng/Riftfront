@@ -2,6 +2,7 @@
 node_modules/
 .idea/
 .gdevelop/
+issues/
 __pycache__/
 *.py[cod]
 *.blend1
