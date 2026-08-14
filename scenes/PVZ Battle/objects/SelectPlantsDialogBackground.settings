@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 25
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "SelectPlantsDialogBackground"
+persistentUuid = "45571af3-249f-45cb-878f-cfb0d28f46d6"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "Select Plants Dialog" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZSelectPlantsDialog"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

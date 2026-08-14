@@ -1,0 +1,40 @@
+kind = "externalLayout"
+settingsFormatVersion = 5
+order = 2
+name = "Select Plants dialog"
+
+[layout]
+version = 1
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = true
+selected_layer = "HUD"
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "hud"
+name = "HUD"
+
+[[layout.instances]]
+id = "7b291667-aa45-4ac4-986c-54a051a0e716"
+object = "SelectPlantsDialogBackground"
+layer = "hud"
+at = [408, 83]
+z_order = 200
+size = [465, 554]
+
+[[layout.instances]]
+id = "8b35a09a-c9cc-4850-8a83-559c5da1487c"
+object = "SelectPlantsDialogButton"
+layer = "hud"
+at = [584, 570]
+z_order = 201
+size = [113, 41]

@@ -1147,3 +1147,19 @@ metadata = ""
 name = "PVZAdventureButton"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/select-plants-dialog.png"
+kind = "image"
+metadata = ""
+name = "PVZSelectPlantsDialog"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/select-plants-button.png"
+kind = "image"
+metadata = ""
+name = "PVZSelectPlantsButton"
+smoothed = true
+userAdded = true

@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 26
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "SelectPlantsDialogButton"
+persistentUuid = "c06b62ae-362a-43c5-a357-43818bcb64cf"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "Select Plants Dialog" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZSelectPlantsButton"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
