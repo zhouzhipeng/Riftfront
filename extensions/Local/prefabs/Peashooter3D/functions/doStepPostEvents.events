@@ -1,10 +1,6 @@
 @event aiGeneratedEventId="peashooter-emit-spawn-bullet"
 if CompareObjectTimer object="Object" timer_name="FireCooldown" comparison_sign=">=" time_in_seconds=1.1
 do EmitSceneSignal signal_name="Peashooter.SpawnBullet" payload=expr(ToString(Object.InstanceId()))
-do AnimatableCapability::AnimatableBehavior::SetIndex object="PeashooterModel" behavior="Animation" modification_sign="=" animation_index=1
-do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="PeashooterModel" behavior="Animation" modification_sign="=" elapsed_time_in_seconds=0
-do AnimatableCapability::AnimatableBehavior::PlayAnimation object="PeashooterModel" behavior="Animation"
-do PlaySound audio_file_or_audio_resource_name="PVZ_PlantAttack" repeat_the_sound=false volume=42 pitch_speed=1
 do ResetObjectTimer object="Object" timer_name="FireCooldown"
 
 @event aiGeneratedEventId="peashooter-return-to-idle"
