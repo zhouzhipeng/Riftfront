@@ -261,7 +261,7 @@ if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCu
 
 @group "Zombie spawning and lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
 @event aiGeneratedEventId="pvz-spawn-random-zombie"
-if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=5
+if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=10
 if PickRandomInstance object="ZombieSpawnPoint"
 do Create object_to_create="Zombie" x_position=expr(ZombieSpawnPoint.X()) y_position=expr(ZombieSpawnPoint.Y()) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="Zombie" behavior="Base3D" modification_sign="=" value=5
