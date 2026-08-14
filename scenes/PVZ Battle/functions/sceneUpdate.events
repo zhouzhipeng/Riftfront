@@ -323,12 +323,57 @@ if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCu
 > do Scene3D::Base3DBehavior::SetDepth parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(76 * 30 / Raycaster3D::Distance())
 @end group
 
+@group "Wave progression and centered HUD" source="" creationTime=0 color=[198,145,58] parameters=[]
+@event aiGeneratedEventId="pvz-center-and-update-wave-meter"
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+do SetX object="WaveMeter" modification_sign="=" value=expr((SceneWindowWidth() - WaveMeter.Width()) / 2)
+do SetY object="WaveMeter" modification_sign="=" value=expr(SceneWindowHeight() - 115)
+do SetX object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.X() - WaveFlagMarker.Width() / 2)
+do SetY object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveFlagMarker.Height()) / 2)
+do SetX object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.X() + WaveMeter.Width() - WaveZombieMarker.Width() / 2 - WaveMeter.Width() * min(1, TimerElapsedTime("WaveTimer") / Variable(WaveDuration)))
+do SetY object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveZombieMarker.Height()) / 2)
+do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+do SetY object="LevelLabel" modification_sign="=" value=expr(SceneWindowHeight() - 81)
+
+@event aiGeneratedEventId="pvz-advance-wave"
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+if BooleanVariable variable="FinalWaveElapsed" check_if_the_value_is=false
+if NumberVariable variable="CurrentWave" comparison_sign="<" value=5
+if CompareTimer timer_name="WaveTimer" comparison_sign=">=" time_in_seconds=expr(Variable(WaveDuration))
+do SetNumberVariable variable="CurrentWave" modification_sign="+" value=1
+do SetNumberVariable variable="ZombieSpawnInterval" modification_sign="=" value=expr(36 - 6 * Variable(CurrentWave))
+do SetNumberVariable variable="ZombieMoveSpeed" modification_sign="=" value=expr(18 + 4 * Variable(CurrentWave))
+do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text=expr("FRONT YARD  -  WAVE " + ToString(Variable(CurrentWave)) + " / 5")
+do ResetTimer timer_name="WaveTimer"
+do ResetTimer timer_name="ZombieSpawn"
+
+@event aiGeneratedEventId="pvz-finish-final-wave-timer"
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+if BooleanVariable variable="FinalWaveElapsed" check_if_the_value_is=false
+if NumberVariable variable="CurrentWave" comparison_sign="=" value=5
+if CompareTimer timer_name="WaveTimer" comparison_sign=">=" time_in_seconds=expr(Variable(WaveDuration))
+do SetBooleanVariable variable="FinalWaveElapsed" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-win-after-final-wave"
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+if BooleanVariable variable="FinalWaveElapsed" check_if_the_value_is=true
+if SceneInstancesCount object="Zombie" comparison_sign="=" value=0
+do SetBooleanVariable variable="BattleEnded" modification_sign="True"
+do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="FRONT YARD  -  ALL 5 WAVES CLEARED!"
+do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+do PlaySound audio_file_or_audio_resource_name="assets\\sfx-victory.wav" repeat_the_sound=false volume=70 pitch_speed=1
+@end group
+
 @group "Zombie spawning and lane movement" source="" creationTime=0 color=[150,105,84] parameters=[]
 @event aiGeneratedEventId="pvz-spawn-random-zombie"
-if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=10
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+if BooleanVariable variable="FinalWaveElapsed" check_if_the_value_is=false
+if CompareTimer timer_name="ZombieSpawn" comparison_sign=">=" time_in_seconds=expr(Variable(ZombieSpawnInterval))
 if PickRandomInstance object="ZombieSpawnPoint"
 do Create object_to_create="Zombie" x_position=expr(ZombieSpawnPoint.X()) y_position=expr(ZombieSpawnPoint.Y()) layer=""
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="Zombie" behavior="Base3D" modification_sign="=" value=5
+do SetNumberObjectVariable object="Zombie" variable="HP" modification_sign="=" value=expr(70 + 30 * Variable(CurrentWave))
+do SetNumberObjectVariable object="Zombie" variable="MaxHP" modification_sign="=" value=expr(70 + 30 * Variable(CurrentWave))
 do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieVoice" repeat_the_sound=false volume=45 pitch_speed=1
 do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 do ResetTimer timer_name="ZombieSpawn"
@@ -336,6 +381,7 @@ do ResetTimer timer_name="ZombieSpawn"
 @event aiGeneratedEventId="pvz-each-zombie-acquire-target"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if PickNearest object="Plants" x_position=expr(Zombie.X()) y_position=expr(Zombie.Y())
 > do SetNumberObjectVariable object="Zombie" variable="TargetX" modification_sign="=" value=expr(Plants.X())
 > do SetNumberObjectVariable object="Zombie" variable="TargetY" modification_sign="=" value=expr(Plants.Y())
@@ -343,6 +389,7 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-clear-target-without-plants"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if SceneInstancesCount object="Plants" comparison_sign="=" value=0
 > do SetNumberObjectVariable object="Zombie" variable="TargetX" modification_sign="=" value=-100000
 > do SetNumberObjectVariable object="Zombie" variable="TargetY" modification_sign="=" value=expr(Zombie.Y())
@@ -350,12 +397,14 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-walk-when-clear"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign=">" second_expression=2025
-> do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - 22 * TimeDelta())
+> do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - Variable(ZombieMoveSpeed) * TimeDelta())
 
 @event aiGeneratedEventId="pvz-each-zombie-return-to-walk"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign=">" second_expression=2025
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=1
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Walk" payload=""
@@ -364,6 +413,7 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-enter-attack"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign="<=" second_expression=2025
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=0
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Attack" payload=""
@@ -373,6 +423,7 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-deal-signal-damage"
 for each "Zombie"
 > @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 > if Collision3D::AreInCollision object="Zombie" first_parameter_3d_capability="Base3D" other_object="Plants" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Plants" x_position=expr(Zombie.X()) y_position=expr(Zombie.Y())
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=1
@@ -382,8 +433,12 @@ for each "Zombie"
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 
 @event aiGeneratedEventId="pvz-remove-zombie-at-house"
+if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 if PosX object="Zombie" comparison_sign="<" value=180
-do Delete object="Zombie"
+do SetBooleanVariable variable="BattleEnded" modification_sign="True"
+do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="GAME OVER  -  ZOMBIES ATE YOUR BRAINS!"
+do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+do PlaySound audio_file_or_audio_resource_name="assets\\sfx-defeat.wav" repeat_the_sound=false volume=75 pitch_speed=1
 @end group
 
 @group "Peashooter combat" source="" creationTime=0 color=[84,190,102] parameters=[]

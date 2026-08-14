@@ -118,6 +118,36 @@ persistentUuid = "05096034-ac25-4666-b15a-e0d25a8c79f5"
 type = "string"
 value = ""
 
+[[variables]]
+name = "CurrentWave"
+type = "number"
+value = 1
+
+[[variables]]
+name = "WaveDuration"
+type = "number"
+value = 60
+
+[[variables]]
+name = "ZombieSpawnInterval"
+type = "number"
+value = 30
+
+[[variables]]
+name = "ZombieMoveSpeed"
+type = "number"
+value = 22
+
+[[variables]]
+name = "FinalWaveElapsed"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "BattleEnded"
+type = "boolean"
+value = false
+
 [objectGroups]
 LawnTiles = [ "LawnTile", "LawnTileDark" ]
 Plants = [ "SunflowerPlant", "PeashooterPlant" ]

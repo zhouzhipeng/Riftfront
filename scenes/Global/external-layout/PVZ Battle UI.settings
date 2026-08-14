@@ -51,7 +51,7 @@ size = [152, 68]
 id = "9117dac2-fca9-448d-b546-2c6247fc6a4e"
 object = "WaveMeter"
 layer = "hud"
-at = [613, 605]
+at = [530, 605]
 z_order = 5
 size = [220, 30]
 
@@ -59,7 +59,7 @@ size = [220, 30]
 id = "112aa703-a6a3-4d31-b8df-d42ca7588c75"
 object = "WaveZombieMarker"
 layer = "hud"
-at = [613, 602]
+at = [735, 602]
 z_order = 6
 size = [31, 33]
 
@@ -67,7 +67,7 @@ size = [31, 33]
 id = "b47ac723-e889-4271-a7aa-f461500ca2ed"
 object = "WaveFlagMarker"
 layer = "hud"
-at = [803, 607]
+at = [515, 607]
 z_order = 6
 size = [30, 27]
 
@@ -91,9 +91,9 @@ size = [145, 32]
 id = "70000000-0000-4000-8000-000000000003"
 object = "LevelLabel"
 layer = "hud"
-at = [445, 639]
+at = [340, 639]
 z_order = 10
-size = [390, 30]
+size = [600, 30]
 
 [[layout.instances]]
 id = "1a17fc96-cba7-479a-b55e-24837330bcba"

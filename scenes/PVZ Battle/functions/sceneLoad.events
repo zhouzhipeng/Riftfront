@@ -21,14 +21,30 @@ do SetNumberVariable variable="PlacedPlants" modification_sign="=" value=0
 do SetNumberVariable variable="SunAmount" modification_sign="=" value=500
 do SetBooleanVariable variable="SunCollectedThisFrame" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
+do SetNumberVariable variable="CurrentWave" modification_sign="=" value=1
+do SetNumberVariable variable="WaveDuration" modification_sign="=" value=60
+do SetNumberVariable variable="ZombieSpawnInterval" modification_sign="=" value=30
+do SetNumberVariable variable="ZombieMoveSpeed" modification_sign="=" value=22
+do SetBooleanVariable variable="FinalWaveElapsed" modification_sign="False"
+do SetBooleanVariable variable="BattleEnded" modification_sign="False"
 do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
 do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
 do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
 do SetZOrder object="ShovelIcon" modification_sign="=" value=6
 do TextContainerCapability::TextContainerBehavior::SetValue object="SunCounter" behavior="Text" modification_sign="=" text=expr("SUN  " + ToString(Variable(SunAmount)))
+do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="FRONT YARD  -  WAVE 1 / 5"
+do SetX object="WaveMeter" modification_sign="=" value=expr((SceneWindowWidth() - WaveMeter.Width()) / 2)
+do SetY object="WaveMeter" modification_sign="=" value=expr(SceneWindowHeight() - 115)
+do SetX object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.X() - WaveFlagMarker.Width() / 2)
+do SetY object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveFlagMarker.Height()) / 2)
+do SetX object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.X() + WaveMeter.Width() - WaveZombieMarker.Width() / 2)
+do SetY object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveZombieMarker.Height()) / 2)
+do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+do SetY object="LevelLabel" modification_sign="=" value=expr(SceneWindowHeight() - 81)
 do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
 do ResetTimer timer_name="SunSpawn"
 do ResetTimer timer_name="ZombieSpawn"
+do ResetTimer timer_name="WaveTimer"
 do Hide object="SelectedSunflower"
 do Hide object="SelectedPeashooter"
 do Hide object="PlacementHover"
