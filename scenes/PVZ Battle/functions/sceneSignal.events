@@ -6,4 +6,4 @@ if BuiltinCommonInstructions::CompareNumbers first_expression=expr(ToNumber(Payl
 >> @event aiGeneratedEventId="pvz-spawn-bullet-for-emitter"
 >> if BuiltinCommonInstructions::CompareNumbers first_expression=expr(PeashooterPlant.InstanceId()) comparison_sign="=" second_expression=expr(ToNumber(Payload))
 >> do Create object_to_create="PeaProjectile" x_position=expr(PeashooterPlant.X() + 45) y_position=expr(PeashooterPlant.Y()) layer=""
->> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=52
+>> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeaProjectile" behavior="Base3D" modification_sign="=" value=71
