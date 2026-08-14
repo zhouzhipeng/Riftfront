@@ -25,3 +25,19 @@ mode = "instances-editor"
 id = "base"
 name = ""
 cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "d2370d44-bced-4ef7-b46a-43d0f238d67f"
+object = "CardArt"
+layer = "base"
+at = [0, 0]
+z_order = 0
+size = [150, 90]
+
+[[layout.instances]]
+id = "3a0d4f28-a5f5-43f4-82dd-a5bfa04075cc"
+object = "CostLabel"
+layer = "base"
+at = [96, 58]
+z_order = 1
+size = [44, 24]
