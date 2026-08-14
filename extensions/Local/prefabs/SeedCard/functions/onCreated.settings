@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Initialize the displayed sun count from the seed card property."
+fullName = "On created"
+functionType = "Action"
+name = "onCreated"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::SeedCard"
+type = "object"

@@ -1,0 +1,2 @@
+@event aiGeneratedEventId="seed-card-initialize-sun-count"
+do TextContainerCapability::TextContainerBehavior::SetValue object="CostLabel" behavior="Text" modification_sign="=" text=expr(ToString(SunCount))

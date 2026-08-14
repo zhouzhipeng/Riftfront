@@ -9,5 +9,7 @@ variant = "Peashooter"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-content = { }
 folder = [ "HUD" ]
+
+[content]
+SunCount = 100

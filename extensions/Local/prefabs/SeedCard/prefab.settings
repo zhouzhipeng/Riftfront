@@ -12,8 +12,14 @@ name = "SeedCard"
 previewIconUrl = ""
 behaviors = [ ]
 variables = [ ]
-propertyDescriptors = [ ]
 objectGroups = { }
+
+[[propertyDescriptors]]
+value = "50"
+type = "Number"
+label = "Sun count"
+description = "Amount of sun required to plant this seed."
+name = "SunCount"
 
 [layout]
 version = 1
