@@ -16,3 +16,11 @@ name = "PVZ planting charges sun"
 type = "gameplay"
 description = "Plant placement deducts the displayed sunflower and peashooter costs."
 file = "tests/PVZ%20planting%20charges%20sun.js"
+
+[[tests]]
+scope = "project"
+order = 2
+name = "PVZ zombie eats nearest sunflower"
+type = "gameplay"
+description = "A zombie crosses the former attack dead zone, eats the nearer of two sunflowers, and retargets the survivor."
+file = "tests/PVZ%20zombie%20eats%20nearest%20sunflower.js"
