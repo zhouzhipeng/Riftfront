@@ -265,6 +265,13 @@ for each "Zombie"
 > do SetNumberObjectVariable object="Zombie" variable="TargetX" modification_sign="=" value=expr(Plants.X())
 > do SetNumberObjectVariable object="Zombie" variable="TargetY" modification_sign="=" value=expr(Plants.Y())
 
+@event aiGeneratedEventId="pvz-each-zombie-clear-target-without-plants"
+for each "Zombie"
+> @event
+> if SceneInstancesCount object="Plants" comparison_sign="=" value=0
+> do SetNumberObjectVariable object="Zombie" variable="TargetX" modification_sign="=" value=-100000
+> do SetNumberObjectVariable object="Zombie" variable="TargetY" modification_sign="=" value=expr(Zombie.Y())
+
 @event aiGeneratedEventId="pvz-each-zombie-walk-when-clear"
 for each "Zombie"
 > @event

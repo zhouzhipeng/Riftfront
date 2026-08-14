@@ -22,5 +22,5 @@ scope = "project"
 order = 2
 name = "PVZ zombie eats nearest sunflower"
 type = "gameplay"
-description = "A zombie crosses the former attack dead zone, eats the nearer of two sunflowers, and retargets the survivor."
+description = "A zombie eats the nearest sunflower, retargets a survivor, and returns to walking after consuming the final plant."
 file = "tests/PVZ%20zombie%20eats%20nearest%20sunflower.js"

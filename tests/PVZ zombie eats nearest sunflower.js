@@ -60,5 +60,49 @@ harness.assert(
   'The completed bite sequence must play the zombie eating sound.'
 );
 
+await harness.goToScene('PVZ Battle', { skipCreatingInstances: true });
+
+const finalSunflower = harness.spawn('SunflowerPlant', 700, 300, 5);
+const finalZombie = harness.spawn('Zombie', 735, 300, 5);
+harness.setObjectVariable(finalSunflower.id, 'HP', 1);
+
+const attackedFinalSunflower = await harness.stepUntil(
+  () => harness.getObjectVariable(finalZombie.id, 'Attacking')?.value === 1,
+  { maxFrames: 15 }
+);
+harness.assert(
+  attackedFinalSunflower,
+  'The zombie must enter its attack state against the final sunflower.'
+);
+
+const consumedFinalSunflower = await harness.stepUntil(
+  () => harness.getObjects('SunflowerPlant').length === 0,
+  { maxFrames: 90 }
+);
+harness.assert(
+  consumedFinalSunflower,
+  'The zombie must consume the final sunflower through its normal bite damage.'
+);
+
+const returnedToWalkAfterFinalPlant = await harness.stepUntil(
+  () => {
+    const currentZombie = harness
+      .getObjects('Zombie')
+      .find(instance => instance.id === finalZombie.id);
+    const attacking = harness.getObjectVariable(
+      finalZombie.id,
+      'Attacking'
+    )?.value;
+    const targetX = harness.getObjectVariable(finalZombie.id, 'TargetX')?.value;
+    const animation = currentZombie?.children?.ZombieModel?.[0]?.animation;
+    return attacking === 0 && targetX === -100000 && animation === 'Walk';
+  },
+  { maxFrames: 12 }
+);
+harness.assert(
+  returnedToWalkAfterFinalPlant,
+  'After consuming the final plant, the zombie must clear its stale target and return to the Walk animation.'
+);
+
 harness.watch('Zombie');
 harness.watch('SunflowerPlant');
