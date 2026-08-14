@@ -152,6 +152,7 @@ if BooleanVariable variable="HasPlacementTarget" check_if_the_value_is=true
 if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
 if MouseButtonFromTextReleased button_to_check="Left"
 if BooleanVariable variable="SunCollectedThisFrame" check_if_the_value_is=false
+if NumberVariable variable="SunAmount" comparison_sign=">=" value=50
 if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
 if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
 do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
@@ -159,6 +160,8 @@ do Create object_to_create="SunflowerPlant" x_position=expr(LawnTiles.X() + 50) 
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SunflowerPlant" behavior="Base3D" modification_sign="=" value=5
 do PlaySound audio_file_or_audio_resource_name="PVZ_PlacePlant" repeat_the_sound=false volume=65 pitch_speed=1
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
+do SetNumberVariable variable="SunAmount" modification_sign="-" value=50
+do TextContainerCapability::TextContainerBehavior::SetValue object="SunCounter" behavior="Text" modification_sign="=" text=expr("SUN  " + ToString(Variable(SunAmount)))
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
@@ -173,6 +176,7 @@ if BooleanVariable variable="HasPlacementTarget" check_if_the_value_is=true
 if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
 if MouseButtonFromTextReleased button_to_check="Left"
 if BooleanVariable variable="SunCollectedThisFrame" check_if_the_value_is=false
+if NumberVariable variable="SunAmount" comparison_sign=">=" value=100
 if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="LawnTiles" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
 if BooleanObjectVariable object="LawnTiles" variable="Occupied" check_if_the_value_is=false
 do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="True"
@@ -180,6 +184,8 @@ do Create object_to_create="PeashooterPlant" x_position=expr(LawnTiles.X() + 50)
 do Scene3D::Base3DBehavior::SetZ parameter_3d_object="PeashooterPlant" behavior="Base3D" modification_sign="=" value=5
 do PlaySound audio_file_or_audio_resource_name="PVZ_PlacePlant" repeat_the_sound=false volume=65 pitch_speed=1
 do SetNumberVariable variable="PlacedPlants" modification_sign="+" value=1
+do SetNumberVariable variable="SunAmount" modification_sign="-" value=100
+do TextContainerCapability::TextContainerBehavior::SetValue object="SunCounter" behavior="Text" modification_sign="=" text=expr("SUN  " + ToString(Variable(SunAmount)))
 do SetBooleanVariable variable="PlantingMode" modification_sign="False"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
