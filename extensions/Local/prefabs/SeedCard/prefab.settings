@@ -1,0 +1,54 @@
+kind = "prefab"
+settingsFormatVersion = 5
+order = 9
+defaultName = "SeedCard"
+description = "Reusable PVZ seed card with plant artwork and a cost label."
+fullName = "Seed card"
+helpPath = ""
+iconUrl = ""
+is3D = false
+isUsingLegacyInstancesRenderer = false
+name = "SeedCard"
+previewIconUrl = ""
+behaviors = [ ]
+variables = [ ]
+propertyDescriptors = [ ]
+objectGroups = { }
+
+[layout]
+version = 1
+bounds = { min = [0, 0, 0], max = [150, 90, 0] }
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [10, 10, 10]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "a4e090c2-55e1-4cc9-a77c-572b7094f519"
+object = "CardArt"
+layer = "base"
+at = [0, 0]
+z_order = 0
+size = [150, 90]
+
+[[layout.instances]]
+id = "0ab47a32-9ca9-4b68-8b0f-2dc96932ba13"
+object = "CostLabel"
+layer = "base"
+at = [96, 58]
+z_order = 1
+size = [44, 24]
