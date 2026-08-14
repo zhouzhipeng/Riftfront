@@ -686,27 +686,6 @@ at = [1150, 560, 3]
 rotation = 92
 
 [[layout.instances]]
-id = "70000000-0000-4000-8000-000000000001"
-object = "SunCounter"
-layer = "hud"
-at = [28, 18]
-z_order = 10
-
-[[layout.instances]]
-id = "70000000-0000-4000-8000-000000000002"
-object = "SeedRack"
-layer = "hud"
-at = [645, 22]
-z_order = 10
-
-[[layout.instances]]
-id = "70000000-0000-4000-8000-000000000003"
-object = "LevelLabel"
-layer = "hud"
-at = [438, 676]
-z_order = 10
-
-[[layout.instances]]
 id = "6d97739d-3e59-4b73-8e9c-a5f7dd234292"
 object = "SM_lobbyRoad"
 layer = "base"
@@ -735,14 +714,6 @@ at = [1200, 450]
 z_order = 11
 
 [[layout.instances]]
-id = "1a17fc96-cba7-479a-b55e-24837330bcba"
-object = "SunflowerCard"
-layer = "hud"
-at = [205, 32]
-z_order = 20
-size = [210, 62]
-
-[[layout.instances]]
 id = "f84c0afb-c7bf-42a5-b93c-38f2996ad56e"
 object = "SelectedSunflower"
 layer = "base"
@@ -760,28 +731,11 @@ opacity = 145
 hidden = true
 
 [[layout.instances]]
-id = "afe32ddf-e654-44c4-a01a-54f149537e46"
-object = "PlantingHint"
-layer = "hud"
-at = [300, 625]
-z_order = 30
-size = [720, 40]
-hidden = true
-
-[[layout.instances]]
 id = "3346f459-486f-4a37-a3f1-32eabe3cbca1"
 object = "SM_lobbyRoad"
 layer = "base"
 at = [1200, 153]
 z_order = 11
-
-[[layout.instances]]
-id = "65d65862-13e1-4ece-819a-683e1aaec02a"
-object = "PeashooterCard"
-layer = "hud"
-at = [420, 32]
-z_order = 20
-size = [220, 62]
 
 [[layout.instances]]
 id = "435300c3-b240-485a-89a4-47092c1f27cc"
@@ -825,22 +779,6 @@ object = "ZombieSpawnPoint"
 layer = "base"
 at = [1270, 550, 5]
 hidden = true
-
-[[layout.instances]]
-id = "4682a5af-9bdb-427f-9513-b48e429a53d7"
-object = "MobileCameraJoystick"
-layer = "hud"
-at = [1120, 560]
-z_order = 80
-size = [140, 140]
-
-[[layout.instances]]
-id = "255ae3c4-ab35-44dc-8307-3391e4a1a555"
-object = "MobileCameraPanJoystick"
-layer = "hud"
-at = [150, 560]
-z_order = 80
-size = [140, 140]
 
 [[layout.instances]]
 id = "16fadfcf-706c-4123-a7b9-b531fd0fcf9b"

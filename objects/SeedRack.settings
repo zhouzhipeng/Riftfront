@@ -1,25 +1,25 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 14
+order = 3
 assetStoreId = ""
 bold = true
 italic = false
-name = "LevelLabel"
+name = "SeedRack"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "ADVENTURE  •  FRONT YARD"
+string = "WALL-NUT  75          SHOVEL   GLOVE"
 font = ""
 textAlignment = "center"
-characterSize = 24
+characterSize = 21
 folder = [ "HUD" ]
 
 [color]
-b = 255
-g = 255
+b = 232
+g = 245
 r = 255
 
 [content]
@@ -27,19 +27,19 @@ bold = true
 isOutlineEnabled = true
 isShadowEnabled = true
 italic = false
-outlineColor = "15;45;12"
-outlineThickness = 4
+outlineColor = "74;34;12"
+outlineThickness = 5
 shadowAngle = 90
 shadowBlurRadius = 3
 shadowColor = "0;0;0"
 shadowDistance = 3
-shadowOpacity = 190
+shadowOpacity = 180
 smoothed = true
 underlined = false
-text = "ADVENTURE  •  FRONT YARD"
+text = "WALL-NUT  75          SHOVEL   GLOVE"
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "top"
-characterSize = 24
+characterSize = 21
 lineHeight = 0
-color = "255;255;255"
+color = "255;245;232"

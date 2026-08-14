@@ -1,46 +1,50 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 20
+order = 5
 assetStoreId = ""
 bold = true
 italic = false
-name = "PlantingHint"
-persistentUuid = "f778e0f3-ad62-4eb5-b478-e2fdac24d687"
+name = "SunflowerCard"
+persistentUuid = "034e0863-b558-4bf1-9c81-d8e301aa12cb"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "LEFT CLICK: PLANT   •   RIGHT DRAG: ORBIT   •   MIDDLE DRAG: PAN   •   WHEEL: ZOOM   •   ESC: CANCEL"
+string = """
+[ SUNFLOWER ]
+50 SUN  •  CLICK"""
 font = ""
 textAlignment = "center"
-characterSize = 18
+characterSize = 19
 folder = [ "HUD" ]
 
 [color]
-b = 225
-g = 255
-r = 236
+b = 88
+g = 245
+r = 255
 
 [content]
 bold = true
 isOutlineEnabled = true
 isShadowEnabled = true
 italic = false
-outlineColor = "24;72;22"
+outlineColor = "60;98;25"
 outlineThickness = 4
 shadowAngle = 90
 shadowBlurRadius = 2
 shadowColor = "0;0;0"
-shadowDistance = 2
+shadowDistance = 3
 shadowOpacity = 180
 smoothed = true
 underlined = false
-text = "LEFT CLICK: PLANT   •   RIGHT DRAG: ORBIT   •   MIDDLE DRAG: PAN   •   WHEEL: ZOOM   •   ESC: CANCEL"
+text = """
+[ SUNFLOWER ]
+50 SUN  •  CLICK"""
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "center"
-characterSize = 18
+characterSize = 19
 lineHeight = 0
-color = "236;255;225"
+color = "255;245;88"

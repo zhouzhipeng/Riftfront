@@ -1,50 +1,46 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 26
+order = 6
 assetStoreId = ""
 bold = true
 italic = false
-name = "PeashooterCard"
-persistentUuid = "d5dee496-4135-44da-b5b4-aa6938237c09"
+name = "PlantingHint"
+persistentUuid = "f778e0f3-ad62-4eb5-b478-e2fdac24d687"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = """
-[ PEASHOOTER ]
-100 SUN  -  CLICK"""
+string = "LEFT CLICK: PLANT   •   RIGHT DRAG: ORBIT   •   MIDDLE DRAG: PAN   •   WHEEL: ZOOM   •   ESC: CANCEL"
 font = ""
 textAlignment = "center"
-characterSize = 19
+characterSize = 18
 folder = [ "HUD" ]
 
 [color]
-b = 232
-g = 245
-r = 255
+b = 225
+g = 255
+r = 236
 
 [content]
 bold = true
 isOutlineEnabled = true
 isShadowEnabled = true
 italic = false
-outlineColor = "74;34;12"
+outlineColor = "24;72;22"
 outlineThickness = 4
 shadowAngle = 90
 shadowBlurRadius = 2
 shadowColor = "0;0;0"
-shadowDistance = 3
+shadowDistance = 2
 shadowOpacity = 180
 smoothed = true
 underlined = false
-text = """
-[ PEASHOOTER ]
-100 SUN  -  CLICK"""
+text = "LEFT CLICK: PLANT   •   RIGHT DRAG: ORBIT   •   MIDDLE DRAG: PAN   •   WHEEL: ZOOM   •   ESC: CANCEL"
 font = ""
 textAlignment = "center"
 verticalTextAlignment = "center"
-characterSize = 19
+characterSize = 18
 lineHeight = 0
-color = "255;245;232"
+color = "236;255;225"

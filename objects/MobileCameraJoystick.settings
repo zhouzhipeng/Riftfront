@@ -1,9 +1,9 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 30
+order = 8
 assetStoreId = ""
-name = "MobileCameraPanJoystick"
-persistentUuid = "8ffb26e6-ef14-44c1-9c94-0799a91892ec"
+name = "MobileCameraJoystick"
+persistentUuid = "04f7c4f7-2620-4272-b8f1-a146154f96ee"
 type = "SpriteMultitouchJoystick::SpriteMultitouchJoystick"
 variant = ""
 variables = [ ]
@@ -14,7 +14,7 @@ folder = [ "UI" ]
 [content]
 ControllerIdentifier = 1
 DeadZoneRadius = 0.18
-JoystickIdentifier = "Secondary"
+JoystickIdentifier = "Primary"
 
 [childrenContent.Border]
 adaptCollisionMaskAutomatically = false

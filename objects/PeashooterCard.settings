@@ -1,26 +1,28 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 12
+order = 7
 assetStoreId = ""
 bold = true
 italic = false
-name = "SunCounter"
-persistentUuid = "13bdf8bf-cf57-47cd-ad30-e8ca560efb5f"
+name = "PeashooterCard"
+persistentUuid = "d5dee496-4135-44da-b5b4-aa6938237c09"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "SUN  500"
+string = """
+[ PEASHOOTER ]
+100 SUN  -  CLICK"""
 font = ""
-textAlignment = "left"
-characterSize = 28
+textAlignment = "center"
+characterSize = 19
 folder = [ "HUD" ]
 
 [color]
-b = 74
-g = 232
+b = 232
+g = 245
 r = 255
 
 [content]
@@ -28,19 +30,21 @@ bold = true
 isOutlineEnabled = true
 isShadowEnabled = true
 italic = false
-outlineColor = "70;40;12"
+outlineColor = "74;34;12"
 outlineThickness = 4
 shadowAngle = 90
 shadowBlurRadius = 2
 shadowColor = "0;0;0"
 shadowDistance = 3
-shadowOpacity = 170
+shadowOpacity = 180
 smoothed = true
 underlined = false
-text = "SUN  500"
+text = """
+[ PEASHOOTER ]
+100 SUN  -  CLICK"""
 font = ""
-textAlignment = "left"
-verticalTextAlignment = "top"
-characterSize = 28
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 19
 lineHeight = 0
-color = "255;232;74"
+color = "255;245;232"
