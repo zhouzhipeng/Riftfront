@@ -1,0 +1,52 @@
+kind = "scene"
+settingsFormatVersion = 5
+order = 5
+disableInputWhenNotFocused = true
+mangledName = "PVZ_32Title_32Screen"
+name = "PVZ Title Screen"
+renderer3DWorldScale = 100
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = "Plants vs. Zombies"
+behaviorsSharedData = [ ]
+variables = [ ]
+objectGroups = { }
+
+[layout]
+version = 1
+background = "#000000"
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = true
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+rendering = "2d"
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layout.instances]]
+id = "46a75a73-b67a-4e74-9834-f4035c0f9172"
+object = "TitleBackground"
+layer = "base"
+at = [0, 0]
+z_order = 0
+size = [1280, 720]
+
+[[layout.instances]]
+id = "2e8ca0a5-b078-4cba-9a7e-c0c09984646b"
+object = "AdventureButton"
+layer = "base"
+at = [786, 161]
+z_order = 10
+size = [331, 146]

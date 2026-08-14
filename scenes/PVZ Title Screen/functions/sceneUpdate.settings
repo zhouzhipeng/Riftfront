@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+folder = [ "Lifecycle" ]
+name = "sceneUpdate"
+functionType = "Action"
+lifecycleRole = "sceneUpdate"
+fullName = "Scene update"
+description = "Events run every frame while this scene is active."
+sentence = ""
+private = true
+async = false
+parameters = [ ]
+objectGroups = { }

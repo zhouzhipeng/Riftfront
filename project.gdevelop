@@ -2,7 +2,7 @@ combinedSettingsFormatVersion = 5
 eventsDslVersion = "3.0"
 kind = "project"
 settingsFormatVersion = 5
-firstLayout = "PVZ Battle"
+firstLayout = "PVZ Title Screen"
 initialGDVersion = "6.0.0"
 objectGroups = { }
 

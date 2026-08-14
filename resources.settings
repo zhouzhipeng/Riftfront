@@ -1123,3 +1123,27 @@ metadata = ""
 name = "PVZUIWaveFlagMarker"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/zombies-won.png"
+kind = "image"
+metadata = ""
+name = "PVZZombiesWon"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/title-background.png"
+kind = "image"
+metadata = ""
+name = "PVZTitleBackground"
+smoothed = true
+userAdded = true
+
+[[resources]]
+file = "assets/ui/pvz/adventure-button.png"
+kind = "image"
+metadata = ""
+name = "PVZAdventureButton"
+smoothed = true
+userAdded = true

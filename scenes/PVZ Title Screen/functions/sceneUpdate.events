@@ -1,0 +1,15 @@
+@group "Title screen" source="" creationTime=0 color=[103,208,93] parameters=[]
+@event aiGeneratedEventId="pvz-title-layout"
+if SceneJustBegins
+do SetX object="TitleBackground" modification_sign="=" value=0
+do SetY object="TitleBackground" modification_sign="=" value=0
+do ResizableCapability::ResizableBehavior::SetWidth object="TitleBackground" behavior="Resizable" modification_sign="=" width=expr(SceneWindowWidth())
+do ResizableCapability::ResizableBehavior::SetHeight object="TitleBackground" behavior="Resizable" modification_sign="=" height=expr(SceneWindowHeight())
+do SetX object="AdventureButton" modification_sign="=" value=expr((SceneWindowWidth() - AdventureButton.Width()) * 0.83)
+do SetY object="AdventureButton" modification_sign="=" value=expr((SceneWindowHeight() - AdventureButton.Height()) * 0.28)
+
+@event aiGeneratedEventId="pvz-title-start-adventure"
+if HasAnyTouchOrMouseStarted
+if IsCursorOnObject object="AdventureButton" accurate_test_yes_by_default=true
+do Scene name_of_the_new_scene="PVZ Battle" stop_any_other_paused_scenes=true
+@end group

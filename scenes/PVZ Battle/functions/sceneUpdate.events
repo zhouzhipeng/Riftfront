@@ -418,6 +418,9 @@ if NumberVariable variable="HouseBreach" comparison_sign=">" value=0
 do SetBooleanVariable variable="BattleEnded" modification_sign="True"
 do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="GAME OVER  -  ZOMBIES ATE YOUR BRAINS!"
 do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+do SetX object="ZombiesWon" modification_sign="=" value=expr((SceneWindowWidth() - ZombiesWon.Width()) / 2)
+do SetY object="ZombiesWon" modification_sign="=" value=expr((SceneWindowHeight() - ZombiesWon.Height()) / 2)
+do Show object="ZombiesWon"
 do PlaySound audio_file_or_audio_resource_name="assets\\sfx-defeat.wav" repeat_the_sound=false volume=75 pitch_speed=1
 
 @event aiGeneratedEventId="pvz-each-zombie-return-to-walk"

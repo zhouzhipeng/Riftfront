@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 24
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "ZombiesWon"
+persistentUuid = "1b6a794c-c11d-4e13-9726-7aae9e5f4789"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "End State" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZZombiesWon"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

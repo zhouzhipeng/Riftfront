@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 1
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "AdventureButton"
+persistentUuid = "f11c6f6b-f4ba-4207-8373-6ecb5b8f9cee"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZAdventureButton"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
