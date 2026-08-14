@@ -6,10 +6,19 @@ name = "SunflowerPlant"
 persistentUuid = "86ec87f3-f1a9-4b7f-825b-e7e99af29809"
 type = "Local::Sunflower3D"
 variant = ""
-variables = [ ]
 effects = [ ]
 content = { }
 folder = [ "Plants" ]
+
+[[variables]]
+name = "HP"
+type = "number"
+value = 3
+
+[[variables]]
+name = "MaxHP"
+type = "number"
+value = 3
 
 [[behaviors]]
 name = "Base3D"
