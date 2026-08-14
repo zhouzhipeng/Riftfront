@@ -1,0 +1,27 @@
+kind = "prefabVariant"
+settingsFormatVersion = 5
+order = 0
+name = "Peashooter"
+objectGroups = { }
+
+[layout]
+version = 1
+bounds = { min = [0, 0, 0], max = [150, 90, 0] }
+
+[layout.editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [10, 10, 10]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 1
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layout.layers]]
+id = "base"
+name = ""
+cameras = [{ size = "default", viewport = "default" }]

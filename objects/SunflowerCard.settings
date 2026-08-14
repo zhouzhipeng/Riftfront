@@ -1,29 +1,13 @@
 kind = "object"
 settingsFormatVersion = 5
 order = 5
-adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "SunflowerCard"
 persistentUuid = "034e0863-b558-4bf1-9c81-d8e301aa12cb"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Local::SeedCard"
+variant = ""
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
+content = { }
 folder = [ "HUD" ]
-
-[[animations]]
-name = ""
-useMultipleDirections = false
-
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "PVZUISunflowerCard"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]

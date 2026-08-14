@@ -1,29 +1,13 @@
 kind = "object"
 settingsFormatVersion = 5
 order = 7
-adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "PeashooterCard"
 persistentUuid = "d5dee496-4135-44da-b5b4-aa6938237c09"
-type = "Sprite"
-updateIfNotVisible = false
+type = "Local::SeedCard"
+variant = "Peashooter"
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
+content = { }
 folder = [ "HUD" ]
-
-[[animations]]
-name = ""
-useMultipleDirections = false
-
-[[animations.directions]]
-looping = false
-timeBetweenFrames = 1
-
-[[animations.directions.sprites]]
-hasCustomCollisionMask = false
-image = "PVZUIPeashooterCard"
-points = [ ]
-originPoint = { name = "origine", x = 0, y = 0 }
-centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-customCollisionMask = [ ]

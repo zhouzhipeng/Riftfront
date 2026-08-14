@@ -121,20 +121,6 @@ z_order = 20
 size = [150, 90]
 
 [[layout.instances]]
-id = "a1d62911-dab0-414c-8c0b-6e80120ac4c4"
-object = "SunflowerCost"
-layer = "hud"
-at = [320, 72]
-z_order = 21
-
-[[layout.instances]]
-id = "f6eb9428-f411-42c4-803a-6acca59eb9be"
-object = "PeashooterCost"
-layer = "hud"
-at = [474, 72]
-z_order = 21
-
-[[layout.instances]]
 id = "4682a5af-9bdb-427f-9513-b48e429a53d7"
 object = "MobileCameraJoystick"
 layer = "hud"
