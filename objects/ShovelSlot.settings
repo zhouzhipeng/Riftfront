@@ -1,6 +1,6 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 13
+order = 11
 adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "ShovelSlot"

@@ -32,22 +32,6 @@ z_order = 5
 size = [190, 52]
 
 [[layout.instances]]
-id = "a72f255b-14fa-4001-a6d5-4394baf026d6"
-object = "SunflowerCardArt"
-layer = "hud"
-at = [220, 14]
-z_order = 19
-size = [150, 90]
-
-[[layout.instances]]
-id = "fd83dc8c-710f-411d-a807-26965ca06295"
-object = "PeashooterCardArt"
-layer = "hud"
-at = [380, 14]
-z_order = 19
-size = [150, 90]
-
-[[layout.instances]]
 id = "654914ce-47a4-4d53-8cb2-97ea93971aa3"
 object = "ShovelSlot"
 layer = "hud"
@@ -93,7 +77,7 @@ object = "SunCounter"
 layer = "hud"
 at = [76, 18]
 z_order = 10
-size = [115, 38]
+size = [130, 38]
 
 [[layout.instances]]
 id = "70000000-0000-4000-8000-000000000002"
@@ -107,9 +91,9 @@ size = [145, 32]
 id = "70000000-0000-4000-8000-000000000003"
 object = "LevelLabel"
 layer = "hud"
-at = [930, 52]
+at = [860, 52]
 z_order = 10
-size = [320, 30]
+size = [390, 30]
 
 [[layout.instances]]
 id = "1a17fc96-cba7-479a-b55e-24837330bcba"
@@ -135,6 +119,20 @@ layer = "hud"
 at = [380, 14]
 z_order = 20
 size = [150, 90]
+
+[[layout.instances]]
+id = "a1d62911-dab0-414c-8c0b-6e80120ac4c4"
+object = "SunflowerCost"
+layer = "hud"
+at = [320, 72]
+z_order = 21
+
+[[layout.instances]]
+id = "f6eb9428-f411-42c4-803a-6acca59eb9be"
+object = "PeashooterCost"
+layer = "hud"
+at = [474, 72]
+z_order = 21
 
 [[layout.instances]]
 id = "4682a5af-9bdb-427f-9513-b48e429a53d7"

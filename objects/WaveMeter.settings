@@ -1,6 +1,6 @@
 kind = "object"
 settingsFormatVersion = 5
-order = 15
+order = 13
 adaptCollisionMaskAutomatically = false
 assetStoreId = ""
 name = "WaveMeter"

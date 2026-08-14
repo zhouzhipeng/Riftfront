@@ -1,46 +1,29 @@
 kind = "object"
 settingsFormatVersion = 5
 order = 7
+adaptCollisionMaskAutomatically = false
 assetStoreId = ""
-bold = true
-italic = false
 name = "PeashooterCard"
 persistentUuid = "d5dee496-4135-44da-b5b4-aa6938237c09"
-smoothed = true
-type = "TextObject::Text"
-underlined = false
+type = "Sprite"
+updateIfNotVisible = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "100"
-font = ""
-textAlignment = "right"
-characterSize = 20
 folder = [ "HUD" ]
 
-[color]
-b = 24
-g = 70
-r = 84
+[[animations]]
+name = ""
+useMultipleDirections = false
 
-[content]
-bold = true
-isOutlineEnabled = true
-isShadowEnabled = true
-italic = false
-outlineColor = "255;244;180"
-outlineThickness = 2
-shadowAngle = 90
-shadowBlurRadius = 2
-shadowColor = "0;0;0"
-shadowDistance = 3
-shadowOpacity = 180
-smoothed = true
-underlined = false
-text = "100"
-font = ""
-textAlignment = "right"
-verticalTextAlignment = "bottom"
-characterSize = 20
-lineHeight = 0
-color = "84;70;24"
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIPeashooterCard"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

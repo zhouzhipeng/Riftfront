@@ -1,46 +1,29 @@
 kind = "object"
 settingsFormatVersion = 5
 order = 5
+adaptCollisionMaskAutomatically = false
 assetStoreId = ""
-bold = true
-italic = false
 name = "SunflowerCard"
 persistentUuid = "034e0863-b558-4bf1-9c81-d8e301aa12cb"
-smoothed = true
-type = "TextObject::Text"
-underlined = false
+type = "Sprite"
+updateIfNotVisible = false
 variables = [ ]
 effects = [ ]
 behaviors = [ ]
-string = "50"
-font = ""
-textAlignment = "right"
-characterSize = 20
 folder = [ "HUD" ]
 
-[color]
-b = 24
-g = 70
-r = 84
+[[animations]]
+name = ""
+useMultipleDirections = false
 
-[content]
-bold = true
-isOutlineEnabled = true
-isShadowEnabled = true
-italic = false
-outlineColor = "255;244;180"
-outlineThickness = 2
-shadowAngle = 90
-shadowBlurRadius = 2
-shadowColor = "0;0;0"
-shadowDistance = 3
-shadowOpacity = 180
-smoothed = true
-underlined = false
-text = "50"
-font = ""
-textAlignment = "right"
-verticalTextAlignment = "bottom"
-characterSize = 20
-lineHeight = 0
-color = "84;70;24"
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUISunflowerCard"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
