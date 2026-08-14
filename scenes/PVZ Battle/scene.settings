@@ -153,6 +153,30 @@ name = "HouseBreach"
 type = "number"
 value = 0
 
+[[variables]]
+name = "SunflowerChosen"
+persistentUuid = "647c16b9-cad3-4bd1-ae95-670fe98cbf3a"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "PeashooterChosen"
+persistentUuid = "722bae94-b5b5-402b-b653-6a4e5225f690"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "BattleActive"
+persistentUuid = "237a42b1-7e6e-44b6-a4e9-94a0e1acbde8"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "FightCountdownStage"
+persistentUuid = "e1657fce-ac7e-4371-b627-6f37254cfdc6"
+type = "number"
+value = 0
+
 [objectGroups]
 LawnTiles = [ "LawnTile", "LawnTileDark" ]
 Plants = [ "SunflowerPlant", "PeashooterPlant" ]
@@ -829,4 +853,31 @@ layer = "hud"
 at = [375, 125]
 z_order = 1000
 size = [529, 470]
+hidden = true
+
+[[layout.instances]]
+id = "934d9c41-5eec-4eba-9461-c8a853227de1"
+object = "FightStartSet"
+layer = "hud"
+at = [490, 294]
+z_order = 1001
+size = [300, 133]
+hidden = true
+
+[[layout.instances]]
+id = "83a82825-08fb-4b5c-a482-0b357e30fd4b"
+object = "FightStartReady"
+layer = "hud"
+at = [490, 294]
+z_order = 1001
+size = [300, 133]
+hidden = true
+
+[[layout.instances]]
+id = "3ee3c2ed-b842-4cd7-ab79-53fd8de0ac4e"
+object = "FightStartPlant"
+layer = "hud"
+at = [490, 294]
+z_order = 1001
+size = [300, 133]
 hidden = true

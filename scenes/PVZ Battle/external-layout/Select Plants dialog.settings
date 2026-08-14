@@ -32,9 +32,33 @@ z_order = 200
 size = [465, 554]
 
 [[layout.instances]]
+id = "1a17fc96-cba7-479a-b55e-24837330bcba"
+object = "SunflowerCard"
+layer = "hud"
+at = [485, 220]
+z_order = 210
+size = [150, 90]
+
+[[layout.instances]]
+id = "65d65862-13e1-4ece-819a-683e1aaec02a"
+object = "PeashooterCard"
+layer = "hud"
+at = [645, 220]
+z_order = 210
+size = [150, 90]
+
+[[layout.instances]]
 id = "8b35a09a-c9cc-4850-8a83-559c5da1487c"
 object = "SelectPlantsDialogButton"
 layer = "hud"
 at = [584, 570]
 z_order = 201
+size = [113, 41]
+
+[[layout.instances]]
+id = "29c12bdd-0bf6-479a-9d6e-b9f36773d30c"
+object = "SelectPlantsDialogButtonLabel"
+layer = "hud"
+at = [584, 570]
+z_order = 202
 size = [113, 41]

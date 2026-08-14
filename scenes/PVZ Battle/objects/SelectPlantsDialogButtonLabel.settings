@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 30
+assetStoreId = ""
+bold = true
+italic = false
+name = "SelectPlantsDialogButtonLabel"
+persistentUuid = "1ece8d19-f4a0-4ec6-a476-0d371bc4060e"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "LET'S ROCK!"
+font = ""
+textAlignment = "center"
+characterSize = 18
+folder = [ "HUD", "Select Plants Dialog" ]
+
+[color]
+b = 255
+g = 255
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "40;25;65"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 190
+smoothed = true
+underlined = false
+text = "LET'S ROCK!"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "center"
+characterSize = 18
+lineHeight = 0
+color = "255;255;255"

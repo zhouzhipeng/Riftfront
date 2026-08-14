@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 28
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "FightStartReady"
+persistentUuid = "110071ed-45ee-4950-9a98-47600ac0dda9"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "Fight Intro" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZStartReady"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

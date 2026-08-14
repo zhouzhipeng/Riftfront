@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 29
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "FightStartPlant"
+persistentUuid = "6260433c-5853-4c23-87d2-746336bd06fc"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "Fight Intro" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZStartPlant"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
