@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 16
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "WaveProgressOverlay"
+persistentUuid = "d23d96df-2ec4-46aa-a41a-1f97580c7373"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "HUD", "PVZ UI" ]
+
+[[animations]]
+name = ""
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZUIWaveMeterFull"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

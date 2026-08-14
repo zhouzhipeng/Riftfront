@@ -333,6 +333,10 @@ if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCu
 if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
 do SetX object="WaveMeter" modification_sign="=" value=expr((SceneWindowWidth() - WaveMeter.Width()) / 2)
 do SetY object="WaveMeter" modification_sign="=" value=expr(SceneWindowHeight() - 115)
+do SetX object="WaveProgressOverlay" modification_sign="=" value=expr(WaveMeter.X())
+do SetY object="WaveProgressOverlay" modification_sign="=" value=expr(WaveMeter.Y())
+do ResizableCapability::ResizableBehavior::SetWidth object="WaveProgressOverlay" behavior="Resizable" modification_sign="=" width=expr(WaveMeter.Width() * max(0, 1 - min(1, TimerElapsedTime("WaveTimer") / Variable(WaveDuration))))
+do ResizableCapability::ResizableBehavior::SetHeight object="WaveProgressOverlay" behavior="Resizable" modification_sign="=" height=expr(WaveMeter.Height())
 do SetX object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.X() - WaveFlagMarker.Width() / 2)
 do SetY object="WaveFlagMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveFlagMarker.Height()) / 2)
 do SetX object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.X() + WaveMeter.Width() - WaveZombieMarker.Width() / 2 - WaveMeter.Width() * min(1, TimerElapsedTime("WaveTimer") / Variable(WaveDuration)))

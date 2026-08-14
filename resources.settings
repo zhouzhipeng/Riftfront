@@ -1101,6 +1101,14 @@ smoothed = true
 userAdded = true
 
 [[resources]]
+file = "assets/ui/pvz/wave-meter-full.png"
+kind = "image"
+metadata = ""
+name = "PVZUIWaveMeterFull"
+smoothed = true
+userAdded = true
+
+[[resources]]
 file = "assets/ui/pvz/wave-zombie-marker.png"
 kind = "image"
 metadata = ""

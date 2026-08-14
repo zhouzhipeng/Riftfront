@@ -56,6 +56,14 @@ z_order = 5
 size = [220, 30]
 
 [[layout.instances]]
+id = "426f7ddc-4969-456a-9a5a-a7e79dfaec53"
+object = "WaveProgressOverlay"
+layer = "hud"
+at = [530, 605]
+z_order = 5
+size = [220, 30]
+
+[[layout.instances]]
 id = "112aa703-a6a3-4d31-b8df-d42ca7588c75"
 object = "WaveZombieMarker"
 layer = "hud"
