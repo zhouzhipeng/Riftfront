@@ -434,12 +434,14 @@ for each "Zombie"
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
 
 @event aiGeneratedEventId="pvz-remove-zombie-at-house"
-if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
-if PosX object="Zombie" comparison_sign="<" value=180
-do SetBooleanVariable variable="BattleEnded" modification_sign="True"
-do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="GAME OVER  -  ZOMBIES ATE YOUR BRAINS!"
-do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
-do PlaySound audio_file_or_audio_resource_name="assets\\sfx-defeat.wav" repeat_the_sound=false volume=75 pitch_speed=1
+for each "Zombie"
+> @event
+> if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
+> if BuiltinCommonInstructions::CompareNumbers first_expression=expr(Zombie.X()) comparison_sign="<" second_expression=180
+> do SetBooleanVariable variable="BattleEnded" modification_sign="True"
+> do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text="GAME OVER  -  ZOMBIES ATE YOUR BRAINS!"
+> do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
+> do PlaySound audio_file_or_audio_resource_name="assets\\sfx-defeat.wav" repeat_the_sound=false volume=75 pitch_speed=1
 @end group
 
 @group "Peashooter combat" source="" creationTime=0 color=[84,190,102] parameters=[]
