@@ -268,15 +268,13 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-walk-when-clear"
 for each "Zombie"
 > @event
-> @instruction inverted=true
-> if Collision3D::AreInCollision object="Zombie" first_parameter_3d_capability="Base3D" other_object="Plants" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign=">" second_expression=2025
 > do SetX object="Zombie" modification_sign="=" value=expr(Zombie.X() - 22 * TimeDelta())
 
 @event aiGeneratedEventId="pvz-each-zombie-return-to-walk"
 for each "Zombie"
 > @event
-> @instruction inverted=true
-> if Collision3D::AreInCollision object="Zombie" first_parameter_3d_capability="Base3D" other_object="Plants" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign=">" second_expression=2025
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=1
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Walk" payload=""
 > do SetNumberObjectVariable object="Zombie" variable="Attacking" modification_sign="=" value=0
@@ -284,7 +282,7 @@ for each "Zombie"
 @event aiGeneratedEventId="pvz-each-zombie-enter-attack"
 for each "Zombie"
 > @event
-> if Collision3D::AreInCollision object="Zombie" first_parameter_3d_capability="Base3D" other_object="Plants" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
+> if BuiltinCommonInstructions::CompareNumbers first_expression=expr((Zombie.X() - Zombie.Variable(TargetX)) * (Zombie.X() - Zombie.Variable(TargetX)) + (Zombie.Y() - Zombie.Variable(TargetY)) * (Zombie.Y() - Zombie.Variable(TargetY))) comparison_sign="<=" second_expression=2025
 > if NumberObjectVariable object="Zombie" variable="Attacking" comparison_sign="=" value=0
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Zombie.Attack" payload=""
 > do SetNumberObjectVariable object="Zombie" variable="Attacking" modification_sign="=" value=1
