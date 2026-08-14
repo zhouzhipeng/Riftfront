@@ -148,6 +148,11 @@ name = "BattleEnded"
 type = "boolean"
 value = false
 
+[[variables]]
+name = "HouseBreach"
+type = "number"
+value = 0
+
 [objectGroups]
 LawnTiles = [ "LawnTile", "LawnTileDark" ]
 Plants = [ "SunflowerPlant", "PeashooterPlant" ]

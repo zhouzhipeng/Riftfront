@@ -27,6 +27,7 @@ do SetNumberVariable variable="ZombieSpawnInterval" modification_sign="=" value=
 do SetNumberVariable variable="ZombieMoveSpeed" modification_sign="=" value=22
 do SetBooleanVariable variable="FinalWaveElapsed" modification_sign="False"
 do SetBooleanVariable variable="BattleEnded" modification_sign="False"
+do SetNumberVariable variable="HouseBreach" modification_sign="=" value=0
 do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
 do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
 do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
