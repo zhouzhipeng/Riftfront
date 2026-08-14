@@ -219,14 +219,6 @@ do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_
 do Show object="SelectedSunflower"
 do Hide object="SelectedPeashooter"
 do Show object="PlantingHint"
-> @event aiGeneratedEventId="pvz-position-sunflower-on-card-click"
-> if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
-> do SetX object="SelectedSunflower" modification_sign="=" value=expr((Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionX() - (Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
-> do SetY object="SelectedSunflower" modification_sign="=" value=expr((Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionY() - (Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
-> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr((Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionZ() - (Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
-> do ResizableCapability::ResizableBehavior::SetWidth object="SelectedSunflower" behavior="Resizable" modification_sign="=" width=expr(76 * 30 / Raycaster3D::Distance())
-> do ResizableCapability::ResizableBehavior::SetHeight object="SelectedSunflower" behavior="Resizable" modification_sign="=" height=expr(76 * 30 / Raycaster3D::Distance())
-> do Scene3D::Base3DBehavior::SetDepth parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(86 * 30 / Raycaster3D::Distance())
 
 @event aiGeneratedEventId="pvz-select-peashooter"
 if IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
@@ -238,11 +230,30 @@ do PlaySound audio_file_or_audio_resource_name="PVZ_SelectPlantCard" repeat_the_
 do Hide object="SelectedSunflower"
 do Show object="SelectedPeashooter"
 do Show object="PlantingHint"
-> @event aiGeneratedEventId="pvz-position-peashooter-on-card-click"
-> if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
-> do SetX object="SelectedPeashooter" modification_sign="=" value=expr((Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionX() - (Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
-> do SetY object="SelectedPeashooter" modification_sign="=" value=expr((Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionY() - (Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
-> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr((Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionZ() - (Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance())
+
+@comment "Keep the bottom-anchored plant preview below the seed card while the pointer is still over the HUD." background=[255,230,109] text=[0,0,0]
+
+@event aiGeneratedEventId="pvz-offset-preview-below-seed-card"
+if BooleanVariable variable="PlantingMode" check_if_the_value_is=true
+if IsCursorOnObject object="SunflowerCard" accurate_test_yes_by_default=true
+or IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="PlantCursorSurface" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=10000
+> @event aiGeneratedEventId="pvz-offset-sunflower-below-seed-card"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Sunflower"
+> do Show object="SelectedSunflower"
+> do SetX object="SelectedSunflower" modification_sign="=" value=expr((Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionX() - (Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() + 4.5 * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * sin(ToRad(Variable(CameraElevationAngle))))
+> do SetY object="SelectedSunflower" modification_sign="=" value=expr((Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionY() - (Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() + 4.5 * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * sin(ToRad(Variable(CameraElevationAngle))))
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr((Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionZ() - (Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() - 4.5 * cos(ToRad(Variable(CameraElevationAngle))))
+> do ResizableCapability::ResizableBehavior::SetWidth object="SelectedSunflower" behavior="Resizable" modification_sign="=" width=expr(76 * 30 / Raycaster3D::Distance())
+> do ResizableCapability::ResizableBehavior::SetHeight object="SelectedSunflower" behavior="Resizable" modification_sign="=" height=expr(76 * 30 / Raycaster3D::Distance())
+> do Scene3D::Base3DBehavior::SetDepth parameter_3d_object="SelectedSunflower" behavior="Base3D" modification_sign="=" value=expr(86 * 30 / Raycaster3D::Distance())
+
+> @event aiGeneratedEventId="pvz-offset-peashooter-below-seed-card"
+> if StringVariable variable="SelectedPlantType" comparison_sign="=" value="Peashooter"
+> do Show object="SelectedPeashooter"
+> do SetX object="SelectedPeashooter" modification_sign="=" value=expr((Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionX() - (Variable(CameraTargetX) + Variable(CameraDistance) * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() + 4.5 * cos(ToRad(Variable(CameraOrbitAngle) + 90)) * sin(ToRad(Variable(CameraElevationAngle))))
+> do SetY object="SelectedPeashooter" modification_sign="=" value=expr((Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionY() - (Variable(CameraTargetY) + Variable(CameraDistance) * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * cos(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() + 4.5 * sin(ToRad(Variable(CameraOrbitAngle) + 90)) * sin(ToRad(Variable(CameraElevationAngle))))
+> do Scene3D::Base3DBehavior::SetZ parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr((Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle)))) + (Raycaster3D::IntersectionZ() - (Variable(CameraTargetZ) + Variable(CameraDistance) * sin(ToRad(Variable(CameraElevationAngle))))) * 30 / Raycaster3D::Distance() - 4.5 * cos(ToRad(Variable(CameraElevationAngle))))
 > do ResizableCapability::ResizableBehavior::SetWidth object="SelectedPeashooter" behavior="Resizable" modification_sign="=" width=expr(76 * 30 / Raycaster3D::Distance())
 > do ResizableCapability::ResizableBehavior::SetHeight object="SelectedPeashooter" behavior="Resizable" modification_sign="=" height=expr(76 * 30 / Raycaster3D::Distance())
 > do Scene3D::Base3DBehavior::SetDepth parameter_3d_object="SelectedPeashooter" behavior="Base3D" modification_sign="=" value=expr(76 * 30 / Raycaster3D::Distance())
