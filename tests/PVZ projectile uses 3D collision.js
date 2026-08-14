@@ -54,5 +54,23 @@ harness.assert(
   }.`
 );
 
+const getHealthFillWidth = () =>
+  harness
+    .getObjects('Zombie')
+    .find(instance => instance.id === zombie.id)
+    ?.children?.HealthBar?.[0]
+    ?.children?.HealthFill?.[0]?.width;
+
+const healthBarUpdated = await harness.stepUntil(
+  () => Math.abs((getHealthFillWidth() ?? 0) - 48) < 0.001,
+  { maxFrames: 4 }
+);
+harness.assert(
+  healthBarUpdated,
+  `The health fill must shrink to 80% width after damage; width was ${
+    getHealthFillWidth()
+  }.`
+);
+
 harness.watch('Zombie');
 harness.watch('PeaProjectile');
