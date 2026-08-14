@@ -334,6 +334,7 @@ do SetX object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.X()
 do SetY object="WaveZombieMarker" modification_sign="=" value=expr(WaveMeter.Y() + (WaveMeter.Height() - WaveZombieMarker.Height()) / 2)
 do SetX object="LevelLabel" modification_sign="=" value=expr((SceneWindowWidth() - LevelLabel.Width()) / 2)
 do SetY object="LevelLabel" modification_sign="=" value=expr(SceneWindowHeight() - 81)
+do TextContainerCapability::TextContainerBehavior::SetValue object="LevelLabel" behavior="Text" modification_sign="=" text=expr("FRONT YARD  -  WAVE " + ToString(Variable(CurrentWave)) + " / 5")
 
 @event aiGeneratedEventId="pvz-advance-wave"
 if BooleanVariable variable="BattleEnded" check_if_the_value_is=false
