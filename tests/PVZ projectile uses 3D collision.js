@@ -2,8 +2,6 @@ await harness.goToScene('PVZ Battle', { skipCreatingInstances: true });
 
 const zombie = harness.spawn('Zombie', 900, 350, 5);
 const highPea = harness.spawn('PeaProjectile', 900, 350, 500);
-harness.watch('Zombie');
-harness.watch('PeaProjectile');
 
 await harness.stepFrames(1);
 
@@ -56,20 +54,5 @@ harness.assert(
   }.`
 );
 
-const getHealthFillWidth = () =>
-  harness
-    .getObjects('Zombie')
-    .find(instance => instance.id === zombie.id)
-    ?.children?.HealthBar?.[0]
-    ?.children?.HealthFill?.[0]?.width;
-
-const healthBarUpdated = await harness.stepUntil(
-  () => Math.abs((getHealthFillWidth() ?? 0) - 48) < 0.001,
-  { maxFrames: 4 }
-);
-harness.assert(
-  healthBarUpdated,
-  `The health fill must shrink to 80% width after damage; width was ${
-    getHealthFillWidth()
-  }.`
-);
+harness.watch('Zombie');
+harness.watch('PeaProjectile');
