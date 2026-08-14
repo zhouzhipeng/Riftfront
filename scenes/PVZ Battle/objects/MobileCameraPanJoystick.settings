@@ -15,3 +15,43 @@ folder = [ "UI" ]
 ControllerIdentifier = 1
 DeadZoneRadius = 0.18
 JoystickIdentifier = "Secondary"
+
+[childrenContent.Border]
+adaptCollisionMaskAutomatically = false
+updateIfNotVisible = false
+
+[[childrenContent.Border.animations]]
+name = "Idle"
+useMultipleDirections = false
+
+[[childrenContent.Border.animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[childrenContent.Border.animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZCameraJoystickBorder"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
+
+[childrenContent.Thumb]
+adaptCollisionMaskAutomatically = false
+updateIfNotVisible = false
+
+[[childrenContent.Thumb.animations]]
+name = "Idle"
+useMultipleDirections = false
+
+[[childrenContent.Thumb.animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[childrenContent.Thumb.animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "PVZCameraJoystickThumb"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

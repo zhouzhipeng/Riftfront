@@ -28,7 +28,7 @@ Before editing an `.events` file, inspect the owner settings and search
 
 ```sh
 rg 'EmitSceneSignal|EmitSignalToObjectInstance|SubscribeSceneSignal' .gdevelop/instructions-catalog.json
-rg 'SignalName|SignalPayload' .gdevelop/instructions-catalog.json
+rg 'SignalName|Payload' .gdevelop/settings-catalog.json
 ```
 
 The normal surface is:
@@ -40,7 +40,6 @@ The normal surface is:
 | Action             | `EmitSceneSignal`                   | Scene, external scene, prefab, and behavior events |
 | Action             | `EmitSignalToObjectInstance`        | Scene, external scene, prefab, and behavior events |
 | Action             | `SubscribeSceneSignal`              | Prefab and behavior events only                    |
-| Text aliases       | `SignalName()`, `SignalPayload()`   | `sceneSignal` only                                 |
 
 Always accept the current generated catalog over this summary.
 
@@ -89,9 +88,8 @@ if BuiltinCommonInstructions::CompareStrings first_string_expression=expr(Signal
 do DebuggerTools::ConsoleLog message_to_log=expr(Payload)
 ```
 
-The lifecycle function is invoked in FIFO order. `SignalName()` and
-`SignalPayload()` remain aliases for the same captured values, but prefer the
-visible parameters when authoring function bodies.
+The lifecycle function is invoked in FIFO order. Read the visible parameters
+directly; there are no separate signal name or payload expressions.
 
 `SignalReceived` is legacy iterator syntax. Never author it in new source. It
 is parsed and preserved only so existing `sceneUpdate` events continue to run.
@@ -234,7 +232,8 @@ Verify:
 - Trying to target an object name, group, or picked-object list.
 - Authoring the legacy `SignalReceived` iterator instead of using
   `sceneSignal`.
-- Using `SignalName()` or `SignalPayload()` inside prefab/behavior `onSignal`.
+- Looking for signal name or payload expressions instead of using the fixed
+  lifecycle parameters.
 - Emitting unconditionally every frame.
 - Expecting a handler-emitted signal to arrive in the same frame.
 - Expecting deactivated behaviors to replay missed signals.
