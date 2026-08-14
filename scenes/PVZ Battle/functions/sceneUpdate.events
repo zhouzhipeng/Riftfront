@@ -206,12 +206,72 @@ do Hide object="PlacementHover"
 do Hide object="PlantingHint"
 @end group
 
+@group "Shovel tool" source="" creationTime=0 color=[143,108,255] parameters=[]
+@comment "The shovel uses the existing HUD icon as its cursor. Removing a plant also releases the lawn tile so it can be replanted." background=[255,230,109] text=[0,0,0]
+
+@event aiGeneratedEventId="pvz-shovel-follow-cursor"
+if BooleanObjectVariable object="ShovelSlot" variable="Active" check_if_the_value_is=true
+do SetX object="ShovelIcon" modification_sign="=" value=expr(CursorX("HUD", 0) - 76)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(CursorY("HUD", 0) - 34)
+
+@event aiGeneratedEventId="pvz-shovel-remove-plant"
+if BooleanObjectVariable object="ShovelSlot" variable="Active" check_if_the_value_is=true
+if MouseButtonFromTextReleased button_to_check="Left"
+if BooleanVariable variable="SunCollectedThisFrame" check_if_the_value_is=false
+@instruction inverted=true
+if IsCursorOnObject object="ShovelSlot" accurate_test_yes_by_default=true
+@instruction inverted=true
+if IsCursorOnObject object="SunflowerCard" accurate_test_yes_by_default=true
+@instruction inverted=true
+if IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
+if Raycaster3D::RaycastFromCameraCursor objects_to_test_against_the_ray="Plants" parameter_2d_layer="HUD" ray_maximum_distance_in_pixels=5000
+if PickNearest object="LawnTiles" x_position=expr(Plants.X() - 50) y_position=expr(Plants.Y() - 50)
+do SetBooleanObjectVariable object="LawnTiles" variable="Occupied" modification_sign="False"
+do Delete object="Plants"
+do SetNumberVariable variable="PlacedPlants" modification_sign="-" value=1
+do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
+do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
+do SetZOrder object="ShovelIcon" modification_sign="=" value=6
+
+@event aiGeneratedEventId="pvz-cancel-shovel"
+if BooleanObjectVariable object="ShovelSlot" variable="Active" check_if_the_value_is=true
+if KeyFromTextReleased key_to_check="Escape"
+do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
+do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
+do SetZOrder object="ShovelIcon" modification_sign="=" value=6
+
+@comment "Activation is after removal so the click that picks up the shovel cannot remove a plant behind the HUD slot." background=[255,230,109] text=[0,0,0]
+
+@event aiGeneratedEventId="pvz-activate-shovel"
+if BooleanObjectVariable object="ShovelSlot" variable="Active" check_if_the_value_is=false
+if IsCursorOnObject object="ShovelSlot" accurate_test_yes_by_default=true
+if MouseButtonFromTextReleased button_to_check="Left"
+do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="True"
+do SetBooleanVariable variable="PlantingMode" modification_sign="False"
+do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
+do SetStringVariable variable="SelectedPlantType" modification_sign="=" value=""
+do Hide object="SelectedSunflower"
+do Hide object="SelectedPeashooter"
+do Hide object="PlacementHover"
+do Hide object="PlantingHint"
+do Show object="ShovelIcon"
+do SetX object="ShovelIcon" modification_sign="=" value=expr(CursorX("HUD", 0) - 76)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(CursorY("HUD", 0) - 34)
+do SetZOrder object="ShovelIcon" modification_sign="=" value=100
+@end group
+
 @group "Choose plant" source="" creationTime=0 color=[247,217,83] parameters=[]
 @comment "Selection is intentionally after placement so the card click cannot also plant on the same frame." background=[255,230,109] text=[0,0,0]
 
 @event aiGeneratedEventId="pvz-select-sunflower"
 if IsCursorOnObject object="SunflowerCard" accurate_test_yes_by_default=true
 if MouseButtonFromTextReleased button_to_check="Left"
+do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
+do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
+do SetZOrder object="ShovelIcon" modification_sign="=" value=6
 do SetBooleanVariable variable="PlantingMode" modification_sign="True"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Sunflower"
@@ -223,6 +283,10 @@ do Show object="PlantingHint"
 @event aiGeneratedEventId="pvz-select-peashooter"
 if IsCursorOnObject object="PeashooterCard" accurate_test_yes_by_default=true
 if MouseButtonFromTextReleased button_to_check="Left"
+do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
+do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
+do SetZOrder object="ShovelIcon" modification_sign="=" value=6
 do SetBooleanVariable variable="PlantingMode" modification_sign="True"
 do SetBooleanVariable variable="HasPlacementTarget" modification_sign="False"
 do SetStringVariable variable="SelectedPlantType" modification_sign="=" value="Peashooter"

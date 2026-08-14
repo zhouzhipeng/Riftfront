@@ -7,10 +7,14 @@ name = "ShovelSlot"
 persistentUuid = "379ce044-0375-44ba-b6f2-e524fc66e85e"
 type = "Sprite"
 updateIfNotVisible = false
-variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "HUD", "PVZ UI" ]
+
+[[variables]]
+name = "Active"
+type = "boolean"
+value = false
 
 [[animations]]
 name = ""
