@@ -8,8 +8,8 @@ renderer3DWorldScale = 100
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = "Plants vs. Zombies"
-behaviorsSharedData = [ ]
 variables = [ ]
+behaviorsSharedData = [ ]
 objectGroups = { }
 
 [layout]
@@ -24,7 +24,7 @@ grid_offset = [0, 0, 0]
 grid_color = "#9EB4FF"
 grid_alpha = 0.8
 snap = false
-zoom = 1
+zoom = 0.7419463142297278
 window_mask = true
 selected_layer = ""
 mode = "instances-editor"
@@ -40,7 +40,6 @@ id = "46a75a73-b67a-4e74-9834-f4035c0f9172"
 object = "TitleBackground"
 layer = "base"
 at = [0, 0]
-z_order = 0
 size = [1280, 720]
 
 [[layout.instances]]

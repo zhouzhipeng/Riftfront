@@ -1,12 +1,12 @@
+name = "Peashooter"
 kind = "prefabVariant"
 settingsFormatVersion = 5
 order = 0
-name = "Peashooter"
 objectGroups = { }
 
 [layout]
 version = 1
-bounds = { min = [0, 0, 0], max = [150, 90, 0] }
+bounds = { max = [150, 90, 0], min = [0, 0, 0] }
 
 [layout.editor]
 grid = false
@@ -31,7 +31,6 @@ id = "d2370d44-bced-4ef7-b46a-43d0f238d67f"
 object = "CardArt"
 layer = "base"
 at = [0, 0]
-z_order = 0
 size = [150, 90]
 
 [[layout.instances]]

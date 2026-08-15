@@ -535,7 +535,6 @@ for each "Zombie"
 > do EmitSignalToObjectInstance instance_id=expr(Plants.InstanceId()) signal_name="Unit.Damage" payload="1"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieEat" repeat_the_sound=false volume=45 pitch_speed=1
 > do ResetObjectTimer object="Zombie" timer_name="AttackCooldown"
-
 @end group
 
 @group "Peashooter combat" source="" creationTime=0 color=[84,190,102] parameters=[]

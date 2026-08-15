@@ -6,7 +6,6 @@ description = "Reusable PVZ seed card with plant artwork and a cost label."
 fullName = "Seed card"
 helpPath = ""
 iconUrl = ""
-is3D = false
 isUsingLegacyInstancesRenderer = false
 name = "SeedCard"
 previewIconUrl = ""
@@ -23,7 +22,7 @@ name = "SunCount"
 
 [layout]
 version = 1
-bounds = { min = [0, 0, 0], max = [150, 90, 0] }
+bounds = { max = [150, 90, 0], min = [0, 0, 0] }
 
 [layout.editor]
 grid = false
@@ -48,7 +47,6 @@ id = "a4e090c2-55e1-4cc9-a77c-572b7094f519"
 object = "CardArt"
 layer = "base"
 at = [0, 0]
-z_order = 0
 size = [150, 90]
 
 [[layout.instances]]
