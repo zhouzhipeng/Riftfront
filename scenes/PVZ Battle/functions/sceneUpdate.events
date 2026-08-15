@@ -1,3 +1,9 @@
+@event aiGeneratedEventId="pvz-anchor-shovel-to-visible-hud"
+if PosX object="ShovelSlot" comparison_sign="!=" value=expr(SceneWindowWidth() - ShovelSlot.Width() - 6)
+do SetX object="ShovelSlot" modification_sign="=" value=expr(SceneWindowWidth() - ShovelSlot.Width() - 6)
+do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
+do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
+
 @group "Select plants and begin fight" source="" creationTime=0 color=[247,217,83] parameters=[]
 @event aiGeneratedEventId="pvz-choose-sunflower-for-loadout"
 if BooleanVariable variable="BattleActive" check_if_the_value_is=false
