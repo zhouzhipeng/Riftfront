@@ -52,7 +52,7 @@ id = "9117dac2-fca9-448d-b546-2c6247fc6a4e"
 object = "WaveMeter"
 layer = "hud"
 at = [530, 605]
-z_order = 6
+z_order = 5
 size = [220, 30]
 
 [[layout.instances]]
@@ -60,7 +60,7 @@ id = "426f7ddc-4969-456a-9a5a-a7e79dfaec53"
 object = "WaveProgressOverlay"
 layer = "hud"
 at = [530, 605]
-z_order = 5
+z_order = 6
 size = [220, 30]
 
 [[layout.instances]]

@@ -22,7 +22,7 @@ timeBetweenFrames = 1
 
 [[animations.directions.sprites]]
 hasCustomCollisionMask = false
-image = "PVZUIWaveMeterFull"
+image = "PVZUIWaveMeterEmpty"
 points = [ ]
 originPoint = { name = "origine", x = 0, y = 0 }
 centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
