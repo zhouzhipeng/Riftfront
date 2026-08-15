@@ -35,7 +35,7 @@ do SetBooleanVariable variable="PeashooterChosen" modification_sign="False"
 do SetBooleanVariable variable="BattleActive" modification_sign="False"
 do SetNumberVariable variable="FightCountdownStage" modification_sign="=" value=0
 do SetBooleanObjectVariable object="ShovelSlot" variable="Active" modification_sign="False"
-do SetX object="ShovelSlot" modification_sign="=" value=expr(SceneWindowWidth() - ShovelSlot.Width() - 6)
+do SetX object="ShovelSlot" modification_sign="=" value=expr(CameraWidth("HUD", 0) - 162)
 do SetX object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.X() + 2)
 do SetY object="ShovelIcon" modification_sign="=" value=expr(ShovelSlot.Y() + 3)
 do SetZOrder object="ShovelIcon" modification_sign="=" value=6
