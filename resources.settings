@@ -1030,6 +1030,16 @@ preloadInCache = false
 userAdded = true
 
 [[resources]]
+file = "assets/audio/pvz/Faster.wav"
+kind = "audio"
+metadata = ""
+name = "PVZ_Faster_BGM"
+preloadAsMusic = true
+preloadAsSound = false
+preloadInCache = false
+userAdded = true
+
+[[resources]]
 file = "assets/SM_SunCollect.glb"
 kind = "model3D"
 metadata = ""
