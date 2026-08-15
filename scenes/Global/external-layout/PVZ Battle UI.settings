@@ -35,7 +35,7 @@ size = [190, 52]
 id = "654914ce-47a4-4d53-8cb2-97ea93971aa3"
 object = "ShovelSlot"
 layer = "hud"
-at = [706, 16]
+at = [1118, 8]
 z_order = 5
 size = [156, 77]
 
@@ -43,7 +43,7 @@ size = [156, 77]
 id = "12784639-b2df-47a1-a2ce-8986e4752c83"
 object = "ShovelIcon"
 layer = "hud"
-at = [708, 19]
+at = [1120, 11]
 z_order = 6
 size = [152, 68]
 
@@ -86,14 +86,6 @@ layer = "hud"
 at = [76, 18]
 z_order = 10
 size = [130, 38]
-
-[[layout.instances]]
-id = "70000000-0000-4000-8000-000000000002"
-object = "SeedRack"
-layer = "hud"
-at = [548, 18]
-z_order = 10
-size = [145, 32]
 
 [[layout.instances]]
 id = "70000000-0000-4000-8000-000000000003"
