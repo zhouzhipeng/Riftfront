@@ -7,8 +7,19 @@ persistentUuid = "7e97047c-976b-49ad-a785-cf875fd0e3f4"
 type = "Scene3D::Model3DObject"
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "SunFlicker"
+type = "TSLMaterial::Material"
+BindingName = "SunFlicker"
+MaterialName = ""
+MeshName = ""
+Priority = 0
+SelectorMode = "All"
+Enabled = true
+Fallback = "KeepOriginal"
+Material = "SunFlicker.tsl.ts"
 
 [content]
 centerLocation = "BottomCenterZ"
