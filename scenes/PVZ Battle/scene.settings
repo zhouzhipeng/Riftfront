@@ -120,36 +120,43 @@ value = ""
 
 [[variables]]
 name = "CurrentWave"
+persistentUuid = "e700d4ba-9b9a-4a57-a7bb-d63c65c5b69c"
 type = "number"
 value = 1
 
 [[variables]]
 name = "WaveDuration"
+persistentUuid = "c6361ac1-ce24-4c6b-9b5e-e905c5f07bde"
 type = "number"
 value = 60
 
 [[variables]]
 name = "ZombieSpawnInterval"
+persistentUuid = "82309439-8b6e-42d5-99aa-c3e52b1db63c"
 type = "number"
 value = 30
 
 [[variables]]
 name = "ZombieMoveSpeed"
+persistentUuid = "12f65b1a-a7ec-4690-b7e2-cb69b0ae69fe"
 type = "number"
 value = 22
 
 [[variables]]
 name = "FinalWaveElapsed"
+persistentUuid = "55f6d9df-ecdf-4984-b103-be6a59ae0472"
 type = "boolean"
 value = false
 
 [[variables]]
 name = "BattleEnded"
+persistentUuid = "4fcd3bba-51ec-477f-9a07-bbfac365ce26"
 type = "boolean"
 value = false
 
 [[variables]]
 name = "HouseBreach"
+persistentUuid = "a89ca9b6-5d54-44fd-96dc-d12ddaf82cc7"
 type = "number"
 value = 0
 
@@ -193,7 +200,7 @@ grid_offset = [0, 0, 0]
 grid_color = "#9EB4FF"
 grid_alpha = 0.8
 snap = false
-zoom = 0.5500000000000006
+zoom = 0.4659586749225489
 window_mask = false
 selected_layer = ""
 mode = "instances-editor"
