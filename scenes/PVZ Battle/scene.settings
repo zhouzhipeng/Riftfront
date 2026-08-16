@@ -845,39 +845,3 @@ object = "PlantCursorSurface"
 layer = "base"
 at = [-5000, -5000, -5]
 hidden = true
-
-[[layout.instances]]
-id = "df6fe318-fabf-4540-a9b6-36a9f90fcdf8"
-object = "ZombiesWon"
-layer = "hud"
-at = [375, 125]
-z_order = 1000
-size = [529, 470]
-hidden = true
-
-[[layout.instances]]
-id = "934d9c41-5eec-4eba-9461-c8a853227de1"
-object = "FightStartSet"
-layer = "hud"
-at = [490, 294]
-z_order = 1001
-size = [300, 133]
-hidden = true
-
-[[layout.instances]]
-id = "83a82825-08fb-4b5c-a482-0b357e30fd4b"
-object = "FightStartReady"
-layer = "hud"
-at = [490, 294]
-z_order = 1001
-size = [300, 133]
-hidden = true
-
-[[layout.instances]]
-id = "3ee3c2ed-b842-4cd7-ab79-53fd8de0ac4e"
-object = "FightStartPlant"
-layer = "hud"
-at = [490, 294]
-z_order = 1001
-size = [300, 133]
-hidden = true

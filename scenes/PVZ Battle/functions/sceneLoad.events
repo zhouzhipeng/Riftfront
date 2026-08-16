@@ -1,6 +1,6 @@
 @event aiGeneratedEventId="pvz-initialize-planting-camera"
 do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="PVZ Battle UI" x_position_of_the_origin=0 y_position_of_the_origin=0 z_position_of_the_origin=0
-do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="Select Plants dialog" x_position_of_the_origin=0 y_position_of_the_origin=0 z_position_of_the_origin=0
+do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="PVZ Battle HUD" x_position_of_the_origin=0 y_position_of_the_origin=0 z_position_of_the_origin=0
 do PlayMusic audio_file_or_audio_resource_name="PVZ_Faster_BGM" repeat_the_sound=true volume=45 pitch_speed=1
 do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=-1.31140401
 do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=0
