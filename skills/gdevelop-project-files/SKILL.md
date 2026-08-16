@@ -1,6 +1,6 @@
 ---
 name: gdevelop-project-files
-description: Create, inspect, modify, refactor, and verify GDevelop games through the version 5 multi-file project sources (`project.gdevelop`, `constants.toml`, `.settings`, `.events`, `tests.settings`, and flat `tests/*.js` scripts). Use for any GDevelop project, scene, object, behavior, prefab, extension, third-party extension installation, reusable-component refactor, variable, resource, GLB animation/bone-name inspection, Constants/placeholder, signal-system, SpringBoneDynamics hair/chest secondary bone animation, layout, event-sheet, JavaScript-event, or gameplay-test work. Read the generated authoring catalogs and public JavaScript declarations when relevant; regenerate catalogs after large structural changes, then validate direct edits before reload and runtime verification.
+description: Create, inspect, modify, refactor, and verify GDevelop games through the version 5 multi-file project sources (`project.gdevelop`, `constants.toml`, `.settings`, `.events`, `tests.settings`, and flat `tests/*.js` scripts). Use for any GDevelop project, scene, object, behavior, prefab, extension, third-party extension installation, reusable-component refactor, variable, resource, GLB animation/bone-name inspection, TSL material (`.tsl.ts`) authoring and GLB binding, Constants/placeholder, signal-system, SpringBoneDynamics hair/chest secondary bone animation, layout, event-sheet, JavaScript-event, or gameplay-test work. Read the generated authoring catalogs and public JavaScript/TSL declarations when relevant; regenerate catalogs after large structural changes, then validate direct edits before reload and runtime verification.
 ---
 
 # GDevelop Project Files
@@ -41,8 +41,12 @@ Read, in order:
    or changing any JavaScript event, and `.gdevelop/harness-api.d.ts` plus its
    runtime/project declaration dependencies before adding or changing a
    gameplay test.
+9. `.gdevelop/tsl-api.d.ts` and `.gdevelop/tsl-catalog.json` before creating or
+   changing a `.tsl.ts` material. Use the TSL reference and, when available,
+   `get_tsl_authoring_context` to retrieve the matching declarations,
+   capability rules, examples, and diagnostics.
 
-The three catalogs and three JavaScript declarations are regenerated from the
+The generated catalogs and JavaScript/TSL declarations are regenerated from the
 loaded project every time GDevelop saves. Never edit them. Search them narrowly
 with `rg`: use file kind, object,
 behavior, effect, owner, or layout context in the source catalogs, and use
@@ -58,7 +62,8 @@ substantially changing a prefab, behavior, function, extension, object type, or
 other catalog-owned component. Re-read the relevant freshly generated
 settings, layout, and instruction catalogs before continuing; if JavaScript is
 in scope, also re-read the applicable declarations, including
-`harness-api.d.ts` for gameplay tests. Do not rely on generated content
+`harness-api.d.ts` for gameplay tests; if TSL is in scope, re-read
+`tsl-api.d.ts` and `tsl-catalog.json`. Do not rely on generated content
 read before the structural change. A later structural change invalidates that
 view and requires another `generate-catalogs` call.
 This refresh is not validation and does not replace the final
@@ -192,9 +197,11 @@ generated compatibility/runtime output, not multi-file source.
   treat them with the same legacy-only restriction.
   `runtime-api.d.ts` and `project-api.d.ts` are the approved JavaScript-event
   surface. `harness-api.d.ts` is the approved gameplay-test surface and may
-  depend on public types from the runtime and project declarations. Read the
-  applicable declarations before changing `@js` or a test; never hand-edit a
-  declaration or recover private APIs from runtime source/generated code.
+  depend on public types from the runtime and project declarations.
+  `tsl-api.d.ts` and `tsl-catalog.json` are the approved TSL material surface;
+  they are paired and version-pinned. Read the applicable declarations before
+  changing `@js`, a test, or a TSL source; never hand-edit a declaration or
+  recover private APIs from runtime source/generated code.
 
 Preserve component order, stable names, existing unknown fields, and ownership
 boundaries. Make the smallest coherent patch. When adding a component, create
@@ -278,6 +285,8 @@ extensions/<Extension>/behaviors/<Behavior>/functions/<Function>.events
 .gdevelop/runtime-api.d.ts
 .gdevelop/project-api.d.ts
 .gdevelop/harness-api.d.ts
+.gdevelop/tsl-api.d.ts
+.gdevelop/tsl-catalog.json
 ```
 
 Do not create optional grouping folders. Canonical component directories are
@@ -319,6 +328,14 @@ Load only the references required by the task:
   `tests/*.js` script. Use the exact flat version 5 file identity, read the
   generated `.gdevelop/harness-api.d.ts` contract, and complete its
   validation, reload, run, and result-polling workflow.
+- Read [references/tsl-materials.md](references/tsl-materials.md) in full
+  whenever the task creates or changes a `.tsl.ts` source, a `tslMaterial`
+  resource, a `TSLMaterial::Material` behavior, a TSL material event binding,
+  or TSL validation/preview. Read `.gdevelop/tsl-api.d.ts` and
+  `.gdevelop/tsl-catalog.json` (or retrieve the equivalent
+  `get_tsl_authoring_context` result), use `inspect_model_materials` for exact
+  GLB selector/geometry metadata, and call `validate_tsl_file` on the saved
+  source before activation.
 - Read [references/constants.md](references/constants.md) in full
   whenever the user asks to create, edit, reorganize, or consume Constants,
   or to add/change a `{{...}}` placeholder. Also read the events guide for an
@@ -445,9 +462,12 @@ loop, comment, and JavaScript metadata when editing existing sources.
    when authoring new events.
    If a JavaScript event is required, read `runtime-api.d.ts`,
    `project-api.d.ts`, and the JavaScript reference before editing the block.
-   If a gameplay test is required, first run `generate-catalogs`, then read all
-   three generated declarations and the gameplay-test reference in full. Do
-   not infer either authoring API from raw engine source or preview code.
+   If a gameplay test is required, first run `generate-catalogs`, then read the
+   three generated JavaScript declarations and the gameplay-test reference in full. Do
+   not infer either authoring API from raw engine source or preview code. If a
+   TSL material is required, read `tsl-api.d.ts`, `tsl-catalog.json`, and the
+   TSL reference before editing; save the source and call `validate_tsl_file`
+   before treating it as an activation candidate.
 3. Patch source files directly. Use `apply_patch` for precise edits.
    Creating or changing an object type or one of its behaviors is a settings
    edit; creating or moving an instance is a layout edit.
@@ -472,9 +492,10 @@ loop, comment, and JavaScript metadata when editing existing sources.
    `javascriptAuthoringValid !== false`; use its file URI, error code, line,
    column, and source excerpt to fix every reported settings, layout, events,
    reference, generated-code, JavaScript-authoring, or semantic failure. This
-   call first regenerates all three `.gdevelop` catalogs and all three
-   JavaScript declaration files, then validates the sources using those fresh
-   contracts.
+   call first regenerates the generated `.gdevelop` catalogs and declarations,
+   including `tsl-api.d.ts` and `tsl-catalog.json`, then validates the sources
+   using those fresh contracts. This project-level gate does not replace the
+   single-file `validate_tsl_file` check for a TSL source.
    Call it at least once before any reload; a failed validation does not satisfy
    this gate. `validMeaning = "pre-runtime-validation-passed"` still means
    `runtimeVerified: false` and `completionReady: false`. Never summarize
@@ -557,14 +578,17 @@ mutation.
 MCP is extension-import/synchronization/read/debug/gameplay-test-only. Use it
 only for:
 
-The complete public protocol surface is the following 26-tool allowlist:
+The complete public protocol surface is the following allowlist:
 
 - Local project opening: `open_project`.
 - Editor/project inspection:
   `gdevelop_get_editor_state`, `gdevelop_get_editor_selection`,
   `gdevelop_get_project_summary`, `gdevelop_list_scenes`,
   `gdevelop_list_objects`, and `gdevelop_inspect_signal_usage`.
-- Local asset inspection: `inspect_glb_model`.
+- Local asset inspection: `inspect_glb_model` and
+  `inspect_model_materials`.
+- TSL authoring and validation: `get_tsl_authoring_context`,
+  `validate_tsl_file`, and `render_tsl_material_preview`.
 - Catalog, validation, and tool discovery:
   `generate-catalogs`, `validate_project_files`, `inspect_tool_schema`,
   and `get_tool_usage_examples`.
@@ -594,10 +618,13 @@ reading and editing `constants.toml` directly.
   direct file edit.
 - Opening a specific local project entry in the editor with `open_project`.
 - Reloading direct disk edits into the editor with `reload_project`.
-- Regenerating and synchronously waiting for the three generated source
-  catalogs and three JavaScript declaration files with `generate-catalogs` after
-  large structural source changes, so subsequent authoring can read current
-  contracts.
+- Regenerating and synchronously waiting for the generated source catalogs and
+  JavaScript/TSL declarations with `generate-catalogs` after large structural
+  source changes, so subsequent authoring can read current contracts.
+- Retrieving the pinned TSL authoring pack, validating one saved `.tsl.ts` file,
+  inspecting one GLB's material metadata, and rendering a validated TSL
+  material preview with the read-only TSL tools. `validate_tsl_file` is the
+  authoritative single-file check; it does not replace `validate_project_files`.
 - Regenerating all source catalogs and validating direct disk edits without
   changing editor memory by calling the no-input `validate_project_files` tool
   before `reload_project`.
@@ -660,16 +687,17 @@ interpretation.
 structural source change. Require `catalogsRegenerated: true`, then read the
 latest relevant `.gdevelop/settings-catalog.json` and
 `.gdevelop/instructions-catalog.json` and,
-for JavaScript work, the applicable generated `.d.ts` files before making
-dependent edits. The tool writes and verifies all six generated authoring
-files (three catalogs and three declarations) and does not
-validate sources or reload editor memory.
+for JavaScript work, the applicable generated `.d.ts` files, or for TSL work
+`.gdevelop/tsl-api.d.ts` and `.gdevelop/tsl-catalog.json`, before making
+dependent edits. The tool writes and verifies all generated authoring files,
+including the TSL declaration/catalog pair, and does not validate sources or
+reload editor memory.
 
 `validate_project_files` is a mandatory reload gate. In every direct-edit task,
 call it successfully with no inputs at least once after the most recent
 source-file edit and before `reload_project`. It regenerates the instruction
 catalogs, the settings catalog (including embedded layout authoring data), and
-all three JavaScript declarations first, then
+the JavaScript/TSL declarations first, then
 reconstructs the generated `game.json` representation from the multi-file
 settings, layouts, and events and type-checks JavaScript event blocks against
 the fresh runtime/project public APIs without replacing editor memory. It also
@@ -755,6 +783,12 @@ Before finishing:
 - For Constants changes, confirm `constants.toml` ownership, direct-root
   TOML data, placeholder paths/types, and regeneration-time behavior
   against the Constants reference.
+- For TSL material changes, confirm the source ends in `.tsl.ts`, imports only
+  the approved modules/symbols, preserves the material contract, and has a
+  saved `validate_tsl_file` result at the required level. For automatic
+  activation require `activation_ready: true`, a current source hash, matching
+  registered `tslMaterial` resource, and verified TSL catalog hashes. Use a
+  model-level result when claiming compatibility with a particular GLB.
 - For signal changes, confirm target kind, receiver kind, fixed `onSignal`
   signature, guarded emission, next-dispatch timing, and preview signal-monitor
   evidence against the signal-system reference.
@@ -767,8 +801,8 @@ Before finishing:
 - Confirm no legacy JSON was changed.
 - Confirm `generate-catalogs` returned `catalogsRegenerated: true` after the
   final large structural change and that subsequent dependent edits used the
-  refreshed relevant catalogs and declarations. Confirm all three catalogs and
-  all three JavaScript declarations were written and verified.
+  refreshed relevant catalogs and declarations. Confirm the generated TSL
+  declaration/catalog pair was also written and verified when TSL was in scope.
 - Confirm `validate_project_files` returned `valid: true` with all checked
   pre-runtime phase fields successful after the final source edit and before
   reload. Confirm that receipt still says `runtimeVerified: false` and

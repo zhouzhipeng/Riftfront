@@ -1197,3 +1197,22 @@ metadata = ""
 name = "PVZStartPlant"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/Material.tsl.ts"
+kind = "tslMaterial"
+metadata = ""
+name = "Material.tsl.ts"
+userAdded = true
+
+[[resources]]
+file = "assets/Carbon512.jpg"
+kind = "image"
+metadata = ""
+name = "Carbon512.jpg"
+smoothed = true
+userAdded = false
+
+[resources.origin]
+identifier = "https://asset-resources.gdevelop.io/public-resources/3D Cubes/e9daef532b59b976ebab50af304970dd742ace47d7b752d2c76345d760e1e73f_Carbon512.jpg"
+name = "Carbon512.jpg"

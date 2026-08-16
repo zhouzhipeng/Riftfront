@@ -1,0 +1,40 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "New3DModel"
+persistentUuid = "3fced431-eb5b-4339-90a9-ad5e8aac4af9"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ ]
+
+[[behaviors]]
+name = "TSLMaterial"
+type = "TSLMaterial::Material"
+BindingName = "Default"
+MaterialName = ""
+MeshName = ""
+Priority = 0
+SelectorMode = "All"
+Enabled = true
+Fallback = "KeepOriginal"
+Material = "Material.tsl.ts"
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.10000000149011612
+depth = 77.8197407722473
+height = 199.99999999999997
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "StandardWithoutMetalness"
+modelResourceName = "assets/models/celestial_lane_pad.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+width = 199.99999999999997
+sharedAnimationModelResources = [ ]
+animations = [ ]

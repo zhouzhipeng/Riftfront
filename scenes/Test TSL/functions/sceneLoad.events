@@ -1,0 +1,2 @@
+@event
+do TSLMaterial::SetNumberParameter parameter_3d_model="New3DModel" tsl_material_behavior="TSLMaterial" binding_name="Default" parameter_name="tintAmount" value=0
