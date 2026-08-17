@@ -9,6 +9,18 @@ variables = [ ]
 effects = [ ]
 folder = [ ]
 
+[[behaviors]]
+name = "TSLMaterial"
+type = "TSLMaterial::Material"
+BindingName = "Default"
+MaterialName = ""
+MeshName = ""
+Priority = 0
+SelectorMode = "All"
+Enabled = true
+Fallback = "KeepOriginal"
+Material = "WaterSurface.tsl.ts"
+
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
