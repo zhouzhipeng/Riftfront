@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 42
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "Duration"
+group = "3D particle emitter configuration"
+name = "SetDuration"
+sentence = ""
+folder = [ "3D particle emitter configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

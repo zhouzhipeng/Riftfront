@@ -1,0 +1,24 @@
+@js objects="Object" strict=true expanded=true
+/** @type {gdjs.CustomRuntimeObject} */
+const object = objects[0];
+// Here runtimeScene is the gdjs.CustomRuntimeObjectInstanceContainer inside the custom object.
+const gameScene = object.getRuntimeScene();
+
+object.__particleSystem.dispose();
+
+// See doStepPostEvents
+gameScene.__particleEmmiter3DExtension.emittersCount--;
+
+if (gameScene.__particleEmmiter3DExtension.emittersCount === 0) {
+    // Update batch system now because doStepPostEvents won't be called.
+    gameScene.__particleEmmiter3DExtension.layerNames = gameScene.__particleEmmiter3DExtension.layerNames || [];
+    const layerNames = gameScene.__particleEmmiter3DExtension.layerNames;
+    gameScene.getAllLayerNames(layerNames);
+    for (const layerName of layerNames) {
+        const layer = gameScene.getLayer(layerName);
+        if (layer.__particleEmmiter3DExtension) {
+            layer.__particleEmmiter3DExtension.batchSystem.update(layer.getElapsedTime() / 1000);
+        }
+    }
+}
+@end js

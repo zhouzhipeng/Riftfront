@@ -1238,3 +1238,15 @@ userAdded = false
 [resources.origin]
 identifier = "https://asset-resources.gdevelop.io/public-resources/3D Cubes/e9daef532b59b976ebab50af304970dd742ace47d7b752d2c76345d760e1e73f_Carbon512.jpg"
 name = "Carbon512.jpg"
+
+[[resources]]
+file = "assets/LightGlow.png"
+kind = "image"
+metadata = ""
+name = "LightGlow.png"
+smoothed = true
+userAdded = false
+
+[resources.origin]
+identifier = "https://asset-resources.gdevelop.io/public-resources/3D Particles/c17e2d500015e598624b763f4942b26e3aac96efca094cd20257a61e15b27fcb_LightGlow.png"
+name = "LightGlow.png"

@@ -1,0 +1,10 @@
+@event
+do SetNumberVariable variable="Gravity" modification_sign="=" value=expr(Value)
+
+@js objects="Object" strict=true expanded=true
+const object = objects[0];
+const gravity = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setGravity(gravity);
+
+@end js

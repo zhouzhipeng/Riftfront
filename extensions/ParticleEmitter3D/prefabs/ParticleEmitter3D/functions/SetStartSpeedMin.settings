@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 34
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "StartSpeedMin"
+group = "3D particle emitter speed configuration"
+name = "SetStartSpeedMin"
+sentence = ""
+folder = [ "3D particle emitter speed configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

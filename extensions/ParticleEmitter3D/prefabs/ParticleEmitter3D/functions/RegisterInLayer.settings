@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 7
+fullName = "Register in layer"
+functionType = "Action"
+name = "RegisterInLayer"
+private = true
+sentence = "Register _PARAM0_ in layer"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

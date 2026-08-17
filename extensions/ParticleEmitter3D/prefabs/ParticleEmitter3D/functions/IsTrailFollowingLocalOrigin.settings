@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 59
+description = "Check if the trail should follow the object."
+fullName = "Trail following the object"
+functionType = "Condition"
+group = "3D particle emitter trail configuration"
+name = "IsTrailFollowingLocalOrigin"
+sentence = "The trail is following _PARAM0_ "
+folder = [ "3D particle emitter trail configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

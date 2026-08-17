@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 13
+description = "the rotation on X axis of the emitter."
+fullName = "Rotation on X axis (deprecated)"
+functionType = "ExpressionAndCondition"
+group = "Angle"
+name = "RotationX"
+private = true
+sentence = "the rotation on X axis"
+folder = [ "Angle" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

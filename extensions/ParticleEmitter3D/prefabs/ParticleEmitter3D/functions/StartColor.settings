@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 17
+description = "the start color of the object."
+fullName = "Start color"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter color configuration"
+name = "StartColor"
+sentence = "the start color"
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "color"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 55
+description = "the start min trail length of the object."
+fullName = "Start min trail length"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter trail configuration"
+name = "TrailStartLengthMin"
+sentence = "the start min trail length"
+folder = [ "3D particle emitter trail configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 60
+description = "Change if the trail should follow the object or not."
+fullName = "Make the trail follow"
+functionType = "Action"
+group = "3D particle emitter trail configuration"
+name = "SetIsTrailFollowingLocalOrigin"
+sentence = "Make the trail follow _PARAM0_: _PARAM1_"
+folder = [ "3D particle emitter trail configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"
+
+[[parameters]]
+defaultValue = "yes"
+description = "IsTrailFollowingLocalOrigin"
+name = "Value"
+optional = true
+type = "yesorno"

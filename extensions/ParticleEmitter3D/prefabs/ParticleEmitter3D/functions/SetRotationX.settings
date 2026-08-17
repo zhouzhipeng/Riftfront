@@ -1,0 +1,18 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 14
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "RotationX"
+group = "Angle"
+name = "SetRotationX"
+private = true
+sentence = ""
+folder = [ "Angle" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

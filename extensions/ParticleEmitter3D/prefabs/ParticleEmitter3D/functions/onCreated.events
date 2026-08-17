@@ -1,0 +1,154 @@
+@event
+do ParticleEmitter3D::DefineHelperClasses
+
+@js objects="Object" strict=true expanded=true
+const {
+    ParticleEmitterAdapter,
+    ParticleEmitter3DRenderer,
+    ParticleEmitterHelper,
+
+    ParticleSystem,
+    IntervalValue,
+    ConstantValue,
+    ConstantColor,
+    ColorOverLife,
+    SizeOverLife,
+    ApplyForce,
+    WidthOverLength,
+    Gradient,
+    PiecewiseBezier,
+    Bezier,
+    PointEmitter,
+    ConeEmitter,
+    RenderMode
+} = gdjs.__particleEmmiter3DExtension;
+
+/** @type {gdjs.CustomRuntimeObject} */
+const object = objects[0];
+// Force the size of the object because it doesn't contain any instance.
+object._innerArea = {
+      min: [-16, -16, -16],
+      max: [16, 16, 16],
+    };
+const hitbox = new gdjs.Polygon();
+hitbox.vertices = [[-16, -16], [16, -16], [16, 16], [-16, 16]];
+object._untransformedHitBoxes = [hitbox];
+object._unrotatedAABB.min[0] = -16;
+object._unrotatedAABB.min[1] = -16;
+object._unrotatedAABB.max[0] = 16;
+object._unrotatedAABB.max[1] = 16;
+object._updateUntransformedHitBoxes = () => {};
+
+// Here runtimeScene is the gdjs.CustomRuntimeObjectInstanceContainer inside the custom object.
+const gameScene = object.getRuntimeScene();
+const game = runtimeScene.getGame();
+
+const texture = game.getImageManager().getThreeTexture('');
+
+// Set the blending here because changes are not applied after the emitter creation.
+const blendingString = object._getBlending();
+const blending =
+    blendingString === "Additive" ? THREE.AdditiveBlending :
+        blendingString === "Normal" ? THREE.NormalBlending :
+            blendingString === "Subtractive" ? THREE.SubtractiveBlending :
+                blendingString === "Multiply" ? THREE.MultiplyBlending :
+                    blendingString === "None" ? THREE.NoBlending :
+                        THREE.AdditiveBlending;
+
+
+// Build a configuration with the right kind of objects.
+// These values are not important as they are overrided by the object properties values.
+const muzzle = {
+    duration: 10,
+    looping: false,
+    startLife: new IntervalValue(1, 2),
+    startSpeed: new IntervalValue(100, 200),
+    startSize: new IntervalValue(20, 50),
+    startColor: new ConstantColor(new THREE.Vector4(1, 1, 1, 1)),
+    worldSpace: true,
+
+    maxParticle: 5,
+    emissionOverTime: new ConstantValue(50),
+    emissionBursts: [{
+        time: 0,
+        count: new ConstantValue(1),
+        cycle: 1,
+        interval: 0.01,
+        probability: 1,
+    }],
+
+    shape: new PointEmitter(),
+    material: new THREE.MeshBasicMaterial({
+        map: texture,
+        blending: blending,
+        transparent: true,
+        side: THREE.DoubleSide
+    }),
+    startTileIndex: 0,
+    uTileCount: 1,
+    vTileCount: 1,
+    renderOrder: 2,
+    renderMode: RenderMode.BillBoard
+};
+const particleSystem = new ParticleSystem(muzzle);
+
+const colorOverLife = new ColorOverLife(
+    new Gradient(
+        [
+            [new THREE.Vector3(1, 0, 0), 0],
+            [new THREE.Vector3(1, 0, 0), 1],
+        ],
+        [
+            [1, 0],
+            [1, 1],
+        ]
+    ));
+particleSystem.addBehavior(colorOverLife);
+const sizeOverLife = new SizeOverLife(new PiecewiseBezier([[new Bezier(1, 2 / 3, 1 / 3, 0), 0]]));
+particleSystem.addBehavior(sizeOverLife);
+const applyForce = new ApplyForce(new THREE.Vector3(0, 0, -1), new ConstantValue(0));
+particleSystem.addBehavior(applyForce);
+const widthOverLength = new WidthOverLength(new PiecewiseBezier([[new Bezier(1, 2 / 3, 1 / 3, 0), 0]]));
+particleSystem.addBehavior(widthOverLength);
+
+particleSystem.emitter.name = object.getName() + object.getNameId();
+
+const inverseWorldScale = gameScene.getRenderer3DInverseWorldScale ? gameScene.getRenderer3DInverseWorldScale() : 1;
+object.__particleEmitterAdapter = new ParticleEmitterAdapter(inverseWorldScale, particleSystem, colorOverLife, sizeOverLife, applyForce, widthOverLength);
+object.__particleSystem = particleSystem;
+
+// This is a hack that may break in future releases.
+// Replace the group that would hold children objects by the emmiter.
+const layer = object.getInstanceContainer().getLayer(object.getLayer());
+const group = object.getRenderer()._threeGroup;
+layer.getRenderer().remove3DRendererObject(group);
+particleSystem.emitter.position.copy(group.position);
+particleSystem.emitter.rotation.order = 'ZYX';
+particleSystem.emitter.rotation.copy(group.rotation);
+
+const particleEmitter3DRenderer = new ParticleEmitter3DRenderer(object, object._instanceContainer, object.getInstanceContainer());
+object._renderer = particleEmitter3DRenderer;
+if (game.isInGameEdition && game.isInGameEdition()) {
+    const particleEmitterHelper = new ParticleEmitterHelper(object);
+    particleEmitter3DRenderer._threeGroup = particleEmitterHelper;
+    layer.getRenderer().add3DRendererObject(particleEmitterHelper);
+}
+else {
+    particleEmitter3DRenderer._threeGroup = particleSystem.emitter;
+    layer.getRenderer().add3DRendererObject(particleSystem.emitter);
+}
+
+particleSystem.emitter.updateMatrixWorld(true);
+
+
+// See doStepPostEvents
+gameScene.__particleEmmiter3DExtension = gameScene.__particleEmmiter3DExtension || {};
+gameScene.__particleEmmiter3DExtension.emittersCount = gameScene.__particleEmmiter3DExtension.emittersCount || 0;
+gameScene.__particleEmmiter3DExtension.emittersCount++;
+
+
+@end js
+
+@event
+do ParticleEmitter3D::ParticleEmitter3D::UpdateFromProperties object="Object"
+do ParticleEmitter3D::ParticleEmitter3D::SetRotationCenter object="Object" x_position=0 y_position=0 z_position=0

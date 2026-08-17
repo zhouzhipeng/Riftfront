@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 22
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "StartOpacity"
+group = "3D particle emitter color configuration"
+name = "SetStartOpacity"
+sentence = ""
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

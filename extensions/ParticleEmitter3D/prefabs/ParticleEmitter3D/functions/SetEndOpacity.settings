@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 24
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "EndOpacity"
+group = "3D particle emitter color configuration"
+name = "SetEndOpacity"
+sentence = ""
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

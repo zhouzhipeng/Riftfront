@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 10
+description = "Restart particule emission from the beginning."
+fullName = "Restart"
+functionType = "Action"
+name = "Restart"
+sentence = "Restart particule emission from _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

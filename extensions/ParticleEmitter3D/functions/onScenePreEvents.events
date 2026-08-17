@@ -1,0 +1,6 @@
+@js strict=true expanded=true
+
+// See doStepPostEvents
+runtimeScene.__particleEmmiter3DExtension = runtimeScene.__particleEmmiter3DExtension || {};
+runtimeScene.__particleEmmiter3DExtension.emittersStepped = 0;
+@end js

@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 51
+description = "the gravity of the object."
+fullName = "Gravity"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter speed configuration"
+name = "Gravity"
+sentence = "the gravity"
+folder = [ "3D particle emitter speed configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

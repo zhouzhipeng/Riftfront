@@ -1,0 +1,6 @@
+@js objects="Object" strict=true expanded=true
+const object = objects[0];
+
+object.deleteFromScene(object.getParent());
+
+@end js

@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 9
+description = "Check that emission has ended and no particle is alive anymore."
+fullName = "Emission has ended"
+functionType = "Condition"
+name = "HasEnded"
+sentence = "Emission from _PARAM0_ has ended"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

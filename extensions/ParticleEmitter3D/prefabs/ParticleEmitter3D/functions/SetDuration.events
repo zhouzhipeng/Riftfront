@@ -1,0 +1,10 @@
+@event
+do SetNumberVariable variable="Duration" modification_sign="=" value=expr(Value)
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const duration = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setDuration(duration);
+
+@end js

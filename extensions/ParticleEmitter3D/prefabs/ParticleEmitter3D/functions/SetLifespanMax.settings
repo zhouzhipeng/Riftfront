@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 40
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "LifespanMax"
+group = "3D particle emitter configuration"
+name = "SetLifespanMax"
+sentence = ""
+folder = [ "3D particle emitter configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

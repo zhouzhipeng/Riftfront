@@ -1,0 +1,18 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 12
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "Z"
+group = "Position"
+name = "SetZ"
+private = true
+sentence = ""
+folder = [ "Position" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

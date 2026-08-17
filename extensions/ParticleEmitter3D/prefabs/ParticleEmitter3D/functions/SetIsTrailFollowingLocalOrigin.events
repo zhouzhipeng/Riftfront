@@ -1,0 +1,14 @@
+@event
+if BooleanVariable variable="Value" check_if_the_value_is=false
+do SetBooleanVariable variable="IsTrailFollowingLocalOrigin" modification_sign="False"
+
+@event
+if BooleanVariable variable="Value" check_if_the_value_is=true
+do SetBooleanVariable variable="IsTrailFollowingLocalOrigin" modification_sign="True"
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const value = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setTrailFollowingLocalOrigin(value);
+@end js

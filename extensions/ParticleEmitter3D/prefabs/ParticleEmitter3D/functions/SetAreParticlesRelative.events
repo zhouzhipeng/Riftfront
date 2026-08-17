@@ -1,0 +1,16 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="Value" check_if_the_value_is=true
+do SetBooleanVariable variable="AreParticlesRelative" modification_sign="False"
+
+@event
+if BooleanVariable variable="Value" check_if_the_value_is=true
+do SetBooleanVariable variable="AreParticlesRelative" modification_sign="True"
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const areParticlesRelative = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setParticlesRelative(areParticlesRelative);
+
+@end js

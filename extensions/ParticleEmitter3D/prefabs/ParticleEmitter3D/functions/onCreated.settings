@@ -1,0 +1,15 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+fullName = ""
+functionType = "Action"
+name = "onCreated"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 20
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "EndColor"
+group = "3D particle emitter color configuration"
+name = "SetEndColor"
+sentence = ""
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 3
+description = "Update from properties."
+fullName = "Update from properties"
+functionType = "Action"
+name = "UpdateFromProperties"
+private = true
+sentence = "Update from properties of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

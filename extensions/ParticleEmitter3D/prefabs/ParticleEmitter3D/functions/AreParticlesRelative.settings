@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 43
+description = "Check if particles move with the emitter."
+fullName = "Particles move with the emitter"
+functionType = "Condition"
+group = "3D particle emitter speed configuration"
+name = "AreParticlesRelative"
+sentence = "_PARAM0_ particles move with the emitter"
+folder = [ "3D particle emitter speed configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 57
+description = "the start max trail length of the object."
+fullName = "Start max trail length"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter trail configuration"
+name = "TrailStartLengthMax"
+sentence = "the start max trail length"
+folder = [ "3D particle emitter trail configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

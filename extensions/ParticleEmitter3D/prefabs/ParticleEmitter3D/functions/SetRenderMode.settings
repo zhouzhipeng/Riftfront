@@ -1,0 +1,18 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 64
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "RenderMode"
+group = "3D particle emitter configuration"
+name = "SetRenderMode"
+private = true
+sentence = ""
+folder = [ "3D particle emitter configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 33
+description = "the min start speed of the object."
+fullName = "Min start speed"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter speed configuration"
+name = "StartSpeedMin"
+sentence = "the min start speed"
+folder = [ "3D particle emitter speed configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

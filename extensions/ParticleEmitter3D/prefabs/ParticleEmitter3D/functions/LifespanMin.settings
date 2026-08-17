@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 37
+description = "the min lifespan of the object."
+fullName = "Min lifespan"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter configuration"
+name = "LifespanMin"
+sentence = "the min lifespan"
+folder = [ "3D particle emitter configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

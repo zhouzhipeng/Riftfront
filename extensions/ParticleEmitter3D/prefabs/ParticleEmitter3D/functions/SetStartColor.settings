@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 18
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "StartColor"
+group = "3D particle emitter color configuration"
+name = "SetStartColor"
+sentence = ""
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

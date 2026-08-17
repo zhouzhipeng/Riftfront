@@ -1,0 +1,8 @@
+@event
+do SetNumberVariable variable="RotationX" modification_sign="=" value=expr(Value)
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+
+object.__particleSystem.emitter.rotation.x = eventsFunctionContext.getArgument("Value") * Math.PI / 180;
+@end js

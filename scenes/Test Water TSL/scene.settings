@@ -35,14 +35,8 @@ name = ""
 rendering = "2d+3d"
 camera_type = "perspective"
 camera_behavior = "do-nothing"
-visible = true
-locked = false
-lighting = false
-follow_base_camera = false
 ambient = "#8BBED4"
-near = 3
 far = 5000
-fov = 45
 max_2d_distance = 2500
 cameras = [{ size = "default", viewport = "default" }]
 
@@ -76,6 +70,6 @@ top = "Z+"
 id = "4063bd3a-8a58-485a-817e-db342e2edf10"
 object = "WaterSurface3D"
 layer = "base"
-at = [640, 390, 0]
+at = [640, 390]
 size = [900, 520]
 keep_ratio = false

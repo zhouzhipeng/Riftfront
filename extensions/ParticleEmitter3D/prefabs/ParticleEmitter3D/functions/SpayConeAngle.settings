@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 45
+description = "the spay cone angle of the object."
+fullName = "Spay cone angle"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter configuration"
+name = "SpayConeAngle"
+sentence = "the spay cone angle"
+folder = [ "3D particle emitter configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

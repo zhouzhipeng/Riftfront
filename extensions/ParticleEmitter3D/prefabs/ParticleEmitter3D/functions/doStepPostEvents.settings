@@ -1,0 +1,15 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 6
+fullName = ""
+functionType = "Action"
+name = "doStepPostEvents"
+sentence = ""
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

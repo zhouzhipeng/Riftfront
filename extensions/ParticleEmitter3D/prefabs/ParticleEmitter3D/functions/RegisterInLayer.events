@@ -1,0 +1,30 @@
+@js objects="Object" strict=true expanded=true
+/** @type {gdjs.CustomRuntimeObject} */
+const object = objects[0];
+
+// TODO Handle layer changes?
+if (object.__emitterLayerName === undefined) {
+    // Here runtimeScene is the gdjs.CustomRuntimeObjectInstanceContainer inside the custom object.
+    const gameScene = object.getRuntimeScene();
+
+    let rootObject = object;
+    while (rootObject.getInstanceContainer().getOwner) {
+        rootObject = rootObject.getInstanceContainer().getOwner();
+    }
+
+    const layer = gameScene.getLayer(rootObject.getLayer());
+    layer.__particleEmmiter3DExtension = layer.__particleEmmiter3DExtension || {};
+    if (!layer.__particleEmmiter3DExtension.batchSystem) {
+        const batchSystem = new gdjs.__particleEmmiter3DExtension.BatchedRenderer();
+        const worldScale = gameScene.getRenderer3DWorldScale ? gameScene.getRenderer3DWorldScale() : 1;
+        batchSystem.scale.set(worldScale, -worldScale, worldScale);
+        const threeScene = layer.getRenderer().getThreeScene();
+        if (threeScene) {
+            threeScene.add(batchSystem);
+        }
+        layer.__particleEmmiter3DExtension.batchSystem = batchSystem;
+    }
+    layer.__particleEmmiter3DExtension.batchSystem.addSystem(object.__particleSystem);
+    object.__emitterLayerName = layer.getName();
+}
+@end js

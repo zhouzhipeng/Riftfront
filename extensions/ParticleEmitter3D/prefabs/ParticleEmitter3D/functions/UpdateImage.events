@@ -1,0 +1,11 @@
+@js objects="Object" strict=true expanded=true
+/** @type {gdjs.CustomRuntimeObject3D} */
+const object = objects[0];
+/** @type {SpriteObjectDataType} */
+const particleSpriteData = object._instanceContainer._objects.get("Particle");
+/** @type {gdjs.SpriteAnimationData} */
+const animation = particleSpriteData.animations[0];
+const animationFrame = animation ? animation.directions[0].sprites[0] : null;
+const resourceName = animationFrame ? animationFrame.image : '';
+object.__particleEmitterAdapter.setImage(resourceName);
+@end js

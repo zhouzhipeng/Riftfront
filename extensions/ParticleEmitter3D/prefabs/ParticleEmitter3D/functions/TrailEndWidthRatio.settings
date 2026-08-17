@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 61
+description = "the tail end width ratio of the object."
+fullName = "Tail end width ratio"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter trail configuration"
+name = "TrailEndWidthRatio"
+sentence = "the tail end width ratio"
+folder = [ "3D particle emitter trail configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

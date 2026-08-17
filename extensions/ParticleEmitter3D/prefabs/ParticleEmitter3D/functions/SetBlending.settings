@@ -1,0 +1,18 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 48
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "Blending"
+group = "3D particle emitter color configuration"
+name = "SetBlending"
+private = true
+sentence = ""
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

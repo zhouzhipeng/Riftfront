@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 5
+fullName = "Update particle image"
+functionType = "Action"
+name = "UpdateImage"
+private = true
+sentence = "Update particle image of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

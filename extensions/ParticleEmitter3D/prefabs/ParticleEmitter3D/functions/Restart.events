@@ -1,0 +1,7 @@
+@js objects="Object" strict=true expanded=false
+/** @type {gdjs.CustomRuntimeObject} */
+const object = objects[0];
+
+object.__particleSystem.restart();
+
+@end js

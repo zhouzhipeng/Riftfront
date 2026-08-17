@@ -1,0 +1,7 @@
+@js objects="Object" strict=true expanded=false
+const game = runtimeScene.getGame();
+if (game.isInGameEdition && game.isInGameEdition()) {
+    const particleEmitterHelper = objects[0].get3DRendererObject();
+    particleEmitterHelper.update();
+}
+@end js

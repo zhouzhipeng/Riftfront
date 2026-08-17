@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 52
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "Gravity"
+group = "3D particle emitter speed configuration"
+name = "SetGravity"
+sentence = ""
+folder = [ "3D particle emitter speed configuration" ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,2 @@
+@event
+do ParticleEmitter3D::ParticleEmitter3D::UpdateFromProperties object="Object"

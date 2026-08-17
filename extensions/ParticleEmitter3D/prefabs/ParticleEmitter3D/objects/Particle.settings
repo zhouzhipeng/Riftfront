@@ -1,0 +1,21 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "Particle"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "Image"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+sprites = [ ]

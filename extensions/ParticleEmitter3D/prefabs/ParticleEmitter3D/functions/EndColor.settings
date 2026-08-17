@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 19
+description = "the end color of the object."
+fullName = "End color"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter color configuration"
+name = "EndColor"
+sentence = "the end color"
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "color"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

@@ -1,0 +1,9 @@
+@js objects="Object" strict=true expanded=true
+const object = objects[0];
+
+eventsFunctionContext.returnValue =
+       object._getShouldAutodestruct()
+    && object.__particleSystem.emitEnded
+    && object.__particleSystem.particleNum === 0;
+
+@end js

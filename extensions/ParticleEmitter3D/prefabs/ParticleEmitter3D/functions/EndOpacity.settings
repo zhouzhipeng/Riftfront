@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 23
+description = "the end opacity of the object."
+fullName = "End opacity"
+functionType = "ExpressionAndCondition"
+group = "3D particle emitter color configuration"
+name = "EndOpacity"
+sentence = "the end opacity"
+folder = [ "3D particle emitter color configuration" ]
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

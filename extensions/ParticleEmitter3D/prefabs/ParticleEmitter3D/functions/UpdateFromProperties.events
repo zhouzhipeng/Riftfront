@@ -1,0 +1,50 @@
+@event
+do ParticleEmitter3D::ParticleEmitter3D::SetZ object="Object" modification_sign="=" value=expr(Object.Z())
+do ParticleEmitter3D::ParticleEmitter3D::SetRotationX object="Object" modification_sign="=" value=expr(Object.PropertyRotationX())
+do ParticleEmitter3D::ParticleEmitter3D::SetRotationY object="Object" modification_sign="=" value=expr(Object.PropertyRotationY())
+do ParticleEmitter3D::ParticleEmitter3D::SetRenderMode object="Object" modification_sign="=" value=expr(RenderMode)
+do ParticleEmitter3D::ParticleEmitter3D::SetTrailStartLengthMin object="Object" modification_sign="=" value=expr(TrailStartLengthMin)
+do ParticleEmitter3D::ParticleEmitter3D::SetTrailStartLengthMax object="Object" modification_sign="=" value=expr(TrailStartLengthMax)
+do ParticleEmitter3D::ParticleEmitter3D::SetTrailEndWidthRatio object="Object" modification_sign="=" value=expr(TrailEndWidthRatio)
+do ParticleEmitter3D::ParticleEmitter3D::SetStartColor object="Object" modification_sign="=" value=expr(Object.StartColor())
+do ParticleEmitter3D::ParticleEmitter3D::SetEndColor object="Object" modification_sign="=" value=expr(Object.EndColor())
+do ParticleEmitter3D::ParticleEmitter3D::SetStartOpacity object="Object" modification_sign="=" value=expr(Object.StartOpacity())
+do ParticleEmitter3D::ParticleEmitter3D::SetEndOpacity object="Object" modification_sign="=" value=expr(Object.EndOpacity())
+do ParticleEmitter3D::ParticleEmitter3D::SetFlow object="Object" modification_sign="=" value=expr(Object.Flow())
+do ParticleEmitter3D::ParticleEmitter3D::SetStartSizeMin object="Object" modification_sign="=" value=expr(Object.StartSizeMin())
+do ParticleEmitter3D::ParticleEmitter3D::SetStartSizeMax object="Object" modification_sign="=" value=expr(Object.StartSizeMax())
+do ParticleEmitter3D::ParticleEmitter3D::SetEndScale object="Object" modification_sign="=" value=expr(Object.EndScale())
+do ParticleEmitter3D::ParticleEmitter3D::SetStartSpeedMin object="Object" modification_sign="=" value=expr(Object.StartSpeedMin())
+do ParticleEmitter3D::ParticleEmitter3D::SetStartSpeedMax object="Object" modification_sign="=" value=expr(Object.StartSpeedMax())
+do ParticleEmitter3D::ParticleEmitter3D::SetLifespanMin object="Object" modification_sign="=" value=expr(Object.LifespanMin())
+do ParticleEmitter3D::ParticleEmitter3D::SetLifespanMax object="Object" modification_sign="=" value=expr(Object.LifespanMax())
+do ParticleEmitter3D::ParticleEmitter3D::SetDuration object="Object" modification_sign="=" value=expr(Object.Duration())
+do ParticleEmitter3D::ParticleEmitter3D::SetSpayConeAngle object="Object" modification_sign="=" value=expr(Object.SpayConeAngle())
+do ParticleEmitter3D::ParticleEmitter3D::SetGravity object="Object" modification_sign="=" value=expr(Object.Gravity())
+do ParticleEmitter3D::ParticleEmitter3D::SetGravityTop object="Object" modification_sign="=" value=expr(Object.GravityTop())
+do ParticleEmitter3D::ParticleEmitter3D::UpdateImage object="Object"
+> @event
+> @instruction inverted=true
+> if BooleanVariable variable="IsTrailFollowingLocalOrigin" check_if_the_value_is=true
+> do ParticleEmitter3D::ParticleEmitter3D::SetIsTrailFollowingLocalOrigin object="Object"
+
+> @event
+> if BooleanVariable variable="IsTrailFollowingLocalOrigin" check_if_the_value_is=true
+> do ParticleEmitter3D::ParticleEmitter3D::SetIsTrailFollowingLocalOrigin object="Object" istrailfollowinglocalorigin=true
+
+> @event
+> @instruction inverted=true
+> if BooleanVariable variable="AreParticlesRelative" check_if_the_value_is=true
+> do ParticleEmitter3D::ParticleEmitter3D::SetAreParticlesRelative object="Object" areparticlesrelative=false
+
+> @event
+> if BooleanVariable variable="AreParticlesRelative" check_if_the_value_is=true
+> do ParticleEmitter3D::ParticleEmitter3D::SetAreParticlesRelative object="Object" areparticlesrelative=true
+
+> @comment "TODO: Blending can't be changed." background=[255,230,109] text=[0,0,0]
+
+> @event disabled=true
+> do ParticleEmitter3D::ParticleEmitter3D::SetBlending object="Object" modification_sign="=" value=expr(Object.Blending())
+
+@event
+do ParticleEmitter3D::ParticleEmitter3D::UpdateHelper object="Object"

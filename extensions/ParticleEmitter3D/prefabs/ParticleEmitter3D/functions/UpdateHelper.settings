@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 4
+fullName = "Update helper"
+functionType = "Action"
+name = "UpdateHelper"
+private = true
+sentence = "Update graphical helper of _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

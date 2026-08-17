@@ -1,0 +1,17 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 8
+description = "Delete itself"
+fullName = "Delete itself"
+functionType = "Action"
+name = "Delete"
+private = true
+sentence = "Delete _PARAM0_"
+folder = [ ]
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "ParticleEmitter3D::ParticleEmitter3D"
+type = "object"

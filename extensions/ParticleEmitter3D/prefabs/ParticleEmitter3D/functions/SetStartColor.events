@@ -1,0 +1,9 @@
+@event
+do SetStringVariable variable="StartColor" modification_sign="=" value=expr(Value)
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const startColor = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setStartColor(startColor);
+@end js

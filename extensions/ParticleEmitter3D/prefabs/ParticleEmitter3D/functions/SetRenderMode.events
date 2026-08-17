@@ -1,0 +1,16 @@
+@event
+do SetStringVariable variable="RenderMode" modification_sign="=" value=expr(Value)
+
+@js objects="Object" strict=true expanded=false
+const object = objects[0];
+const value = eventsFunctionContext.getArgument("Value");
+
+object.__particleEmitterAdapter.setRenderMode(value);
+@end js
+
+@comment "Update the trail properties because the RenderMode setter reset them" background=[255,230,109] text=[0,0,0]
+
+@event
+if StringVariable variable="RenderMode" comparison_sign="=" value="Trail"
+do ParticleEmitter3D::ParticleEmitter3D::SetTrailStartLengthMin object="Object" modification_sign="=" value=expr(TrailStartLengthMin)
+do ParticleEmitter3D::ParticleEmitter3D::SetTrailStartLengthMax object="Object" modification_sign="=" value=expr(TrailStartLengthMax)
