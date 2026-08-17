@@ -1220,6 +1220,14 @@ name = "WaterSurface.tsl.ts"
 userAdded = true
 
 [[resources]]
+file = "assets/water-caustics-base.png"
+kind = "image"
+metadata = ""
+name = "WaterCausticsBase"
+smoothed = true
+userAdded = true
+
+[[resources]]
 file = "assets/Carbon512.jpg"
 kind = "image"
 metadata = ""
