@@ -1,0 +1,28 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 0
+assetStoreId = ""
+name = "WaterSurface3D"
+persistentUuid = "d9c94b69-afe3-4c79-be70-81574081340f"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 4
+height = 520
+isCastingShadow = false
+isReceivingShadow = false
+keepAspectRatio = false
+materialType = "KeepOriginal"
+modelResourceName = "SM_LawnTile.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 900
+sharedAnimationModelResources = [ ]
+animations = [ ]

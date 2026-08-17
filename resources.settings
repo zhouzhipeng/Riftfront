@@ -1213,6 +1213,13 @@ name = "SunFlicker.tsl.ts"
 userAdded = true
 
 [[resources]]
+file = "assets/WaterSurface.tsl.ts"
+kind = "tslMaterial"
+metadata = ""
+name = "WaterSurface.tsl.ts"
+userAdded = true
+
+[[resources]]
 file = "assets/Carbon512.jpg"
 kind = "image"
 metadata = ""
