@@ -553,8 +553,8 @@ configuration. Do not create generated images when a code-native or existing
 asset is appropriate.
 
 For an existing `.glb`, resolve its resource path through `resources.settings`,
-then call the read-only MCP tool before authoring an animation or bone-name
-reference:
+then call the read-only MCP tool before authoring an animation, bone-name, or
+TSL mesh/material reference:
 
 ```text
 inspect_glb_model { file_path: "assets/models/hero.glb" }
@@ -568,10 +568,13 @@ Use returned source and `boneNames` values exactly, including case; never guess
 names from a filename or substitute preview-only labels. The returned bone
 names are canonical names usable by GDevelop, so the tool omits empty or
 ambiguous duplicate names as well as runtime-generated fallback names that
-cannot be identified safely from metadata alone. This bounded metadata
-inspection does not load meshes or textures and does not require opening the
-asset in Blender; use the Blender workflow for deeper scene inspection or any
-mutation.
+cannot be identified safely from metadata alone. The result also includes the
+same `meshCount`, `materialSlotCount`, and `meshes[].materials[]` structure
+shown by the TSL Resources editor, including exact runtime mesh/material names,
+material classes, texture channels, skinning, morph targets, transparency, and
+transmission. Runtime mesh/material inspection is bounded to 256 MiB and may
+load the model's geometry and textures; use the Blender workflow for deeper
+scene inspection or any mutation.
 
 ## MCP boundary
 
