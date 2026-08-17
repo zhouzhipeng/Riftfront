@@ -22,7 +22,7 @@ Fallback = "KeepOriginal"
 Material = "WaterSurface.tsl.ts"
 
 [content]
-centerLocation = "ModelOrigin"
+centerLocation = "ObjectCenter"
 crossfadeDuration = 0.1
 depth = 4
 height = 520
@@ -31,7 +31,7 @@ isReceivingShadow = false
 keepAspectRatio = false
 materialType = "KeepOriginal"
 modelResourceName = "SM_LawnTile.glb"
-originLocation = "ModelOrigin"
+originLocation = "ObjectCenter"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
