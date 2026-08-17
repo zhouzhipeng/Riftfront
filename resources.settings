@@ -1199,21 +1199,21 @@ smoothed = true
 userAdded = true
 
 [[resources]]
-file = "assets/Material.tsl.ts"
+file = "materials/Material.tsl.ts"
 kind = "tslMaterial"
 metadata = ""
 name = "Material.tsl.ts"
 userAdded = true
 
 [[resources]]
-file = "assets/SunFlicker.tsl.ts"
+file = "materials/SunFlicker.tsl.ts"
 kind = "tslMaterial"
 metadata = ""
 name = "SunFlicker.tsl.ts"
 userAdded = true
 
 [[resources]]
-file = "assets/WaterSurface.tsl.ts"
+file = "materials/WaterSurface.tsl.ts"
 kind = "tslMaterial"
 metadata = ""
 name = "WaterSurface.tsl.ts"
