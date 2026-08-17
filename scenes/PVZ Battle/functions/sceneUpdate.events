@@ -549,6 +549,7 @@ for each "PeaProjectile"
 > @event aiGeneratedEventId="pvz-pea-hits-zombie"
 > if Collision3D::AreInCollision object="PeaProjectile" first_parameter_3d_capability="Base3D" other_object="Zombie" second_parameter_3d_capability="Base3D" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no=false
 > if PickNearest object="Zombie" x_position=expr(PeaProjectile.X()) y_position=expr(PeaProjectile.Y())
+> do Create object_to_create="RedExplosion" x_position=expr(Zombie.X()) y_position=expr(Zombie.Y()) layer=""
 > do EmitSignalToObjectInstance instance_id=expr(Zombie.InstanceId()) signal_name="Unit.Damage" payload="20"
 > do PlaySound audio_file_or_audio_resource_name="PVZ_ZombieDamage" repeat_the_sound=false volume=50 pitch_speed=1
 > do Delete object="PeaProjectile"
