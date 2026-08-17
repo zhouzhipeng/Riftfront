@@ -20,17 +20,17 @@ export default defineMaterial({
   parameters: {
     deepColor: {
       type: "color",
-      default: "#032F68",
+      default: "#052E67",
       label: "Deep water color"
     },
     shallowColor: {
       type: "color",
-      default: "#0A87D1",
+      default: "#0C78BC",
       label: "Water blue"
     },
     highlightColor: {
       type: "color",
-      default: "#C8F6FF",
+      default: "#9BE5F5",
       label: "Caustic highlight"
     },
     colorStrength: {
@@ -42,7 +42,7 @@ export default defineMaterial({
     },
     waveScale: {
       type: "number",
-      default: 7.5,
+      default: 18.5,
       min: 0,
       max: 30,
       label: "Caustic scale"
@@ -56,28 +56,28 @@ export default defineMaterial({
     },
     distortionScale: {
       type: "number",
-      default: 6,
+      default: 10,
       min: 0,
       max: 30,
       label: "Caustic distortion scale"
     },
     distortionAmount: {
       type: "number",
-      default: 1.45,
+      default: 1.15,
       min: 0,
       max: 5,
       label: "Caustic distortion"
     },
     lineWidth: {
       type: "number",
-      default: 0.16,
+      default: 0.09,
       min: 0.01,
       max: 0.5,
       label: "Highlight line width"
     },
     highlightStrength: {
       type: "number",
-      default: 1,
+      default: 0.78,
       min: 0,
       max: 2,
       label: "Highlight strength"
@@ -105,7 +105,7 @@ export default defineMaterial({
     },
     emissiveStrength: {
       type: "number",
-      default: 0.48,
+      default: 0.3,
       min: 0,
       max: 2,
       label: "Surface glow"
