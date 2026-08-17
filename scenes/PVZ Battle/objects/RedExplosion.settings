@@ -8,8 +8,11 @@ type = "ParticleEmitter3D::ParticleEmitter3D"
 variant = ""
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "Base3D"
+type = "Scene3D::Base3DBehavior"
 
 [content]
 EndColor = "255;0;0"
