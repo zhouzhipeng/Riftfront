@@ -1,0 +1,48 @@
+kind = "object"
+settingsFormatVersion = 5
+order = 31
+assetStoreId = "6d3db6815965204d2834e8cad91e32297418907dfed0ebd1e03104e0f2c6139c"
+name = "RedExplosion"
+persistentUuid = "40a04039-dc98-4b5a-85a6-737da1a9c598"
+type = "ParticleEmitter3D::ParticleEmitter3D"
+variant = ""
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+EndColor = "255;0;0"
+StartColor = "255;255;64"
+StartOpacity = 255
+SpayConeAngle = 360
+StartSizeMin = 12
+StartSizeMax = 16
+EndScale = 2
+Flow = 220
+LifespanMin = 0.18
+LifespanMax = 0.32
+Duration = 0.08
+StartSpeedMin = 45
+StartSpeedMax = 75
+ShouldAutodestruct = true
+
+[childrenContent.Particle]
+adaptCollisionMaskAutomatically = true
+updateIfNotVisible = false
+
+[[childrenContent.Particle.animations]]
+name = "Image"
+useMultipleDirections = false
+
+[[childrenContent.Particle.animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[childrenContent.Particle.animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "LightGlow.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]
