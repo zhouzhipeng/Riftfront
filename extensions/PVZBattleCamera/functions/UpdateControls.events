@@ -1,0 +1,81 @@
+@group "Desktop orbit" source="" creationTime=0 color=[143,108,255] parameters=[]
+@event aiGeneratedEventId="pvz-camera-orbit-start"
+if MouseButtonFromTextPressed button_to_check="Right"
+if BooleanVariable variable="CameraOrbitDragging" check_if_the_value_is=false
+do SetNumberVariable variable="CameraDragStartX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraDragStartY" modification_sign="=" value=expr(CursorY("HUD", 0))
+do SetNumberVariable variable="CameraDragStartAngle" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
+do SetNumberVariable variable="CameraDragStartElevation" modification_sign="=" value=expr(Variable(CameraElevationAngle))
+do SetBooleanVariable variable="CameraOrbitDragging" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-orbit-update"
+if MouseButtonFromTextPressed button_to_check="Right"
+if BooleanVariable variable="CameraOrbitDragging" check_if_the_value_is=true
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="=" value=expr(Variable(CameraDragStartAngle) + (CursorX("HUD", 0) - Variable(CameraDragStartX)) * 0.35)
+do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=expr(clamp(Variable(CameraDragStartElevation) + (CursorY("HUD", 0) - Variable(CameraDragStartY)) * 0.25, 20, 78))
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-orbit-stop"
+@instruction inverted=true
+if MouseButtonFromTextPressed button_to_check="Right"
+if BooleanVariable variable="CameraOrbitDragging" check_if_the_value_is=true
+do SetBooleanVariable variable="CameraOrbitDragging" modification_sign="False"
+@end group
+
+@group "Desktop pan" source="" creationTime=0 color=[74,176,228] parameters=[]
+@event aiGeneratedEventId="pvz-camera-pan-start"
+if MouseButtonFromTextPressed button_to_check="Middle"
+if BooleanVariable variable="CameraPanDragging" check_if_the_value_is=false
+do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=expr(CursorY("HUD", 0))
+do SetBooleanVariable variable="CameraPanDragging" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-pan-update"
+if MouseButtonFromTextPressed button_to_check="Middle"
+if BooleanVariable variable="CameraPanDragging" check_if_the_value_is=true
+do SetNumberVariable variable="CameraTargetX" modification_sign="-" value=expr((cos(ToRad(Variable(CameraOrbitAngle))) * (CursorX("HUD", 0) - Variable(CameraPanLastX)) + cos(ToRad(Variable(CameraOrbitAngle) + 90)) * (CursorY("HUD", 0) - Variable(CameraPanLastY))) * Variable(CameraDistance) / 700)
+do SetNumberVariable variable="CameraTargetY" modification_sign="-" value=expr((sin(ToRad(Variable(CameraOrbitAngle))) * (CursorX("HUD", 0) - Variable(CameraPanLastX)) + sin(ToRad(Variable(CameraOrbitAngle) + 90)) * (CursorY("HUD", 0) - Variable(CameraPanLastY))) * Variable(CameraDistance) / 700)
+do SetNumberVariable variable="CameraPanLastX" modification_sign="=" value=expr(CursorX("HUD", 0))
+do SetNumberVariable variable="CameraPanLastY" modification_sign="=" value=expr(CursorY("HUD", 0))
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-pan-stop"
+@instruction inverted=true
+if MouseButtonFromTextPressed button_to_check="Middle"
+if BooleanVariable variable="CameraPanDragging" check_if_the_value_is=true
+do SetBooleanVariable variable="CameraPanDragging" modification_sign="False"
+@end group
+
+@group "Zoom" source="" creationTime=0 color=[247,217,83] parameters=[]
+@event aiGeneratedEventId="pvz-camera-zoom-in"
+if IsMouseWheelScrollingUp
+do SetNumberVariable variable="CameraDistance" modification_sign="=" value=expr(max(300, Variable(CameraDistance) * 0.88))
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-zoom-out"
+if IsMouseWheelScrollingDown
+do SetNumberVariable variable="CameraDistance" modification_sign="=" value=expr(min(1800, Variable(CameraDistance) / 0.88))
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+@end group
+
+@group "Mobile controls" source="" creationTime=0 color=[103,208,93] parameters=[]
+@event aiGeneratedEventId="pvz-camera-mobile-orbit"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Primary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Primary"))) comparison_sign=">" second_expression=0.01
+do SetNumberVariable variable="CameraOrbitAngle" modification_sign="+" value=expr(SpriteMultitouchJoystick::StickForceX(1, "Primary") * 85 * TimeDelta())
+do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value=expr(clamp(Variable(CameraElevationAngle) + SpriteMultitouchJoystick::StickForceY(1, "Primary") * 55 * TimeDelta(), 20, 78))
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+
+@event aiGeneratedEventId="pvz-camera-mobile-pan"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Secondary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Secondary"))) comparison_sign=">" second_expression=0.01
+do SetNumberVariable variable="CameraTargetX" modification_sign="+" value=expr((cos(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + cos(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
+do SetNumberVariable variable="CameraTargetY" modification_sign="+" value=expr((sin(ToRad(Variable(CameraOrbitAngle))) * SpriteMultitouchJoystick::StickForceX(1, "Secondary") + sin(ToRad(Variable(CameraOrbitAngle) + 90)) * SpriteMultitouchJoystick::StickForceY(1, "Secondary")) * Variable(CameraDistance) * 0.55 * TimeDelta())
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="True"
+@end group
+
+@event aiGeneratedEventId="pvz-camera-apply-state"
+if BooleanVariable variable="CameraNeedsApply" check_if_the_value_is=true
+do SetNumberVariable variable="BillboardCameraRotationX" modification_sign="=" value=expr(Variable(CameraElevationAngle) - 90)
+do SetNumberVariable variable="BillboardCameraRotationY" modification_sign="=" value=0
+do SetNumberVariable variable="BillboardCameraRotationZ" modification_sign="=" value=expr(Variable(CameraOrbitAngle))
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis=expr(Variable(CameraTargetX)) position_on_y_axis=expr(Variable(CameraTargetY)) position_on_z_axis=expr(Variable(CameraTargetZ)) distance=expr(Variable(CameraDistance)) rotation_angle_around_z_axis=expr(Variable(CameraOrbitAngle)) elevation_angle_around_y_axis=expr(Variable(CameraElevationAngle)) layer=""
+do SetBooleanVariable variable="CameraNeedsApply" modification_sign="False"

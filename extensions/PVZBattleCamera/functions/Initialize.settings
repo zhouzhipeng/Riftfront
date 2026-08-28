@@ -1,0 +1,13 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 0
+description = "Reset the PVZ battle camera state and apply its initial transform."
+fullName = "Initialize PVZ battle camera"
+functionType = "Action"
+name = "Initialize"
+sentence = "Initialize the PVZ battle camera"
+extension = "PVZBattleCamera"
+private = false
+async = false
+parameters = [ ]
+objectGroups = { }

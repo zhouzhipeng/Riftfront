@@ -1,0 +1,13 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 2
+description = "Process orbit, pan, zoom, and mobile joystick input and apply the camera transform."
+fullName = "Update PVZ battle camera controls"
+functionType = "Action"
+name = "UpdateControls"
+sentence = "Update the PVZ battle camera controls"
+extension = "PVZBattleCamera"
+private = false
+async = false
+parameters = [ ]
+objectGroups = { }

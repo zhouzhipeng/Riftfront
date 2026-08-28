@@ -1,0 +1,13 @@
+kind = "function"
+settingsFormatVersion = 5
+order = 1
+description = "Check whether desktop or mobile camera input, or drag cleanup, needs processing."
+fullName = "Camera control is active"
+functionType = "Condition"
+name = "HasControlActivity"
+sentence = "The PVZ battle camera has control activity"
+extension = "PVZBattleCamera"
+private = false
+async = false
+parameters = [ ]
+objectGroups = { }

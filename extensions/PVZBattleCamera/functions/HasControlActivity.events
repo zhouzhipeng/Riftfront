@@ -1,0 +1,34 @@
+@event aiGeneratedEventId="pvz-camera-activity-default"
+do SetReturnBoolean should_the_condition_be_true_or_false=false
+
+@event aiGeneratedEventId="pvz-camera-activity-right-drag"
+if MouseButtonFromTextPressed button_to_check="Right"
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-middle-drag"
+if MouseButtonFromTextPressed button_to_check="Middle"
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-wheel-up"
+if IsMouseWheelScrollingUp
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-wheel-down"
+if IsMouseWheelScrollingDown
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-orbit-joystick"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Primary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Primary"))) comparison_sign=">" second_expression=0.01
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-pan-joystick"
+if BuiltinCommonInstructions::CompareNumbers first_expression=expr(abs(SpriteMultitouchJoystick::StickForceX(1, "Secondary")) + abs(SpriteMultitouchJoystick::StickForceY(1, "Secondary"))) comparison_sign=">" second_expression=0.01
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-orbit-cleanup"
+if BooleanVariable variable="CameraOrbitDragging" check_if_the_value_is=true
+do SetReturnBoolean should_the_condition_be_true_or_false=true
+
+@event aiGeneratedEventId="pvz-camera-activity-pan-cleanup"
+if BooleanVariable variable="CameraPanDragging" check_if_the_value_is=true
+do SetReturnBoolean should_the_condition_be_true_or_false=true
