@@ -13,6 +13,7 @@ folder = [ "HUD", "PVZ UI" ]
 
 [[variables]]
 name = "Active"
+persistentUuid = "39627901-00b8-46fa-bcf3-bc109872f676"
 type = "boolean"
 value = false
 

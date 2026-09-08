@@ -12,11 +12,13 @@ folder = [ "Plants" ]
 
 [[variables]]
 name = "HP"
+persistentUuid = "b9c184df-21d3-4769-baf7-b50ab4724799"
 type = "number"
 value = 3
 
 [[variables]]
 name = "MaxHP"
+persistentUuid = "a5f10d11-ede1-4e0e-9f57-5b30988221c1"
 type = "number"
 value = 3
 

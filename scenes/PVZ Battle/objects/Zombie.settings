@@ -18,21 +18,25 @@ value = 0
 
 [[variables]]
 name = "HP"
+persistentUuid = "7a5411e4-0bf2-4579-9a66-983a57aecfd8"
 type = "number"
 value = 100
 
 [[variables]]
 name = "MaxHP"
+persistentUuid = "2c634590-d933-4255-a737-3f4172cea320"
 type = "number"
 value = 100
 
 [[variables]]
 name = "TargetX"
+persistentUuid = "bbe03793-bb49-4d62-b090-c13e48490f91"
 type = "number"
 value = -100_000
 
 [[variables]]
 name = "TargetY"
+persistentUuid = "85fe461a-2cbe-4a9e-91c5-35bb4281b58b"
 type = "number"
 value = -100_000
 
